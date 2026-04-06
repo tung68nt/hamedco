@@ -14,6 +14,14 @@ export const dictionaries = {
       news: "Tin tức",
       contact: "Liên hệ",
       quote: "Yêu cầu báo giá"
+    },
+    about: {
+      hero_title: "Hơn 20 năm đồng hành cùng nền y tế Việt Nam",
+      hero_desc: "Từ một đơn vị cung cấp thiết bị nhỏ lẻ, HAMEDCO đã vươn mình trở thành đối tác chiến lược của Philips và nhiều thương hiệu y tế hàng đầu thế giới, mang lại những giải pháp cứu sống tính mạng hàng triệu người.",
+      stats_years: "Năm kinh nghiệm",
+      stats_partners: "Đối tác quốc tế",
+      stats_products: "Sản phẩm",
+      stats_projects: "Dự án triển khai"
     }
   },
   en: {
@@ -31,6 +39,14 @@ export const dictionaries = {
       news: "News",
       contact: "Contact",
       quote: "Request Quote"
+    },
+    about: {
+      hero_title: "Over 20 Years of Partnership with Vietnam's Healthcare",
+      hero_desc: "From a small equipment supplier, HAMEDCO has grown into a strategic partner of Philips and many world-leading medical brands, bringing life-saving solutions to millions.",
+      stats_years: "Years of Experience",
+      stats_partners: "International Partners",
+      stats_products: "Products",
+      stats_projects: "Project Implementations"
     }
   }
 };

@@ -1,0 +1,662 @@
+{
+  "lumify": {
+    "productImages": [
+      "https://images.philips.com/is/image/philipsconsumer/d894f72aed4a4c55b7f9b103014ed8bc?wid=1024&$jpglarge$"
+    ],
+    "clinicalImages": [
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/d48d52417e784ce0814db3a801682e1f?wid=1024&$jpglarge$",
+        "caption": "Lung ultrasound demonstrating auto B-Lines feature using C5-2 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/259fa7164cb2401490d5b3a8016830b4?wid=1024&$jpglarge$",
+        "caption": "Lung ultrasound demonstrating auto B-Lines feature using L12-4 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/772fc9e1fa9b4a75a848b3a80168300d?wid=1024&$jpglarge$",
+        "caption": "Ocular scan using L12-4 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/29ee39974428493aa29fb066015253c8?wid=1024&$jpglarge$",
+        "caption": "Cardiac ultrasound using color and Pulsed Wave Doppler shown using S4-1 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/41349a8e3ecb4bca994ab3a801682ec9?wid=1024&$jpglarge$",
+        "caption": "Longitudinal abdomen with IVC shown using C5-2 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/b3b04e38743d486ea7f8aea101623827?wid=1024&$jpglarge$",
+        "caption": "Internal carotid artery with color and PW Doppler using L12-4 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/b6b3d81ddc314692b3e0aea101623ff2?wid=1024&$jpglarge$",
+        "caption": "Longitudinal inferior vena cava shown using S4-1 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/6c5069c9ea2e4fc2b473aea101625b38?wid=1024&$jpglarge$",
+        "caption": "Portal vein with color and Pulsed Wave Doppler shown using C5-2 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/a50f195320d643c3b0ccaea101623af4?wid=1024&$jpglarge$",
+        "caption": "Liver ultrasound demonstrating fatty infiltration shown using C5-2 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/35950b59ff7d4e73b459aea10162309d?wid=1024&$jpglarge$",
+        "caption": "Enlarged lymph nodes shown using L12-4 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/0f08dfa868d74641a2f4aea101622c83?wid=1024&$jpglarge$",
+        "caption": "Common carotid artery with color, Pulsed Wave Doppler and resistive index (RI) shown using L12-4 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/903329edc0ad4cd995c8aea101622923?wid=1024&$jpglarge$",
+        "caption": "Carotid artery bifurcation with color Doppler shown using L12-4 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/5af116c7f4524100a736aea10162343a?wid=1024&$jpglarge$",
+        "caption": "Inferior vena cava with M-Mode trace shown using S4-1 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/a77ab9448df745059a7cb3a80168314c?wid=1024&$jpglarge$",
+        "caption": "Lateral elbow image shown using L12-4 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/baa26494b9a946c4aaa2b066015252ec?wid=1024&$jpglarge$",
+        "caption": "PLAX view of the heart shown with annotations using S4-1 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/47cb22b72f0c4e0aa25caea1016267aa?wid=1024&$jpglarge$",
+        "caption": "Subcostal four chamber cardiac view shown using S4-1 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/6423a9976d454f2f840daea101624b35?wid=1024&$jpglarge$",
+        "caption": "Mitral valve with color and Pulsed Wave Doppler shown using S4-1 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/2b1a2d4bc21f471f8c0faea101622779?wid=1024&$jpglarge$",
+        "caption": "Urinary bladder transverse shown using C5-2 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/92c3a76ecc2b423d95f6aea101621d66?wid=1024&$jpglarge$",
+        "caption": "26 week OB fetal profile shown using C5-2 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/1ad85c0b56e3445e827aaea101623289?wid=1024&$jpglarge$",
+        "caption": "FAST exam RUQ view shown using S4-1 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/8e7b5a18199e40579ae8b3a8016832ef?wid=1024&$jpglarge$",
+        "caption": "Lung ultrasound shown with S4-1 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/6ac5e92eb82d49d599acb3a80168322c?wid=1024&$jpglarge$",
+        "caption": "Apical four chamber view of the heart with Auto EF tool shown using S4-1 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/00a10016825345fe8b04aea101626e1a?wid=1024&$jpglarge$",
+        "caption": "Umbilical cord with color Doppler shown using C5-2 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/a81b6a25614b4f6982efaea101625cc0?wid=1024&$jpglarge$",
+        "caption": "Transverse liver demonstrating portal vein with inferior vena cava shown using C5-2 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/a7ab1f1055a643d8ab09aea10162398c?wid=1024&$jpglarge$",
+        "caption": "Arcuate artery in kidney with color and Pulsed Wave Doppler shown using C5-2 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/30469655e3ed45d79de0aea1016219ce?wid=1024&$jpglarge$",
+        "caption": "26 week OB biparietal diameter measurement shown using C5-2 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/0c88ece4beae47ab9512b3a801682f75?wid=1024&$jpglarge$",
+        "caption": "11 week, 6 day, OB with crown rump length (CRL) measurement shown using C5-2 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/09d3a466736649e8af02aea101626952?wid=1024&$jpglarge$",
+        "caption": "Transverse thyroid with lesion shown using L12-4 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/5f4b7eb13c8049f98d7fb309016976e9?wid=1024&$jpglarge$",
+        "caption": "Presets optimize the transducer to the exam "
+      }
+    ],
+    "features": []
+  },
+  "innosight": {
+    "productImages": [
+      "https://images.philips.com/is/image/philipsconsumer/a6671c8ef0084f60928eb18b0151f25f?wid=1024&$jpglarge$"
+    ],
+    "clinicalImages": [
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/1dafb3dd462e48668701a7a201187049?wid=1024&$jpglarge$",
+        "caption": "InnoSight clinical image fetal abdomen"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/97d72e1df0ea48f3a1a5a7a20118a6d3?wid=1024&$jpglarge$",
+        "caption": "InnoSight clinical image renal arcuate vessels"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/da6b3c35dfc34163ab63a7a201183145?wid=1024&$jpglarge$",
+        "caption": "InnoSight clinical image abdominal aorta"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/e838cc8b08124401949da7a20118272f?wid=1024&$jpglarge$",
+        "caption": "InnoSight clinical image breast"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/f0290b215d5d40d59f8aa7a201182c80?wid=1024&$jpglarge$",
+        "caption": "InnoSight clinical image adnexal vascularity"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/1af6284592f941a8a4c1a7a20118759e?wid=1024&$jpglarge$",
+        "caption": "InnoSight clinical image fetal heart"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/f2577df8e36c494d99c0a7a20118a003?wid=1024&$jpglarge$",
+        "caption": "InnoSight clinical image liver vasculature"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/7c36e38354584e08b827a7a20118697c?wid=1024&$jpglarge$",
+        "caption": "InnoSight clinical image common carotid artery Doppler"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/80502a91e42e431084d6a7a201188098?wid=1024&$jpglarge$",
+        "caption": "InnoSight clinical image High Automatic Doppler measurement"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/2036aaa176314b28bbf6a7a201187adc?wid=1024&$jpglarge$",
+        "caption": "InnoSight clinical image four chamber"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/c105fc4cf9d944e9bc7ca7a201189ac2?wid=1024&$jpglarge$",
+        "caption": "InnoSight clinical image liver and gallbladder"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/247a3e5601d44a8c8364a7a20118614d?wid=1024&$jpglarge$",
+        "caption": "Innosight clinical image Cirlce of Willis"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/b165151bdd9e425cb03ca7a20118229e?wid=1024&$jpglarge$",
+        "caption": "Innosight clinical image CCA and jugular"
+      }
+    ],
+    "features": []
+  },
+  "flash-5100-poc": {
+    "productImages": [
+      "https://images.philips.com/is/image/philipsconsumer/70fd4d9d28e347708bcab2e5012858cd?wid=1024&$jpglarge$"
+    ],
+    "clinicalImages": [
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/9f6f590956da4a49a7c8b2de00f82bd8?wid=1024&$jpglarge$",
+        "caption": "Carotid artery and internal jugular vein with color flow Doppler shown using eL18-4 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/4aefddb9d8c44e8f933eb2de00f82c6e?wid=1024&$jpglarge$",
+        "caption": "Venous posterior calf vessels shown using eL18-4 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/eec0057006c049ad8b27b2de00f82d01?wid=1024&$jpglarge$",
+        "caption": "Venous superior femoral vessels shown using eL18-4 transducer with color."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/418064e202734ee6b55db2de00f8320c?wid=1024&$jpglarge$",
+        "caption": "Longitudinal view of the radial artery shown using mL26-8 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/8e169c25efaa48fcb8eeb2de00f8262d?wid=1024&$jpglarge$",
+        "caption": "Umbilical cord with and without color flow Doppler shown using C6-2 transducer and dual imaging capability."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/5ec815208777482480eab2de00f826a1?wid=1024&$jpglarge$",
+        "caption": "Fetal spine shown using C6-2 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/628451d8502a47379ffeb2de00f8273d?wid=1024&$jpglarge$",
+        "caption": "Ovarian cyst shown using C9-4v transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/9813ad2e972945cab49fb2de00f827bd?wid=1024&$jpglarge$",
+        "caption": "Uterus shown using C9-4v transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/de78142b00f34f33ac28b2de00f82848?wid=1024&$jpglarge$",
+        "caption": "Hip shown using eL18-4 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/fc6dc472f54645c9a6ecb2de00f828f9?wid=1024&$jpglarge$",
+        "caption": "Bicep tendon shown using eL18-4 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/0a522b846b2140899f5fb2de00f82951?wid=1024&$jpglarge$",
+        "caption": "Needle visualization shown using eL18 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/fc75e86440b849d2b982b2de00f829d4?wid=1024&$jpglarge$",
+        "caption": "Axillary nerves and vessels shown using eL18-4 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/6847543b337a4b05a528b2de00f82a77?wid=1024&$jpglarge$",
+        "caption": "Femoral artery and nerve shown using eL18-4 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/a8833cc85add4434b621b2de00f82adc?wid=1024&$jpglarge$",
+        "caption": "Brachial plexus nerve and interscalene muscles shown using eL18-4 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/d495767734d74d2aa1a4b2de00f82b5b?wid=1024&$jpglarge$",
+        "caption": "Thoracic paravertebral using eL18-4 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/baa22e86b01f40a3b08db2de00f82e14?wid=1024&$jpglarge$",
+        "caption": "Bicep tendon shown using L12-3ERGO transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/a5b3245f621148b4b608b2de00f82ea8?wid=1024&$jpglarge$",
+        "caption": "Median nerve shown using mL26-8 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/f83f1ed9890f48b09d49b2de00f82f41?wid=1024&$jpglarge$",
+        "caption": "Superficial wrist shown with color flow Doppler using mL26-8 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/ffed844b36e045b6bdbeb2de00f82fd1?wid=1024&$jpglarge$",
+        "caption": "Supraclavicular nerve and artery shown using mL26-8 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/51bac059d6b14961b8a6b2de00f83038?wid=1024&$jpglarge$",
+        "caption": "Short axis of jugular vein and carotid artery using mL26-8 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/43308e60452d46eba063b2de00f83103?wid=1024&$jpglarge$",
+        "caption": "Pediatric antecubital shown using color with mL26-8 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/f237ef103ee44cecb578b2de00f83179?wid=1024&$jpglarge$",
+        "caption": "Radial artery and veins shown using mL26-8 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/bc1de933d3514d028e94b2de00f83273?wid=1024&$jpglarge$",
+        "caption": "Adult echo apical 4ch using S5-1 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/0bc62c8d4c4b4d1e89a5b2de00f83306?wid=1024&$jpglarge$",
+        "caption": "Adult echo subcoastal IVC shown using S5-1 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/095127e2256d4d589561b2e4004926d6?wid=1024&$jpglarge$",
+        "caption": "Flash 5100: mL26-8 transducer for excellent visualization"
+      }
+    ],
+    "features": []
+  },
+  "flash-5100-poc-pro": {
+    "productImages": [
+      "https://images.philips.com/is/image/philipsconsumer/c2fb3b05c6ee4c21aa4eb2e5012859f3?wid=1024&$jpglarge$"
+    ],
+    "clinicalImages": [
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/a0b2f440ce0e4858b4e0b2de00f81cb7?wid=1024&$jpglarge$",
+        "caption": "FAST bladder image shown using C5-1 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/7f757b17543f40ba88bcb2de00f81d22?wid=1024&$jpglarge$",
+        "caption": "Upper right quadrant liver and kidney shown using C5-1 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/79cdbd0d4cb8411eb45cb2de00f81e0a?wid=1024&$jpglarge$",
+        "caption": "Sciatic nerve shown using C5-1 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/71f311ecba12461d8de8b2de00f81e9e?wid=1024&$jpglarge$",
+        "caption": "Fetal heart shown with M-mode using C5-1 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/f928c8d9648344598264b2de00f81f52?wid=1024&$jpglarge$",
+        "caption": "Umbilical cord shown with pulsed wave and color flow Doppler using C5-1 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/f22add10dda046d6add0b2de00f81fd1?wid=1024&$jpglarge$",
+        "caption": "Adult echo demonstrating AutoStrain EF feature using S5-1 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/038a9084db18408ea71fb2de00f82068?wid=1024&$jpglarge$",
+        "caption": "Adult echo LVOT with Pulsed wave and color using S5-1 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/28bf93c66cd549f8bfffb2de00f820dd?wid=1024&$jpglarge$",
+        "caption": "Adult echo PLAX shown using S5-1 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/7067ca0ed6984fb78963b2de00f82168?wid=1024&$jpglarge$",
+        "caption": "Adult echo Tissue Doppler Imaging with pulsed wave Doppler shown using S5-1 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/ff4b3541f5444066944ab2de00f821ea?wid=1024&$jpglarge$",
+        "caption": "Neonatal head shown using S8-3 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/cb842f660cd44d46842ab2de00f82271?wid=1024&$jpglarge$",
+        "caption": "Pediatric parasternal long axis view of left ventricle shown using S8-3 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/4643a6630f4d4d228787b2de00f82333?wid=1024&$jpglarge$",
+        "caption": "Pediatric parasternal short axis view of left ventricle shown using S8-3 transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/432cbcc073b444dfba2cb2de00f823dc?wid=1024&$jpglarge$",
+        "caption": "Adult echo with mitral regurgitation shown with color using X8-2t transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/7421711fdacb40ed86a9b2de00f824fc?wid=1024&$jpglarge$",
+        "caption": "Left ventricle and mitral valve shown using X8-2t transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/886f41dbfec943e5b4e2b2de00f825a8?wid=1024&$jpglarge$",
+        "caption": "Left ventricle with views of the Mitral and Aortic valves shown with X8-2t transducer."
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/0bb7029afda54cc0a45cb2de00f81d7d?wid=1024&$jpglarge$",
+        "caption": "B-lines shown in the lungs using C5-1 transducer."
+      }
+    ],
+    "features": []
+  },
+  "compact-5300": {
+    "productImages": [
+      "https://images.philips.com/is/image/philipsconsumer/4190811865814a78b89caf540122196e?wid=1024&$jpglarge$"
+    ],
+    "clinicalImages": [
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/1992cd8bb67d45f386e1b2900035cfb7?wid=1024&$jpglarge$",
+        "caption": "Fetal face shown using TrueVue using V9-2 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/c399c9153ee24cf0ba7ab28f01690445?wid=1024&$jpglarge$",
+        "caption": "Fetal profile shown using V9-2 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/38b46fed8ad04d5f812bb2900035d05f?wid=1024&$jpglarge$",
+        "caption": "2D image of uterus using V9-2 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/63dfdf6aa2674a3aa370b28f01690706?wid=1024&$jpglarge$",
+        "caption": "Fetal brain shown using V9-2 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/cd4acd17cb644c52b439b2900034fe5b?wid=1024&$jpglarge$",
+        "caption": "VSD evaluation using Color Compare with S12-4 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/785f6a7255944464a4bdb28f01690782?wid=1024&$jpglarge$",
+        "caption": "Fetal echo with 4 ch with color shown with the V9-2 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/fbda9b8d8f3c4af8b1a5af51015ddb14?wid=1024&$jpglarge$",
+        "caption": "Fetal Face with TrueVue feature using a V6-2 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/fc9996b9b6c0415585c7af51015dde2c?wid=1024&$jpglarge$",
+        "caption": "Early OB shown with FlexVue using 3D9-3v transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/cbdf25b97f694b0dba0baf51015deb3c?wid=1024&$jpglarge$",
+        "caption": "Dual display carotid artery with color shown using L12-5 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/1b4776fa685e4dafb533af51015df0f6?wid=1024&$jpglarge$",
+        "caption": "Longitudinal common carotid artery shown using L12-3ERGO transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/efcd342473dd4defb267af51015df7d6?wid=1024&$jpglarge$",
+        "caption": "Optic nerve shown using L12-3 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/ec9d504809dd45388f1aaf54013eb2fd?wid=1024&$jpglarge$",
+        "caption": "Endovaginal uterus shown with color using 3D9-3v transducer"
+      }
+    ],
+    "features": []
+  },
+  "compact-5500": {
+    "productImages": [
+      "https://images.philips.com/is/image/philipsconsumer/61195d7d740b4d659da6b0660152520d?wid=1024&$jpglarge$"
+    ],
+    "clinicalImages": [
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/1992cd8bb67d45f386e1b2900035cfb7?wid=1024&$jpglarge$",
+        "caption": "Fetal face shown using TrueVue using V9-2 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/c399c9153ee24cf0ba7ab28f01690445?wid=1024&$jpglarge$",
+        "caption": "Fetal profile shown using V9-2 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/38b46fed8ad04d5f812bb2900035d05f?wid=1024&$jpglarge$",
+        "caption": "2D image of uterus using V9-2 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/cd4acd17cb644c52b439b2900034fe5b?wid=1024&$jpglarge$",
+        "caption": "VSD evaluation using Color Compare with S12-4 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/4338f4c466004d92956cb28f0169032b?wid=1024&$jpglarge$",
+        "caption": "Auto Measure shown using S5-1 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/9356a096c98246af8702b28f016903e5?wid=1024&$jpglarge$",
+        "caption": "Auto Measure shown using S5-1 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/785f6a7255944464a4bdb28f01690782?wid=1024&$jpglarge$",
+        "caption": "Fetal echo with 4 ch with color shown with the V9-2 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/fe44791fa99f477e9c4ab290003280bc?wid=1024&$jpglarge$",
+        "caption": "Live 3D TEE shown with X8-2t transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/02f5f90e87f048fb9eb1b29001568f60?wid=1024&$jpglarge$",
+        "caption": "Ovarian blood flow with MFI using a C10-3v transducer on Compact 5000 Series"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/6947395b1ed445feb56cb2900156902d?wid=1024&$jpglarge$",
+        "caption": "Thyroid MFI with the eL18-4 transducer on Compact 5000 Series"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/fbda9b8d8f3c4af8b1a5af51015ddb14?wid=1024&$jpglarge$",
+        "caption": "Fetal Face with TrueVue feature using a V6-2 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/fc9996b9b6c0415585c7af51015dde2c?wid=1024&$jpglarge$",
+        "caption": "Early OB shown with FlexVue using 3D9-3v transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/cbdf25b97f694b0dba0baf51015deb3c?wid=1024&$jpglarge$",
+        "caption": "Dual display carotid artery with color shown using L12-5 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/708e8501d1a641a7a1a6af51015ded29?wid=1024&$jpglarge$",
+        "caption": "Umbilical cord Doppler shown using eL18-4 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/dfb79c8f3fc64df596d6af51015def06?wid=1024&$jpglarge$",
+        "caption": "Left ventricular outflow tract with color and pulsed wave Doppler shown using S4-2 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/1b4776fa685e4dafb533af51015df0f6?wid=1024&$jpglarge$",
+        "caption": "Longitudinal common carotid artery shown using L12-3ERGO transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/ef54a443f6d5482c9974af51015df2c6?wid=1024&$jpglarge$",
+        "caption": "Longitudinal liver with inferior vena cava, hepatic veins, abdominal aorta using C5-1 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/01b86cf6187a48d4a38eaf51015df4c0?wid=1024&$jpglarge$",
+        "caption": "Longitudinal thyroid lobe with nodule shown using eL18-4 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/54581bbcc0a249cbb46faf51015df630?wid=1024&$jpglarge$",
+        "caption": "Lung pleural lining shown using eL18-4 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/efcd342473dd4defb267af51015df7d6?wid=1024&$jpglarge$",
+        "caption": "Optic nerve shown using L12-3 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/ffe827c7bcec43ca872aaf51015df994?wid=1024&$jpglarge$",
+        "caption": "Shoulder rotator cuff using eL18-4 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/6c1fb034e14146f99c64af51015de83b?wid=1024&$jpglarge$",
+        "caption": "Cardiac PLAX view shown using S5-1 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/9027430accfc4eb6a4b0af51015dfb98?wid=1024&$jpglarge$",
+        "caption": "Transverse liver with hepatic veins shown using C5-1 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/6b47bebf5dd24e848813af51015de644?wid=1024&$jpglarge$",
+        "caption": "Cardiac apical four chamber view with mitral inflow shown using S5-1 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/cdc444531d79482484caaf54013eb4da?wid=1024&$jpglarge$",
+        "caption": "Fetal brain image with the eL18-4 transducer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/ec9d504809dd45388f1aaf54013eb2fd?wid=1024&$jpglarge$",
+        "caption": "Endovaginal uterus shown with color using 3D9-3v transducer"
+      }
+    ],
+    "features": []
+  },
+  "affiniti-30": {
+    "productImages": [
+      "https://images.philips.com/is/image/philipsconsumer/53447b3fc13d47c4af93b38701582ec2?wid=1024&$jpglarge$"
+    ],
+    "clinicalImages": [
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/66c5eb6b3d904a678c5fa8c800ed1d52?wid=1024&$jpglarge$",
+        "caption": "3D9-3v Fetal Imaging with TrueVue"
+      }
+    ],
+    "features": []
+  },
+  "affiniti-50": {
+    "productImages": [
+      "https://images.philips.com/is/image/philipsconsumer/5d3ea50c2fef493f9d87b0a801747af5?wid=1024&$jpglarge$"
+    ],
+    "clinicalImages": [
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/99781790b317445e819ab0590128a1b8?wid=1024&$jpglarge$",
+        "caption": "V9-2 Fetal Lung Perfusion with Flow Viewer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/fe0141e83a2d4b5da568b05901289f88?wid=1024&$jpglarge$",
+        "caption": "V9-2 Fetal Heart CPA with Flow Viewer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/1a0ab69092a1468b8fdbb0a8011b7f07?wid=1024&$jpglarge$",
+        "caption": "mL26-8 Transducer Compact and Ultra-high frequency Transducer"
+      }
+    ],
+    "features": []
+  },
+  "affiniti-70": {
+    "productImages": [
+      "https://images.philips.com/is/image/philipsconsumer/5d3ea50c2fef493f9d87b0a801747af5?wid=1024&$jpglarge$"
+    ],
+    "clinicalImages": [
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/236e6610b3344e88ab16a77c01478af4?wid=1024&$jpglarge$",
+        "caption": "C9-2 Fetal heart"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/4caed42ef4764bef9544a77c0159e62f?wid=1024&$jpglarge$",
+        "caption": "C9-2 Fetal Abdomen"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/246f684c91c74f7eaf9aa8c800ee06a3?wid=1024&$jpglarge$",
+        "caption": "3D9-3v TrueVue Fetal Imaging"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/368c444c341a482cb7bfa8c800ee0206?wid=1024&$jpglarge$",
+        "caption": "3D9-3v Fetal Imaging with GlassVue"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/66c5eb6b3d904a678c5fa8c800ed1d52?wid=1024&$jpglarge$",
+        "caption": "3D9-3v Fetal Imaging with TrueVue"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/1a0ab69092a1468b8fdbb0a8011b7f07?wid=1024&$jpglarge$",
+        "caption": "mL26-8 Transducer Compact and Ultra-high frequency Transducer"
+      }
+    ],
+    "features": []
+  },
+  "affiniti-cvx": {
+    "productImages": [
+      "https://images.philips.com/is/image/philipsconsumer/592e3788937443348a80adcf01135216?wid=1024&$jpglarge$"
+    ],
+    "clinicalImages": [
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/abd36de39bb0425e94c5ae2a0144b9fa?wid=1024&$jpglarge$",
+        "caption": "S5-1Transducer PLAX with Image Boost"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/9185ffed13e24e8e9718ac2b00a330ea?wid=1024&$jpglarge$",
+        "caption": "Affiniti CVx clinical image vascular"
+      }
+    ],
+    "features": []
+  },
+  "epiq-cvx": {
+    "productImages": [
+      "https://images.philips.com/is/image/philipsconsumer/683c5f818a1e48a79e36a91900e78db5?wid=1024&$jpglarge$"
+    ],
+    "clinicalImages": [
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/ae994d787589496aa913b0d00163ca5d?wid=1024&$jpglarge$",
+        "caption": "X11-4t Transducer xMatrix TEE Transducer"
+      }
+    ],
+    "features": []
+  },
+  "epiq-elite": {
+    "productImages": [
+      "https://images.philips.com/is/image/philipsconsumer/0fcef27f42a74975b38db0bd017fe30d?wid=1024&$jpglarge$"
+    ],
+    "clinicalImages": [
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/28ceafe652cb4bcea28bb05901289ef0?wid=1024&$jpglarge$",
+        "caption": "C5-1 Fetal Heart Color Flow with Flow Viewer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/341c0220b91747e1a5cdb0590128a05f?wid=1024&$jpglarge$",
+        "caption": "C5-1 Fetal Heart Pulmonary Vein with MFI HD (Micro Flow Imaging, High Definition)"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/9a21e0af720747409747a9b400a0a904?wid=1024&$jpglarge$",
+        "caption": "eL18-4 OB Fetal Spine"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/99781790b317445e819ab0590128a1b8?wid=1024&$jpglarge$",
+        "caption": "V9-2 Fetal Lung Perfusion with Flow Viewer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/fe0141e83a2d4b5da568b05901289f88?wid=1024&$jpglarge$",
+        "caption": "V9-2 Fetal Heart CPA with Flow Viewer"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/9c3745eb039842b5887fa8c800cbfeb6?wid=1024&$jpglarge$",
+        "caption": "3D9-3v 3D TrueVue Fetal Imaging"
+      },
+      {
+        "url": "https://images.philips.com/is/image/philipsconsumer/1a0ab69092a1468b8fdbb0a8011b7f07?wid=1024&$jpglarge$",
+        "caption": "mL26-8 Transducer Compact and Ultra-high frequency Transducer"
+      }
+    ],
+    "features": []
+  }
+}

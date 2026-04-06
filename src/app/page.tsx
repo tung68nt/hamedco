@@ -16,7 +16,7 @@ export default function Home() {
       <HeroCarousel />
 
       {/* ═══ STATS COUNTER ═══ */}
-      <section className="stats-section">
+      {/* <section className="stats-section">
         <div className="container">
           <div className="grid grid-4">
             <div className="stat-item fade-in-up stagger-1">
@@ -37,7 +37,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ═══ ABOUT INTRO ═══ */}
       <section className="section bg-white">

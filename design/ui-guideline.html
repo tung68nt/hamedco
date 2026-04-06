@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAMEDCO — 18 Templates UI Guideline</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <style>
+    /* === Layout === */
+    body { display: flex; margin: 0; background: var(--color-gray-50); height: 100vh; overflow: hidden; font-family: var(--font-sans); }
+    .sidebar { width: 260px; background: #fff; border-right: 1px solid var(--color-gray-200); height: 100vh; overflow-y: auto; padding: 24px; flex-shrink: 0; }
+    .main-content { flex: 1; height: 100vh; overflow-y: auto; position: relative; scroll-behavior: smooth; }
+    
+    /* === Sidebar === */
+    .brand { font-size: 1.25rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 32px; display: block; text-decoration: none;}
+    .nav-group { margin-bottom: 24px; }
+    .nav-group-title { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--color-gray-400); letter-spacing: 0.08em; margin-bottom: 8px; }
+    .sidebar-nav { display: flex; flex-direction: column; gap: 4px; }
+    .sidebar-nav a { padding: 8px 12px; font-size: 0.875rem; color: var(--color-gray-600); text-decoration: none; border-radius: 6px; transition: all 0.2s; }
+    .sidebar-nav a:hover { background: var(--color-gray-50); color: var(--color-primary); }
+    .sidebar-nav a.active { background: var(--color-primary-light); color: var(--color-primary); font-weight: 500; }
+    
+    /* === Main Content === */
+    .guide-header { background: var(--gradient-dark); color: #fff; padding: 48px; }
+    .guide-header h1 { color: #fff; margin-bottom: 8px; }
+    .guide-section { padding: 48px; border-bottom: 1px solid var(--color-gray-200); scroll-margin-top: 0; }
+    .guide-section-title { font-size: 1.5rem; font-weight: 700; color: var(--color-gray-900); margin-bottom: 8px; }
+    .guide-section-desc { color: var(--color-gray-500); font-size: 0.875rem; margin-bottom: 32px; }
+    
+    /* Component specific wrapper */
+    .guide-wrapper { background: #fff; border: 1px dashed var(--color-gray-300); border-radius: 12px; padding: 24px; overflow-x: auto;}
+    .guide-wrapper.dark { background: var(--color-gray-900); }
+    
+    /* Utilities for docs */
+    .swatch { width: 48px; height: 48px; border-radius: 8px; border: 1px solid var(--color-gray-200); }
+    .grid-demo { display: grid; gap: 16px; }
+    [id]::before { content: ''; display: block; height: 24px; margin-top: -24px; visibility: hidden; }
+  </style>
+</head>
+<body>
+
+<!-- ═══ SIDEBAR ═══ -->
+<aside class="sidebar">
+  <a href="#" class="brand">HAMEDCO UI</a>
+  
+  <div class="nav-group">
+    <div class="nav-group-title">Foundation</div>
+    <div class="sidebar-nav">
+      <a href="#colors" class="active">Colors & Tokens</a>
+      <a href="#typography">Typography</a>
+      <a href="#buttons">Buttons & Badges</a>
+      <a href="#forms">Forms</a>
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Global Components</div>
+    <div class="sidebar-nav">
+      <a href="#nav-footer">Header & Footer</a>
+      <a href="#topbar">Top Bar</a>
+      <a href="#cards">Cards Collection</a>
+      <a href="#stats-partners">Stats & Partners</a>
+      <a href="#faq">FAQ Accordion</a>
+      <a href="#partner-logos">Partner Logo Grid</a>
+      <a href="#lang-switcher">Language Switcher</a>
+      <a href="#floating-cta">Floating CTA</a>
+      <a href="#cta-section">CTA Section</a>
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">New Components (Audit)</div>
+    <div class="sidebar-nav">
+      <a href="#search-bar">Search Bar</a>
+      <a href="#blog-cards">Blog Cards</a>
+      <a href="#tags">Tags & Categories</a>
+      <a href="#toast">Toast & Alerts</a>
+      <a href="#file-upload">File Upload</a>
+      <a href="#loading">Loading States</a>
+      <a href="#image-zoom">Image Zoom</a>
+      <a href="#newsletter">Newsletter</a>
+      <a href="#error-page">404 Error Page</a>
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Page Templates (18+)</div>
+    <div class="sidebar-nav">
+      <a href="#tpl-hero">Home & Page Heroes</a>
+      <a href="#tpl-about">About (History, Leader)</a>
+      <a href="#tpl-products">Products (Detail, Filter & Pagin)</a>
+      <a href="#tpl-services">Services (Process)</a>
+      <a href="#tpl-projects">Projects (Gallery)</a>
+      <a href="#tpl-blog">Blog & News Pattern</a>
+      <a href="#tpl-contact">Contact & Modal Quote</a>
+      <a href="#tpl-career">Career (Jobs & Perks)</a>
+    </div>
+  </div>
+</aside>
+
+<!-- ═══ MAIN CONTENT ═══ -->
+<main class="main-content">
+  <div class="guide-header">
+    <span class="overline" style="color:var(--color-accent);">Design System v3.0 — Post-Audit</span>
+    <h1>Bố cục & Component Library</h1>
+    <p style="color:rgba(255,255,255,.7); max-width:600px;">Bao gồm System Tokens, All Global Components và 18+ Template patterns. Phiên bản mới sau Audit PRD Coverage Analysis.</p>
+  </div>
+
+
+  <!-- 1. FOUNDATION -->
+  <section class="guide-section" id="colors">
+    <div class="guide-section-title">Colors &amp; Tokens</div>
+
+    <div class="guide-wrapper" style="margin-bottom:24px;">
+      <div style="font-weight:700; text-transform:uppercase; font-size:0.75rem; letter-spacing:0.08em; color:var(--color-gray-500); margin-bottom:16px;">Brand Palette — Primary</div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:28px;">
+        <div style="text-align:center;"><div class="swatch" style="background:#1A7A8A;"></div><small style="font-weight:600;">Dark</small><br><small style="color:var(--color-gray-400);">#1A7A8A</small></div>
+        <div style="text-align:center;"><div class="swatch" style="background:#2B9EB3;"></div><small style="font-weight:600;">Primary</small><br><small style="color:var(--color-gray-400);">#2B9EB3</small></div>
+        <div style="text-align:center;"><div class="swatch" style="background:#5FBFD0;"></div><small style="font-weight:600;">Mid</small><br><small style="color:var(--color-gray-400);">#5FBFD0</small></div>
+        <div style="text-align:center;"><div class="swatch" style="background:#A8DFE9;"></div><small style="font-weight:600;">Light</small><br><small style="color:var(--color-gray-400);">#A8DFE9</small></div>
+        <div style="text-align:center;"><div class="swatch" style="background:#E6F4F7;"></div><small style="font-weight:600;">Tint</small><br><small style="color:var(--color-gray-400);">#E6F4F7</small></div>
+      </div>
+      <div style="font-weight:700; text-transform:uppercase; font-size:0.75rem; letter-spacing:0.08em; color:var(--color-gray-500); margin-bottom:16px;">Brand Palette — Accent</div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <div style="text-align:center;"><div class="swatch" style="background:#D06A30;"></div><small style="font-weight:600;">Dark</small><br><small style="color:var(--color-gray-400);">#D06A30</small></div>
+        <div style="text-align:center;"><div class="swatch" style="background:#E8834A;"></div><small style="font-weight:600;">Accent</small><br><small style="color:var(--color-gray-400);">#E8834A</small></div>
+        <div style="text-align:center;"><div class="swatch" style="background:#F0A878;"></div><small style="font-weight:600;">Mid</small><br><small style="color:var(--color-gray-400);">#F0A878</small></div>
+        <div style="text-align:center;"><div class="swatch" style="background:#F8D4B6;"></div><small style="font-weight:600;">Light</small><br><small style="color:var(--color-gray-400);">#F8D4B6</small></div>
+        <div style="text-align:center;"><div class="swatch" style="background:#FFF0E6;"></div><small style="font-weight:600;">Tint</small><br><small style="color:var(--color-gray-400);">#FFF0E6</small></div>
+      </div>
+    </div>
+
+    <div class="guide-wrapper" style="margin-bottom:24px;">
+      <div style="font-weight:700; text-transform:uppercase; font-size:0.75rem; letter-spacing:0.08em; color:var(--color-gray-500); margin-bottom:16px;">Neutral Gray Scale</div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap;">
+        <div style="text-align:center;"><div class="swatch" style="background:#1A1D23;"></div><small style="font-weight:600;">900</small><br><small style="color:var(--color-gray-400);">#1A1D23</small></div>
+        <div style="text-align:center;"><div class="swatch" style="background:#374151;"></div><small style="font-weight:600;">700</small><br><small style="color:var(--color-gray-400);">#374151</small></div>
+        <div style="text-align:center;"><div class="swatch" style="background:#6B7280;"></div><small style="font-weight:600;">500</small><br><small style="color:var(--color-gray-400);">#6B7280</small></div>
+        <div style="text-align:center;"><div class="swatch" style="background:#9CA3AF;"></div><small style="font-weight:600;">400</small><br><small style="color:var(--color-gray-400);">#9CA3AF</small></div>
+        <div style="text-align:center;"><div class="swatch" style="background:#D1D5DB;"></div><small style="font-weight:600;">300</small><br><small style="color:var(--color-gray-400);">#D1D5DB</small></div>
+        <div style="text-align:center;"><div class="swatch" style="background:#E5E7EB;"></div><small style="font-weight:600;">200</small><br><small style="color:var(--color-gray-400);">#E5E7EB</small></div>
+        <div style="text-align:center;"><div class="swatch" style="background:#F3F4F6;"></div><small style="font-weight:600;">100</small><br><small style="color:var(--color-gray-400);">#F3F4F6</small></div>
+        <div style="text-align:center;"><div class="swatch" style="background:#F9FAFB; border:1px solid #E5E7EB;"></div><small style="font-weight:600;">50</small><br><small style="color:var(--color-gray-400);">#F9FAFB</small></div>
+      </div>
+    </div>
+
+    <div class="guide-wrapper" style="margin-bottom:24px;">
+      <div style="font-weight:700; text-transform:uppercase; font-size:0.75rem; letter-spacing:0.08em; color:var(--color-gray-500); margin-bottom:16px;">Semantic UI</div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <div style="text-align:center;"><div class="swatch" style="background:#EF4444; border-radius:10px;"></div><small style="font-weight:600;">Error</small><br><small style="color:var(--color-gray-400);">#EF4444</small></div>
+        <div style="text-align:center;"><div class="swatch" style="background:#F59E0B; border-radius:10px;"></div><small style="font-weight:600;">Warning</small><br><small style="color:var(--color-gray-400);">#F59E0B</small></div>
+        <div style="text-align:center;"><div class="swatch" style="background:#10B981; border-radius:10px;"></div><small style="font-weight:600;">Success</small><br><small style="color:var(--color-gray-400);">#10B981</small></div>
+        <div style="text-align:center;"><div class="swatch" style="background:#3B82F6; border-radius:10px;"></div><small style="font-weight:600;">Info</small><br><small style="color:var(--color-gray-400);">#3B82F6</small></div>
+      </div>
+    </div>
+
+    <div class="guide-wrapper" style="margin-bottom:24px;">
+      <div style="font-weight:700; text-transform:uppercase; font-size:0.75rem; letter-spacing:0.08em; color:var(--color-gray-500); margin-bottom:16px;">Gradient Strips</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+        <div><div style="height:48px; border-radius:10px; background:var(--gradient-hero);"></div><small style="color:var(--color-gray-500); margin-top:6px; display:block;">Hero &mdash; Primary to Accent</small></div>
+        <div><div style="height:48px; border-radius:10px; background:var(--gradient-cta);"></div><small style="color:var(--color-gray-500); margin-top:6px; display:block;">CTA &mdash; Accent gradient</small></div>
+        <div><div style="height:48px; border-radius:10px; background:var(--gradient-dark);"></div><small style="color:var(--color-gray-500); margin-top:6px; display:block;">Dark &mdash; Gray900 to Primary</small></div>
+        <div><div style="height:48px; border-radius:10px; background:var(--gradient-teal); border:1px solid #E5E7EB;"></div><small style="color:var(--color-gray-500); margin-top:6px; display:block;">Teal Soft &mdash; PrimaryLight to White</small></div>
+      </div>
+    </div>
+
+    <div class="guide-wrapper">
+      <div style="font-weight:700; text-transform:uppercase; font-size:0.75rem; letter-spacing:0.08em; color:var(--color-gray-500); margin-bottom:16px;">CSS Variables Reference</div>
+      <div style="background:var(--color-gray-50); border:1px solid var(--color-gray-200); border-radius:var(--radius-lg); padding:20px; font-family:var(--font-mono); font-size:0.78rem; line-height:2.2; color:var(--color-gray-600); overflow-x:auto;">
+        --color-primary: <b style="color:#2B9EB3;">#2B9EB3</b> | --color-primary-dark: <b style="color:#1A7A8A;">#1A7A8A</b> | --color-primary-light: #E6F4F7<br>
+        --color-accent: <b style="color:#E8834A;">#E8834A</b> | --color-accent-dark: <b style="color:#D06A30;">#D06A30</b> | --color-accent-light: #FFF0E6<br>
+        --color-success: <b style="color:#10B981;">#10B981</b> | --color-warning: <b style="color:#F59E0B;">#F59E0B</b> | --color-error: <b style="color:#EF4444;">#EF4444</b> | --color-info: <b style="color:#3B82F6;">#3B82F6</b><br>
+        --radius-sm: 4px | --radius-md: 8px | --radius-lg: 12px | --radius-xl: 16px | --radius-full: 9999px<br>
+        --shadow-sm | --shadow-md | --shadow-lg | --shadow-xl | --shadow-card | --shadow-header
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="typography">
+    <div class="guide-section-title">Typography</div>
+    <div class="guide-wrapper">
+      <div class="display-xl">Display XL (3.5rem)</div>
+      <h1>Heading 1 (2.25rem)</h1>
+      <h2>Heading 2 (1.75rem)</h2>
+      <p class="body-lg">Body Large — KLS Martin, Philips Healthcare.</p>
+      <span class="overline">Overline Label</span>
+    </div>
+  </section>
+
+  <section class="guide-section" id="buttons">
+    <div class="guide-section-title">Buttons & Badges</div>
+    <div class="guide-wrapper">
+      <div style="display:flex; gap:16px; margin-bottom:16px; align-items:center;">
+        <button class="btn btn-primary btn-md">Primary Button</button>
+        <button class="btn btn-accent btn-md">Accent CTA</button>
+        <button class="btn btn-outline btn-md">Outline</button>
+        <button class="btn btn-ghost btn-md">Ghost</button>
+      </div>
+      <div style="display:flex; gap:8px;">
+        <span class="badge badge-primary">Primary Badge</span>
+        <span class="badge badge-accent">Accent Badge</span>
+        <span class="badge badge-success">Success Badge</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="forms">
+    <div class="guide-section-title">Form Controls</div>
+    <div class="guide-wrapper" style="max-width:500px;">
+      <div class="form-group"><label class="form-label">Input Text</label><input type="text" class="form-input" placeholder="Placeholder..."></div>
+      <div class="form-group"><label class="form-label">Select box</label><select class="form-select"><option>Option 1</option></select></div>
+      <div class="form-group"><label class="form-label">Error State</label><input type="text" class="form-input" style="border-color:var(--color-error);"><div class="form-error">Error message</div></div>
+    </div>
+  </section>
+
+  <!-- 2. GLOBAL COMPONENTS -->
+  <section class="guide-section" id="nav-footer">
+    <div class="guide-section-title">Navigation & Header</div>
+    <div class="guide-wrapper" style="margin-bottom:24px; padding:0; overflow:visible;">
+      <div class="header" style="position:static;"><div class="container" style="height:72px;">
+        <div class="header-logo"><b style="font-size:20px;color:var(--color-primary-dark)">HAMEDCO</b></div>
+        <div class="nav-desktop">
+          <a href="#" class="nav-link active">Home</a>
+          <div class="nav-item-mega">
+            <a href="#" class="nav-link">Sản phẩm (Hover to see Mega) ▼</a>
+            <div class="mega-menu">
+              <div class="mega-col"><h4>Chẩn đoán hình ảnh</h4><ul class="mega-list"><li><a href="#">Máy MRI</a></li><li><a href="#">Máy X-quang</a></li></ul></div>
+              <div class="mega-col"><h4>Thiết bị phòng mổ</h4><ul class="mega-list"><li><a href="#">Bàn mổ</a></li><li><a href="#">Đèn mổ</a></li></ul></div>
+              <div class="mega-col"><h4>Hồi sức cấp cứu</h4><ul class="mega-list"><li><a href="#">Máy thở</a></li><li><a href="#">Monitor</a></li></ul></div>
+              <div class="mega-col"><h4>Nội thất y tế</h4><ul class="mega-list"><li><a href="#">Giường bệnh</a></li><li><a href="#">Xe đẩy</a></li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="header-actions"><button class="btn btn-primary btn-sm">Liên hệ</button></div>
+      </div></div>
+    </div>
+
+    <h4 style="margin-top:24px;">Global Modals (Lead Magnet / Brochure)</h4>
+    <div class="guide-wrapper">
+      <button class="btn btn-primary" onclick="document.getElementById('demo-modal').classList.add('active')">Test Show Modal Popup</button>
+      <div class="modal-overlay" id="demo-modal">
+        <div class="modal-box">
+          <button class="modal-close" onclick="document.getElementById('demo-modal').classList.remove('active')">×</button>
+          <h3 style="margin-bottom:16px;">Tải trọn bộ Profile Năng Lực 2026</h3>
+          <p style="color:var(--color-gray-500); margin-bottom:24px;">Để lại Email để nhận file Brochure PDF (15MB) ngay lập tức.</p>
+          <div class="form-group"><input type="email" class="form-input" placeholder="Email của bạn..."></div>
+          <button class="btn btn-primary btn-lg" style="width:100%" onclick="document.getElementById('demo-modal').classList.remove('active')">Download PDF</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="cards">
+    <div class="guide-section-title">Cards Collection</div>
+    <div class="guide-wrapper">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+        <!-- Product Card -->
+        <article class="card product-card">
+          <div class="card-image" style="background:#eee;"></div>
+          <div class="card-body">
+            <span class="product-brand">KLS Martin</span>
+            <h3 class="card-title">Bộ dụng cụ phẫu thuật</h3>
+            <p>Sản phẩm tiêu chuẩn Đức.</p>
+          </div>
+        </article>
+        <!-- Service Card -->
+        <div class="service-card">
+          <div class="service-icon">S</div>
+          <h3>Tư vấn thiết kế</h3>
+          <p>Tư vấn phòng mổ chuyên sâu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="stats-partners">
+    <div class="guide-section-title">Stats & Certificates</div>
+    <div class="guide-wrapper dark" style="margin-bottom:24px;">
+      <div class="stats-section" style="background:transparent;"><div style="display:flex; justify-content:space-around;">
+        <div class="stat-item"><div class="stat-number">20+</div><div class="stat-label">Năm kinh nghiệm</div></div>
+        <div class="stat-item"><div class="stat-number">500+</div><div class="stat-label">Sản phẩm</div></div>
+      </div></div>
+    </div>
+    <div class="guide-wrapper">
+      <div class="cert-grid">
+        <div class="cert-item"><div class="cert-name">ISO 13485</div></div>
+        <div class="cert-item"><div class="cert-name">CE Mark</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. PAGE TEMPLATES BLOCKS -->
+  
+  <section class="guide-section" id="tpl-hero">
+    <div class="guide-section-title">Hero Blocks (Home & Inner)</div>
+    <p class="guide-section-desc">Template: Trang chủ & Các trang con (Giới thiệu, Sản phẩm, Dịch vụ)</p>
+    
+    <h4>1. Home Hero Carousel</h4>
+    <div class="guide-wrapper" style="padding:0; height:400px;">
+      <div class="hero" style="min-height:400px;"><div class="hero-slide active" style="background:var(--gradient-hero);"></div>
+        <div class="container" style="min-height:400px; padding:40px;">
+          <div class="hero-content">
+            <span class="hero-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> 
+              Medical Standard
+            </span>
+            <h1>Giải pháp Thiết bị Y tế Toàn diện</h1>
+            <p>Đối tác tin cậy của hơn 200 bệnh viện.</p>
+            <div class="hero-actions">
+              <button class="btn btn-accent btn-lg">Xem danh mục</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h4 style="margin-top:24px;">2. Inner Page Hero</h4>
+    <div class="guide-wrapper" style="padding:0;">
+      <div class="page-hero">
+        <div class="container">
+          <div class="breadcrumbs"><span class="breadcrumb-item">Home</span> <span class="breadcrumb-separator">/</span> <span class="breadcrumb-current">Sản phẩm</span></div>
+          <h1>Thiết bị phòng mổ</h1>
+          <p>Danh mục đa dạng chuẩn CE, FDA.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="tpl-about">
+    <div class="guide-section-title">About Template Blocks</div>
+    
+    <h4>Leadership Message (CEO Quote)</h4>
+    <div class="guide-wrapper" style="margin-bottom:24px;">
+      <div class="leadership-block">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400" class="leader-img" alt="CEO">
+        <div>
+          <div class="leader-quote">"Xuyên suốt 20 năm cống hiến, mục tiêu lớn nhất của tập thể HAMEDCO là mang lại giải pháp y tế toàn diện vững chắc nhất cho ngành y học kỹ thuật cao tại Việt Nam."</div>
+          <div class="leader-name">Mr. Nguyễn Văn B</div>
+          <div class="leader-title">Tổng Giám Đốc HAMEDCO</div>
+        </div>
+      </div>
+    </div>
+
+    <h4>History Timeline (20+ Years)</h4>
+    <div class="guide-wrapper" style="margin-bottom:24px;">
+      <div class="history-timeline">
+        <div class="history-item"><div class="history-dot"></div><div class="history-year">2026</div><div class="history-content">Mở rộng chi nhánh miền Nam, thiết lập mạng lưới với hơn 200 bệnh viện đầu ngành.</div></div>
+        <div class="history-item"><div class="history-dot"></div><div class="history-year">2010</div><div class="history-content">Trở thành đối tác chiến lược độc quyền của KLS Martin.</div></div>
+        <div class="history-item"><div class="history-dot"></div><div class="history-year">2006</div><div class="history-content">Được thành lập với định hướng chuyên sâu cung cấp thiết bị chẩn đoán hình ảnh.</div></div>
+      </div>
+    </div>
+
+    <h4>Values Grid</h4>
+    <div class="guide-wrapper" style="margin-bottom:24px;">
+      <div class="values-grid">
+        <div class="value-card"><div class="value-card-icon">1</div><h3>Tận tâm</h3><p>Phục vụ khách hàng 24/7</p></div>
+        <div class="value-card"><div class="value-card-icon">2</div><h3>Chính trực</h3><p>Cam kết hàng chính hãng</p></div>
+      </div>
+    </div>
+    
+    <h4>Testimonials</h4>
+    <div class="guide-wrapper">
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <blockquote>Dịch vụ cực kỳ chuyên nghiệp, đáp ứng nhanh.</blockquote>
+          <div class="testimonial-author"><div class="testimonial-avatar" style="background:#ddd;"></div><div><div class="testimonial-name">BS. Nguyễn A</div><div class="testimonial-role">Giám đốc Bệnh viện Q.1</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="tpl-products">
+    <div class="guide-section-title">Products Template Blocks</div>
+    <h4>Product Filter & Tabs</h4>
+    <div class="guide-wrapper" style="margin-bottom:24px;">
+      <div class="filter-bar">
+        <div class="tabs">
+          <button class="tab active">Tất cả</button>
+          <button class="tab">Chẩn đoán hình ảnh</button>
+        </div>
+        <select class="form-select" style="width:200px;"><option>Sắp xếp: Mới nhất</option></select>
+      </div>
+    </div>
+    
+    <h4>Product Detail Specs</h4>
+    <div class="guide-wrapper" style="margin-bottom:24px;">
+      <table class="spec-table">
+        <tr><td>Hãng sản xuất</td><td>Philips</td></tr>
+        <tr><td>Chứng nhận</td><td>FDA, CE</td></tr>
+      </table>
+    </div>
+
+    <h4>Pagination Control</h4>
+    <div class="guide-wrapper">
+      <div class="pagination">
+        <a href="#" class="page-link">‹</a>
+        <a href="#" class="page-link active">1</a>
+        <a href="#" class="page-link">2</a>
+        <span class="page-dots">...</span>
+        <a href="#" class="page-link">9</a>
+        <a href="#" class="page-link">›</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="tpl-services">
+    <div class="guide-section-title">Services Template Blocks</div>
+    <h4>Process Steps (Timeline)</h4>
+    <div class="guide-wrapper">
+      <div class="process-steps">
+        <div class="process-step"><h4>Tư vấn</h4><p>Phân tích nhu cầu</p></div>
+        <div class="process-step"><h4>Đề xuất</h4><p>Thiết kế giải pháp</p></div>
+        <div class="process-step"><h4>Lắp đặt</h4><p>Triển khai thực tế</p></div>
+        <div class="process-step"><h4>Bảo trì</h4><p>Bảo hành trọn đời</p></div>
+      </div>
+    </div>
+    
+    <h4 style="margin-top:24px;">Why Choose Us</h4>
+    <div class="guide-wrapper">
+      <div class="why-grid">
+        <div class="why-item"><div class="why-icon">✔</div><div><h4>Hàng Mỹ/Âu</h4><p>Nhập khẩu chính ngạch.</p></div></div>
+        <div class="why-item"><div class="why-icon">★</div><div><h4>Support 24/7</h4><p>Sẵn sàng xử lý sự cố.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="tpl-projects">
+    <div class="guide-section-title">Projects Template Blocks</div>
+    <h4>Masonry Project Gallery</h4>
+    <div class="guide-wrapper">
+      <div class="project-gallery">
+        <div class="gallery-item large">
+          <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800" alt="Dự án phòng mổ">
+          <div class="gallery-overlay"><span class="gallery-cat">Phòng Mổ Hybrid</span><div class="gallery-title">Bệnh viện Đa khoa Tâm Anh</div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=400" alt="Dự án X-Quang">
+          <div class="gallery-overlay"><span class="gallery-cat">CĐHA</span><div class="gallery-title">BV Chợ Rẫy</div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1551076805-e1869043e560?w=400" alt="Dự án ICU">
+          <div class="gallery-overlay"><span class="gallery-cat">ICU</span><div class="gallery-title">BV Nhi Đồng 1</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="tpl-blog">
+    <div class="guide-section-title">Blog Template Blocks</div>
+    <h4>Blog Cover</h4>
+    <div class="guide-wrapper" style="padding:0; overflow:hidden; margin-bottom:24px;">
+      <div class="blog-cover">
+         <div class="blog-cover-header">
+           <span class="cover-cat">Tin Y Tế</span>
+           <h1>Xu hướng Công nghệ AI trong Chẩn đoán hình ảnh 2026</h1>
+         </div>
+         <div class="blog-cover-img" style="background:#ddd; height:200px;"></div>
+      </div>
+    </div>
+    
+    <h4>Article Content (TOC + Layout)</h4>
+    <div class="guide-wrapper">
+      <div class="blog-layout">
+        <div class="article-body"><h2>1. Tầm quan trọng</h2><p>Đoạn văn bài viết chi tiết, hiển thị nội dung phân bổ rõ ràng.</p></div>
+        <aside class="toc-sidebar"><div class="toc-box"><h4>Mục lục</h4><ul class="toc-list"><li><a class="active">1. Tầm quan trọng</a></li></ul></div></aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="tpl-contact">
+    <div class="guide-section-title">Contact & Quote Blocks</div>
+    <h4>Office Location Cards</h4>
+    <div class="guide-wrapper" style="margin-bottom:24px;">
+      <div class="contact-grid">
+        <div class="office-card"><h3>Trụ sở Hà Nội</h3><div class="office-detail">123 Trần Duy Hưng</div></div>
+        <div class="office-card"><h3>Chi nhánh Hồ Chí Minh</h3><div class="office-detail">456 Lê Lợi, Q1</div></div>
+      </div>
+    </div>
+    
+    <h4>Quote Layout (Sidebar + Form)</h4>
+    <div class="guide-wrapper">
+      <div class="quote-layout" style="grid-template-columns: 1fr 2fr;">
+        <div class="quote-sidebar">
+          <h3>Lợi ích đăng ký</h3>
+          <div class="quote-benefit">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            Nhận báo giá ngay sau 30p
+          </div>
+          <div class="quote-benefit">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            Tư vấn Layout phòng mổ
+          </div>
+          <div class="quote-benefit">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            Tài liệu hãng chi tiết
+          </div>
+        </div>
+        <div class="contact-form-card" style="box-shadow: none; border: 1px dashed var(--color-gray-300);">
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+            <div class="form-group"><label class="form-label">Họ Tên *</label><input type="text" class="form-input" placeholder="Nguyễn Văn A"></div>
+            <div class="form-group"><label class="form-label">SĐT / Zalo *</label><input type="text" class="form-input" placeholder="0901234567"></div>
+          </div>
+          <div class="form-group"><label class="form-label">Tên thiết bị cần báo giá *</label><input type="text" class="form-input" placeholder="VD: Bàn mổ KLS Martin..."></div>
+          <div class="form-group"><label class="form-label">Ghi chú (Tùy chọn)</label><textarea class="form-textarea" placeholder="Nhu cầu cụ thể..."></textarea></div>
+          <button class="btn btn-primary btn-lg" style="width:100%">Gửi Yêu Cầu Báo Giá</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="tpl-career">
+    <div class="guide-section-title">Career Template Blocks</div>
+    <h4>Career Perks</h4>
+    <div class="guide-wrapper" style="margin-bottom:24px;">
+      <div class="career-perks" style="display:grid; grid-template-columns:1fr 1fr;">
+        <div class="perk-card"><div class="perk-icon">❤</div><div><h4>Bảo hiểm cao cấp</h4><p>PTI Care gói VIP.</p></div></div>
+        <div class="perk-card"><div class="perk-icon">✈</div><div><h4>Company Trip</h4><p>Du lịch nước ngoài hàng năm.</p></div></div>
+      </div>
+    </div>
+
+    <h4>Job Listing Board</h4>
+    <div class="guide-wrapper">
+      <div class="job-list">
+        <a href="#" class="job-item">
+          <div>
+            <div class="job-title">Kỹ sư Thiết bị Y tế (Phòng Mổ)</div>
+            <div class="job-meta">
+              <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke-width="2"/></svg> Hà Nội / TPHCM</span>
+              <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="M12 6v6l4 2" stroke-width="2"/></svg> Full-time</span>
+            </div>
+          </div>
+          <button class="btn btn-outline btn-md">Ứng tuyển</button>
+        </a>
+        <a href="#" class="job-item">
+          <div>
+            <div class="job-title">Chuyên viên Hồ sơ Thầu (Đấu Thầu Y Tế)</div>
+            <div class="job-meta">
+              <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke-width="2"/></svg> Hà Nội</span>
+              <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="M12 6v6l4 2" stroke-width="2"/></svg> Full-time</span>
+            </div>
+          </div>
+          <button class="btn btn-outline btn-md">Ứng tuyển</button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ NEW GLOBAL COMPONENTS (AUDIT PHASE 2) ═══ -->
+
+  <section class="guide-section" id="topbar">
+    <div class="guide-section-title">Top Bar</div>
+    <div class="guide-section-desc">Thanh thông tin nhỏ phía trên Header — hiển thị hotline, email, và social links.</div>
+    <div class="guide-wrapper" style="padding:0;">
+      <div class="top-bar" style="position:static;">
+        <div class="container">
+          <div class="top-bar-left">
+            <span class="top-bar-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              Hotline: <a href="tel:19001234"><strong>1900 1234</strong></a>
+            </span>
+            <span class="top-bar-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+              info@hamedco.vn
+            </span>
+          </div>
+          <div class="top-bar-right">
+            <span class="top-bar-item">🇻🇳 Tiếng Việt</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="faq">
+    <div class="guide-section-title">FAQ Accordion</div>
+    <div class="guide-section-desc">Accordion mở/đóng cho FAQ. Click câu hỏi để thử tương tác.</div>
+    <div class="guide-wrapper">
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            HAMEDCO phân phối những thương hiệu nào?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">HAMEDCO là đối tác chiến lược độc quyền của KLS Martin (Đức), Philips Healthcare (Hà Lan), và hơn 50 hãng thiết bị y tế quốc tế khác.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            Thời gian bảo hành thiết bị là bao lâu?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">Bảo hành chính hãng 12-24 tháng tùy sản phẩm, kèm dịch vụ bảo trì định kỳ và hỗ trợ kỹ thuật 24/7.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            Quy trình đặt hàng và thanh toán như thế nào?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">Liên hệ → Nhận báo giá trong 30 phút → Ký hợp đồng → Đặt cọc 40% → Giao hàng & Lắp đặt → Thanh toán phần còn lại.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="partner-logos">
+    <div class="guide-section-title">Partner Logo Grid</div>
+    <div class="guide-section-desc">Grid hiển thị logo đối tác — grayscale mặc định, full-color khi hover.</div>
+    <div class="guide-wrapper">
+      <div class="partner-logo-grid">
+        <div class="partner-logo-item"><div style="font-weight:700; color:var(--color-gray-500); font-size:14px;">KLS Martin</div></div>
+        <div class="partner-logo-item"><div style="font-weight:700; color:var(--color-gray-500); font-size:14px;">Philips</div></div>
+        <div class="partner-logo-item"><div style="font-weight:700; color:var(--color-gray-500); font-size:14px;">Siemens</div></div>
+        <div class="partner-logo-item"><div style="font-weight:700; color:var(--color-gray-500); font-size:14px;">GE Healthcare</div></div>
+        <div class="partner-logo-item"><div style="font-weight:700; color:var(--color-gray-500); font-size:14px;">Dräger</div></div>
+        <div class="partner-logo-item"><div style="font-weight:700; color:var(--color-gray-500); font-size:14px;">Mindray</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="lang-switcher">
+    <div class="guide-section-title">Language Switcher</div>
+    <div class="guide-section-desc">Hỗ trợ 5 ngôn ngữ theo PRD. Click để mở dropdown.</div>
+    <div class="guide-wrapper">
+      <div class="lang-switcher" onclick="this.classList.toggle('open')" style="display:inline-block;">
+        <button class="lang-btn">🇻🇳 VN ▼</button>
+        <div class="lang-dropdown">
+          <div class="lang-option active">🇻🇳 Tiếng Việt</div>
+          <div class="lang-option">🇬🇧 English</div>
+          <div class="lang-option">🇯🇵 日本語</div>
+          <div class="lang-option">🇰🇷 한국어</div>
+          <div class="lang-option">🇩🇪 Deutsch</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="floating-cta">
+    <div class="guide-section-title">Floating CTA Panel</div>
+    <div class="guide-section-desc">Nút liên hệ nổi cố định góc phải — mở ra panel chứa Hotline/Zalo/Messenger.</div>
+    <div class="guide-wrapper" style="min-height:350px; position:relative;">
+      <div class="floating-cta open" style="position:absolute; bottom:24px; right:24px;">
+        <div class="floating-panel" style="position:absolute;">
+          <div class="floating-panel-header">
+            <h4>Liên hệ nhanh</h4>
+            <p>Chọn kênh liên lạc thuận tiện nhất</p>
+          </div>
+          <div class="floating-panel-list">
+            <a class="floating-panel-item" href="#">
+              <div class="floating-panel-icon hotline">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div class="floating-panel-text"><span class="label">Hotline</span><span class="detail">1900 1234</span></div>
+              <span class="floating-panel-action hotline">→</span>
+            </a>
+            <a class="floating-panel-item" href="#">
+              <div class="floating-panel-icon zalo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.75 15h-1.5v-1.5h1.5V17zm1.27-5.4c-.12.15-.93.94-1.13 1.12-.2.18-.29.29-.29.56V14h-1.2v-.64c0-.43.08-.65.4-.98.28-.28.85-.83 1.04-1.1.27-.37.4-.72.4-1.18 0-.78-.56-1.35-1.24-1.35-.72 0-1.3.58-1.3 1.35H9.3c0-1.39 1.12-2.55 2.7-2.55 1.54 0 2.7 1.07 2.7 2.55 0 .72-.26 1.28-.68 1.8z"/></svg>
+              </div>
+              <div class="floating-panel-text"><span class="label">Zalo</span><span class="detail">Chat ngay</span></div>
+              <span class="floating-panel-action zalo">→</span>
+            </a>
+            <a class="floating-panel-item" href="#">
+              <div class="floating-panel-icon fb">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </div>
+              <div class="floating-panel-text"><span class="label">Messenger</span><span class="detail">Chat trực tiếp</span></div>
+              <span class="floating-panel-action fb">→</span>
+            </a>
+          </div>
+        </div>
+        <button class="floating-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          <span class="toggle-label">Liên hệ</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="cta-section">
+    <div class="guide-section-title">CTA Section (Dark Background)</div>
+    <div class="guide-section-desc">Block kêu gọi hành động với dark gradient, dùng cuối mỗi page.</div>
+    <div class="guide-wrapper" style="padding:0; overflow:hidden;">
+      <div class="cta-section" style="padding:48px;">
+        <div class="cta-content">
+          <h2>Bạn cần tư vấn giải pháp thiết bị y tế?</h2>
+          <p>Đội ngũ kỹ sư của HAMEDCO sẵn sàng hỗ trợ 24/7. Liên hệ ngay để được tư vấn miễn phí.</p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <button class="btn btn-accent btn-lg">Yêu cầu báo giá</button>
+            <button class="btn btn-outline-white btn-lg">Gọi Hotline</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="footer-demo">
+    <div class="guide-section-title">Footer (Full 5-Column)</div>
+    <div class="guide-section-desc">Footer đầy đủ: CTA bar + 5 cột liên kết + Trust badges + Newsletter + Copyright.</div>
+    <div class="guide-wrapper dark" style="padding:0; overflow:hidden;">
+      <div class="footer" style="position:static;">
+        <div class="footer-main" style="padding:48px 24px 32px;">
+          <div class="footer-grid" style="grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;">
+            <div class="footer-brand">
+              <div style="font-size:1.25rem; font-weight:700; color:#fff; margin-bottom:16px;">HAMEDCO</div>
+              <p>Đối tác tin cậy hơn 20 năm trong lĩnh vực cung cấp thiết bị y tế cho các bệnh viện hàng đầu Việt Nam.</p>
+              <div class="footer-social">
+                <a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                <a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              </div>
+            </div>
+            <div>
+              <div class="footer-heading">Sản phẩm</div>
+              <div class="footer-links">
+                <a href="#">Chẩn đoán hình ảnh</a>
+                <a href="#">Thiết bị phòng mổ</a>
+                <a href="#">Nội thất y tế</a>
+              </div>
+            </div>
+            <div>
+              <div class="footer-heading">Dịch vụ</div>
+              <div class="footer-links">
+                <a href="#">Tư vấn giải pháp</a>
+                <a href="#">Bảo trì định kỳ</a>
+                <a href="#">Đào tạo</a>
+              </div>
+            </div>
+            <div>
+              <div class="footer-heading">Về chúng tôi</div>
+              <div class="footer-links">
+                <a href="#">Giới thiệu</a>
+                <a href="#">Đối tác</a>
+                <a href="#">Tuyển dụng</a>
+              </div>
+            </div>
+            <div>
+              <div class="footer-heading">Liên hệ</div>
+              <div class="footer-contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>123 Trần Duy Hưng, Cầu Giấy, Hà Nội</span>
+              </div>
+              <div class="footer-newsletter">
+                <p>Đăng ký nhận tin mới nhất</p>
+                <div class="footer-newsletter-form">
+                  <input type="email" placeholder="Email của bạn...">
+                  <button>Gửi</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-badges">
+            <div class="footer-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              ISO 13485 Certified
+            </div>
+            <div class="footer-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Support 24/7
+            </div>
+            <div class="footer-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01 9 11.01"/></svg>
+              20+ năm kinh nghiệm
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <span>© 2026 HAMEDCO. All rights reserved.</span>
+            <div class="footer-bottom-links">
+              <a href="#">Chính sách bảo mật</a>
+              <a href="#">Điều khoản sử dụng</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ NEW COMPONENTS (AUDIT PHASE 1) ═══ -->
+
+  <section class="guide-section" id="search-bar">
+    <div class="guide-section-title">Search Bar (Real-time)</div>
+    <div class="guide-section-desc">Thanh tìm kiếm với dropdown kết quả real-time. PRD yêu cầu: "Real-time search".</div>
+    <h4>Standalone Search</h4>
+    <div class="guide-wrapper" style="margin-bottom:24px;">
+      <div class="search-bar open">
+        <div class="search-input-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm, dịch vụ..." value="Máy MRI">
+          <button class="search-clear" style="opacity:1;">✕</button>
+        </div>
+        <div class="search-results" style="opacity:1; visibility:visible; transform:none; position:relative; top:8px;">
+          <div class="search-result-group">
+            <div class="search-result-label">Sản phẩm</div>
+            <a class="search-result-item" href="#">
+              <div style="width:40px;height:40px;background:var(--color-gray-100);border-radius:8px;"></div>
+              <div><strong>Máy MRI</strong> Philips Ingenia 3.0T</div>
+            </a>
+            <a class="search-result-item" href="#">
+              <div style="width:40px;height:40px;background:var(--color-gray-100);border-radius:8px;"></div>
+              <div><strong>Máy MRI</strong> Siemens Magnetom</div>
+            </a>
+          </div>
+          <div class="search-result-group" style="border-top:1px solid var(--color-gray-100);">
+            <div class="search-result-label">Tin tức</div>
+            <a class="search-result-item" href="#">Xu hướng MRI trong chẩn đoán 2026</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h4>Header Search (Compact)</h4>
+    <div class="guide-wrapper">
+      <div class="search-bar header-search" style="max-width:280px;">
+        <div class="search-input-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <input type="text" class="search-input" placeholder="Tìm kiếm...">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="blog-cards">
+    <div class="guide-section-title">Blog / News Cards</div>
+    <div class="guide-section-desc">Card tin tức với image, category, excerpt, author. Responsive grid 3 → 2 → 1 cột.</div>
+    <div class="guide-wrapper">
+      <div class="blog-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="blog-card">
+          <div class="blog-card-image" style="background:linear-gradient(135deg,#E6F4F7,#A8DFE9);"></div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span class="blog-card-category">Tin Y Tế</span>
+              <span class="meta-sep"></span>
+              <span>15/03/2026</span>
+            </div>
+            <div class="blog-card-title"><a href="#">Xu hướng AI trong Chẩn đoán Hình ảnh Y tế 2026</a></div>
+            <div class="blog-card-excerpt">Trí tuệ nhân tạo đang cách mạng hóa ngành chẩn đoán hình ảnh, giúp phát hiện bệnh sớm và chính xác hơn.</div>
+            <div class="blog-card-footer">
+              <div class="blog-card-author">
+                <div style="width:28px;height:28px;border-radius:50%;background:var(--color-primary-light);"></div>
+                HAMEDCO
+              </div>
+              <a class="blog-card-read-more" href="#">Đọc thêm →</a>
+            </div>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-card-image" style="background:linear-gradient(135deg,#FFF0E6,#F8D4B6);"></div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span class="blog-card-category">Sản phẩm</span>
+              <span class="meta-sep"></span>
+              <span>10/03/2026</span>
+            </div>
+            <div class="blog-card-title"><a href="#">Hướng dẫn chọn mua dụng cụ phẫu thuật chính hãng</a></div>
+            <div class="blog-card-excerpt">Tiêu chí đánh giá chất lượng dụng cụ phẫu thuật theo tiêu chuẩn quốc tế CE, FDA.</div>
+            <div class="blog-card-footer">
+              <div class="blog-card-author">
+                <div style="width:28px;height:28px;border-radius:50%;background:var(--color-accent-light);"></div>
+                HAMEDCO
+              </div>
+              <a class="blog-card-read-more" href="#">Đọc thêm →</a>
+            </div>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-card-image" style="background:linear-gradient(135deg,#F3F4F6,#E5E7EB);"></div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span class="blog-card-category">Đối tác</span>
+              <span class="meta-sep"></span>
+              <span>05/03/2026</span>
+            </div>
+            <div class="blog-card-title"><a href="#">HAMEDCO ký kết hợp tác chiến lược với Perfint Healthcare</a></div>
+            <div class="blog-card-excerpt">Mở rộng danh mục sản phẩm phẫu thuật robot và can thiệp chính xác.</div>
+            <div class="blog-card-footer">
+              <div class="blog-card-author">
+                <div style="width:28px;height:28px;border-radius:50%;background:var(--color-gray-200);"></div>
+                HAMEDCO
+              </div>
+              <a class="blog-card-read-more" href="#">Đọc thêm →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="tags">
+    <div class="guide-section-title">Tags & Categories</div>
+    <div class="guide-section-desc">Tag badges cho blog filters và phân loại nội dung.</div>
+    <div class="guide-wrapper">
+      <div class="tag-group">
+        <span class="tag tag-primary">Tin Y Tế</span>
+        <span class="tag tag-primary">Sản phẩm mới</span>
+        <span class="tag tag-accent">Đối tác</span>
+        <span class="tag tag-default">Chẩn đoán hình ảnh</span>
+        <span class="tag tag-default">Phòng mổ</span>
+        <span class="tag tag-default">ICU</span>
+        <span class="tag tag-default">Nội thất y tế</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="toast">
+    <div class="guide-section-title">Toast & Alert Notifications</div>
+    <div class="guide-section-desc">Thông báo hệ thống: Toast (floating) và Alert (inline). 4 variants: success/error/warning/info.</div>
+    <h4>Toast Notifications (Floating)</h4>
+    <div class="guide-wrapper" style="margin-bottom:24px;">
+      <div style="display:flex; flex-direction:column; gap:12px; max-width:420px;">
+        <div class="toast toast-success" style="animation:none;">
+          <div class="toast-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01 9 11.01"/></svg></div>
+          <div class="toast-content"><div class="toast-title">Gửi thành công!</div><div class="toast-message">Yêu cầu báo giá đã được gửi. Chúng tôi sẽ phản hồi trong 30 phút.</div></div>
+          <button class="toast-close">✕</button>
+        </div>
+        <div class="toast toast-error" style="animation:none;">
+          <div class="toast-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg></div>
+          <div class="toast-content"><div class="toast-title">Lỗi gửi form</div><div class="toast-message">Vui lòng kiểm tra lại thông tin nhập.</div></div>
+          <button class="toast-close">✕</button>
+        </div>
+        <div class="toast toast-info" style="animation:none;">
+          <div class="toast-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg></div>
+          <div class="toast-content"><div class="toast-title">Thông tin</div><div class="toast-message">Sản phẩm đã được thêm vào danh sách so sánh.</div></div>
+          <button class="toast-close">✕</button>
+        </div>
+      </div>
+    </div>
+    <h4>Inline Alerts</h4>
+    <div class="guide-wrapper">
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <div class="alert alert-success">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01 9 11.01"/></svg>
+          <span>Form đã được gửi thành công! Đội ngũ HAMEDCO sẽ liên hệ bạn trong vòng 30 phút.</span>
+        </div>
+        <div class="alert alert-error">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+          <span>Vui lòng nhập đầy đủ các trường bắt buộc (Họ tên, SĐT, Email).</span>
+        </div>
+        <div class="alert alert-warning">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+          <span>Sản phẩm này hiện đang tạm hết hàng. Vui lòng liên hệ để đặt trước.</span>
+        </div>
+        <div class="alert alert-info">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          <span>Giá sản phẩm được cập nhật theo tỷ giá hiện hành. Liên hệ để nhận báo giá chính xác nhất.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="file-upload">
+    <div class="guide-section-title">File Upload</div>
+    <div class="guide-section-desc">Vùng upload kéo thả (drag & drop) cho form Ứng tuyển và Tài liệu. PRD: "Job Apply có đính kèm file".</div>
+    <div class="guide-wrapper" style="max-width:500px;">
+      <div class="file-upload">
+        <div class="file-upload-zone">
+          <div class="file-upload-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          </div>
+          <div class="file-upload-text"><strong>Click để chọn file</strong> hoặc kéo thả vào đây</div>
+          <div class="file-upload-hint">PDF, DOC, DOCX — Tối đa 10MB</div>
+        </div>
+        <div class="file-list">
+          <div class="file-item">
+            <div class="file-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div class="file-item-info">
+              <div class="file-item-name">CV_NguyenVanA_2026.pdf</div>
+              <div class="file-item-size">2.4 MB</div>
+            </div>
+            <button class="file-item-remove">✕</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="loading">
+    <div class="guide-section-title">Loading States</div>
+    <div class="guide-section-desc">Spinner + Skeleton shimmer loading cho trải nghiệm tải nội dung mượt mà.</div>
+    <h4>Spinners</h4>
+    <div class="guide-wrapper" style="margin-bottom:24px;">
+      <div style="display:flex; align-items:center; gap:32px;">
+        <div style="text-align:center;"><div class="spinner spinner-sm"></div><br><small style="color:var(--color-gray-400);">SM</small></div>
+        <div style="text-align:center;"><div class="spinner"></div><br><small style="color:var(--color-gray-400);">Default</small></div>
+        <div style="text-align:center;"><div class="spinner spinner-lg"></div><br><small style="color:var(--color-gray-400);">LG</small></div>
+      </div>
+    </div>
+    <h4>Skeleton Card</h4>
+    <div class="guide-wrapper">
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px;">
+        <div class="skeleton-card">
+          <div class="skeleton skeleton-image"></div>
+          <div class="skeleton-card-body">
+            <div class="skeleton skeleton-title"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div style="margin-top:12px;"><div class="skeleton skeleton-button"></div></div>
+          </div>
+        </div>
+        <div class="skeleton-card">
+          <div class="skeleton skeleton-image"></div>
+          <div class="skeleton-card-body">
+            <div class="skeleton skeleton-title"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div style="margin-top:12px;"><div class="skeleton skeleton-button"></div></div>
+          </div>
+        </div>
+        <div class="skeleton-card">
+          <div class="skeleton skeleton-image"></div>
+          <div class="skeleton-card-body">
+            <div class="skeleton skeleton-title"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div style="margin-top:12px;"><div class="skeleton skeleton-button"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="image-zoom">
+    <div class="guide-section-title">Image Zoom</div>
+    <div class="guide-section-desc">Hover để zoom ảnh sản phẩm. PRD: "Zoom Gallery" cho Product Detail.</div>
+    <div class="guide-wrapper" style="max-width:400px;">
+      <div class="zoom-container" style="background:var(--color-gray-50); aspect-ratio:4/3;">
+        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=600" alt="Medical Equipment" style="padding:24px; object-fit:contain;">
+        <div class="zoom-hint">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+          Hover to zoom
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="newsletter">
+    <div class="guide-section-title">Newsletter Section</div>
+    <div class="guide-section-desc">Block đăng ký nhận tin độc lập. PRD: "Đăng ký nhận tin (Newsletter)".</div>
+    <div class="guide-wrapper" style="padding:0; overflow:hidden;">
+      <div class="newsletter-section">
+        <h3>Đăng ký nhận tin từ HAMEDCO</h3>
+        <p>Cập nhật xu hướng thiết bị y tế mới nhất, khuyến mãi đặc biệt và thông tin hữu ích.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Nhập email của bạn...">
+          <button>Đăng ký</button>
+        </div>
+        <div class="newsletter-trust">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Không spam · Hủy đăng ký bất cứ lúc nào
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="error-page">
+    <div class="guide-section-title">404 Error Page</div>
+    <div class="guide-section-desc">Trang lỗi 404 với gradient text và CTA quay về trang chủ.</div>
+    <div class="guide-wrapper">
+      <div class="error-page" style="min-height:auto; padding:48px 24px;">
+        <div class="error-code">404</div>
+        <h2>Trang không tồn tại</h2>
+        <p>Xin lỗi, trang bạn tìm kiếm không tồn tại hoặc đã được di chuyển.</p>
+        <div class="error-actions">
+          <button class="btn btn-primary btn-lg">← Về trang chủ</button>
+          <button class="btn btn-outline btn-lg">Liên hệ hỗ trợ</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div style="text-align:center; padding:48px 0; color:var(--color-gray-400); font-size:13px;">
+    HAMEDCO Design System v3.0 — Post-Audit Edition · Tương thích hoàn toàn 18+ Templates SOW<br>
+    CSS Engine: <code>variables.css</code> · <code>base.css</code> · <code>layout.css</code> · <code>components.css</code> · <code>pages.css</code>
+  </div>
+
+</main>
+
+<script>
+  // Sync sidebar active links based on scroll
+  const sections = document.querySelectorAll('.guide-section');
+  const navLinks = document.querySelectorAll('.sidebar-nav a');
+  const mainContent = document.querySelector('.main-content');
+
+  mainContent.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      if (mainContent.scrollTop >= sectionTop - 100) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').substring(1) === current) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

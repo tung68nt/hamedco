@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Báo giá Thiết kế & Phát triển Website Doanh nghiệp HAMEDCO (Gói Cao cấp - Bespoke)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, sans-serif; color: #1a1a2e; line-height: 1.65; background: #f0f2f5; }
+  .page { max-width: 960px; margin: 0 auto; background: #fff; }
+  @media print {
+    body { background: #fff; }
+    .page { box-shadow: none; max-width: 100%; }
+    .no-print { display: none !important; }
+    .section-card { break-inside: avoid; }
+    table { font-size: 0.75rem; }
+  }
+
+  /* ===== HEADER ===== */
+  .header { background: linear-gradient(135deg, #0d6e7e 0%, #1a9ab5 50%, #0d6e7e 100%); color: #fff; padding: 48px 56px; position: relative; overflow: hidden; }
+  .header::before { content: ''; position: absolute; top: -60px; right: -60px; width: 200px; height: 200px; background: rgba(232,131,74,0.15); border-radius: 50%; }
+  .header::after { content: ''; position: absolute; bottom: -40px; left: -40px; width: 160px; height: 160px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+  .header-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1; }
+  .header h1 { font-size: 1.6rem; font-weight: 800; margin-bottom: 6px; letter-spacing: -0.5px; }
+  .header .subtitle { font-size: 0.9rem; opacity: 0.85; font-weight: 300; }
+  .quote-number { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); padding: 10px 18px; border-radius: 10px; text-align: right; backdrop-filter: blur(4px); }
+  .quote-number .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7; }
+  .quote-number .value { font-size: 0.95rem; font-weight: 700; }
+  .header-meta { display: flex; gap: 32px; position: relative; z-index: 1; font-size: 0.82rem; opacity: 0.9; }
+  .header-meta span { display: flex; align-items: center; gap: 6px; }
+
+  /* ===== CONTENT ===== */
+  .content { padding: 40px 56px; }
+
+  /* ===== PROPOSAL SECTIONS ===== */
+  .section-card { background: #f8fafb; border: 1px solid #e8eef0; border-radius: 12px; padding: 28px 32px; margin-bottom: 20px; }
+  .section-card h3 { font-size: 0.95rem; font-weight: 700; color: #0d6e7e; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+  .section-card h3 .icon { width: 28px; height: 28px; background: linear-gradient(135deg, #0d6e7e, #2B9EB3); color: #fff; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; flex-shrink: 0; }
+  .section-card p, .section-card li { font-size: 0.85rem; color: #444; line-height: 1.75; }
+  .section-card ul { padding-left: 20px; }
+  .section-card li { margin-bottom: 4px; }
+
+  /* ===== PRICING TABLE ===== */
+  .pricing-section { margin-top: 36px; }
+  .pricing-section > h2 { font-size: 1.2rem; font-weight: 700; color: #0d6e7e; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #e8eef0; }
+  .pricing-table { width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid #e0e5e8; border-radius: 12px; overflow: hidden; font-size: 0.82rem; }
+  .pricing-table thead th { background: #0d6e7e; color: #fff; padding: 14px 16px; font-weight: 600; text-align: left; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.5px; }
+  .pricing-table thead th:first-child { width: 40px; text-align: center; }
+  .pricing-table thead th:nth-child(3) { width: 50px; text-align: center; }
+  .pricing-table thead th:nth-child(4) { width: 55px; text-align: center; }
+  .pricing-table thead th:nth-child(5) { width: 110px; text-align: right; }
+  .pricing-table thead th:last-child { width: 120px; text-align: right; }
+
+  .section-row td { background: #f0f7f8; padding: 12px 16px; border-top: 2px solid #d0e8ec; font-size: 0.85rem; }
+  .section-row td:last-child { text-align: right; white-space: nowrap; }
+
+  .item-row td { padding: 12px 16px; border-top: 1px solid #eef1f3; vertical-align: top; }
+  .item-row:hover td { background: #fafcfd; }
+  .item-name { font-weight: 600; color: #1a1a2e; margin-bottom: 6px; font-size: 0.85rem; }
+  .item-desc { font-size: 0.78rem; color: #666; line-height: 1.6; }
+
+  .text-center { text-align: center; }
+  .text-right { text-align: right; }
+
+  .badge-free { background: #0d6e7e; color: #fff; padding: 3px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: 600; }
+  .badge-optional { background: #E8834A; color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 0.65rem; font-weight: 600; vertical-align: middle; margin-left: 6px; }
+
+  /* ===== TOTAL ===== */
+  .total-section { margin-top: 0; border-top: 2px solid #0d6e7e; }
+  .total-row { display: flex; justify-content: space-between; padding: 10px 16px; font-size: 0.9rem; }
+  .total-row.sub { color: #666; }
+  .total-row.discount { color: #0d6e7e; }
+  .total-row.grand { background: linear-gradient(135deg, #0d6e7e, #1a9ab5); color: #fff; padding: 16px 20px; border-radius: 0 0 12px 12px; font-size: 1.1rem; font-weight: 700; }
+
+  /* ===== PAGE TEMPLATES LIST ===== */
+  .templates-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+  .template-item { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: #fff; border: 1px solid #e0e5e8; border-radius: 8px; font-size: 0.82rem; }
+  .template-item .num { width: 24px; height: 24px; background: #0d6e7e; color: #fff; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; flex-shrink: 0; }
+  .template-item .name { font-weight: 500; color: #333; }
+
+  /* ===== TERMS ===== */
+  .terms-section { margin-top: 36px; padding: 28px 32px; background: #fdf8f4; border: 1px solid #f0ddd0; border-radius: 12px; }
+  .terms-section h3 { font-size: 0.95rem; font-weight: 700; color: #c56a2e; margin-bottom: 12px; }
+  .terms-section p { font-size: 0.82rem; color: #666; line-height: 1.7; margin-bottom: 8px; }
+
+  /* ===== FOOTER ===== */
+  .footer { padding: 32px 56px; background: #f8fafb; border-top: 1px solid #e8eef0; display: flex; justify-content: space-between; align-items: center; }
+  .footer .validity { font-size: 0.82rem; color: #888; }
+  .footer .powered { font-size: 0.75rem; color: #bbb; }
+</style>
+</head>
+<body>
+<div class="page">
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-top">
+      <div>
+        <h1>Báo giá Thiết kế & Phát triển Website Doanh nghiệp HAMEDCO</h1>
+        <div class="subtitle">(Gói Cao cấp - Bespoke)</div>
+      </div>
+      <div class="quote-number">
+        <div class="label">Mã báo giá</div>
+        <div class="value">BG-WEB-HAMEDCO-2026</div>
+      </div>
+    </div>
+    <div class="header-meta">
+      <span>📅 Ngày lập: 18/03/2026</span>
+      <span>⏱ Hiệu lực: 30 ngày</span>
+      <span>🏥 Khách hàng: HAMEDCO</span>
+    </div>
+  </div>
+
+  <div class="content">
+    <!-- PROPOSAL CONTENT -->
+    <div class="section-card">
+      <h3><span class="icon">📋</span> Tổng quan dự án</h3>
+      <p>Gói Cao cấp (Bespoke) là giải pháp thiết kế số 'may đo' dành riêng cho HAMEDCO. Vượt trên một website thông thường, đây là một cổng thông tin doanh nghiệp chuyên nghiệp mang đậm dấu ấn thương hiệu, với giao diện độc quyền, trải nghiệm người dùng đỉnh cao và kiến trúc hệ thống vững chắc. Giải pháp này giúp HAMEDCO khẳng định vị thế dẫn đầu trong lĩnh vực phân phối thiết bị y tế tại Việt Nam, đồng thời tạo ấn tượng chuyên nghiệp với đối tác quốc tế từ Đức, Hà Lan, Hàn Quốc, Ấn Độ.</p>
+    </div>
+
+    <div class="section-card">
+      <h3><span class="icon">🎯</span> Phạm vi công việc</h3>
+      <p>1. Nghiên cứu & Thiết kế UX/UI: Vẽ wireframe, thiết kế concept trực quan và tạo bản mẫu tương tác (Prototype) cho 18 page templates.<br>2. Lập trình Frontend Độc quyền: Chuyển đổi thiết kế thành mã Next.js/React/TypeScript với độ chính xác tuyệt đối (Pixel-perfect) và hiệu ứng nâng cao.<br>3. Lập trình Backend & API: Xây dựng logic xử lý dữ liệu, lead capture, email automation.<br>4. Hệ thống CMS Quản trị: Xây dựng bảng điều khiển CMS (Payload CMS) cho phép doanh nghiệp tự quản lý 100% nội dung.<br>5. Đa ngôn ngữ & SEO: Tích hợp 5 ngôn ngữ, SEO On-page chuyên sâu, Schema Markup.<br>6. Đảm bảo chất lượng (QA) & Bàn giao: Kiểm thử hiệu năng, bảo mật và triển khai.</p>
+    </div>
+
+    <div class="section-card">
+      <h3><span class="icon">⭐</span> Tại sao chọn chúng tôi?</h3>
+      <p>• Thiết kế Độc bản (Bespoke Design): Không sử dụng template. Giao diện được thiết kế từ con số 0 (Figma) dựa trên bản sắc thương hiệu và lĩnh vực thiết bị y tế cao cấp của HAMEDCO.<br>• Hiệu năng & Thẩm mỹ: Ứng dụng các công nghệ hoạt ảnh hiện đại (Micro-interactions, Parallax) tạo trải nghiệm cuộn trang mượt mà, chuyên nghiệp nhưng vẫn giữ tốc độ tải trang < 2 giây.<br>• Nền tảng Kiến trúc Cấp doanh nghiệp: Mã nguồn (Source code) tinh gọn, bảo mật đa tầng, sẵn sàng mở rộng và tích hợp liền mạch với hệ thống CRM/ERP nội bộ.<br>• Đa ngôn ngữ: Hỗ trợ 5 ngôn ngữ (VI, EN, ZH, KO, JA) phục vụ đối tác quốc tế.</p>
+    </div>
+
+    <div class="section-card">
+      <h3><span class="icon">⚙️</span> Phương pháp thực hiện</h3>
+      <p>• Tiếp cận Design-Driven Development: Đặt trải nghiệm người dùng (UX) làm cốt lõi, duyệt thiết kế (Prototype) trực quan trước khi đưa vào lập trình.<br>• Mã hóa thủ công (Hand-coded): Lập trình từ đầu trên nền tảng Next.js + Payload CMS để kiểm soát hoàn toàn chất lượng đầu ra, tối ưu hóa điểm số SEO và Core Web Vitals tuyệt đối.<br>• Kiến trúc Headless CMS: Tách biệt lớp hiển thị (Frontend) và lớp quản trị (Backend), cho phép mở rộng linh hoạt trong tương lai.</p>
+    </div>
+
+    <!-- PAGE TEMPLATES -->
+    <div class="section-card">
+      <h3><span class="icon">📄</span> Danh sách Page Templates (18 trang giao diện khác nhau)</h3>
+      <p style="margin-bottom: 12px; font-size: 0.82rem; color: #666;">Chỉ tính các trang có cấu trúc/giao diện riêng biệt. Các trang nội dung (bài viết, sản phẩm cụ thể...) được thêm qua CMS không giới hạn.</p>
+      <div class="templates-grid">
+        <div class="template-item"><span class="num">1</span><span class="name">Trang chủ (Homepage)</span></div>
+        <div class="template-item"><span class="num">2</span><span class="name">Giới thiệu công ty</span></div>
+        <div class="template-item"><span class="num">3</span><span class="name">Sản phẩm — Listing</span></div>
+        <div class="template-item"><span class="num">4</span><span class="name">Sản phẩm — Chi tiết</span></div>
+        <div class="template-item"><span class="num">5</span><span class="name">Dịch vụ — Listing</span></div>
+        <div class="template-item"><span class="num">6</span><span class="name">Dịch vụ — Chi tiết</span></div>
+        <div class="template-item"><span class="num">7</span><span class="name">Đối tác — Listing</span></div>
+        <div class="template-item"><span class="num">8</span><span class="name">Đối tác — Brand Page</span></div>
+        <div class="template-item"><span class="num">9</span><span class="name">Dự án — Listing</span></div>
+        <div class="template-item"><span class="num">10</span><span class="name">Dự án — Chi tiết</span></div>
+        <div class="template-item"><span class="num">11</span><span class="name">Tin tức — Listing</span></div>
+        <div class="template-item"><span class="num">12</span><span class="name">Tin tức — Chi tiết</span></div>
+        <div class="template-item"><span class="num">13</span><span class="name">Tuyển dụng — Listing</span></div>
+        <div class="template-item"><span class="num">14</span><span class="name">Tuyển dụng — Chi tiết</span></div>
+        <div class="template-item"><span class="num">15</span><span class="name">Liên hệ</span></div>
+        <div class="template-item"><span class="num">16</span><span class="name">Yêu cầu Báo giá</span></div>
+        <div class="template-item"><span class="num">17</span><span class="name">Tài liệu / Download</span></div>
+        <div class="template-item"><span class="num">18</span><span class="name">Utility (404, Thank you...)</span></div>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <h3><span class="icon">📅</span> Timeline thực hiện</h3>
+      <p>Tổng thời gian thực hiện: ~10-12 tuần làm việc:<br>• Tuần 1-2: Phân tích hành vi người dùng (UX Research), vẽ Wireframe và Thiết kế giao diện (UI Design) độc bản trên Figma cho toàn bộ 18 templates.<br>• Tuần 3-5: Lập trình Frontend tùy chỉnh, xử lý hiệu ứng động (Animations) chuẩn Pixel-perfect cho tất cả trang.<br>• Tuần 6-8: Xây dựng kiến trúc Cơ sở dữ liệu, Lập trình Backend và hệ thống CMS chuyên biệt (Payload CMS).<br>• Tuần 9-10: Tích hợp đa ngôn ngữ, SEO Framework, Data Migration từ website cũ.<br>• Tuần 11-12: Lắp ghép luồng dữ liệu, Kiểm thử đa môi trường (UAT), Đào tạo và Triển khai Live Server.</p>
+    </div>
+
+    <div class="section-card">
+      <h3><span class="icon">📦</span> Sản phẩm bàn giao</h3>
+      <p>• Bản thiết kế UI/UX hoàn chỉnh cho 18 templates (Figma Source file).<br>• Source code hoàn chỉnh (Frontend Next.js, Backend Payload CMS) bàn giao toàn quyền.<br>• Hệ thống CMS quản trị nội dung tùy chỉnh cấp độ doanh nghiệp.<br>• Hệ thống đa ngôn ngữ 5 ngôn ngữ hoạt động hoàn chỉnh.<br>• Tài liệu hướng dẫn sử dụng và bàn giao kỹ thuật chi tiết.<br>• Website vận hành hoàn chỉnh trên Internet.</p>
+    </div>
+
+    <div class="section-card">
+      <h3><span class="icon">🛡️</span> Bảo hành</h3>
+      <p>• Bảo hành mã nguồn hoàn toàn miễn phí trong vòng 12 tháng.<br>• Hỗ trợ xử lý lỗi kỹ thuật (bugs) sinh ra từ source code với SLA (Cam kết chất lượng dịch vụ) phản hồi dưới 4 giờ làm việc.</p>
+    </div>
+
+    <!-- PRICING TABLE -->
+    <div class="pricing-section">
+      <h2>💰 Bảng Chi tiết Báo giá</h2>
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Hạng mục</th>
+            <th>SL</th>
+            <th>ĐVT</th>
+            <th>Đơn giá</th>
+            <th>Thành tiền</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+    <tr class="section-row">
+      <td colspan="5"><strong>1. Thiết kế Trải nghiệm & Giao diện (UX/UI Design)</strong></td>
+      <td class="text-right"><strong>46.500.000đ</strong></td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">1</td>
+      <td>
+        <div class="item-name">Thiết kế UX/UI Trang chủ & Thương hiệu</div>
+        <div class="item-desc">Nghiên cứu hành vi người dùng B2B ngành thiết bị y tế và thiết kế giao diện độc bản (Figma):<br><br>Thiết kế Trang chủ (Homepage): Lên concept Hero carousel sáng tạo, sắp xếp dải logo đối tác quốc tế, thiết kế counter thống kê trực quan, định vị các nút CTA chiến lược, grid sản phẩm nổi bật, testimonials, FAQ accordion.<br><br>Thiết kế Trang Giới thiệu: Phác thảo trải nghiệm dòng thời gian (Timeline) lịch sử 20 năm theo phong cách kể chuyện (Storytelling), Vision/Mission cards.<br><br>Thiết kế Trang Liên hệ: Layout 3 văn phòng (HN, HCM), tích hợp Google Maps, form liên hệ chuyên nghiệp.</div>
+      </td>
+      <td class="text-center">3</td>
+      <td class="text-center">Trang</td>
+      <td class="text-right">3.500.000đ</td>
+      <td class="text-right">10.500.000đ</td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">2</td>
+      <td>
+        <div class="item-name">Thiết kế UX/UI Sản phẩm & Đối tác</div>
+        <div class="item-desc">Thiết kế Trang Danh sách Sản phẩm: Hệ thống filter đa điều kiện (ngành hàng, chuyên khoa, hãng), product cards với badge thương hiệu.<br><br>Thiết kế Trang Chi tiết Sản phẩm: Bố cục gallery ảnh + lightbox, hệ thống 6 tabs (Tổng quan, Tính năng, Thông số kỹ thuật, Cấu hình, Tài liệu, Ứng dụng lâm sàng), sidebar CTA.<br><br>Thiết kế Trang Danh sách Đối tác: Showcase 6 thương hiệu quốc tế với quốc kỳ, logo, mô tả.<br><br>Thiết kế Trang Chi tiết Đối tác (Brand page): Landing page cho từng hãng (KLS Martin, Philips, JVM...).</div>
+      </td>
+      <td class="text-center">4</td>
+      <td class="text-center">Trang</td>
+      <td class="text-right">3.000.000đ</td>
+      <td class="text-right">12.000.000đ</td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">3</td>
+      <td>
+        <div class="item-name">Thiết kế UX/UI Dịch vụ & Dự án</div>
+        <div class="item-desc">Thiết kế Trang Danh sách Dịch vụ: Grid 4 service cards (Tư vấn, Triển khai, Bảo trì, Đào tạo) với process timeline.<br><br>Thiết kế Trang Chi tiết Dịch vụ: Landing page riêng cho từng dịch vụ với hero, benefits, quy trình, CTA.<br><br>Thiết kế Trang Danh sách Dự án/Case Study: Card grid dự án với filter.<br><br>Thiết kế Trang Chi tiết Dự án: Layout trình bày Khách hàng → Sản phẩm → Kết quả + gallery ảnh hiện trường.</div>
+      </td>
+      <td class="text-center">4</td>
+      <td class="text-center">Trang</td>
+      <td class="text-right">2.500.000đ</td>
+      <td class="text-right">10.000.000đ</td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">4</td>
+      <td>
+        <div class="item-name">Thiết kế UX/UI Nội dung & Chuyển đổi</div>
+        <div class="item-desc">Thiết kế Trang Danh sách Tin tức/Blog: Hệ thống filter (Tin công ty, Kiến thức, Ngành y tế), article cards, phân trang.<br><br>Thiết kế Trang Chi tiết Bài viết: Layout bài viết chuẩn không gian đọc, social sharing, related articles.<br><br>Thiết kế Trang Tuyển dụng (Listing): Showcase văn hóa DN, job cards với department badges.<br><br>Thiết kế Trang Chi tiết Tuyển dụng: Job description, requirements, benefits, apply form.<br><br>Thiết kế Trang Yêu cầu Báo giá: Form 9 fields tối ưu chuyển đổi, sidebar benefits.<br><br>Thiết kế Trang Tài liệu/Download Center: Resource grid, lead gate form.<br><br>Thiết kế Utility Pages: 404, Thank you, Chính sách bảo mật, Điều khoản.</div>
+      </td>
+      <td class="text-center">7</td>
+      <td class="text-center">Trang</td>
+      <td class="text-right">2.000.000đ</td>
+      <td class="text-right">14.000.000đ</td>
+    </tr>
+    <tr class="section-row">
+      <td colspan="5"><strong>2. Lập trình Frontend (Frontend Development)</strong></td>
+      <td class="text-right"><strong>57.000.000đ</strong></td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">5</td>
+      <td>
+        <div class="item-name">Lập trình FE Trang chủ & Thương hiệu</div>
+        <div class="item-desc">Cắt HTML/CSS/JS chuẩn Pixel-perfect dựa trên bản thiết kế Figma.<br><br>Tích hợp hiệu ứng chuyển động cao cấp (Micro-interactions, Parallax scrolling) bằng thư viện GSAP/Framer Motion cho Trang chủ: Hero carousel auto-play, counter animation scroll, fade-in-up stagger, FAQ accordion mở/đóng.<br><br>Trang Giới thiệu: Timeline animation, stats counter.<br><br>Trang Liên hệ: Google Maps iframe, form validation realtime.<br><br>Đảm bảo trải nghiệm hoạt ảnh mượt mà ở tần số quét 60fps trên mọi trình duyệt.</div>
+      </td>
+      <td class="text-center">3</td>
+      <td class="text-center">Trang</td>
+      <td class="text-right">3.500.000đ</td>
+      <td class="text-right">10.500.000đ</td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">6</td>
+      <td>
+        <div class="item-name">Lập trình FE Sản phẩm & Đối tác</div>
+        <div class="item-desc">Lập trình các module phức tạp:<br><br>Trang Sản phẩm Listing: Hệ thống filter tabs đa điều kiện không cần tải lại trang (React state), animation transition card.<br><br>Trang Chi tiết Sản phẩm: Image gallery với lightbox/zoom, tab navigation 6 tabs, bảng thông số kỹ thuật responsive, download brochure PDF, related products carousel.<br><br>Trang Đối tác Listing: Partner showcase với hover effects.<br><br>Trang Brand Page: Dynamic content layout theo từng hãng.<br><br>Xử lý responsive chuyên sâu: Đảm bảo gallery, bảng specs hiển thị hoàn hảo trên mobile.</div>
+      </td>
+      <td class="text-center">4</td>
+      <td class="text-center">Trang</td>
+      <td class="text-right">3.500.000đ</td>
+      <td class="text-right">14.000.000đ</td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">7</td>
+      <td>
+        <div class="item-name">Lập trình FE Dịch vụ, Dự án & Nội dung</div>
+        <div class="item-desc">Trang Dịch vụ Listing: Service cards với icon SVG, process timeline animation.<br><br>Trang Chi tiết Dịch vụ: Landing page với benefits grid, quy trình steps.<br><br>Trang Dự án Listing + Detail: Card grid, gallery ảnh hiện trường.<br><br>Trang Tin tức Listing: Filter tabs category, article cards, phân trang.<br><br>Trang Chi tiết Bài viết: Rich content rendering, social share buttons, related articles.<br><br>Trang Tuyển dụng Listing + Detail: Job cards, perk showcase.<br><br>Trang Báo giá: Form 9 fields với validation, sidebar.<br><br>Trang Tài liệu: Download center với lead gate popup.<br><br>Utility Pages: 404 creative, Thank you page.</div>
+      </td>
+      <td class="text-center">11</td>
+      <td class="text-center">Trang</td>
+      <td class="text-right">2.500.000đ</td>
+      <td class="text-right">27.500.000đ</td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">8</td>
+      <td>
+        <div class="item-name">Lập trình FE Global Components</div>
+        <div class="item-desc">Thiết kế & lập trình các thành phần dùng chung toàn site:<br><br>Top Bar: Thông tin liên hệ nhanh responsive.<br><br>Header Sticky: Logo, mega menu dropdown 4 danh mục sản phẩm, language switcher 5 ngôn ngữ, CTA button — sticky on scroll.<br><br>Mobile Navigation: Full-screen menu với hamburger toggle animation.<br><br>Footer Mega: 5 columns, newsletter form, social links, trust badges, CTA bar.<br><br>Floating Contact Panel: Hotline + Zalo + Facebook popup animation.<br><br>Back-to-Top Button, Breadcrumbs, Lightbox, Skip-to-content.</div>
+      </td>
+      <td class="text-center">1</td>
+      <td class="text-center">Gói</td>
+      <td class="text-right">5.000.000đ</td>
+      <td class="text-right">5.000.000đ</td>
+    </tr>
+    <tr class="section-row">
+      <td colspan="5"><strong>3. Lập trình Backend, Logic & API</strong></td>
+      <td class="text-right"><strong>10.000.000đ</strong></td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">9</td>
+      <td>
+        <div class="item-name">Xử lý Logic Form & Lead Capture</div>
+        <div class="item-desc">Lập trình xử lý 6 form thu thập dữ liệu:<br><br>Form tư vấn nhanh (Trang chủ): 4 fields, validation, email notification.<br><br>Form yêu cầu báo giá: 9 fields chuyên sâu, logic chọn sản phẩm động.<br><br>Form liên hệ: 7 fields, dropdown chủ đề, chống spam.<br><br>Form newsletter: Email subscription + double opt-in.<br><br>Form ứng tuyển: Upload CV, auto-email HR.<br><br>Form tải tài liệu (Lead gate): Xác thực → gửi link tải qua email.<br><br>CSRF protection, rate limiting, validation server-side cho tất cả form.</div>
+      </td>
+      <td class="text-center">1</td>
+      <td class="text-center">Gói</td>
+      <td class="text-right">5.000.000đ</td>
+      <td class="text-right">5.000.000đ</td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">10</td>
+      <td>
+        <div class="item-name">Tích hợp API & Email Automation</div>
+        <div class="item-desc">Xây dựng hệ thống email notification tự động:<br><br>Thông báo realtime cho team Sales khi có lead mới từ form báo giá/liên hệ.<br><br>Thông báo cho HR khi có ứng viên mới.<br><br>Email xác nhận tự động cho khách hàng sau submit form.<br><br>Tích hợp API Google Maps cho trang liên hệ.<br><br>Xây dựng API endpoint cho language switcher (Google Translate integration).<br><br>Cấu hình luồng sự kiện tracking (GTM, GA4, Facebook Pixel).</div>
+      </td>
+      <td class="text-center">1</td>
+      <td class="text-center">Gói</td>
+      <td class="text-right">5.000.000đ</td>
+      <td class="text-right">5.000.000đ</td>
+    </tr>
+    <tr class="section-row">
+      <td colspan="5"><strong>4. Hệ thống Quản trị Nội dung CMS (CMS Backend)</strong></td>
+      <td class="text-right"><strong>18.000.000đ</strong></td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">11</td>
+      <td>
+        <div class="item-name">CMS Quản trị Cấu hình & Trang tĩnh</div>
+        <div class="item-desc">Xây dựng module quản trị trên nền Payload CMS cho phép thay đổi toàn bộ nội dung mà không cần biết code:<br><br>Cấu hình chung: Đổi Logo, thông tin Footer, Mạng xã hội, chèn mã Tracking (GTM, Pixel), thay đổi Hotline/Email.<br><br>Trang Chủ: Quản lý Hero carousel (thêm/xóa/sắp xếp slides), chỉnh sửa số liệu thống kê, thêm/xóa logo đối tác, quản lý FAQ, testimonials.<br><br>Trang Giới thiệu: Quản lý các mốc Timeline, Vision/Mission, Core Values.<br><br>Trang Liên hệ: Quản lý thông tin 3 văn phòng, iframe bản đồ.<br><br>Export dữ liệu form liên hệ ra Excel/CSV.</div>
+      </td>
+      <td class="text-center">1</td>
+      <td class="text-center">Gói</td>
+      <td class="text-right">4.000.000đ</td>
+      <td class="text-right">4.000.000đ</td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">12</td>
+      <td>
+        <div class="item-name">CMS Quản trị Sản phẩm & Đối tác</div>
+        <div class="item-desc">Module quản lý động toàn bộ Danh mục và Chi tiết sản phẩm:<br><br>CRUD Sản phẩm: Tạo/sửa/xóa sản phẩm, upload gallery ảnh, upload brochure PDF.<br><br>Quản lý Danh mục: Ngành hàng, Chuyên khoa, Hãng sản xuất — phân cấp cha-con.<br><br>Rich Text Editor: WYSIWYG editor cho mô tả sản phẩm, image upload inline.<br><br>CRUD Đối tác/Brand: Quản lý thông tin hãng, logo, quốc gia, sản phẩm đại diện.<br><br>Draft/Publish workflow: Nháp → Duyệt → Xuất bản.<br><br>Version History: Lịch sử chỉnh sửa, khôi phục phiên bản cũ.</div>
+      </td>
+      <td class="text-center">1</td>
+      <td class="text-center">Gói</td>
+      <td class="text-right">5.000.000đ</td>
+      <td class="text-right">5.000.000đ</td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">13</td>
+      <td>
+        <div class="item-name">CMS Quản trị Nội dung Động (Dynamic Content)</div>
+        <div class="item-desc">Module Tin tức/Blog: Rich-text editor, quản lý danh mục (Tin công ty, Kiến thức, Ngành y tế), Tags, hẹn giờ đăng bài (Schedule Publish).<br><br>Module Dịch vụ: CRUD 4 dịch vụ, quản lý nội dung landing page dịch vụ.<br><br>Module Dự án/Case Study: Quản lý theo cấu trúc Client → Sản phẩm → Kết quả, gallery ảnh.<br><br>Module Tuyển dụng: Đăng tải vị trí, thu CV, quản lý deadline.<br><br>Module Tài liệu: Upload brochure/catalog, quản lý lead gate.<br><br>Module SEO On-page: Meta Title, Description, OG Image, URL Slug cho mọi nội dung.</div>
+      </td>
+      <td class="text-center">1</td>
+      <td class="text-center">Gói</td>
+      <td class="text-right">5.000.000đ</td>
+      <td class="text-right">5.000.000đ</td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">14</td>
+      <td>
+        <div class="item-name">CMS Quản trị Lead & Media</div>
+        <div class="item-desc">Module Lead Management:<br><br>Dashboard tổng quan inquiry mới.<br><br>Danh sách leads từ tất cả forms với filter/search.<br><br>Status tracking: New → Contacted → Qualified → Closed.<br><br>Export leads ra Excel/CSV.<br><br>Module Media Management:<br><br>Upload ảnh, video, PDF lên Cloud Storage (Cloudflare R2).<br><br>Tự động optimize ảnh (resize, compress, WebP).<br><br>Quản lý thư mục, alt text cho SEO.<br><br>Phân quyền 4 roles: Admin, Marketing, Sales, Viewer.</div>
+      </td>
+      <td class="text-center">1</td>
+      <td class="text-center">Gói</td>
+      <td class="text-right">4.000.000đ</td>
+      <td class="text-right">4.000.000đ</td>
+    </tr>
+    <tr class="section-row">
+      <td colspan="5"><strong>5. Kiến trúc Hệ thống, Database & Bảo mật</strong></td>
+      <td class="text-right"><strong>12.000.000đ</strong></td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">15</td>
+      <td>
+        <div class="item-name">Kiến trúc Cơ sở dữ liệu (Database)</div>
+        <div class="item-desc">Xây dựng sơ đồ cơ sở dữ liệu (DB Schema) chuẩn hóa PostgreSQL cấp doanh nghiệp:<br><br>Bảng Products: Sản phẩm, danh mục, specs, gallery, brochures.<br><br>Bảng Partners/Brands: Đối tác, quốc gia, sản phẩm đại diện.<br><br>Bảng Posts: Tin tức, blog, tags, categories.<br><br>Bảng Services, Projects, Jobs: Dịch vụ, dự án, tuyển dụng.<br><br>Bảng Leads: Inquiry từ tất cả forms.<br><br>Bảng Media: Quản lý file uploads.<br><br>Bảng Users: Admin roles & permissions.<br><br>Thiết lập Cloud Storage (Cloudflare R2) cho tài liệu nặng (PDF, video, ảnh HD).</div>
+      </td>
+      <td class="text-center">1</td>
+      <td class="text-center">Gói</td>
+      <td class="text-right">4.000.000đ</td>
+      <td class="text-right">4.000.000đ</td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">16</td>
+      <td>
+        <div class="item-name">Bảo mật Thông tin & Chống tấn công</div>
+        <div class="item-desc">Mã hóa dữ liệu thông tin khách hàng tiềm năng ngay từ bước nhập form.<br><br>CSRF Protection: Chống tấn công giả mạo request.<br><br>Rate Limiting: Giới hạn số lần submit form, chống spam/bot.<br><br>Cấu hình tường lửa ứng dụng web (WAF), thuật toán chặn Bot rà quét.<br><br>Cấu hình bảo mật CMS: Xác thực đa lớp (2FA), giới hạn số lần đăng nhập sai, ghi nhật ký thao tác (Audit log).<br><br>Thiết lập chứng chỉ SSL toàn diện (HTTPS).<br><br>Content Security Policy (CSP) headers.</div>
+      </td>
+      <td class="text-center">1</td>
+      <td class="text-center">Gói</td>
+      <td class="text-right">5.000.000đ</td>
+      <td class="text-right">5.000.000đ</td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">17</td>
+      <td>
+        <div class="item-name">Sao lưu & Dự phòng (Backup & Recovery)</div>
+        <div class="item-desc">Lập trình kịch bản sao lưu cơ sở dữ liệu tự động theo ngày.<br><br>Sao lưu Source code đồng bộ lên repository dự phòng.<br><br>Xây dựng quy trình khôi phục hệ thống khẩn cấp (Disaster Recovery).<br><br>Cấu hình CI/CD pipeline cho deployment tự động (Vercel).</div>
+      </td>
+      <td class="text-center">1</td>
+      <td class="text-center">Gói</td>
+      <td class="text-right">3.000.000đ</td>
+      <td class="text-right">3.000.000đ</td>
+    </tr>
+    <tr class="section-row">
+      <td colspan="5"><strong>6. Tối ưu SEO & Hiệu suất Cốt lõi</strong></td>
+      <td class="text-right"><strong>14.000.000đ</strong></td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">18</td>
+      <td>
+        <div class="item-name">Tối ưu Kỹ thuật SEO (Technical SEO)</div>
+        <div class="item-desc">Lập trình cơ chế Server-Side Rendering (SSR) / Incremental Static Regeneration (ISR) trên Next.js tối ưu index cho Google Bot.<br><br>Tự động hóa cập nhật XML Sitemap và robots.txt.<br><br>Cấu hình Schema Markup chuyên sâu: Organization, Product, Article, BreadcrumbList.<br><br>Lập trình thuật toán thẻ Canonical và luồng Redirect 301 an toàn (migration từ site cũ).<br><br>Semantic HTML5: Heading hierarchy chuẩn, ARIA labels.</div>
+      </td>
+      <td class="text-center">1</td>
+      <td class="text-center">Gói</td>
+      <td class="text-right">4.000.000đ</td>
+      <td class="text-right">4.000.000đ</td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">19</td>
+      <td>
+        <div class="item-name">Tối ưu Hiển thị Nội dung (On-page SEO)</div>
+        <div class="item-desc">Chức năng tự động sinh/tùy chỉnh thẻ Meta Title, Meta Description cho mọi trang.<br><br>Thiết lập Open Graph, Twitter Card đồng bộ hình ảnh khi share mạng xã hội.<br><br>Xây dựng cấu trúc Heading (H1-H6) chuẩn logic ngữ nghĩa.<br><br>Cơ chế bắt buộc điền thẻ Alt text cho hình ảnh trong CMS.<br><br>Tích hợp Google Search Console & Google Analytics 4.</div>
+      </td>
+      <td class="text-center">1</td>
+      <td class="text-center">Gói</td>
+      <td class="text-right">3.000.000đ</td>
+      <td class="text-right">3.000.000đ</td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">20</td>
+      <td>
+        <div class="item-name">Tối ưu Hiệu suất (Core Web Vitals & Performance)</div>
+        <div class="item-desc">Lập trình cơ chế Lazy-loading cho hình ảnh, video, iframe.<br><br>Thuật toán tự động chuyển đổi định dạng ảnh sang WebP siêu nhẹ.<br><br>Cấu hình nén tài nguyên mã nguồn (Minify CSS/JS, Tree-shaking).<br><br>Mục tiêu: Lighthouse ≥85, LCP <2.5s, INP <200ms, CLS <0.1.<br><br>Responsive Design 4 breakpoints: Mobile (0-639px), Tablet (640-1023px), Desktop (1024-1279px), Wide (1280px+).</div>
+      </td>
+      <td class="text-center">1</td>
+      <td class="text-center">Gói</td>
+      <td class="text-right">3.000.000đ</td>
+      <td class="text-right">3.000.000đ</td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">21</td>
+      <td>
+        <div class="item-name">Đa ngôn ngữ (Multi-Language i18n)</div>
+        <div class="item-desc">Tích hợp hệ thống đa ngôn ngữ 5 ngôn ngữ:<br><br>Tiếng Việt 🇻🇳 (mặc định), English 🇬🇧, 中文 🇨🇳, 한국어 🇰🇷, 日本語 🇯🇵.<br><br>Google Translate Integration: Dịch tự động in-page.<br><br>Ẩn hoàn toàn Google Translate UI (toolbar, banner, tooltip).<br><br>Custom Language Switcher: Dropdown với cờ quốc gia trong header.<br><br>Lưu preference ngôn ngữ qua Cookie/localStorage.</div>
+      </td>
+      <td class="text-center">1</td>
+      <td class="text-center">Gói</td>
+      <td class="text-right">4.000.000đ</td>
+      <td class="text-right">4.000.000đ</td>
+    </tr>
+    <tr class="section-row">
+      <td colspan="5"><strong>7. Chuyển dữ liệu & Nhập liệu (Data Migration)</strong></td>
+      <td class="text-right"><strong>5.000.000đ</strong></td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">22</td>
+      <td>
+        <div class="item-name">Migration dữ liệu từ Website cũ</div>
+        <div class="item-desc">Kiểm kê toàn bộ nội dung website cũ (Content Inventory).<br><br>Ánh xạ URL cũ → URL mới, thiết lập 301 Redirects cho tất cả URL có traffic.<br><br>Download + re-upload toàn bộ media (ảnh, PDF) lên Cloud Storage mới.<br><br>Ánh xạ data cũ → schema mới (Field Mapping).<br><br>Viết Migration Script chuyển dữ liệu (idempotent, có thể chạy lại).<br><br>QA Checklist kiểm tra chất lượng từng batch.<br><br>Nhập liệu ban đầu: 5 sản phẩm, 6 bài viết, 6 đối tác, 3 vị trí tuyển dụng.</div>
+      </td>
+      <td class="text-center">1</td>
+      <td class="text-center">Gói</td>
+      <td class="text-right">5.000.000đ</td>
+      <td class="text-right">5.000.000đ</td>
+    </tr>
+    <tr class="section-row">
+      <td colspan="5"><strong>8. Kiểm thử Chất lượng (QA/QC Testing)</strong></td>
+      <td class="text-right"><strong>0đ</strong></td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">23</td>
+      <td>
+        <div class="item-name">Kiểm thử Chức năng & Luồng dữ liệu</div>
+        <div class="item-desc">Rà soát toàn bộ nút tương tác, liên kết, menu navigation.<br><br>Kiểm thử 6 forms: Validation, submission, email notification.<br><br>Kiểm thử luồng dữ liệu CMS → Frontend: Tạo/sửa/xóa nội dung hiển thị đúng.<br><br>Kiểm tra filter sản phẩm, filter tin tức hoạt động chính xác.<br><br>Kiểm tra logic phân quyền CMS 4 roles.</div>
+      </td>
+      <td class="text-center">1</td>
+      <td class="text-center">Gói</td>
+      <td class="text-right">3.000.000đ</td>
+      <td class="text-right"><span class="badge-free">MIỄN PHÍ</span></td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">24</td>
+      <td>
+        <div class="item-name">Kiểm thử Giao diện & Tương thích</div>
+        <div class="item-desc">Rà soát lỗi hiển thị trên đa thiết bị (Mobile, Tablet, Desktop, Wide).<br><br>Kiểm tra tính đồng nhất hiệu ứng, màu sắc, typography trên Chrome, Safari, Firefox, Edge.<br><br>Kiểm thử responsive cho tất cả 18 page templates.<br><br>Kiểm tra đa ngôn ngữ hiển thị đúng trên 5 ngôn ngữ.</div>
+      </td>
+      <td class="text-center">1</td>
+      <td class="text-center">Gói</td>
+      <td class="text-right">3.000.000đ</td>
+      <td class="text-right"><span class="badge-free">MIỄN PHÍ</span></td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">25</td>
+      <td>
+        <div class="item-name">Kiểm thử Hiệu năng & Bảo mật</div>
+        <div class="item-desc">Giả lập môi trường mạng (3G, 4G, Wifi) tối ưu tốc độ.<br><br>Đo Lighthouse score, Core Web Vitals cho tất cả page templates.<br><br>Chạy kịch bản quét lỗ hổng bảo mật (Penetration testing cơ bản).<br><br>Thử nghiệm form spam để đánh giá thuật toán chặn bot.<br><br>Kiểm thử sức chịu tải (Load testing) đồng thời 100+ users.</div>
+      </td>
+      <td class="text-center">1</td>
+      <td class="text-center">Gói</td>
+      <td class="text-right">3.000.000đ</td>
+      <td class="text-right"><span class="badge-free">MIỄN PHÍ</span></td>
+    </tr>
+    <tr class="section-row">
+      <td colspan="5"><strong>9. Bảo trì & Vận hành (Maintenance & Support)</strong></td>
+      <td class="text-right"><strong>3.000.000đ</strong></td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">26</td>
+      <td>
+        <div class="item-name">Đào tạo & Hỗ trợ Vận hành</div>
+        <div class="item-desc">Biên soạn tài liệu và video hướng dẫn sử dụng hệ thống CMS chi tiết.<br><br>Tổ chức buổi đào tạo (Training) cho nhân sự HAMEDCO: Marketing, Sales.<br><br>Hỗ trợ kỹ thuật 30 ngày sau go-live.<br><br>Bàn giao toàn bộ source code, tài khoản, tài liệu kỹ thuật.</div>
+      </td>
+      <td class="text-center">1</td>
+      <td class="text-center">Gói</td>
+      <td class="text-right">3.000.000đ</td>
+      <td class="text-right">3.000.000đ</td>
+    </tr>
+    <tr class="item-row">
+      <td class="text-center">27</td>
+      <td>
+        <div class="item-name">Bảo trì hệ thống hàng tháng (Tùy chọn) <span class="badge-optional">Tùy chọn</span></div>
+        <div class="item-desc">Giám sát Uptime 24/7, cảnh báo kỹ thuật tự động.<br><br>Cài đặt bản vá lỗi, cập nhật dependencies định kỳ.<br><br>Rà soát, dọn dẹp tệp tin tạm và tối ưu DB hàng tháng.<br><br>Xử lý lỗi kỹ thuật (bugs) phát sinh với SLA phản hồi dưới 4 giờ.<br><br>Báo cáo phân tích hiệu suất web định kỳ.</div>
+      </td>
+      <td class="text-center">12</td>
+      <td class="text-center">Tháng</td>
+      <td class="text-right">2.000.000đ</td>
+      <td class="text-right"><span class="badge-free">MIỄN PHÍ</span></td>
+    </tr>
+        </tbody>
+      </table>
+
+      <div class="total-section">
+        <div class="total-row sub"><span>Tổng cộng trước ưu đãi</span><span>198.500.000đ</span></div>
+        <div class="total-row discount"><span>🎁 Ưu đãi (QA + Bảo trì miễn phí)</span><span>-33.000.000đ</span></div>
+        
+        <div class="total-row grand"><span>TỔNG GIÁ TRỊ HỢP ĐỒNG</span><span>165.500.000đ</span></div>
+      </div>
+    </div>
+
+    <!-- TERMS -->
+    <div class="terms-section">
+      <h3>📌 Điều khoản & Lưu ý</h3>
+      <p><strong>Điều kiện:</strong> Khách hàng cung cấp và chịu trách nhiệm duy trì Tên miền (Domain) và Máy chủ (Hosting/VPS). Agency sẽ hỗ trợ trỏ domain, tư vấn hạ tầng đám mây tối ưu và cấu hình môi trường triển khai mã nguồn CI/CD. Nội dung bài viết, hình ảnh sản phẩm do khách hàng cung cấp. Agency hỗ trợ nhập liệu ban đầu 5 sản phẩm và 6 bài viết mẫu.</p>
+      <p><strong>Lưu ý:</strong> Chi phí trên không bao gồm các loại thuế, phí mua bản quyền phần mềm bên thứ 3 (nếu phát sinh ngoài dự kiến). Phí hosting/VPS và domain hàng năm do khách hàng tự chi trả.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="validity">Báo giá có hiệu lực 30 ngày kể từ ngày lập (18/03/2026)</div>
+    <div class="powered">Powered by Tulie Agency CRM</div>
+  </div>
+</div>
+</body>
+</html>

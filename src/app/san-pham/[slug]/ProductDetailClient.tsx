@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import { useLocale } from "../../../components/LocaleProvider";
 
 interface Product {
@@ -12,10 +13,16 @@ interface Product {
   categoryLabel: { vi: string; en: string };
   brand: string;
   description: { vi: string; en: string };
+  longDescription?: { vi: string; en: string };
   images: string[];
   thumbnail: string;
   sourceUrl: string;
+  videoUrl?: string | null;
+  documents?: { label: string; size?: string; url: string }[];
   highlights: { vi: string[]; en: string[] };
+  features?: { title: { vi: string; en: string }; desc: { vi: string; en: string }; image?: string }[];
+  specifications?: { label: { vi: string; en: string }; value: { vi: string; en: string } }[];
+  clinicalImages?: { url: string; caption?: string }[];
 }
 
 interface Props {
@@ -31,7 +38,12 @@ export default function ProductDetailClient({ product, related }: Props) {
   const desc = product.description[locale];
   const category = product.categoryLabel[locale];
   const highlights = product.highlights[locale];
-  const mainImg = product.images[0] || product.thumbnail;
+  
+  // Local state for main image gallery
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [showVideo, setShowVideo] = useState(product.videoUrl ? true : false);
+
+  const mainImg = product.images[activeImageIndex] || product.thumbnail;
 
   return (
     <>
@@ -56,11 +68,82 @@ export default function ProductDetailClient({ product, related }: Props) {
       <section className="pd-hero">
         <div className="container">
           <div className="pd-hero-grid">
-            {/* Left — Image */}
+            {/* Left — Image & Video */}
             <div className="pd-gallery">
-              <div className="pd-image-main">
-                <span className="pd-category-badge">{category}</span>
-                <img src={mainImg} alt={title} />
+              <div className="pd-image-main" style={{ borderRadius: "16px", overflow: "hidden", position: "relative", marginBottom: "1rem", backgroundColor: "#fff", display: "flex", justifyContent: "center", alignItems: "center", border: "1px solid var(--border-color)", aspectRatio: "16/9" }}>
+                <span className="pd-category-badge" style={{ position: "absolute", top: "16px", left: "16px", zIndex: 10 }}>{category}</span>
+                
+                {product.videoUrl && showVideo ? (
+                  <div className="pd-video-container" style={{ position: "relative", width: "100%", height: "100%" }}>
+                    <iframe 
+                      src={product.videoUrl.replace("watch?v=", "embed/")} 
+                      style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: 0 }} 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowFullScreen 
+                    />
+                  </div>
+                ) : (
+                  <img src={mainImg} alt={title} style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }} />
+                )}
+              </div>
+              
+              {/* Image & Video Thumbnails Gallery */}
+              <div className="pd-gallery-thumbnails" style={{ display: "flex", gap: "10px", marginTop: "1rem", flexWrap: "wrap" }}>
+                {/* Video Thumbnail (Always first if exists) */}
+                {product.videoUrl && (
+                  <div 
+                    onClick={() => setShowVideo(true)}
+                    style={{ 
+                      width: "80px", 
+                      height: "80px", 
+                      borderRadius: "8px", 
+                      border: showVideo ? "2px solid var(--color-primary)" : "1px solid var(--border-color)", 
+                      cursor: "pointer", 
+                      position: "relative",
+                      overflow: "hidden",
+                      backgroundColor: "#000",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      opacity: showVideo ? 1 : 0.6,
+                      transition: "all 0.2s"
+                    }}
+                  >
+                    <img src={product.thumbnail} alt="Video Preview" style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.5 }} />
+                    <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <svg width="32" height="32" fill="white" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                )}
+
+                {/* Image Thumbnails */}
+                {product.images.map((img, idx) => (
+                  <div 
+                    key={idx} 
+                    onClick={() => {
+                      setActiveImageIndex(idx);
+                      setShowVideo(false);
+                    }}
+                    style={{ 
+                      width: "80px", 
+                      height: "80px", 
+                      borderRadius: "8px", 
+                      border: (!showVideo && activeImageIndex === idx) ? "2px solid var(--color-primary)" : "1px solid var(--border-color)", 
+                      cursor: "pointer", 
+                      overflow: "hidden",
+                      backgroundColor: "#fff",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      opacity: (!showVideo && activeImageIndex === idx) ? 1 : 0.6,
+                      transition: "all 0.2s"
+                    }}
+                  >
+                    <img src={img} alt={`${title} - ${idx}`} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -133,6 +216,143 @@ export default function ProductDetailClient({ product, related }: Props) {
           </div>
         </div>
       </section>
+
+      {/* ═══ TỔNG QUAN THIẾT KẾ ═══ */}
+      {product.longDescription && (
+        <section className="pd-overview-section" style={{ padding: "5rem 0", backgroundColor: "#fff" }}>
+          <div className="container" style={{ maxWidth: "900px", margin: "0 auto", textAlign: "center" }}>
+            <h2 style={{ fontSize: "2.5rem", fontWeight: 700, color: "var(--color-text)", marginBottom: "1.5rem" }}>
+              {t("Tổng quan thiết kế", "Design Overview")}
+            </h2>
+            <p style={{ fontSize: "1.125rem", lineHeight: 1.8, color: "var(--color-neutral)" }}>
+              {product.longDescription[locale]}
+            </p>
+          </div>
+        </section>
+      )}
+
+      {/* ═══ TÍNH NĂNG NỔI BẬT (FEATURES) ═══ */}
+      {product.features && product.features.length > 0 && (
+        <section className="pd-features-section" style={{ padding: "5rem 0", backgroundColor: "#FAFAFA" }}>
+          <div className="container">
+            <h2 style={{ fontSize: "2.5rem", fontWeight: 700, color: "var(--color-text)", textAlign: "center", marginBottom: "4rem" }}>
+              {t("Tính năng", "Features")}
+            </h2>
+            <div style={{ display: "flex", flexDirection: "column", gap: "5rem" }}>
+              {product.features.map((feat, i) => {
+                const isReverse = i % 2 !== 0;
+                return (
+                  <div key={i} style={{ 
+                    display: "flex", 
+                    flexDirection: isReverse ? "row-reverse" : "row", 
+                    gap: "4rem", 
+                    alignItems: "center",
+                    flexWrap: "wrap"
+                  }}>
+                    {feat.image && (
+                      <div style={{ flex: "1 1 400px", borderRadius: "12px", overflow: "hidden" }}>
+                        <img src={feat.image} alt={feat.title[locale]} style={{ width: "100%", height: "auto", display: "block", objectFit: "cover", borderRadius: "12px", boxShadow: "0 10px 30px rgba(0,0,0,0.06)" }} />
+                      </div>
+                    )}
+                    <div style={{ flex: "1 1 400px" }}>
+                      <h3 style={{ fontSize: "2rem", fontWeight: 600, color: "var(--color-text)", marginBottom: "1.25rem" }}>
+                        {feat.title[locale]}
+                      </h3>
+                      <p style={{ fontSize: "1.125rem", lineHeight: 1.8, color: "var(--color-neutral)" }}>
+                        {feat.desc[locale]}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ═══ THÔNG SỐ KỸ THUẬT (SPECIFICATIONS) ═══ */}
+      {product.specifications && product.specifications.length > 0 && (
+        <section className="pd-specs-section" style={{ padding: "5rem 0", backgroundColor: "#fff", borderTop: "1px solid #EAEAEA", borderBottom: "1px solid #EAEAEA" }}>
+          <div className="container" style={{ maxWidth: "1000px", margin: "0 auto" }}>
+            <h2 style={{ fontSize: "2.25rem", fontWeight: 700, color: "var(--color-text)", marginBottom: "3rem" }}>
+              {t("Thông số kỹ thuật", "Specifications")}
+            </h2>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", columnGap: "4rem", rowGap: "2.5rem" }}>
+              {product.specifications.map((spec, i) => (
+                <div key={i} style={{ borderBottom: "1px solid #EAEAEA", paddingBottom: "1rem" }}>
+                  <h4 style={{ fontSize: "1.0625rem", fontWeight: 700, color: "var(--color-text)", marginBottom: "0.5rem" }}>
+                    {spec.label[locale]}
+                  </h4>
+                  <p style={{ fontSize: "1rem", color: "var(--color-neutral)", margin: 0, lineHeight: 1.6 }}>
+                    {spec.value[locale]}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ═══ TÀI LIỆU SẢN PHẨM (DOCUMENTATION) ═══ */}
+      {product.documents && product.documents.length > 0 && (
+        <section className="pd-docs-section" style={{ padding: "5rem 0", backgroundColor: "#FAFAFA" }}>
+          <div className="container" style={{ maxWidth: "800px", margin: "0 auto" }}>
+            <h2 style={{ fontSize: "2.5rem", fontWeight: 700, color: "var(--color-text)", textAlign: "center", marginBottom: "3rem" }}>
+              {t("Tài liệu sản phẩm", "Documentation")}
+            </h2>
+            <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+              {product.documents.map((doc, i) => (
+                <a key={i} href={doc.url} download target="_blank" rel="noopener noreferrer" 
+                   style={{
+                     display: "flex", alignItems: "center", justifyContent: "space-between",
+                     padding: "1.5rem 2rem", backgroundColor: "#fff", 
+                     borderRadius: "8px", border: "1px solid #EAEAEA",
+                     textDecoration: "none", transition: "all 0.2s",
+                     boxShadow: "0 2px 8px rgba(0,0,0,0.03)"
+                   }}
+                >
+                  <div>
+                    <div style={{ fontSize: "1.125rem", fontWeight: 600, color: "var(--color-text)", marginBottom: "0.3rem" }}>
+                      {doc.label}
+                    </div>
+                    <div style={{ fontSize: "0.875rem", color: "var(--color-neutral)" }}>
+                      PDF {doc.size ? `| ${doc.size}` : ""}
+                    </div>
+                  </div>
+                  <div style={{ width: "44px", height: "44px", borderRadius: "50%", border: "1px solid var(--color-text)", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--color-text)" }}>
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                    </svg>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ═══ THƯ VIỆN HÌNH ẢNH LÂM SÀNG (CLINICAL IMAGES) ═══ */}
+      {product.clinicalImages && product.clinicalImages.length > 0 && (
+        <section className="pd-clinical-section" style={{ padding: "5rem 0", backgroundColor: "#fff" }}>
+          <div className="container">
+            <h2 style={{ fontSize: "2.5rem", fontWeight: 700, color: "var(--color-text)", textAlign: "center", marginBottom: "3rem" }}>
+              {t("Thư viện hình ảnh lâm sàng", "Clinical image gallery")}
+            </h2>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "1.5rem" }}>
+              {product.clinicalImages.map((img, i) => (
+                <div key={i} style={{ backgroundColor: "#000", borderRadius: "8px", overflow: "hidden", position: "relative", aspectRatio: "4/3", display: "flex", flexDirection: "column" }}>
+                  <img src={img.url} alt={img.caption || `Clinical Image ${i}`} style={{ width: "100%", height: "100%", objectFit: "contain", display: "block", flex: 1 }} />
+                  {img.caption && (
+                    <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: "rgba(0,0,0,0.8)", color: "#fff", padding: "1rem", fontSize: "0.875rem" }}>
+                      {img.caption}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ═══ SOURCE LINK ═══ */}
       <section className="pd-source-section">

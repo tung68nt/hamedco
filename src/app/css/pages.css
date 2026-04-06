@@ -214,22 +214,45 @@
 }
 
 /* ── About Page ─────────────────────────────────────────── */
-.about-intro-image {
+.about-overview .split {
+  gap: var(--space-12);
+}
+
+.about-intro-image, .about-overview-image {
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-xl);
 }
 
-.about-intro-image img {
+.about-intro-image img, .about-overview-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   aspect-ratio: 4/3;
 }
 
+.vision-mission-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.vm-card {
+  padding: var(--space-6);
+  background: var(--color-gray-50);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--color-primary);
+}
+
+.vm-card h4 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: var(--space-6);
 }
 
@@ -248,7 +271,7 @@
   transform: translateY(-4px);
 }
 
-.value-card-icon {
+.value-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -260,7 +283,7 @@
   color: var(--color-primary);
 }
 
-.value-card-icon svg {
+.value-icon svg {
   width: 32px;
   height: 32px;
 }
@@ -276,8 +299,175 @@
   line-height: 1.6;
 }
 
+/* Timeline */
+.history-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 60px auto 0;
+  padding-left: 30px;
+}
+
+.history-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-gray-200);
+}
+
+.history-item {
+  position: relative;
+  padding-bottom: 60px;
+  padding-left: 30px;
+}
+
+.history-item:last-child {
+  padding-bottom: 0;
+}
+
+.history-marker {
+  position: absolute;
+  left: -41px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.history-year {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: var(--color-gray-50);
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--color-gray-200);
+  width: 80px;
+  text-align: center;
+  transform: translateX(-100%);
+}
+
+.history-dot {
+  width: 20px;
+  height: 20px;
+  background: var(--color-white);
+  border: 4px solid var(--color-primary);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.history-item.is-visible .history-dot {
+  animation: pulse-primary 2s infinite;
+}
+
+@keyframes pulse-primary {
+  0% { box-shadow: 0 0 0 0 rgba(43, 158, 179, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(43, 158, 179, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(43, 158, 179, 0); }
+}
+
+.history-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--color-gray-900);
+}
+
+.history-desc {
+  color: var(--color-gray-600);
+  line-height: 1.7;
+}
+
+/* Leadership Cards */
+.leadership-message-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.leadership-card {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 60px;
+  align-items: center;
+  background: var(--color-gray-50);
+  padding: 40px;
+  border-radius: var(--radius-xl);
+}
+
+.leadership-card.reverse {
+  grid-template-columns: 1fr 320px;
+}
+
+.leadership-card.reverse .leader-image {
+  order: 2;
+}
+
+.leader-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4/5;
+}
+
+.leader-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.leader-info .overline {
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.leader-name {
+  font-size: 1.75rem;
+  margin-bottom: 4px;
+}
+
+.leader-title {
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.leader-quote {
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--color-gray-700);
+  border-left: 3px solid var(--color-accent);
+  padding-left: 24px;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .leadership-card, .leadership-card.reverse {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 32px;
+  }
+  .leadership-card.reverse .leader-image {
+    order: 0;
+  }
+  .leader-image {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .vision-mission-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 767px) {
   .values-grid { grid-template-columns: 1fr; }
+  .history-timeline { padding-left: 20px; }
+  .history-year { display: none; }
+  .history-marker { left: -11px; }
 }
 
 /* ── Product Detail Page ────────────────────────────────── */
