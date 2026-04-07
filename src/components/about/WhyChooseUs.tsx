@@ -85,7 +85,7 @@ export default function WhyChooseUs() {
 
         {/* Philips badge */}
         <div className="why-philips-badge fade-in-up">
-          <img src="/assets/images/partners/philips-logo.png" alt="Philips Healthcare" className="why-philips-logo" />
+          <img src="/assets/images/philips-logo.svg" alt="Philips Healthcare" className="why-philips-logo" />
           <div className="why-philips-text">
             <strong>{t("Nhà phân phối chính thức Philips Healthcare", "Official Philips Healthcare Distributor")}</strong>
             <span>{t("Đại diện duy nhất phân phối siêu âm Philips tại Việt Nam", "Exclusive distributor of Philips ultrasound in Vietnam")}</span>

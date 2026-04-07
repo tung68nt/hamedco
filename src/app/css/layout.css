@@ -121,7 +121,7 @@
 
 .section-header .overline {
   margin-bottom: var(--space-3);
-  display: block;
+  display: inline-flex;
 }
 
 .section-header h2 {
