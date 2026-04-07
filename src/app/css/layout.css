@@ -125,7 +125,10 @@
 }
 
 .section-header h2 {
+  font-size: 2rem;
   margin-bottom: var(--space-4);
+  color: var(--color-gray-900);
+  text-wrap: balance;
 }
 
 .section-header p {

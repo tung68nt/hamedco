@@ -47,9 +47,7 @@ export default function FloatingContact() {
           {/* Zalo */}
           <a href="https://zalo.me/0869009486" target="_blank" rel="noopener noreferrer" className="floating-panel-item">
             <div className="floating-panel-icon zalo">
-              <svg width="20" height="20" viewBox="0 0 48 48" fill="#0068FF">
-                <path d="M24 2C11.85 2 2 11.85 2 24s9.85 22 22 22 22-9.85 22-22S36.15 2 24 2zm8.66 31.15c-.4.68-1.16 1.04-1.93 1.04h-.37c-.46-.04-.86-.24-1.14-.58l-5.07-6.24v5.16c0 .94-.72 1.66-1.66 1.66H13.6c-.72 0-1.34-.44-1.58-1.08-.24-.64-.04-1.36.48-1.78l8.36-7.04H13.6c-.94 0-1.66-.72-1.66-1.66s.72-1.66 1.66-1.66h8.88c.72 0 1.34.44 1.58 1.08.24.64.04 1.36-.48 1.78l-8.36 7.04h7.28c.22 0 .42-.08.58-.22l5.72-7.04c.54-.66 1.52-.74 2.16-.2.66.54.74 1.52.2 2.16l-3.44 4.22 3.76 4.62c.36.44.42 1.04.04 1.52z" />
-              </svg>
+              <img src="https://cdn.haitrieu.com/wp-content/uploads/2022/01/Logo-Zalo-Arc.png" alt="Zalo" width="24" height="24" style={{ objectFit: 'contain' }} />
             </div>
             <div className="floating-panel-text">
               <div className="label">Zalo</div>
@@ -61,9 +59,7 @@ export default function FloatingContact() {
           {/* Facebook */}
           <a href="https://www.facebook.com/hamedco" target="_blank" rel="noopener noreferrer" className="floating-panel-item">
             <div className="floating-panel-icon fb">
-              <svg width="20" height="20" fill="#1877F2" viewBox="0 0 24 24">
-                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-              </svg>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/960px-2023_Facebook_icon.svg.png" alt="Facebook" width="24" height="24" style={{ objectFit: 'contain' }} />
             </div>
             <div className="floating-panel-text">
               <div className="label">Facebook</div>

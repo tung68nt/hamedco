@@ -241,7 +241,7 @@ export default function Home() {
       </section>
 
       {/* ═══ CERTIFICATIONS ═══ */}
-      <section className="section bg-white">
+      <section className="cert-section">
         <div className="container">
           <div className="section-header fade-in-up">
             <span className="overline">{t("TIÊU CHUẨN & CHỨNG NHẬN CHẤT LƯỢNG", "Certifications & Quality Standards")}</span>

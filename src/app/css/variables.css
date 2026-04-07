@@ -98,8 +98,34 @@
   --container-padding: 24px;
 }
 
+[data-theme='dark'] {
+  /* Keep brand primary and accent roughly the same, maybe adjust slightly for contrast */
+  /* Neutral Colors reversed */
+  --color-gray-900: #F9FAFB; /* formerly gray-50 */
+  --color-gray-700: #D1D5DB; /* formerly gray-300 */
+  --color-gray-500: #9CA3AF;
+  --color-gray-400: #6B7280;
+  --color-gray-300: #374151; /* formerly gray-700 */
+  --color-gray-200: #1F2937; /* borders */
+  --color-gray-100: #111827; /* dark bg slightly lighter */
+  --color-gray-50:  #0B0F19; /* dark bg main */
+  --color-white: #0B0F19;    /* white becomes black/dark blue */
+
+  /* Specific background adjustments for dark mode */
+  --color-primary-light: #122c30; /* instead of #E6F4F7 */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 1px 3px rgba(0, 0, 0, 0.6), 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.8);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.6);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.8);
+  --shadow-header: 0 2px 8px rgba(0, 0, 0, 0.4);
+
+  color-scheme: dark;
+}
+
 @media (max-width: 639px) {
   :root {
     --container-padding: 16px;
   }
 }
+

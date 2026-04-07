@@ -4,9 +4,21 @@ import Link from "next/link";
 import MobileHeader from "./MobileHeader";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { useLocale } from "../LocaleProvider";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import ThemeToggle from "../ThemeToggle";
+import QuoteModal from "../QuoteModal";
 
 export default function Header() {
   const { t } = useLocale();
+  const pathname = usePathname();
+  const [quoteOpen, setQuoteOpen] = useState(false);
+
+  const isActive = (path: string) => {
+    if (path === "/" && pathname === "/") return true;
+    if (path !== "/" && pathname?.startsWith(path)) return true;
+    return false;
+  };
 
   return (
     <>
@@ -53,9 +65,9 @@ export default function Header() {
           </Link>
 
           <nav className="nav-desktop" aria-label="Main navigation">
-            <Link href="/" className="nav-link active" aria-current="page">{t("Trang chủ", "Home")}</Link>
-            <Link href="/gioi-thieu" className="nav-link">{t("Giới thiệu", "About")}</Link>
-            <div className="nav-dropdown">
+            <Link href="/" className={`nav-link ${isActive("/") ? "active" : ""}`} aria-current={isActive("/") ? "page" : undefined}>{t("Trang chủ", "Home")}</Link>
+            <Link href="/gioi-thieu" className={`nav-link ${isActive("/gioi-thieu") ? "active" : ""}`}>{t("Giới thiệu", "About")}</Link>
+            <div className={`nav-dropdown ${isActive("/san-pham") ? "active" : ""}`}>
               <Link href="/san-pham" className="nav-link">
                 {t("Sản phẩm", "Products")} <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
               </Link>
@@ -65,20 +77,25 @@ export default function Header() {
                 <Link href="/san-pham/danh-muc/cao-cap" className="nav-dropdown-item">{t("Phân khúc Cao cấp", "Premium Segment")}</Link>
               </div>
             </div>
-            <Link href="/dich-vu" className="nav-link">{t("Dịch vụ", "Services")}</Link>
-            <Link href="/doi-tac" className="nav-link">{t("Đối tác", "Partners")}</Link>
-            <Link href="/tin-tuc" className="nav-link">{t("Tin tức", "News")}</Link>
-            <Link href="/lien-he" className="nav-link">{t("Liên hệ", "Contact")}</Link>
+            <Link href="/dich-vu" className={`nav-link ${isActive("/dich-vu") ? "active" : ""}`}>{t("Dịch vụ", "Services")}</Link>
+            <Link href="/doi-tac" className={`nav-link ${isActive("/doi-tac") ? "active" : ""}`}>{t("Đối tác", "Partners")}</Link>
+            <Link href="/tin-tuc" className={`nav-link ${isActive("/tin-tuc") ? "active" : ""}`}>{t("Tin tức", "News")}</Link>
+            <Link href="/lien-he" className={`nav-link ${isActive("/lien-he") ? "active" : ""}`}>{t("Liên hệ", "Contact")}</Link>
           </nav>
 
           <div className="header-actions">
+            <ThemeToggle />
             <LanguageSwitcher />
-            <Link href="/bao-gia" className="btn btn-accent btn-md">{t("Yêu cầu báo giá", "Request Quote")}</Link>
+            <button onClick={() => setQuoteOpen(true)} className="btn btn-accent btn-md">
+              {t("Yêu cầu báo giá", "Request Quote")}
+            </button>
           </div>
 
           <MobileHeader />
         </div>
       </header>
+
+      <QuoteModal isOpen={quoteOpen} onClose={() => setQuoteOpen(false)} />
     </>
   );
 }

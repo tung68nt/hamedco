@@ -76,12 +76,16 @@ export default function FaqAccordion() {
             </svg>
           </button>
           <div
-            className="faq-answer"
+            className="faq-answer-wrapper"
             id={`faq-${i}`}
             role="region"
             aria-labelledby={`faq-${i}-btn`}
-            dangerouslySetInnerHTML={{ __html: faq.answer[locale] }}
-          />
+          >
+            <div 
+              className="faq-answer-content"
+              dangerouslySetInnerHTML={{ __html: faq.answer[locale] }} 
+            />
+          </div>
         </div>
       ))}
     </div>

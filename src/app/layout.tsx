@@ -11,23 +11,27 @@ export const metadata: Metadata = {
   description: "Nhà cung cấp vật tư và thiết bị y tế hàng đầu Việt Nam với hơn 20 năm kinh nghiệm. Đối tác chiến lược của Philips.",
 };
 
+import { ThemeProvider } from "../components/ThemeProvider";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi">
+    <html lang="vi" suppressHydrationWarning>
       <body>
-        <LocaleProvider>
-          <Header />
-          <main id="main">
-            {children}
-          </main>
-          <Footer />
-          <ScrollAnimator />
-          <FloatingContact />
-        </LocaleProvider>
+        <ThemeProvider>
+          <LocaleProvider>
+            <Header />
+            <main id="main">
+              {children}
+            </main>
+            <Footer />
+            <ScrollAnimator />
+            <FloatingContact />
+          </LocaleProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
