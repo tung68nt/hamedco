@@ -190,7 +190,7 @@
 
 .nav-link:hover,
 .nav-link.active {
-  color: #0F5A66;
+  color: var(--nav-hover-text, #0F5A66);
   background-color: var(--color-primary-light);
 }
 
