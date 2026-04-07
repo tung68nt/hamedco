@@ -2819,6 +2819,8 @@
   min-width: 220px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  overflow: hidden;
+  transform: translateZ(0); /* Fixes Safari border-radius clipping bug with backdrop-filter */
   transition: all var(--transition-base);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }

@@ -118,7 +118,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
               </div>
 
               <div className="form-actions">
-                <button type="submit" className="btn btn-primary btn-block" disabled={loading}>
+                <button type="submit" className="btn btn-primary btn-lg btn-block" disabled={loading}>
                   {loading ? (
                     <span className="spinner"></span>
                   ) : (
