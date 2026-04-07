@@ -41,8 +41,8 @@ export default function ComprehensiveSolutions() {
       number: "03",
       title: { vi: "Tư vấn & triển khai giải pháp", en: "Consulting & Solution Implementation" },
       desc: {
-        vi: "Khảo sát thực tế, đánh giá hạ tầng và nhu cầu sử dụng để đề xuất cấu hình phù hợp. Đồng hành từ tư vấn, lắp đặt, vận hành đến đào tạo và chuyển giao công nghệ.",
-        en: "On-site surveys, infrastructure assessment and usage needs evaluation to propose appropriate configurations. Accompanying from consulting, installation, operation to training and technology transfer."
+        vi: "Khảo sát thực tế, đánh giá hạ tầng và nhu cầu sử dụng tại từng cơ sở y tế để đề xuất cấu hình phù hợp, tối ưu hiệu quả đầu tư. Đồng hành xuyên suốt từ tư vấn giải pháp, lắp đặt, vận hành đến đào tạo và chuyển giao công nghệ, đảm bảo hệ thống được khai thác hiệu quả và bền vững.",
+        en: "On-site surveys, infrastructure assessment and usage needs evaluation at each medical facility to propose appropriate configurations, optimizing investment efficiency. Accompanying throughout from solution consulting, installation, operation to training and technology transfer, ensuring the system is exploited effectively and sustainably."
       },
       tags: ["Khảo sát", "Lắp đặt", "Đào tạo", "Chuyển giao công nghệ"],
       icon: (

@@ -12,8 +12,8 @@ export const PHILIPS_PRODUCTS = [
       vi: "Hệ thống siêu âm cầm tay",
       en: "Exceptional portable ultrasound system for Android"
     },
-    category: "handheld",
-    categoryLabel: { vi: "Siêu âm cầm tay", en: "Handheld Ultrasound" },
+    category: "di-dong",
+    categoryLabel: { vi: "Siêu âm di động", en: "Portable Ultrasound" },
     brand: "Philips Healthcare",
     description: {
       vi: "Philips Lumify kết hợp đầu dò chất lượng cao, nhẹ và ứng dụng siêu âm trực quan, mang khả năng chẩn đoán đến thiết bị Android, IOS tương thích. Thu thập dữ liệu lâm sàng quan trọng nhanh chóng tại điểm chăm sóc: cấp cứu, hồi sức, tại giường bệnh và phòng khám.",
@@ -70,8 +70,8 @@ export const PHILIPS_PRODUCTS = [
       vi: "Hệ thống siêu âm compact",
       en: "Compact ultrasound system"
     },
-    category: "compact",
-    categoryLabel: { vi: "Siêu âm compact", en: "Compact Ultrasound" },
+    category: "di-dong",
+    categoryLabel: { vi: "Siêu âm di động", en: "Portable Ultrasound" },
     brand: "Philips Healthcare",
     description: {
       vi: "Philips InnoSight cho phép quét bệnh nhân tại nhiều điểm chăm sóc lâm sàng hơn. Hệ thống siêu âm compact và di động cao với thiết kế công thái học đổi mới và tính linh hoạt lâm sàng, phù hợp cho phòng khám, bệnh viện.",
@@ -129,8 +129,8 @@ export const PHILIPS_PRODUCTS = [
       vi: "Hệ thống siêu âm Point-of-Care",
       en: "Point of care ultrasound system"
     },
-    category: "poc",
-    categoryLabel: { vi: "Siêu âm tại điểm chăm sóc", en: "Point-of-Care Ultrasound" },
+    category: "di-dong",
+    categoryLabel: { vi: "Siêu âm di động", en: "Portable Ultrasound" },
     brand: "Philips Healthcare",
     description: {
       vi: "Flash 5100 POC mang đến hiệu suất hàng đầu của Philips và quy trình trực quan cho siêu âm đa chuyên khoa tại điểm chăm sóc. Hướng dẫn từng bước giúp người dùng ở mọi trình độ thực hiện chẩn đoán hình ảnh xuất sắc, đẩy nhanh chẩn đoán chính xác.",
@@ -180,8 +180,8 @@ export const PHILIPS_PRODUCTS = [
       vi: "Hệ thống siêu âm POC nâng cao",
       en: "Advanced point-of-care ultrasound system"
     },
-    category: "poc",
-    categoryLabel: { vi: "Siêu âm tại điểm chăm sóc", en: "Point-of-Care Ultrasound" },
+    category: "di-dong",
+    categoryLabel: { vi: "Siêu âm di động", en: "Portable Ultrasound" },
     brand: "Philips Healthcare",
     description: {
       vi: "Flash 5100 POC Pro mang đến hiệu suất hàng đầu và quy trình trực quan cho siêu âm đa chuyên khoa tại điểm chăm sóc, bao gồm khả năng tim mạch nâng cao với tính năng AutoStrain EF để đánh giá tim nhanh chóng.",
@@ -230,8 +230,8 @@ export const PHILIPS_PRODUCTS = [
       vi: "Hệ thống siêu âm compact cao cấp",
       en: "Premium compact ultrasound system"
     },
-    category: "compact",
-    categoryLabel: { vi: "Siêu âm compact", en: "Compact Ultrasound" },
+    category: "di-dong",
+    categoryLabel: { vi: "Siêu âm di động", en: "Portable Ultrasound" },
     brand: "Philips Healthcare",
     description: {
       vi: "Philips Compact 5300 Series tích hợp hiệu suất quét mạnh mẽ vào hệ thống di động, giúp bạn nhanh chóng đạt được kết quả cần thiết trong chẩn đoán hình ảnh tổng quát, POC và Sản phụ khoa.",
@@ -311,8 +311,8 @@ export const PHILIPS_PRODUCTS = [
       vi: "Hệ thống siêu âm compact cao cấp",
       en: "Premium compact ultrasound system"
     },
-    category: "compact",
-    categoryLabel: { vi: "Siêu âm compact", en: "Compact Ultrasound" },
+    category: "di-dong",
+    categoryLabel: { vi: "Siêu âm di động", en: "Portable Ultrasound" },
     brand: "Philips Healthcare",
     description: {
       vi: "Philips Compact 5500 Series tích hợp hiệu suất mạnh mẽ vào thiết kế compact. Có sẵn trong cấu hình chẩn đoán hình ảnh tổng quát, POC, tim mạch và Sản phụ khoa. Chất lượng hình ảnh sánh ngang hệ thống cart cao cấp Philips. Compact không thỏa hiệp.",
@@ -369,8 +369,8 @@ export const PHILIPS_PRODUCTS = [
       vi: "Hệ thống siêu âm đa năng",
       en: "Ultrasound system"
     },
-    category: "cart",
-    categoryLabel: { vi: "Siêu âm cart", en: "Cart-based Ultrasound" },
+    category: "tam-trung",
+    categoryLabel: { vi: "Phân khúc Tầm trung", en: "Mid-range Segment" },
     brand: "Philips Healthcare",
     description: {
       vi: "Affiniti 30 được thiết kế để giúp bạn nổi bật và đi trước với các đổi mới đáp ứng nhu cầu thực hành siêu âm bận rộn. Hệ thống cung cấp hiệu suất và giao diện trực quan cho chẩn đoán nhanh chóng, tự tin.",
@@ -420,8 +420,8 @@ export const PHILIPS_PRODUCTS = [
       vi: "Thiết kế cho thực hành hàng ngày",
       en: "Designed for your everyday"
     },
-    category: "cart",
-    categoryLabel: { vi: "Siêu âm cart", en: "Cart-based Ultrasound" },
+    category: "tam-trung",
+    categoryLabel: { vi: "Phân khúc Tầm trung", en: "Mid-range Segment" },
     brand: "Philips Healthcare",
     description: {
       vi: "Affiniti 50 cung cấp hình ảnh ấn tượng và giá trị vượt trội cho khả năng lâm sàng đa dạng. Được thiết kế cho thực hành hàng ngày với chất lượng hình ảnh và workflow chuyên nghiệp.",
@@ -473,8 +473,8 @@ export const PHILIPS_PRODUCTS = [
       vi: "Thiết kế cho thực hành hàng ngày",
       en: "Designed for your everyday"
     },
-    category: "cart",
-    categoryLabel: { vi: "Siêu âm cart", en: "Cart-based Ultrasound" },
+    category: "tam-trung",
+    categoryLabel: { vi: "Phân khúc Tầm trung", en: "Mid-range Segment" },
     brand: "Philips Healthcare",
     description: {
       vi: "Affiniti 70 là hệ thống tiên tiến nhất trong dòng Affiniti, mang đến bộ tính năng cao cấp nhất. Kết hợp mạnh mẽ giữa hiệu suất và workflow cho chẩn đoán nhanh chóng, tự tin.",
@@ -523,8 +523,8 @@ export const PHILIPS_PRODUCTS = [
       vi: "Siêu âm tim thế hệ mới",
       en: "Next dimension in echocardiography"
     },
-    category: "cardiac",
-    categoryLabel: { vi: "Siêu âm tim mạch", en: "Cardiac Ultrasound" },
+    category: "tam-trung",
+    categoryLabel: { vi: "Phân khúc Tầm trung", en: "Mid-range Segment" },
     brand: "Philips Healthcare",
     description: {
       vi: "Affiniti CVx mang đến chiều hướng mới trong siêu âm tim với khả năng AI-based đẩy mạnh chẩn đoán hình ảnh tim mạch. Được thiết kế cho thực hành siêu âm tim chuyên sâu.",
@@ -577,8 +577,8 @@ export const PHILIPS_PRODUCTS = [
       vi: "Hệ thống siêu âm tim cao cấp",
       en: "Premium cardiology ultrasound system"
     },
-    category: "cardiac",
-    categoryLabel: { vi: "Siêu âm tim mạch", en: "Cardiac Ultrasound" },
+    category: "cao-cap",
+    categoryLabel: { vi: "Phân khúc Cao cấp", en: "Premium Segment" },
     brand: "Philips Healthcare",
     description: {
       vi: "EPIQ CVx là nền tảng siêu âm tim mạch cao cấp nhất của Philips — đổi mới, modular với giải pháp chẩn đoán tiên tiến cho các ca tim mạch phức tạp nhất.",
@@ -632,8 +632,8 @@ export const PHILIPS_PRODUCTS = [
       vi: "Hiệu suất được tái định nghĩa",
       en: "Performance redefined"
     },
-    category: "premium",
-    categoryLabel: { vi: "Siêu âm cao cấp", en: "Premium Ultrasound" },
+    category: "cao-cap",
+    categoryLabel: { vi: "Phân khúc Cao cấp", en: "Premium Segment" },
     brand: "Philips Healthcare",
     description: {
       vi: "EPIQ Elite Elevate cung cấp hình ảnh chất lượng cao và thông tin lâm sàng tùy chỉnh giúp bác sĩ đưa ra kết quả kịp thời, tự tin cho nhiều bệnh nhân hơn trên toàn thế giới. Với trí tuệ nhân tạo tiên tiến và hiệu suất vượt trội.",
@@ -688,10 +688,7 @@ export const PHILIPS_PRODUCTS = [
 // Product categories for filtering
 const PRODUCT_CATEGORIES = [
   { id: "all", label: { vi: "Tất cả", en: "All" } },
-  { id: "handheld", label: { vi: "Siêu âm cầm tay", en: "Handheld" } },
-  { id: "compact", label: { vi: "Siêu âm compact", en: "Compact" } },
-  { id: "poc", label: { vi: "Point-of-Care", en: "Point-of-Care" } },
-  { id: "cart", label: { vi: "Siêu âm cart", en: "Cart-based" } },
-  { id: "cardiac", label: { vi: "Tim mạch", en: "Cardiac" } },
-  { id: "premium", label: { vi: "Cao cấp", en: "Premium" } }
+  { id: "di-dong", label: { vi: "Siêu âm di động", en: "Portable Ultrasound" } },
+  { id: "tam-trung", label: { vi: "Phân khúc Tầm trung", en: "Mid-range Segment" } },
+  { id: "cao-cap", label: { vi: "Phân khúc Cao cấp", en: "Premium Segment" } }
 ];

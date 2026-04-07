@@ -15,10 +15,10 @@ export default function WhyChooseUs() {
           <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
-      title: { vi: "Bề dày lịch sử từ năm 2005", en: "Track Record Since 2005" },
+      title: { vi: "Bề dày kinh nghiệm & Năng lực được kiểm chứng", en: "Extensive Experience & Proven Capability" },
       desc: {
-        vi: "Với kinh nghiệm thực chiến vững vàng, chúng tôi thấu hiểu mọi yêu cầu khắt khe của ngành y tế.",
-        en: "With solid practical experience, we understand all the strict requirements of the healthcare industry."
+        vi: "Hơn 20 năm kinh nghiệm thực tiễn: Am hiểu thấu đáo quy trình vận hành và các tiêu chuẩn khắt khe nhất của ngành y tế tại Việt Nam. Hiện diện tại các cơ sở y tế trọng điểm: Năng lực tư vấn và triển khai đã được khẳng định qua hàng loạt dự án lớn tại các bệnh viện tuyến trung ương, tuyến tỉnh và hệ thống y tế tư nhân cao cấp.",
+        en: "Over 20 years of practical experience: Deep understanding of operating procedures and the strictest standards of the healthcare industry in Vietnam. Presence in key medical facilities: Consulting and implementation capacity has been affirmed through a series of large projects at central, provincial hospitals and high-end private healthcare systems."
       }
     },
     {
@@ -27,10 +27,10 @@ export default function WhyChooseUs() {
           <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
         </svg>
       ),
-      title: { vi: "Hồ sơ năng lực vượt trội", en: "Outstanding Capability Record" },
+      title: { vi: "Chuẩn mực công nghệ & Pháp lý minh bạch", en: "Technology Standards & Transparent Legality" },
       desc: {
-        vi: "Minh chứng qua hàng loạt dự án triển khai thành công tại các bệnh viện lớn tuyến trung ương cũng như cơ sở y tế tuyến tỉnh và hệ thống y tế tư nhân cao cấp.",
-        en: "Evidenced through numerous successful projects at major central-level hospitals as well as provincial facilities and premium private healthcare systems."
+        vi: "Thiết bị chính hãng, đẳng cấp toàn cầu: Phân phối các thiết bị chẩn đoán hình ảnh tiên tiến nhất từ các thương hiệu hàng đầu thế giới như Philips. Hồ sơ pháp lý chuẩn chỉnh: Cung cấp minh bạch và đầy đủ các giấy tờ chứng nhận (CO, CQ) cùng bộ hồ sơ trang thiết bị y tế (TTBYT) theo đúng quy chuẩn cao nhất của Bộ Y tế.",
+        en: "Genuine, world-class equipment: Distributing the most advanced diagnostic imaging equipment from world-leading brands like Philips. Standard legal documents: Transparently providing complete certification documents (CO, CQ) alongside the medical equipment dossier meeting the highest standards of the Ministry of Health."
       }
     },
     {
@@ -39,22 +39,10 @@ export default function WhyChooseUs() {
           <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
         </svg>
       ),
-      title: { vi: "Đội ngũ kỹ sư tinh nhuệ", en: "Elite Engineering Team" },
+      title: { vi: "Giải pháp vận hành & Đồng hành trọn đời", en: "Operational Solutions & Lifetime Accompaniment" },
       desc: {
-        vi: "Các kỹ sư được đào tạo chính quy bài bản, đúng chuyên ngành y sinh và được trực tiếp đào tạo bởi đội ngũ kỹ sư từ hãng sản xuất, có khả năng xử lý các tình huống phức tạp trong thời gian ngắn nhất.",
-        en: "Engineers trained systematically in biomedical engineering and directly trained by manufacturer engineering teams, capable of handling complex situations in the shortest time."
-      }
-    },
-    {
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><circle cx="12" cy="12" r="3" />
-        </svg>
-      ),
-      title: { vi: "Dịch vụ hậu mãi khác biệt", en: "Distinctive After-Sales Service" },
-      desc: {
-        vi: "Xây dựng hệ thống bảo hành, bảo trì chủ động với linh kiện chính hãng, đảm bảo thiết bị luôn sẵn sàng ở mức cao nhất.",
-        en: "Building a proactive warranty and maintenance system with genuine spare parts, ensuring equipment is always at the highest readiness."
+        vi: "Đội ngũ kỹ sư tinh nhuệ, phản ứng 24/7: Được đào tạo bài bản trực tiếp từ hãng. Bảo trì chủ động định kỳ với 100% linh kiện chính hãng. Tổ chức đào tạo chuyên sâu và liên tục, giúp đội ngũ y bác sĩ khai thác triệt để hiệu năng máy móc.",
+        en: "Elite engineering team, 24/7 response: Systematically trained directly by the manufacturer. Proactive scheduled maintenance with 100% genuine parts. Organizing intensive and continuous training, helping doctors fully utilize machine performance."
       }
     }
   ];
@@ -64,11 +52,11 @@ export default function WhyChooseUs() {
       <div className="container">
         <div className="section-header text-center fade-in-up">
           <span className="overline">{t("Lý do tin chọn", "Reasons to Trust")}</span>
-          <h2>{t("Tại sao các bệnh viện hàng đầu lựa chọn HAMEDCO?", "Why Leading Hospitals Choose HAMEDCO?")}</h2>
+          <h2>{t("Vi sao các bệnh viện hàng đầu lựa chọn HAMEDCO?", "Why Leading Hospitals Choose HAMEDCO?")}</h2>
           <p>
             {t(
-              "Những giá trị thực sự mà HAMEDCO mang lại cho hệ thống y tế Việt Nam",
-              "The real values that HAMEDCO brings to Vietnam's healthcare system"
+              "Không chỉ cung cấp thiết bị, HAMEDCO được lựa chọn bởi năng lực bảo chứng cho sự vận hành ổn định, an toàn và xuyên suốt của toàn bộ hệ thống y tế.",
+              "More than just an equipment supplier, HAMEDCO is chosen for our guaranteed capacity for stable, safe, and continuous operation of the entire healthcare system."
             )}
           </p>
         </div>
@@ -83,12 +71,17 @@ export default function WhyChooseUs() {
           ))}
         </div>
 
+        {/* Highlight quote */}
+        <div className="why-quote fade-in-up text-center" style={{ marginTop: "40px", fontStyle: "italic", fontWeight: 500, color: "var(--color-primary-dark)", fontSize: "1.125rem" }}>
+          <p>"{t("HAMEDCO không chỉ bán thiết bị — chúng tôi chịu trách nhiệm cho hiệu quả vận hành của toàn bộ hệ thống.", "HAMEDCO does not just sell equipment — we take responsibility for the operational effectiveness of the entire system.")}"</p>
+        </div>
+
         {/* Philips badge */}
         <div className="why-philips-badge fade-in-up">
           <img src="/assets/images/philips-logo.svg" alt="Philips Healthcare" className="why-philips-logo" />
           <div className="why-philips-text">
             <strong>{t("Nhà phân phối chính thức Philips Healthcare", "Official Philips Healthcare Distributor")}</strong>
-            <span>{t("Đại diện duy nhất phân phối siêu âm Philips tại Việt Nam", "Exclusive distributor of Philips ultrasound in Vietnam")}</span>
+            <span>{t("Đại diện phân phối sản phẩm siêu âm Philips tại Việt Nam", "Distributor of Philips ultrasound products in Vietnam")}</span>
           </div>
         </div>
       </div>

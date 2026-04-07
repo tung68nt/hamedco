@@ -12,12 +12,9 @@ export const metadata: Metadata = {
 // Product categories for filtering
 const CATEGORIES = [
   { id: "all", label: { vi: "Tất cả", en: "All" } },
-  { id: "handheld", label: { vi: "Siêu âm cầm tay", en: "Handheld Ultrasound" } },
-  { id: "compact", label: { vi: "Siêu âm compact", en: "Compact Ultrasound" } },
-  { id: "poc", label: { vi: "Point-of-Care", en: "Point-of-Care" } },
-  { id: "cart", label: { vi: "Siêu âm cart", en: "Cart-based Ultrasound" } },
-  { id: "cardiac", label: { vi: "Tim mạch", en: "Cardiac" } },
-  { id: "premium", label: { vi: "Cao cấp", en: "Premium" } },
+  { id: "di-dong", label: { vi: "Siêu âm di động", en: "Portable Ultrasound" } },
+  { id: "tam-trung", label: { vi: "Phân khúc Tầm trung", en: "Mid-range Segment" } },
+  { id: "cao-cap", label: { vi: "Phân khúc Cao cấp", en: "Premium Segment" } },
 ];
 
 export default function ProductsPage() {

@@ -42,6 +42,7 @@ export default function ProductDetailClient({ product, related }: Props) {
   // Local state for main image gallery
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [showVideo, setShowVideo] = useState(product.videoUrl ? true : false);
+  const [openAccordion, setOpenAccordion] = useState<string | null>("docs");
 
   const mainImg = product.images[activeImageIndex] || product.thumbnail;
 
@@ -176,14 +177,14 @@ export default function ProductDetailClient({ product, related }: Props) {
                 </ul>
               </div>
 
-              <div className="pd-actions">
-                <Link href="/bao-gia" className="btn btn-primary btn-lg pd-btn-quote">
+              <div className="pd-actions" style={{ marginBottom: "2rem" }}>
+                <Link href="/bao-gia" className="btn btn-primary btn-lg pd-btn-quote" style={{ minWidth: "160px" }}>
                   <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                   {t("Yêu cầu báo giá", "Request Quote")}
                 </Link>
-                <Link href="/lien-he" className="btn btn-outline btn-lg pd-btn-contact">
+                <Link href="/lien-he" className="btn btn-outline btn-lg pd-btn-contact" style={{ minWidth: "160px" }}>
                   <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
@@ -191,27 +192,82 @@ export default function ProductDetailClient({ product, related }: Props) {
                 </Link>
               </div>
 
-              {/* Trust badges */}
-              <div className="pd-trust">
-                <div className="pd-trust-item">
-                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                  {t("Chính hãng 100%", "100% Authentic")}
+              {/* Accordions cho Product Support & Documentation */}
+              <div className="pd-accordions" style={{ display: "flex", flexDirection: "column", borderTop: "1px solid #EAEAEA", paddingTop: "0.5rem" }}>
+                
+                {/* Hỗ trợ kỹ thuật */}
+                <div className="pd-accordion-item" style={{ borderBottom: "1px solid #EAEAEA" }}>
+                  <button 
+                    onClick={() => setOpenAccordion(openAccordion === "support" ? null : "support")}
+                    style={{
+                      width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between",
+                      padding: "1rem 0", background: "none", border: "none", cursor: "pointer",
+                      fontSize: "1.125rem", fontWeight: 600, color: "var(--color-text)", textAlign: "left"
+                    }}
+                  >
+                    {t("Hỗ trợ kỹ thuật", "Technical support")}
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ transform: openAccordion === "support" ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s" }}>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div style={{
+                    maxHeight: openAccordion === "support" ? "500px" : "0px",
+                    overflow: "hidden",
+                    transition: "max-height 0.3s ease-in-out",
+                    opacity: openAccordion === "support" ? 1 : 0
+                  }}>
+                    <div style={{ paddingBottom: "1.5rem" }}>
+                      <p style={{ margin: "0 0 1rem 0", fontSize: "0.9375rem", color: "var(--color-neutral)" }}>
+                        {t("Trung tâm hỗ trợ khách hàng của HAMEDCO luôn sẵn sàng 24/7 để hỗ trợ khắc phục sự cố, bảo trì và hướng dẫn vận hành thiết bị.", "HAMEDCO's customer support center is available 24/7 to assist with troubleshooting, maintenance and equipment operation guidance.")}
+                      </p>
+                      <a href="tel:+84869009486" style={{ display: "inline-flex", alignItems: "center", gap: "8px", fontWeight: 600, color: "var(--color-primary)", textDecoration: "none" }}>
+                        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        Hotline: 086 900 9486
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <div className="pd-trust-item">
-                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  {t("Bảo hành 12–24 tháng", "12–24 Month Warranty")}
-                </div>
-                <div className="pd-trust-item">
-                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
-                  {t("Hỗ trợ kỹ thuật 24/7", "24/7 Support")}
-                </div>
+
+                {/* Tài liệu sản phẩm */}
+                {product.documents && product.documents.length > 0 && (
+                  <div className="pd-accordion-item" style={{ borderBottom: "1px solid #EAEAEA" }}>
+                    <button 
+                      onClick={() => setOpenAccordion(openAccordion === "docs" ? null : "docs")}
+                      style={{
+                        width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between",
+                        padding: "1rem 0", background: "none", border: "none", cursor: "pointer",
+                        fontSize: "1.125rem", fontWeight: 600, color: "var(--color-text)", textAlign: "left"
+                      }}
+                    >
+                      {t("Tài liệu sản phẩm", "Documentation")}
+                      <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ transform: openAccordion === "docs" ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s" }}>
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    <div style={{
+                      maxHeight: openAccordion === "docs" ? "500px" : "0px",
+                      overflow: "hidden",
+                      transition: "max-height 0.3s ease-in-out",
+                      opacity: openAccordion === "docs" ? 1 : 0
+                    }}>
+                      <div style={{ paddingBottom: "1.5rem" }}>
+                        <h4 style={{ fontSize: "0.875rem", textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--color-text)", margin: "0 0 1rem 0" }}>{t("Brochure", "Brochure")}</h4>
+                        <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                          {product.documents.map((doc, i) => (
+                            <li key={i}>
+                              <a href={doc.url} download target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", textDecoration: "none", color: "var(--color-primary)", fontWeight: 500, fontSize: "0.9375rem" }}>
+                                <span style={{ textDecoration: "underline" }}>{doc.label}</span>
+                                {doc.size && <span style={{ color: "var(--color-neutral)", fontSize: "0.8125rem", textDecoration: "none" }}>({doc.size})</span>}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
+
             </div>
           </div>
         </div>
@@ -293,44 +349,6 @@ export default function ProductDetailClient({ product, related }: Props) {
         </section>
       )}
 
-      {/* ═══ TÀI LIỆU SẢN PHẨM (DOCUMENTATION) ═══ */}
-      {product.documents && product.documents.length > 0 && (
-        <section className="pd-docs-section" style={{ padding: "5rem 0", backgroundColor: "#FAFAFA" }}>
-          <div className="container" style={{ maxWidth: "800px", margin: "0 auto" }}>
-            <h2 style={{ fontSize: "2.5rem", fontWeight: 700, color: "var(--color-text)", textAlign: "center", marginBottom: "3rem" }}>
-              {t("Tài liệu sản phẩm", "Documentation")}
-            </h2>
-            <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
-              {product.documents.map((doc, i) => (
-                <a key={i} href={doc.url} download target="_blank" rel="noopener noreferrer" 
-                   style={{
-                     display: "flex", alignItems: "center", justifyContent: "space-between",
-                     padding: "1.5rem 2rem", backgroundColor: "#fff", 
-                     borderRadius: "8px", border: "1px solid #EAEAEA",
-                     textDecoration: "none", transition: "all 0.2s",
-                     boxShadow: "0 2px 8px rgba(0,0,0,0.03)"
-                   }}
-                >
-                  <div>
-                    <div style={{ fontSize: "1.125rem", fontWeight: 600, color: "var(--color-text)", marginBottom: "0.3rem" }}>
-                      {doc.label}
-                    </div>
-                    <div style={{ fontSize: "0.875rem", color: "var(--color-neutral)" }}>
-                      PDF {doc.size ? `| ${doc.size}` : ""}
-                    </div>
-                  </div>
-                  <div style={{ width: "44px", height: "44px", borderRadius: "50%", border: "1px solid var(--color-text)", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--color-text)" }}>
-                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-                    </svg>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
       {/* ═══ THƯ VIỆN HÌNH ẢNH LÂM SÀNG (CLINICAL IMAGES) ═══ */}
       {product.clinicalImages && product.clinicalImages.length > 0 && (
         <section className="pd-clinical-section" style={{ padding: "5rem 0", backgroundColor: "#fff" }}>
@@ -382,16 +400,18 @@ export default function ProductDetailClient({ product, related }: Props) {
             </h2>
             <div className="products-grid">
               {related.map((p) => (
-                <div className="product-card fade-in-up" key={p.id}>
+                <div className="product-card fade-in-up" key={p.id} style={{ cursor: "pointer" }} onClick={(e) => {
+                  window.location.href = `/san-pham/${p.slug}`;
+                }}>
                   <div className="product-image">
                     <img src={p.thumbnail} alt={p.name} loading="lazy" />
                     <div className="product-badge">{p.categoryLabel[locale]}</div>
                   </div>
                   <div className="product-content">
                     <div className="product-brand">{p.brand}</div>
-                    <h3 className="product-title">{p.name}</h3>
+                    <Link href={`/san-pham/${p.slug}`} className="product-title" style={{ textDecoration: "none", color: "inherit", cursor: "pointer", display: "inline-block" }}>{p.name}</Link>
                     <p className="product-desc line-clamp-2">{p.description[locale]}</p>
-                    <Link href={`/san-pham/${p.slug}`} className="product-action">
+                    <Link href={`/san-pham/${p.slug}`} className="product-action" onClick={(e) => e.stopPropagation()}>
                       {t("Chi tiết sản phẩm", "View Details")}
                       <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />

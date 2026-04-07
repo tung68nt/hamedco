@@ -11,42 +11,42 @@ export default function CompanyJourney() {
   const milestones = [
     {
       year: "2005",
-      title: { vi: "Thành lập công ty", en: "Company Founded" },
+      title: { vi: "Khởi nguồn sứ mệnh", en: "Origins of the Mission" },
       desc: {
-        vi: "Công ty Cổ phần Trang thiết bị và Vật tư Y tế Hà Nội (HAMEDCO) chính thức được thành lập ngày 05/09/2005.",
-        en: "Hanoi Medical Equipment and Supplies Joint Stock Company (HAMEDCO) was officially established on September 5, 2005."
+        vi: "Thành lập HAMEDCO, đặt những viên gạch đầu tiên trong lĩnh vực vật tư y tế và dịch vụ kỹ thuật. Đây là giai đoạn xây dựng nền tảng chuyên môn vững chắc và thấu hiểu sâu sắc nhu cầu thực tế của ngành y tế Việt Nam.",
+        en: "Established HAMEDCO, laying the first bricks in the field of medical supplies and technical services. This was the stage of building a solid professional foundation and deeply understanding the practical needs of the Vietnamese healthcare sector."
       }
     },
     {
-      year: "2006",
-      title: { vi: "Đối tác chính thức Philips", en: "Official Philips Partner" },
+      year: "2013",
+      title: { vi: "Chuyển mình chiến lược", en: "Strategic Transformation" },
       desc: {
-        vi: "Trở thành Nhà phân phối chính thức các dòng máy siêu âm của Philips Healthcare tại Việt Nam.",
-        en: "Became the official distributor of Philips Healthcare ultrasound systems in Vietnam."
+        vi: "Năm 2013 - Hamedco quyết định tái cấu trúc hoạt động, xây dựng lại nền tảng chiến lược và phát triển, chuyển hướng mô hình kinh doanh sang mảng thiết bị y tế",
+        en: "In 2013, HAMEDCO decided to restructure its operations, rebuild its strategic foundation and development, and shift its business model to the medical equipment sector."
       }
     },
     {
-      year: "2010",
+      year: "2016",
       title: { vi: "Mở rộng danh mục sản phẩm", en: "Expanding Product Portfolio" },
       desc: {
-        vi: "Hợp tác với các đối tác quốc tế hàng đầu từ Châu Âu, Mỹ và Nhật Bản để cung cấp giải pháp toàn diện.",
-        en: "Partnered with leading international brands from Europe, USA and Japan to provide comprehensive healthcare solutions."
-      }
-    },
-    {
-      year: "2015",
-      title: { vi: "10 Năm khẳng định vị thế", en: "10 Years of Leadership" },
-      desc: {
-        vi: "Hiện diện tại hàng trăm bệnh viện từ trung ương đến địa phương. Đạt chứng chỉ tiêu chuẩn quốc tế.",
-        en: "Present in hundreds of hospitals from central to local levels. Achieved international standard certifications."
+        vi: "Hợp tác với các đối tác quốc tế hàng đầu từ Châu Âu, Mỹ và Nhật Bản để cung cấp giải pháp toàn diện cho các bệnh viện và cơ sở y tế đầu ngành.",
+        en: "Collaborated with leading international partners from Europe, the US, and Japan to provide comprehensive solutions for top hospitals and medical facilities."
       }
     },
     {
       year: "2020",
-      title: { vi: "Chuyển đổi số Y tế", en: "Digital Health Transformation" },
+      title: { vi: "Mở rộng quy mô kinh doanh", en: "Business Expansion" },
       desc: {
-        vi: "Triển khai CT-Scanner, MRI, DSA và các hệ thống chẩn đoán hình ảnh tiên tiến cho các bệnh viện lớn.",
-        en: "Deployed CT-Scanners, MRI, DSA and advanced diagnostic imaging systems for major hospitals."
+        vi: "Công ty chính thức mở rộng thị trường hoạt động vào phía nam, mở thêm chi nhánh tại HCM khẳng định năng lực triển khai dự án và hỗ trợ kỹ thuật thần tốc trên phạm vi toàn quốc, xóa bỏ mọi rào cản về địa lý trong phục vụ khách hàng.",
+        en: "The company officially expanded its operations to the south, opening a new branch in HCMC, affirming its project implementation and rapid technical support capabilities nationwide, eliminating all geographical barriers in serving customers."
+      }
+    },
+    {
+      year: "2022",
+      title: { vi: "Khẳng định vị thế Đối tác chiến lược", en: "Affirming Strategic Partner Position" },
+      desc: {
+        vi: "Trở thành nhà phân phối chính thức của Philips Healthcare. Cột mốc vàng khẳng định uy tín tuyệt đối về tiêu chuẩn kỹ thuật, năng lực vận hành và sự tin tưởng từ tập đoàn công nghệ y tế hàng đầu thế giới trong phân khúc cao cấp.",
+        en: "Became the official distributor of Philips Healthcare. A golden milestone affirming absolute prestige in technical standards, operational capacity, and the trust from the world's leading health technology corporation in the high-end segment."
       }
     },
     {

@@ -44,8 +44,8 @@ export default function VisionMissionValues() {
         </svg>
       ),
       desc: {
-        vi: "Khắt khe trong lựa chọn, chỉ cung cấp những sản phẩm đạt chuẩn quốc tế (CE, ISO).",
-        en: "Strict in selection, only providing products meeting international standards (CE, ISO)."
+        vi: "Khắt khe trong lựa chọn, chỉ cung cấp những sản phẩm đạt chuẩn quốc tế (FDA, CE, ISO).",
+        en: "Strict in selection, only providing products meeting international standards (FDA, CE, ISO)."
       }
     },
     {

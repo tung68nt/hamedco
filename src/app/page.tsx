@@ -80,18 +80,33 @@ export default function Home() {
           </div>
           <div className="products-grid">
             {topProducts.map((p) => (
-              <div className="product-card" key={p.id}>
+              <div 
+                className="product-card" 
+                key={p.id}
+                style={{ cursor: "pointer" }}
+                onClick={(e) => {
+                  window.location.href = `/san-pham/${p.slug}`;
+                }}
+              >
                 <div className="product-image">
                   <img src={p.thumbnail} alt={p.name} loading="lazy" />
                   <div className="product-badge">{p.categoryLabel[locale]}</div>
                 </div>
                 <div className="product-content">
                   <div className="product-brand">{p.brand}</div>
-                  <h3 className="product-title">{p.name}</h3>
+                  <Link href={`/san-pham/${p.slug}`} className="product-title" style={{ textDecoration: "none", color: "inherit", cursor: "pointer", display: "inline-block" }}>
+                    {p.name}
+                  </Link>
                   <p className="product-desc line-clamp-3">{p.description[locale]}</p>
-                  <Link href={`/san-pham/${p.slug}`} className="product-action">
+                  <Link 
+                    href={`/san-pham/${p.slug}`} 
+                    className="product-action"
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     {t("Chi tiết sản phẩm", "View Details")}
-                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
                   </Link>
                 </div>
               </div>
