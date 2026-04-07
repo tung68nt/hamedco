@@ -46,13 +46,13 @@ export default function Home() {
             <div className="fade-in-up">
               <span className="overline">{t("Về HAMEDCO", "About HAMEDCO")}</span>
               <h2>{t(
-                "Nhà cung cấp giải pháp thiết bị y tế hàng đầu Việt Nam – Đối tác chiến lược của Philips",
-                "Vietnam's Leading Medical Equipment Supplier – Strategic Partner of Philips"
+                "HAMEDCO – Nhà cung cấp giải pháp thiết bị y tế công nghệ cao hàng đầu Việt Nam. Đối tác chiến lược của Philips Healthcare",
+                "HAMEDCO – Vietnam's Leading High-Tech Medical Equipment Solutions Provider. Strategic Partner of Philips Healthcare"
               )}</h2>
               <p className="body-lg" style={{ margin: "20px 0", color: "var(--color-gray-500)" }}>
                 {t(
-                  "Thành lập từ năm 2005, Công ty Cổ phần Vật tư và Thiết bị Y tế Hà Nội (HAMEDCO) tự hào là Nhà phân phối chính thức của Philips tại thị trường Việt Nam. Với hơn 20 năm kinh nghiệm, chúng tôi đã xác lập vị thế là đối tác tin cậy của hàng trăm bệnh viện và cơ sở y tế trên toàn quốc thông qua việc cung cấp các hệ thống chẩn đoán hình ảnh và giải pháp hồi sức cấp cứu tiên tiến nhất.",
-                  "Established in 2005, Hanoi Medical Supplies and Equipment Joint Stock Company (HAMEDCO) proudly serves as the official distributor of Philips in Vietnam. With over 20 years of experience, we have become a trusted partner for hundreds of hospitals and medical facilities nationwide by providing the most advanced imaging diagnostics and critical care solutions."
+                  "Thành lập từ năm 2005, Công ty Cổ phần Vật tư và Thiết bị Y tế Hà Nội (HAMEDCO) là Nhà phân phối chính thức của Philips tại thị trường Việt Nam. Với hơn 20 năm kinh nghiệm, chúng tôi cung cấp các hệ thống chẩn đoán hình ảnh và giải pháp hồi sức cấp cứu tiên tiến, đồng thời mang đến giải pháp y tế tổng thể giúp các bệnh viện tối ưu vận hành, nâng cao độ chính xác trong chẩn đoán và cải thiện chất lượng điều trị.",
+                  "Established in 2005, Hanoi Medical Supplies and Equipment Joint Stock Company (HAMEDCO) is the official distributor of Philips in the Vietnamese market. With over 20 years of experience, we provide advanced imaging diagnostics and critical care solutions, delivering comprehensive healthcare solutions to optimize hospital operations, improve diagnostic accuracy, and enhance treatment quality."
                 )}
               </p>
               <div className="flex gap-4 flex-wrap">
@@ -94,7 +94,7 @@ export default function Home() {
                 </div>
                 <div className="product-content">
                   <div className="product-brand">{p.brand}</div>
-                  <Link href={`/san-pham/${p.slug}`} className="product-title" style={{ textDecoration: "none", color: "inherit", cursor: "pointer", display: "inline-block" }}>
+                  <Link href={`/san-pham/${p.slug}`} className="product-title" style={{ textDecoration: "none", color: "inherit", cursor: "pointer", display: "block", marginTop: "4px" }}>
                     {p.name}
                   </Link>
                   <p className="product-desc line-clamp-3">{p.description[locale]}</p>
@@ -237,11 +237,11 @@ export default function Home() {
       <section className="section bg-white">
         <div className="container">
           <div className="section-header fade-in-up">
-            <span className="overline">{t("Chứng nhận & Tiêu chuẩn", "Certifications & Standards")}</span>
+            <span className="overline">{t("TIÊU CHUẨN & CHỨNG NHẬN CHẤT LƯỢNG", "Certifications & Quality Standards")}</span>
             <h2>{t("Cam kết chất lượng quốc tế", "Commitment to International Quality")}</h2>
             <p>{t(
-              "Toàn bộ sản phẩm đều đạt các chứng nhận quốc tế nghiêm ngặt nhất trong ngành y tế",
-              "All products meet the most stringent international certifications in the healthcare industry."
+              "Sản phẩm đạt chứng nhận quốc tế đảm bảo sự an toàn tuyệt đối và tính pháp lý minh bạch cho mọi dự án y tế.",
+              "Products achieve international certifications ensuring absolute safety and transparent legal compliance for all medical projects."
             )}</p>
           </div>
           <div className="cert-grid fade-in-up">
@@ -273,58 +273,58 @@ export default function Home() {
               "The Trusted Partner of Hundreds of Hospitals Nationwide"
             )}</h2>
             <p>{t(
-              "Chúng tôi cam kết mang đến giải pháp thiết bị y tế toàn diện với chất lượng dịch vụ vượt trội.",
-              "We are committed to providing comprehensive medical equipment solutions with outstanding service quality."
+              "Chúng tôi cam kết mang đến giải pháp thiết bị y tế toàn diện cùng chất lượng dịch vụ vượt trội.",
+              "We are committed to providing comprehensive medical equipment solutions alongside outstanding service quality."
             )}</p>
           </div>
           <div className="why-grid">
             <div className="why-item fade-in-up stagger-1">
               <div className="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
               <div>
-                <h3>{t("1. Bảo chứng Chính hãng 100%", "1. 100% Genuine Guarantee")}</h3>
+                <h3>{t("1. Chính hãng 100%", "1. 100% Genuine")}</h3>
                 <p>{t(
-                  "Cam kết phân phối sản phẩm chính hãng từ các nhà sản xuất hàng đầu (Philips). Đầy đủ chứng từ CO-CQ, giấy phép nhập khẩu và lưu hành trang thiết bị y tế (TTBYT) theo quy định.",
-                  "Authorized distribution with full CO-CQ certification and medical device licensing."
+                  "Cam kết phân phối sản phẩm chính hãng từ các nhà sản xuất hàng đầu thế giới như Philips. Hồ sơ pháp lý đầy đủ, bao gồm CO, CQ, giấy phép nhập khẩu và giấy phép lưu hành trang thiết bị y tế theo quy định.",
+                  "Committed to distributing genuine products from top global manufacturers like Philips. Full legal documentation including CO, CQ, import licenses and medical device circulation permits."
                 )}</p>
               </div>
             </div>
             <div className="why-item fade-in-up stagger-2">
               <div className="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
               <div>
-                <h3>{t("2. Phản hồi Kỹ thuật 24/7", "2. 24/7 Technical Response")}</h3>
+                <h3>{t("2. Phản hồi kỹ thuật 24/7", "2. 24/7 Technical Response")}</h3>
                 <p>{t(
-                  "Đội ngũ kỹ thuật chuyên sâu luôn trong tư thế sẵn sàng 24/7. Chúng tôi cam kết phản hồi và đưa ra phương án xử lý yêu cầu đảm bảo hệ thống y tế vận hành thông suốt.",
-                  "Our dedicated technical team is ready to respond to any support request 24/7 ensuring smooth operation."
+                  "Đội ngũ kỹ thuật chuyên sâu luôn sẵn sàng hỗ trợ 24/7. Chúng tôi cam kết phản hồi nhanh chóng và đưa ra phương án xử lý kịp thời, góp phần bảo đảm hệ thống thiết bị y tế vận hành ổn định, liên tục.",
+                  "Our expert technical team is always ready and available 24/7. We commit to rapid response and timely resolution to ensure your medical systems operate stably and continuously."
                 )}</p>
               </div>
             </div>
             <div className="why-item fade-in-up stagger-3">
               <div className="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></div>
               <div>
-                <h3>{t("3. Chuyển giao Công nghệ Chuyên sâu", "3. Professional Technology Transfer")}</h3>
+                <h3>{t("3. Chuyển giao công nghệ chuyên sâu", "3. In-depth Technology Transfer")}</h3>
                 <p>{t(
-                  "Chú trọng đào tạo và chuyển giao công nghệ bài bản. Hướng dẫn vận hành chi tiết cho đội ngũ y bác sĩ, giúp tối ưu hóa công năng thiết bị trong chẩn đoán và điều trị.",
-                  "Comprehensive training programs for medical staff to ensure optimal equipment performance."
+                  "HAMEDCO chú trọng đào tạo và chuyển giao công nghệ bài bản. Đội ngũ y bác sĩ được hướng dẫn vận hành chi tiết, giúp khai thác tối đa hiệu quả thiết bị trong chẩn đoán và điều trị.",
+                  "HAMEDCO prioritizes comprehensive training and technology transfer. Medical staff receive detailed guidance, helping maximize equipment efficiency in diagnosis and treatment."
                 )}</p>
               </div>
             </div>
             <div className="why-item fade-in-up stagger-4">
               <div className="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg></div>
               <div>
-                <h3>{t("4. Bảo hành & Bảo trì Toàn diện", "4. Comprehensive Warranty")}</h3>
+                <h3>{t("4. Bảo hành và bảo trì toàn diện", "4. Comprehensive Warranty & Maintenance")}</h3>
                 <p>{t(
-                  "Chế độ bảo hành chính hãng từ 12–24 tháng. Thiết lập lịch bảo trì định kỳ và duy trì kho linh kiện dự phòng tại chỗ, giúp rút ngắn tối đa thời gian chờ đợi khi có sự cố.",
-                  "12–24 month official warranty, scheduled preventive maintenance, and on-site spare parts availability."
+                  "Chính sách bảo hành chính hãng từ 12 đến 24 tháng. Đồng thời, chúng tôi xây dựng kế hoạch bảo trì định kỳ và duy trì kho linh kiện dự phòng, giúp rút ngắn thời gian xử lý khi phát sinh sự cố.",
+                  "Official warranty policy from 12 to 24 months. We also establish regular maintenance plans and maintain on-site spare parts reserves, minimizing downtime when incidents occur."
                 )}</p>
               </div>
             </div>
             <div className="why-item fade-in-up stagger-5">
               <div className="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
               <div>
-                <h3>{t("5. 20+ Năm Kinh nghiệm Thực chiến", "5. 20+ Years of Expertise")}</h3>
+                <h3>{t("5. Hơn 20 năm kinh nghiệm thực chiến", "5. Over 20 Years of Practical Experience")}</h3>
                 <p>{t(
-                  "Với hơn 20 năm đồng hành cùng nền y tế nước nhà, HAMEDCO am hiểu sâu sắc quy trình vận hành và nhu cầu thực tế của các bệnh viện Việt Nam.",
-                  "Deep understanding of Vietnam's healthcare landscape to deliver the most effective and reliable solutions."
+                  "Với hơn 20 năm đồng hành cùng ngành y tế Việt Nam, HAMEDCO thấu hiểu sâu sắc quy trình vận hành và nhu cầu thực tiễn của các bệnh viện, từ đó mang đến các giải pháp phù hợp và hiệu quả.",
+                  "With more than 20 years supporting Vietnam's healthcare sector, HAMEDCO deeply understands the operational processes and practical needs of hospitals, ensuring tailored and effective solutions."
                 )}</p>
               </div>
             </div>

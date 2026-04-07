@@ -76,10 +76,6 @@ export default function ContactSection() {
               )}
             </p>
 
-            <div className="about-contact-company">
-              <strong>{t("Tên giao dịch:", "Trading name:")}</strong>
-              <p>CÔNG TY CP TRANG THIẾT BỊ VÀ VẬT TƯ Y TẾ HÀ NỘI</p>
-            </div>
 
             <div className="about-contact-actions">
               <Link href="/lien-he" className="btn btn-primary btn-lg">

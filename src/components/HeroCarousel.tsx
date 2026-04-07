@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const SLIDES = [
   { src: "/assets/images/hero/slide-1.webp", alt: "Phòng phẫu thuật hiện đại với thiết bị y tế tiên tiến" },
-  { src: "/assets/images/hero/slide-2.webp", alt: "Đội ngũ y bác sĩ sử dụng thiết bị chẩn đoán hình ảnh" },
+  { src: "https://yviet.com.vn/wp-content/uploads/2025/11/Bannerwebtrangchitiet_DV.jpg", alt: "Đội ngũ y bác sĩ sử dụng thiết bị chẩn đoán hình ảnh siêu âm chuyên nghiệp" },
   { src: "/assets/images/hero/slide-3.webp", alt: "Hệ thống thiết bị y tế trong bệnh viện hiện đại" },
 ];
 

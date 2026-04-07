@@ -409,7 +409,7 @@ export default function ProductDetailClient({ product, related }: Props) {
                   </div>
                   <div className="product-content">
                     <div className="product-brand">{p.brand}</div>
-                    <Link href={`/san-pham/${p.slug}`} className="product-title" style={{ textDecoration: "none", color: "inherit", cursor: "pointer", display: "inline-block" }}>{p.name}</Link>
+                    <Link href={`/san-pham/${p.slug}`} className="product-title" style={{ textDecoration: "none", color: "inherit", cursor: "pointer", display: "block", marginTop: "4px" }}>{p.name}</Link>
                     <p className="product-desc line-clamp-2">{p.description[locale]}</p>
                     <Link href={`/san-pham/${p.slug}`} className="product-action" onClick={(e) => e.stopPropagation()}>
                       {t("Chi tiết sản phẩm", "View Details")}

@@ -6,7 +6,7 @@
 export const PHILIPS_PRODUCTS = [
   {
     id: "lumify",
-    slug: "lumify",
+    slug: "HC795005-lumify",
     name: "Lumify",
     subtitle: {
       vi: "Hệ thống siêu âm cầm tay",
@@ -42,33 +42,102 @@ export const PHILIPS_PRODUCTS = [
     },
     features: [
       {
-        title: { vi: "Hình ảnh vượt trội (Exceptional Imaging)", en: "Exceptional Imaging" },
-        desc: { vi: "Đầu dò chất lượng cao mang DNA của Philips tích hợp vào thiết bị di động.", en: "High-quality transducers with Philips DNA integrated into a portable mobile device." },
-        image: "https://images.philips.com/is/image/philipsconsumer/336e5b51b6a84f048c78a7ee0144e2cf?wid=1024&$jpglarge$"
+            "title": {
+                  "vi": "Đầu dò thông minh 3 trong 1",
+                  "en": "3-in-1 Smart Transducers"
+            },
+            "desc": {
+                  "vi": "Phạm vi đầy đủ các đánh giá lâm sàng với các đầu dò Convex (C5-2), Linear (L12-4) và Sector (S4-1) kết nối qua cáp USB-C hoặc Micro-USB.",
+                  "en": "Full range of clinical assessments with Convex (C5-2), Linear (L12-4) and Sector (S4-1) transducers connecting via USB-C or Micro-USB."
+            }
       },
       {
-        title: { vi: "Tối ưu hóa đầu dò (Transducer Optimization)", en: "Transducer Optimization" },
-        desc: { vi: "14 preset tùy chỉnh (Bụng, Tim, FAST, MSK...) giúp tối ưu hóa chẩn đoán cho từng bộ phận.", en: "14 customized presets (Abdominal, Cardiac, FAST, MSK...) helping optimize diagnosis for each organ." }
+            "title": {
+                  "vi": "Siêu âm từ xa Lumify with Reacts",
+                  "en": "Reacts Tele-ultrasound"
+            },
+            "desc": {
+                  "vi": "Nền tảng hội chẩn trực tuyến video - audio theo thời gian thực (real-time video and audio collaboration) giúp các bác sĩ từ xa có thể tham gia vào ca siêu âm trực tiếp.",
+                  "en": "Real-time video and audio collaboration platform allows remote doctors to join the live ultrasound exam."
+            }
       },
       {
-        title: { vi: "Hợp tác tức thì (Instant Collaboration)", en: "Instant Collaboration" },
-        desc: { vi: "Siêu âm từ xa tích hợp nền tảng Reacts cho phép hội chẩn trực tuyến theo thời gian thực.", en: "Integrated tele-ultrasound powered by the Reacts platform for real-time collaboration." }
+            "title": {
+                  "vi": "Quản lý dữ liệu HIPAA",
+                  "en": "HIPAA-compliant Data Management"
+            },
+            "desc": {
+                  "vi": "Quản lý bảo mật thông tin bệnh nhân cấp cao, gửi dữ liệu thẳng tới hệ thống PACS của bệnh viện thông qua mạng DICOM an toàn.",
+                  "en": "Advanced patient information security management, sending data directly to the hospital's PACS system over secure DICOM networks."
+            }
+      },
+      {
+            "title": {
+                  "vi": "Cập nhật ứng dụng miễn phí",
+                  "en": "Free App Updates"
+            },
+            "desc": {
+                  "vi": "Tải ứng dụng Lumify từ Google Play hoặc Apple App Store và nhận các bản cập nhật phần mềm liên tục miễn phí.",
+                  "en": "Download the Lumify app from Google Play or Apple App Store and receive continuous software updates for free."
+            }
       }
-    ],
-    documents: [
-      { label: "Lumify 5.1 iOS Brochure", size: "1.4 MB", url: "https://www.documents.philips.com/assets/20250701/a0a69c9f60f041569522b30d003780d2.pdf" },
-      { label: "Lumify Handheld Ultrasound for Android", size: "6.60 MB", url: "https://www.documents.philips.com/assets/20250709/edeb29c4bcb54049a971b3150044f565.pdf" },
-      { label: "Lumify Device Compatibility List", size: "146.38 KB", url: "https://www.documents.philips.com/assets/20250811/40c397e620e74ac7b1ceb33601451281.pdf" }
-    ],
+],
     specifications: [
-      { label: { vi: "Nền tảng hỗ trợ", en: "Supported Platforms" }, value: { vi: "Android và iOS (iPhone/iPad)", en: "Android and iOS (iPhone/iPad)" } },
-      { label: { vi: "Chứng nhận & Bảo hành", en: "Cert & Warranty" }, value: { vi: "Chính hãng Philips, bảo hành mở rộng", en: "Official Philips, extended warranty" } },
-      { label: { vi: "Chia sẻ trực tuyến", en: "Tele-ultrasound" }, value: { vi: "Tích hợp chia sẻ thời gian thực Lumify with Reacts", en: "Integrated real-time sharing with Lumify Reacts" } }
-    ]
+      {
+            "label": {
+                  "vi": "Nền tảng hỗ trợ",
+                  "en": "Supported OS"
+            },
+            "value": {
+                  "vi": "Android và iOS",
+                  "en": "Android & iOS"
+            }
+      },
+      {
+            "label": {
+                  "vi": "Chiều dài cáp",
+                  "en": "Cable Length"
+            },
+            "value": {
+                  "vi": "Khách hàng có thể tháo rời/thay thế",
+                  "en": "User detachable/replaceable"
+            }
+      },
+      {
+            "label": {
+                  "vi": "Chế độ siêu âm",
+                  "en": "Imaging Modes"
+            },
+            "value": {
+                  "vi": "2D, Color Doppler, M-mode, PW Doppler",
+                  "en": "2D, Color Doppler, M-mode, PW Doppler"
+            }
+      },
+      {
+            "label": {
+                  "vi": "Chuẩn chống nước",
+                  "en": "Waterproof standard"
+            },
+            "value": {
+                  "vi": "IP67 (Đầu dò có thể nhúng lỏng)",
+                  "en": "IP67 (Transducer submersible)"
+            }
+      },
+      {
+            "label": {
+                  "vi": "Pin dự phòng",
+                  "en": "Battery"
+            },
+            "value": {
+                  "vi": "Sử dụng nguồn điện của thiết bị di động",
+                  "en": "Uses host device power"
+            }
+      }
+]
   },
   {
     id: "innosight",
-    slug: "innosight",
+    slug: "HC795001-innosight-compact-ultrasound-system",
     name: "InnoSight",
     subtitle: {
       vi: "Hệ thống siêu âm compact",
@@ -102,37 +171,57 @@ export const PHILIPS_PRODUCTS = [
       vi: ["Thiết kế compact, di động cao", "Công thái học đổi mới", "Đa dạng ứng dụng lâm sàng", "Màn hình HD 29.4cm"],
       en: ["Compact, highly portable design", "Innovative ergonomics", "Versatile clinical applications", "29.4cm HD display"]
     },
+    
     features: [
       {
-        title: { vi: "Giao diện trực quan", en: "Intuitive User Interface" },
-        desc: { vi: "Quy trình làm việc hợp lý, giảm thiểu thời gian đào tạo với các phím tùy chỉnh.", en: "Streamlined workflow that reduces the learning curve with customizable keys." },
+        title: { vi: "Giao diện cảm ứng trực quan (Intuitive Interface)", en: "Intuitive User Interface" },
+        desc: { vi: "Màn hình cảm ứng 11.6 inch với giao diện tùy biến, giúp giảm tối đa đường cong học tập, tối ưu quy trình thao tác và thời gian chẩn đoán.", en: "11.6 inch touchscreen with customizable interface, minimizing the learning curve and streamlining operational workflow." },
         image: "https://images.philips.com/is/image/philipsconsumer/4183db5e85b7488fb8ffab4200f41473?wid=1024&$jpglarge$"
       },
       {
-        title: { vi: "Tính di động cao", en: "Enhanced Mobility" },
-        desc: { vi: "Thiết kế tablet nhẹ (2.5kg), pin dự phòng 1.5 giờ và khởi động tức thì.", en: "Lightweight (2.5 kg) ergonomic tablet design with 1.5-hour battery backup." }
+        title: { vi: "Tính di động cao và thiết kế công thái học", en: "Enhanced Mobility & Ergonomics" },
+        desc: { vi: "Thiết kế dạng máy tính bảng nhỏ gọn, trọng lượng chỉ 2.46kg. Khởi động tức thì từ chế độ chờ (sleep mode) cùng pin dự phòng 1.5 giờ, lý tưởng cho cấp cứu và thăm khám tại giường.", en: "Compact tablet design weighing only 2.46kg. Instant boot-up from sleep mode alongside a 1.5-hour battery backup, ideal for emergency and bedside exams." }
       },
       {
-        title: { vi: "Công nghệ tối ưu iSCAN", en: "iSCAN Optimization Technology" },
-        desc: { vi: "Tự động tinh chỉnh hình ảnh siêu âm 2D ngay lập tức chỉ với một nút chạm.", en: "Automatically adjust 2D ultrasound images instantly with a single touch button." }
+        title: { vi: "Công nghệ tối ưu hóa iSCAN 2D", en: "iSCAN 2D Optimization Technology" },
+        desc: { vi: "Tự động điều chỉnh các thông số quét theo thời gian thực (real-time) để tối ưu chất lượng hình ảnh siêu âm 2D ngay lập tức chỉ với một lần chạm (one-touch).", en: "Automatically adjusts scanning parameters in real-time to optimize 2D ultrasound image quality instantly with a single touch." }
       },
       {
-        title: { vi: "Thời lượng pin dài", en: "Long lasting battery" },
-        desc: { vi: "Cho phép làm việc dã chiến liên tục nhờ thiết kế pin dung lượng lớn tích hợp.", en: "Allows continuous field work thanks to the built-in high capacity battery design." }
+        title: { vi: "Hỗ trợ đa dạng đầu dò chuyên sâu (Broadband Transducers)", en: "Comprehensive Broadband Transducers" },
+        desc: { vi: "Kết nối tương thích với đầy đủ dải đầu dò: Convex C6-2, Linear L12-4, Transvaginal C9-4v, và Sector S4-2 đáp ứng siêu âm tổng quát, sản phụ khoa, cơ xương khớp và tim mạch cơ bản.", en: "Compatible with a full range of transducers: Convex C6-2, Linear L12-4, Transvaginal C9-4v, and Sector S4-2 covering general imaging, OB/GYN, musculoskeletal, and basic cardiology." }
+      },
+      {
+        title: { vi: "Khả năng kết nối mở rộng (Advanced Connectivity)", en: "Advanced Connectivity" },
+        desc: { vi: "Hỗ trợ Wi-Fi và Ethernet tích hợp DICOM đầy đủ, cho phép đồng bộ hóa dữ liệu mượt mà tới hệ thống PACS / HIS của bệnh viện ngay từ điểm chăm sóc bệnh nhân.", en: "Includes Wi-Fi, Ethernet, and full DICOM integration, allowing seamless data synchronization to the hospital's PACS / HIS directly from the point of care." }
+      },
+      {
+        title: { vi: "Xe đẩy cơ động (Mobility Cart option)", en: "Mobility Cart Option" },
+        desc: { vi: "Lắp đặt linh hoạt trên giá đỡ hoặc xe đẩy chuyên dụng có thể điều chỉnh độ cao từ 118.6cm đến 148.6cm, mở rộng khả năng tiếp cận trong môi trường bệnh viện.", en: "Flexible mounting on bedside brackets or dedicated mobility carts with adjustable heights (118.6cm - 148.6cm), extending the system's reach within hospital environments." }
       }
     ],
     documents: [
-      { label: "InnoSight Product Brochure", size: "3.2 MB", url: "#" }
+      { label: "InnoSight Product Brochure", size: "3.2 MB", url: "https://www.documents.philips.com/assets/20200706/13dc4620ebc44d1496c3abf000d53b6f.pdf" },
+      { label: "InnoSight User Manual", size: "5.1 MB", url: "https://www.documents.philips.com/assets/20200625/a861ed8c7a864dc88963abe500fa145c.pdf" },
+      { label: "InnoSight MTM Brochure", size: "1.4 MB", url: "https://www.documents.philips.com/assets/20200706/de51ead51e70478a8c5aabf000d5382b.pdf" }
+    ],
+    clinicalImages: [
+      { url: "https://images.philips.com/is/image/philipsconsumer/2169262dae7f428eb415ab4200f41a1e?wid=1024&$jpglarge$", caption: "Fetal abdomen" },
+      { url: "https://images.philips.com/is/image/philipsconsumer/15e762303e9b42aa8f5cab4200f417f2?wid=1024&$jpglarge$", caption: "Renal arcuate vessels" },
+      { url: "https://images.philips.com/is/image/philipsconsumer/1dafb3dd462e48668701a7a201187049?wid=1024&$jpglarge$", caption: "Abdominal aorta" },
+      { url: "https://images.philips.com/is/image/philipsconsumer/12192ad24e674e67809bab4200f4161e?wid=1024&$jpglarge$", caption: "Fetal heart" }
     ],
     specifications: [
-      { label: { vi: "Kích thước màn hình", en: "Display Size" }, value: { vi: "29.4 cm (11.6 inch) cảm ứng HD", en: "29.4 cm (11.6 inch) HD touchscreen" } },
-      { label: { vi: "Giao diện", en: "Interface" }, value: { vi: "Giao diện người dùng dựa trên thao tác vuốt chạm thông minh", en: "Smart gesture-based touch user interface" } },
-      { label: { vi: "Ứng dụng", en: "Applications" }, value: { vi: "Tổng quát, mạch máu, cơ xương khớp", en: "General, vascular, musculoskeletal" } }
+      { label: { vi: "Kích thước màn hình", en: "Display Size" }, value: { vi: "29.4 cm (11.6 inch) cảm ứng HD chống chói (Anti-glare)", en: "29.4 cm (11.6 inch) anti-glare HD touchscreen" } },
+      { label: { vi: "Trọng lượng thân máy (Tablet)", en: "Tablet Weight" }, value: { vi: "2.46 Kg", en: "2.46 Kg" } },
+      { label: { vi: "Kích thước thân máy (D x R x C)", en: "Tablet Dimensions" }, value: { vi: "31.9 cm x 22.3 cm x 3.2 cm", en: "31.9 cm x 22.3 cm x 3.2 cm" } },
+      { label: { vi: "Ứng dụng lâm sàng chính", en: "Core Applications" }, value: { vi: "Tổng quát, mạch máu, cơ xương khớp, sản phụ khoa y tế cấp cứu (POC)", en: "General, vascular, MSK, OB/GYN, Point of Care (POC)" } },
+      { label: { vi: "Danh sách đầu dò hỗ trợ", en: "Supported Transducers" }, value: { vi: "C6-2 (Convex 128 elements), L12-4 (Linear 128 elements), C9-4v (TransVaginal 128 elements), S4-2 (Sector 64 elements)", en: "C6-2 (Convex 128 elements), L12-4 (Linear 128 elements), C9-4v (TransVaginal 128 elements), S4-2 (Sector 64 elements)" } },
+      { label: { vi: "Thông số xe đẩy (Mobility Cart)", en: "Mobility Cart Specs" }, value: { vi: "Nặng 27.7kg, Rộng 48.6cm, Cao từ 118.6cm đến 148.6cm", en: "Weight 27.7kg, Width 48.6cm, Height 118.6cm to 148.6cm" } }
     ]
   },
   {
     id: "flash-5100-poc",
-    slug: "flash-5100-poc",
+    slug: "795158-flash-ultrasound-system-5100-poc",
     name: "Flash 5100 POC",
     subtitle: {
       vi: "Hệ thống siêu âm Point-of-Care",
@@ -168,27 +257,102 @@ export const PHILIPS_PRODUCTS = [
     },
     features: [
       {
-        title: { vi: "Thiết kế bền bỉ & Compact", en: "Rugged & Compact Design" },
-        desc: { vi: "Bàn đẩy thẳng đứng lướt nhẹ trong không gian hẹp; màn hình cảm ứng 21.5-inch chống lóa.", en: "Vertical cart design that glides into tight spaces; features a 21.5-inch glove-compatible touchscreen." },
-        image: "https://images.philips.com/is/image/philipsconsumer/9f6f590956da4a49a7c8b2de00f82bd8?wid=1024&$jpglarge$"
+            "title": {
+                  "vi": "Màn hình kép thông minh",
+                  "en": "Smart Dual Display"
+            },
+            "desc": {
+                  "vi": "Màn hình hiển thị 21.5 inch kết hợp với giao diện cảm ứng 12 inch bên dưới giúp thao tác nhanh gấp 2 lần.",
+                  "en": "21.5-inch display combined with a 12-inch lower touchscreen interface speeds up operation by 2x."
+            }
       },
       {
-        title: { vi: "Hiệu suất chuyên dụng", en: "Purpose-Built Performance" },
-        desc: { vi: "Chất lượng hình ảnh vượt trội trong thiết kế tinh giản, tối ưu cho cấp cứu và hồi sức.", en: "Exceptional image quality in a simplified design, optimized for emergency and critical care." }
+            "title": {
+                  "vi": "Thiết kế chống nhiễm khuẩn",
+                  "en": "Infection Control Design"
+            },
+            "desc": {
+                  "vi": "Bề mặt phẳng, không kẽ hở kết hợp cùng vật liệu kháng khuẩn giúp dễ dàng khử trùng với hóa chất bệnh viện.",
+                  "en": "Flat, gapless surface combined with antibacterial materials makes it easy to disinfect with hospital chemicals."
+            }
+      },
+      {
+            "title": {
+                  "vi": "Pin hoạt động 2 giờ liên tục",
+                  "en": "2-Hour Continuous Battery"
+            },
+            "desc": {
+                  "vi": "Công nghệ pin thông minh cho phép hệ thống duy trì hoạt động quét cả khi rút điện di chuyển dọc hành lang.",
+                  "en": "Smart battery technology allows the system to continue scanning even when unplugged while moving down the hall."
+            }
+      },
+      {
+            "title": {
+                  "vi": "Khoá tự động (Auto-Lock)",
+                  "en": "Auto-Lock Security"
+            },
+            "desc": {
+                  "vi": "Hệ thống tự khoá và bảo mật dữ liệu HIPAA ngay lập tức khi bác sĩ rời đi.",
+                  "en": "The system auto-locks and secures HIPAA data instantly when the doctor leaves."
+            }
       }
-    ],
-    documents: [
-      { label: "Flash Ultrasound System 5100 POC Brochure", size: "3.2 MB", url: "https://www.documents.philips.com/assets/20250507/2f2a82833fe24c4985a2b2d6012af27d.pdf" },
-      { label: "EcoPassport Flash Ultrasound System 5100 POC and 5100 POC Pro", size: "1.1 MB", url: "https://www.documents.philips.com/assets/20250507/4fa74198bf24442eae48b2d601117005.pdf" }
-    ],
+],
     specifications: [
-      { label: { vi: "Chuyên khoa mục tiêu", en: "Target Specialties" }, value: { vi: "Cấp cứu, Hồi sức, Gây mê, Khám tại giường", en: "Emergency, ICU, Anesthesia, Point of Care" } },
-      { label: { vi: "Tùy biến", en: "Customizability" }, value: { vi: "Tùy biến giao diện (Presets) cho từng bác sĩ", en: "Custom user presets for each physician" } }
-    ]
+      {
+            "label": {
+                  "vi": "Kích thước màn hình chính",
+                  "en": "Main Display Size"
+            },
+            "value": {
+                  "vi": "21.5 inch HD",
+                  "en": "21.5 inch HD"
+            }
+      },
+      {
+            "label": {
+                  "vi": "Màn hình điều khiển",
+                  "en": "Control Screen"
+            },
+            "value": {
+                  "vi": "12 inch cảm ứng",
+                  "en": "12 inch touchscreen"
+            }
+      },
+      {
+            "label": {
+                  "vi": "Thời lượng Pin",
+                  "en": "Battery Life"
+            },
+            "value": {
+                  "vi": "Lên tới 2 giờ quét liên tục",
+                  "en": "Up to 2 hours of continuous scanning"
+            }
+      },
+      {
+            "label": {
+                  "vi": "Cổng cắm đầu dò",
+                  "en": "Transducer Ports"
+            },
+            "value": {
+                  "vi": "4 cổng hoạt động linh hoạt",
+                  "en": "4 active flexible ports"
+            }
+      },
+      {
+            "label": {
+                  "vi": "Công nghệ AutoSCAN",
+                  "en": "AutoSCAN Tech"
+            },
+            "value": {
+                  "vi": "Tối ưu hóa hình ảnh một chạm",
+                  "en": "One-touch image optimization"
+            }
+      }
+]
   },
   {
     id: "flash-5100-poc-pro",
-    slug: "flash-5100-poc-pro",
+    slug: "795404-flash-ultrasound-system-5100-poc-pro",
     name: "Flash 5100 POC Pro",
     subtitle: {
       vi: "Hệ thống siêu âm POC nâng cao",
@@ -243,7 +407,7 @@ export const PHILIPS_PRODUCTS = [
   },
   {
     id: "compact-5300",
-    slug: "compact-5300",
+    slug: "HC795136-compact-5300",
     name: "Compact 5300 Series",
     subtitle: {
       vi: "Hệ thống siêu âm compact cao cấp",
@@ -329,7 +493,7 @@ export const PHILIPS_PRODUCTS = [
   },
   {
     id: "compact-5500",
-    slug: "compact-5500",
+    slug: "HC795140-compact-5500",
     name: "Compact 5500 Series",
     subtitle: {
       vi: "Hệ thống siêu âm compact cao cấp",
@@ -392,7 +556,7 @@ export const PHILIPS_PRODUCTS = [
   },
   {
     id: "affiniti-30",
-    slug: "affiniti-30",
+    slug: "HC795218-affiniti-30",
     name: "Affiniti 30",
     subtitle: {
       vi: "Hệ thống siêu âm đa năng",
@@ -449,7 +613,7 @@ export const PHILIPS_PRODUCTS = [
   },
   {
     id: "affiniti-50",
-    slug: "affiniti-50",
+    slug: "HC795208-affiniti-50",
     name: "Affiniti 50",
     subtitle: {
       vi: "Thiết kế cho thực hành hàng ngày",
@@ -509,7 +673,7 @@ export const PHILIPS_PRODUCTS = [
   },
   {
     id: "affiniti-70",
-    slug: "affiniti-70",
+    slug: "HC795210-affiniti-70",
     name: "Affiniti 70",
     subtitle: {
       vi: "Thiết kế cho thực hành hàng ngày",
@@ -545,27 +709,102 @@ export const PHILIPS_PRODUCTS = [
     },
     features: [
       {
-        title: { vi: "Công nghệ tinh thể PureWave", en: "PureWave crystal technology" },
-        desc: { vi: "Bước tiến lớn nhất trong công nghệ đầu dò cho hình ảnh vượt trội trên bệnh nhân khó thăm khám.", en: "The biggest step forward in transducer technology for exceptional imaging even on difficult patients." },
-        image: "https://images.philips.com/is/image/philipsconsumer/f7cda87f54924c7f8a7eaf8c009d01f8?wid=1024&$jpglarge$"
+            "title": {
+                  "vi": "Đầu dò PureWave thế hệ mới",
+                  "en": "Next-gen PureWave Transducers"
+            },
+            "desc": {
+                  "vi": "Sử dụng tinh thể PureWave (đơn tinh thể) cho độ xuyên thấu cực lớn và dải băng thông rộng, giải quyết bài toán siêu âm khó trên bệnh nhân béo phì.",
+                  "en": "PureWave (single crystal) provides ultimate penetration and broad bandwidth, solving difficult ultrasound challenges on obese patients."
+            }
       },
       {
-        title: { vi: "Hiển thị MaxVue HD", en: "MaxVue HD display" },
-        desc: { vi: "Màn hình 21.5-inch HD cung cấp thêm 33% diện tích hiển thị hình ảnh.", en: "A 21.5\" HD display that provides 33% more display area for immersive imaging." }
+            "title": {
+                  "vi": "Đàn hồi mô Shear Wave",
+                  "en": "Shear Wave Elastography"
+            },
+            "desc": {
+                  "vi": "Định lượng độ cứng của nhu mô gan, tuyến giáp, vú không xâm lấn, mang lại cơ sở tin cậy mạnh mẽ trong chẩn đoán xơ hóa.",
+                  "en": "Non-invasive quantitative stiffness measurement of liver parenchyma, thyroid, breast, providing a highly reliable basis for fibrosis staging."
+            }
+      },
+      {
+            "title": {
+                  "vi": "Auto Doppler",
+                  "en": "Auto Doppler"
+            },
+            "desc": {
+                  "vi": "Tự động tối ưu hóa góc màu, cổng thu và phổ Doppler với 1 nút bấm, giảm 68% thao tác gõ phím.",
+                  "en": "Automatically optimizes color box angle, sample volume, and Doppler spectrum with 1 button, reducing keystrokes by 68%."
+            }
+      },
+      {
+            "title": {
+                  "vi": "Độ ồn cực thấp (Thì thầm)",
+                  "en": "Library-quiet Operation"
+            },
+            "desc": {
+                  "vi": "Các quạt tản nhiệt thiết kế đặc biệt phát ra âm thanh cực nhỏ, tạo môi trường yên tĩnh tối đa cho bệnh nhân ở không gian chật hẹp.",
+                  "en": "Specially designed cooling fans emit minimal noise, creating a maximally quiet environment for patients."
+            }
       }
-    ],
-    documents: [
-      { label: "EPIQ Elite & Affiniti ultrasound Vascular flyer", size: "1.5 MB", url: "https://www.documents.philips.com/assets/20230823/c717079f784c4620a184b067014fd67d.pdf" },
-      { label: "EPIQ Elite & Affiniti ultrasound Interventional Radiology flyer", size: "1.2 MB", url: "https://www.documents.philips.com/assets/20230823/edb4b78f9bd744cb849fb067014fd155.pdf" },
-      { label: "EPIQ Elite & Affiniti Pediatric flyer", size: "1.8 MB", url: "https://www.documents.philips.com/assets/20230823/752a90cd7bd646758be4b067014fdc63.pdf" }
-    ],
+],
     specifications: [
-      { label: { vi: "Đầu dò chuyên biệt", en: "Specialized Transducers" }, value: { vi: "PureWave C5-1, L12-3, eL18-4", en: "PureWave C5-1, L12-3, eL18-4" } }
-    ]
+      {
+            "label": {
+                  "vi": "Màn hình",
+                  "en": "Display"
+            },
+            "value": {
+                  "vi": "Màn hình phẳng 21.5-inch gấp gập",
+                  "en": "Fold-down 21.5-inch flat panel"
+            }
+      },
+      {
+            "label": {
+                  "vi": "Đầu dò",
+                  "en": "Transducers"
+            },
+            "value": {
+                  "vi": "Tương thích đầy đủ C5-1, L12-5, S5-1, eL18-4",
+                  "en": "Fully compatible C5-1, L12-5, S5-1, eL18-4"
+            }
+      },
+      {
+            "label": {
+                  "vi": "Đàn hồi mô",
+                  "en": "Elastography"
+            },
+            "value": {
+                  "vi": "Strain Elastography & Shear Wave (ARFI)",
+                  "en": "Strain Elastography & Shear Wave (ARFI)"
+            }
+      },
+      {
+            "label": {
+                  "vi": "Thời gian khởi động",
+                  "en": "Boot time"
+            },
+            "value": {
+                  "vi": "< 90 giây từ lúc cắm điện",
+                  "en": "< 90 seconds from cold boot"
+            }
+      },
+      {
+            "label": {
+                  "vi": "CEUS",
+                  "en": "CEUS"
+            },
+            "value": {
+                  "vi": "Tích hợp siêu âm cản quang",
+                  "en": "Contrast Enhanced Ultrasound Integrated"
+            }
+      }
+]
   },
   {
     id: "affiniti-cvx",
-    slug: "affiniti-cvx",
+    slug: "795190-affiniti-cvx",
     name: "Affiniti CVx",
     subtitle: {
       vi: "Siêu âm tim thế hệ mới",
@@ -624,7 +863,7 @@ export const PHILIPS_PRODUCTS = [
   },
   {
     id: "epiq-cvx",
-    slug: "epiq-cvx",
+    slug: "HC795231-epiq-cvx",
     name: "EPIQ CVx",
     subtitle: {
       vi: "Hệ thống siêu âm tim cao cấp",
@@ -660,31 +899,102 @@ export const PHILIPS_PRODUCTS = [
     },
     features: [
       {
-        title: { vi: "Kiến trúc hình ảnh nSIGHT Plus", en: "nSIGHT Plus Architecture" },
-        desc: { vi: "Xử lý song song dữ liệu lớn cho độ phân giải cực cao và tốc độ khung hình vượt trội.", en: "Processes vast amounts of acoustic data, providing high image resolution and frame rates." },
-        image: "https://images.philips.com/is/image/philipsconsumer/09deb85123eb4a98b04fb14f01513c0a?wid=1024&$jpglarge$"
+            "title": {
+                  "vi": "Công nghệ kết xuất nSIGHT",
+                  "en": "nSIGHT Architecture"
+            },
+            "desc": {
+                  "vi": "Cấu trúc tạo ảnh đột phá vượt xa siêu âm truyền thống. Nắm bắt lượng lớn dữ liệu âm thanh và tập trung lại thông qua tính toán cực hạn (extreme computation).",
+                  "en": "Groundbreaking imaging architecture goes beyond traditional ultrasound. Captures massive amounts of acoustic data and optimally focuses them through extreme computation."
+            }
       },
       {
-        title: { vi: "Trực quan hóa TrueVue 3D", en: "TrueVue 3D Visualization" },
-        desc: { vi: "Công nghệ dựng ảnh quang học 3D giúp quan sát chi tiết giải phẫu tim sống động.", en: "Provides photorealistic 3D imaging with a virtual light source for enhanced insight." }
+            "title": {
+                  "vi": "Kết xuất TrueVue cực thực",
+                  "en": "TrueVue Photorealistic Rendering"
+            },
+            "desc": {
+                  "vi": "Công nghệ độc quyền Philips TrueVue cùng AutoStrain, AI 3D/4D cho phép dựng hình cấu trúc tim 3D với nguồn sáng ảo, mang lại độ phân giải chiều sâu chưa từng có.",
+                  "en": "Philips exclusive TrueVue with AutoStrain and 3D/4D AI allows 3D heart rendering with a virtual light source, delivering unprecedented depth perception."
+            }
       },
       {
-        title: { vi: "Đầu dò xMATRIX", en: "xMATRIX Transducers" },
-        desc: { vi: "Hỗ trợ thu thập thể tích linh hoạt với 2D, 3D, xPlane trực tiếp trên một đầu dò.", en: "Enables versatile volume acquisition and various modes from a single probe." }
+            "title": {
+                  "vi": "HeartModel AI định lượng tự động",
+                  "en": "HeartModel AI Auto-Quantification"
+            },
+            "desc": {
+                  "vi": "Tự động phân vùng và định lượng thể tích thất trái (LV) và nhĩ trái (LA) trên siêu âm 3D theo chuẩn hội tim mạch, chỉ mất vài giây.",
+                  "en": "Automatic segmentation and quantification of LV and LA volumes on 3D ultrasound following cardiology standards in just seconds."
+            }
+      },
+      {
+            "title": {
+                  "vi": "Màn hình MaxVue",
+                  "en": "MaxVue High-Def Display"
+            },
+            "desc": {
+                  "vi": "Tăng 38% diện tích hiển thị siêu âm, cho phép dễ dàng nhìn thấy hình ảnh từ khoảng cách xa trong phòng thông tim (Cath lab).",
+                  "en": "Increases ultrasound viewing area by 38%, making it easy to view images from a distance in the Cath lab."
+            }
       }
-    ],
-    documents: [
-      { label: "X11-4t Product Brochure", size: "2.1 MB", url: "https://www.documents.philips.com/assets/20240425/5501a1a1fa774e93a440b15d0186a001.pdf" },
-      { label: "EPIQ CVx/CVxi Product Overview Ultrasound", size: "6.8 MB", url: "https://www.documents.philips.com/assets/20240502/240d371246504779bca2b164016b35c5.pdf" },
-      { label: "EPIQ CVx/CVxi Feature and User Experience", size: "4.5 MB", url: "https://www.documents.philips.com/assets/20181113/f1efc848a59b4c118da6a99700902ab7.pdf" }
-    ],
+],
     specifications: [
-      { label: { vi: "Nền tảng xử lý", en: "Processing Platform" }, value: { vi: "nSIGHT Architecture", en: "nSIGHT Architecture" } }
-    ]
+      {
+            "label": {
+                  "vi": "Cấu trúc hệ thống",
+                  "en": "System Architecture"
+            },
+            "value": {
+                  "vi": "Độc quyền Philips nSIGHT",
+                  "en": "Exclusive Philips nSIGHT"
+            }
+      },
+      {
+            "label": {
+                  "vi": "Màn hình chính",
+                  "en": "Main Display"
+            },
+            "value": {
+                  "vi": "24-inch OLED HD cực nét",
+                  "en": "24-inch OLED HD ultra-sharp"
+            }
+      },
+      {
+            "label": {
+                  "vi": "Phần mềm tim mạch AI",
+                  "en": "AI Config"
+            },
+            "value": {
+                  "vi": "AutoStrain LV/RV/LA, HeartModel 3D",
+                  "en": "AutoStrain LV/RV/LA, HeartModel 3D"
+            }
+      },
+      {
+            "label": {
+                  "vi": "Hỗ trợ đầu dò TEE",
+                  "en": "TEE Support"
+            },
+            "value": {
+                  "vi": "Siêu âm thực quản X8-2t, X7-2t (xMatrix)",
+                  "en": "Transesophageal X8-2t, X7-2t (xMatrix)"
+            }
+      },
+      {
+            "label": {
+                  "vi": "Chế độ Echo Navigator",
+                  "en": "Echo Navigator"
+            },
+            "value": {
+                  "vi": "Tích hợp trực tiếp máy chụp mạch (Cath Lab/Hybrid OR)",
+                  "en": "Direct integration with Angio system (Cath Lab/Hybrid OR)"
+            }
+      }
+]
   },
   {
     id: "epiq-elite",
-    slug: "epiq-elite",
+    slug: "HC795098-epiq-elite",
     name: "EPIQ Elite",
     subtitle: {
       vi: "Hiệu suất được tái định nghĩa",

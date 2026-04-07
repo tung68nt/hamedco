@@ -89,7 +89,7 @@ export default function ProductFilter({ categories, products }: Props) {
       <div className="products-grid">
         {filtered.map((p) => (
           <div 
-            className="product-card fade-in-up" 
+            className="product-card" 
             key={p.id} 
             style={{ cursor: "pointer", position: "relative" }}
             onClick={(e) => {
@@ -102,7 +102,7 @@ export default function ProductFilter({ categories, products }: Props) {
             </div>
             <div className="product-content">
               <div className="product-brand">{p.brand}</div>
-              <Link href={`/san-pham/${p.slug}`} className="product-title" style={{ textDecoration: "none", color: "inherit", cursor: "pointer", display: "inline-block" }}>
+              <Link href={`/san-pham/${p.slug}`} className="product-title" style={{ textDecoration: "none", color: "inherit", cursor: "pointer", display: "block", marginTop: "4px" }}>
                 {p.name}
               </Link>
               <p className="product-desc line-clamp-3">{(p.description as any)[locale] || p.description.vi}</p>
