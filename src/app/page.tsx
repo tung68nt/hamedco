@@ -192,7 +192,7 @@ export default function Home() {
             <div style={{ margin: "8px 0 32px", display: "flex", justifyContent: "center" }}>
               <img src="https://medicaldialogues.in/wp-content/uploads/2015/08/Philips_Logo_09.png" alt="Philips Logo" width="350" style={{ objectFit: "contain" }} />
             </div>
-            <h2>{t("HAMEDCO – Nhà phân phối Philips Healthcare tại Việt Nam", "HAMEDCO – Philips Healthcare Distributor in Vietnam")}</h2>
+            <h2 style={{ whiteSpace: "pre-line" }}>{t("HAMEDCO – Nhà phân phối Philips Healthcare\ntại Việt Nam", "HAMEDCO – Philips Healthcare Distributor\nin Vietnam")}</h2>
             <p>{t(
               "Tự hào là nhà phân phối của Philips tại Việt Nam, HAMEDCO đồng hành đưa hệ sinh thái y khoa tiên tiến cùng các giải pháp công nghệ hiện đại đến các bệnh viện và cơ sở y tế trên toàn quốc",
               "Proud to be Philips’ distributor in Vietnam, HAMEDCO helps bring an advanced healthcare ecosystem and modern medical technologies to hospitals and healthcare facilities nationwide."
