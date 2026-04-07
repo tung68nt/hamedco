@@ -24,12 +24,16 @@ export const PHILIPS_PRODUCTS = [
       en: "The Lumify handheld ultrasound system delivers exceptional diagnostic imaging instantly. Supporting cross-platform (Android & iOS) with a plug-and-play mechanism, simply download the app, plug the transducer into your smartphone, and start scanning. Ideal for emergency care, ICU, and family physician practice."
     },
     images: [
-      "https://images.philips.com/is/image/philipsconsumer/336e5b51b6a84f048c78a7ee0144e2cf?wid=1024&$jpglarge$",
-      "https://images.philips.com/is/image/philipsconsumer/a567675034c540989063a77c0145a328?wid=1024&$jpglarge$",
-      "https://images.philips.com/is/image/philipsconsumer/231a3823e7494dfca17aa77c015190b0?wid=1024&$jpglarge$",
-      "https://images.philips.com/is/image/philipsconsumer/05b65839ca45463cb383a77c0145a6bd?wid=1024&$jpglarge$"
+      "https://images.philips.com/is/image/philipsconsumer/d894f72aed4a4c55b7f9b103014ed8bc?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/d48d52417e784ce0814db3a801682e1f?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/259fa7164cb2401490d5b3a8016830b4?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/772fc9e1fa9b4a75a848b3a80168300d?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/29ee39974428493aa29fb066015253c8?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/41349a8e3ecb4bca994ab3a801682ec9?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/b3b04e38743d486ea7f8aea101623827?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/b6b3d81ddc314692b3e0aea101623ff2?wid=1024&$jpglarge$"
     ],
-    thumbnail: "https://images.philips.com/is/image/philipsconsumer/336e5b51b6a84f048c78a7ee0144e2cf?wid=1024&$jpglarge$",
+    thumbnail: "https://images.philips.com/is/image/philipsconsumer/d894f72aed4a4c55b7f9b103014ed8bc?wid=1024&$jpglarge$",
     sourceUrl: "https://www.usa.philips.com/healthcare/product/HC795005/lumify",
     videoUrl: "https://www.youtube.com/watch?v=6B8VnHNU7C8",
     highlights: {
@@ -82,11 +86,16 @@ export const PHILIPS_PRODUCTS = [
       en: "InnoSight bridges the gap between portable clinical ultrasound systems and traditional cart-based machines. With a highly visible 29.4cm (11.6 inch) display that can be carried like a large tablet, InnoSight provides high-quality imaging for quick exams anywhere. Its highly responsive touch interface and advanced software accelerate clinical diagnostics."
     },
     images: [
+      "https://images.philips.com/is/image/philipsconsumer/a6671c8ef0084f60928eb18b0151f25f?wid=1024&$jpglarge$",
       "https://images.philips.com/is/image/philipsconsumer/4183db5e85b7488fb8ffab4200f41473?wid=1024&$jpglarge$",
       "https://images.philips.com/is/image/philipsconsumer/2169262dae7f428eb415ab4200f41a1e?wid=1024&$jpglarge$",
-      "https://images.philips.com/is/image/philipsconsumer/15e762303e9b42aa8f5cab4200f417f2?wid=1024&$jpglarge$"
+      "https://images.philips.com/is/image/philipsconsumer/15e762303e9b42aa8f5cab4200f417f2?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/1dafb3dd462e48668701a7a201187049?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/12192ad24e674e67809bab4200f4161e?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/ea167936ef1e4896b5afab4200f41dc4?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/97d72e1df0ea48f3a1a5a7a20118a6d3?wid=1024&$jpglarge$"
     ],
-    thumbnail: "https://images.philips.com/is/image/philipsconsumer/be498d224f7b425481c4a7a501361abf?wid=1024&$jpglarge$",
+    thumbnail: "https://images.philips.com/is/image/philipsconsumer/a6671c8ef0084f60928eb18b0151f25f?wid=1024&$jpglarge$",
     sourceUrl: "https://www.usa.philips.com/healthcare/product/HC795001/innosight-compact-ultrasound-system",
     videoUrl: "https://www.youtube.com/watch?v=FGecw8WW3Ws",
     highlights: {
@@ -141,11 +150,16 @@ export const PHILIPS_PRODUCTS = [
       en: "From beginners to experienced sonographers, everyone needs fast and accurate information at the Point of Care. The Flash 5100 POC system delivers top-tier performance from Philips with an incredibly intuitive workflow. Smart step-by-step guidance minimizes errors, allows lightning-fast setup, and supports confident diagnosis in the most complex emergency cases."
     },
     images: [
+      "https://images.philips.com/is/image/philipsconsumer/70fd4d9d28e347708bcab2e5012858cd?wid=1024&$jpglarge$",
       "https://images.philips.com/is/image/philipsconsumer/9f6f590956da4a49a7c8b2de00f82bd8?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/4aefddb9d8c44e8f933eb2de00f82c6e?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/eec0057006c049ad8b27b2de00f82d01?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/418064e202734ee6b55db2de00f8320c?wid=1024&$jpglarge$",
       "https://images.philips.com/is/image/philipsconsumer/8e169c25efaa48fcb8eeb2de00f8262d?wid=1024&$jpglarge$",
-      "https://images.philips.com/is/image/philipsconsumer/5ec815208777482480eab2de00f826a1?wid=1024&$jpglarge$"
+      "https://images.philips.com/is/image/philipsconsumer/5ec815208777482480eab2de00f826a1?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/628451d8502a47379ffeb2de00f8273d?wid=1024&$jpglarge$"
     ],
-    thumbnail: "https://images.philips.com/is/image/philipsconsumer/c2fb3b05c6ee4c21aa4eb2e5012859f3?$jpglarge$",
+    thumbnail: "https://images.philips.com/is/image/philipsconsumer/70fd4d9d28e347708bcab2e5012858cd?wid=1024&$jpglarge$",
     sourceUrl: "https://www.usa.philips.com/healthcare/product/795158/flash-ultrasound-system-5100-poc-point-of-care-ultrasound-sy",
     videoUrl: "https://www.youtube.com/watch?v=tDSJW3WQ628",
     highlights: {
@@ -192,11 +206,16 @@ export const PHILIPS_PRODUCTS = [
       en: "A spectacular upgrade of the Flash series. Flash 5100 POC Pro inherits all the power of the standard version while adding deeply advanced Cardiac features. With AutoStrain EF technology, the machine automatically analyzes and measures cardiac function in a blink, shortening the golden time during emergency circulatory resuscitation."
     },
     images: [
-      "https://images.philips.com/is/image/philipsconsumer/8daf4a8adfbf4af3b54ab2e40049245f?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/c2fb3b05c6ee4c21aa4eb2e5012859f3?wid=1024&$jpglarge$",
       "https://images.philips.com/is/image/philipsconsumer/b214c2c8d05d49c8bca4b2de00f81c19?wid=1024&$jpglarge$",
-      "https://images.philips.com/is/image/philipsconsumer/a0b2f440ce0e4858b4e0b2de00f81cb7?wid=1024&$jpglarge$"
+      "https://images.philips.com/is/image/philipsconsumer/a0b2f440ce0e4858b4e0b2de00f81cb7?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/7f757b17543f40ba88bcb2de00f81d22?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/79cdbd0d4cb8411eb45cb2de00f81e0a?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/71f311ecba12461d8de8b2de00f81e9e?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/f928c8d9648344598264b2de00f81f52?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/f22add10dda046d6add0b2de00f81fd1?wid=1024&$jpglarge$"
     ],
-    thumbnail: "https://images.philips.com/is/image/philipsconsumer/8daf4a8adfbf4af3b54ab2e40049245f?wid=1024&$jpglarge$",
+    thumbnail: "https://images.philips.com/is/image/philipsconsumer/c2fb3b05c6ee4c21aa4eb2e5012859f3?wid=1024&$jpglarge$",
     sourceUrl: "https://www.usa.philips.com/healthcare/product/795404/flash-ultrasound-system-5100-poc-pro-advanced-point-of-care-",
     videoUrl: "https://www.youtube.com/watch?v=tDSJW3WQ628",
     highlights: {
@@ -243,8 +262,13 @@ export const PHILIPS_PRODUCTS = [
     },
     images: [
       "https://images.philips.com/is/image/philipsconsumer/4190811865814a78b89caf540122196e?wid=1024&$jpglarge$",
-      "https://images.philips.com/is/image/philipsconsumer/c41021a07d614632b7b1af03010ef3da?wid=1024&$jpglarge$",
-      "https://images.philips.com/is/image/philipsconsumer/1ab1424149f947c58f22af540123b744?wid=1024&$jpglarge$"
+      "https://images.philips.com/is/image/philipsconsumer/1992cd8bb67d45f386e1b2900035cfb7?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/c399c9153ee24cf0ba7ab28f01690445?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/38b46fed8ad04d5f812bb2900035d05f?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/63dfdf6aa2674a3aa370b28f01690706?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/cd4acd17cb644c52b439b2900034fe5b?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/785f6a7255944464a4bdb28f01690782?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/fbda9b8d8f3c4af8b1a5af51015ddb14?wid=1024&$jpglarge$"
     ],
     thumbnail: "https://images.philips.com/is/image/philipsconsumer/4190811865814a78b89caf540122196e?wid=1024&$jpglarge$",
     sourceUrl: "https://www.usa.philips.com/healthcare/product/HC795136/5000-series-hc795136-premium-compact-ultrasound-system",
@@ -323,11 +347,16 @@ export const PHILIPS_PRODUCTS = [
       en: "Compact without compromise. The Philips Compact Ultrasound System 5500 Series packs the core functionalities of premium cart-based ultrasound into an incredibly portable design. Whether in cardiac, OB/GYN, or point of care (POC) clinical settings, the system provides exceptionally clear imaging along with an intuitive interface to support even the most complex diagnoses."
     },
     images: [
-      "https://images.philips.com/is/image/philipsconsumer/da60a87f54924c7f8a7eaf8c009d01f8?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/61195d7d740b4d659da6b0660152520d?wid=1024&$jpglarge$",
       "https://images.philips.com/is/image/philipsconsumer/1992cd8bb67d45f386e1b2900035cfb7?wid=1024&$jpglarge$",
-      "https://images.philips.com/is/image/philipsconsumer/6c1fb034e14146f99c64af51015de83b?wid=1024&$jpglarge$"
+      "https://images.philips.com/is/image/philipsconsumer/c399c9153ee24cf0ba7ab28f01690445?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/38b46fed8ad04d5f812bb2900035d05f?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/cd4acd17cb644c52b439b2900034fe5b?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/4338f4c466004d92956cb28f0169032b?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/9356a096c98246af8702b28f016903e5?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/785f6a7255944464a4bdb28f01690782?wid=1024&$jpglarge$"
     ],
-    thumbnail: "https://images.philips.com/is/image/philipsconsumer/b08df8f2ed9b4e0da169af6b010dc807?$jpglarge$",
+    thumbnail: "https://images.philips.com/is/image/philipsconsumer/61195d7d740b4d659da6b0660152520d?wid=1024&$jpglarge$",
     sourceUrl: "https://www.usa.philips.com/healthcare/product/HC795140/5000-series-hc795140-premium-compact-ultrasound-system",
     videoUrl: "https://www.youtube.com/watch?v=6B8VnHNU7C8",
     highlights: {
@@ -377,10 +406,16 @@ export const PHILIPS_PRODUCTS = [
       en: "Designed to set you apart and help you stay ahead with innovation that responds to the needs of a busy ultrasound practice. Delivers balanced performance and intuitive user interface for quick, confident diagnosis."
     },
     images: [
-      "https://images.philips.com/is/image/philipsconsumer/30d2d3a778c14a2a8932af8e00e84b9e?wid=1024&$jpglarge$",
-      "https://images.philips.com/is/image/philipsconsumer/66c5eb6b3d904a678c5fa8c800ed1d52?wid=1024&$jpglarge$"
+      "https://images.philips.com/is/image/philipsconsumer/53447b3fc13d47c4af93b38701582ec2?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/09290f667ea64b4fb908a77c014a950c?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/2c5d039d2c2e4ee3ba11b05b011c06c2?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/3921b987ed8e4c0ab399b05b010c6179?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/3988617960fb459c8851b05b011c0a92?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/b771af01b20f438aa81cb05a01505e4b?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/a701d93d94c3470ebdeab05a01505a0a?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/972fe18d0930465eaac9b05901597e05?wid=1024&$jpglarge$"
     ],
-    thumbnail: "https://images.philips.com/is/image/philipsconsumer/b7c9c61d56ce43709baba8d40089e927?$jpglarge$",
+    thumbnail: "https://images.philips.com/is/image/philipsconsumer/53447b3fc13d47c4af93b38701582ec2?wid=1024&$jpglarge$",
     sourceUrl: "https://www.usa.philips.com/healthcare/product/HC795218/affiniti-30-ultrasound-system",
     videoUrl: "https://www.youtube.com/watch?v=IpK-Ia2pQ1s",
     highlights: {
@@ -428,9 +463,16 @@ export const PHILIPS_PRODUCTS = [
       en: "Provides stunning imaging and exceptional value for versatile clinical capabilities. Designed for your everyday with professional image quality and workflow."
     },
     images: [
-      "https://images.philips.com/is/image/philipsconsumer/e74a87376c6c4c6f937aaf8200d6efda?wid=1024&$jpglarge$"
+      "https://images.philips.com/is/image/philipsconsumer/5d3ea50c2fef493f9d87b0a801747af5?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/2f65797ea5444344b899b05a0157f3db?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/3b8b3f0c767344018007b05a01581dde?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/5d009e567e324185b7dab05a0157ecd0?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/633b66899a844c6da49eb05a0157fd67?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/63d5d4c0c4d740ca9c8cb05a0157fa3a?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/888f5236007e4b66ac09b05a0157f0aa?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/9dd9806547e34d4bbb9bb05a01580c67?wid=1024&$jpglarge$"
     ],
-    thumbnail: "https://images.philips.com/is/image/philipsconsumer/b7c9c61d56ce43709baba8d40089e927?$jpglarge$",
+    thumbnail: "https://images.philips.com/is/image/philipsconsumer/5d3ea50c2fef493f9d87b0a801747af5?wid=1024&$jpglarge$",
     sourceUrl: "https://www.usa.philips.com/healthcare/product/HC795208/affiniti-50-ultrasound-system",
     videoUrl: "https://www.youtube.com/watch?v=IpK-Ia2pQ1s",
     highlights: {
@@ -481,10 +523,16 @@ export const PHILIPS_PRODUCTS = [
       en: "The Affiniti 70 ultrasound system offers a powerful combination of performance and workflow for quick, confident diagnosis. The most advanced in the Affiniti family, delivering a suite of premium features."
     },
     images: [
-      "https://images.philips.com/is/image/philipsconsumer/f7cda87f54924c7f8a7eaf8c009d01f8?wid=1024&$jpglarge$",
-      "https://images.philips.com/is/image/philipsconsumer/246f684c91c74f7eaf9aa8c800ee06a3?wid=1024&$jpglarge$"
+      "https://images.philips.com/is/image/philipsconsumer/5d3ea50c2fef493f9d87b0a801747af5?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/2f65797ea5444344b899b05a0157f3db?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/04956693a7b940c792a6b05b0123cdd7?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/3b8b3f0c767344018007b05a01581dde?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/5d009e567e324185b7dab05a0157ecd0?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/1241c0095f4e4ab9ad2bb05a015801a7?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/62b42fc5db1341de8d8da77c0150bc76?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/633b66899a844c6da49eb05a0157fd67?wid=1024&$jpglarge$"
     ],
-    thumbnail: "https://images.philips.com/is/image/philipsconsumer/eb74e50882194b3c8f85a8d40090875e?$jpglarge$",
+    thumbnail: "https://images.philips.com/is/image/philipsconsumer/5d3ea50c2fef493f9d87b0a801747af5?wid=1024&$jpglarge$",
     sourceUrl: "https://www.usa.philips.com/healthcare/product/HC795210/affiniti-70-ultrasound-system",
     videoUrl: "https://www.youtube.com/watch?v=IpK-Ia2pQ1s",
     highlights: {
@@ -532,8 +580,13 @@ export const PHILIPS_PRODUCTS = [
     },
     images: [
       "https://images.philips.com/is/image/philipsconsumer/592e3788937443348a80adcf01135216?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/6c1408c3f19d48c5a5bfac2b00a2e3a2?wid=1024&$jpglarge$",
       "https://images.philips.com/is/image/philipsconsumer/abd36de39bb0425e94c5ae2a0144b9fa?wid=1024&$jpglarge$",
-      "https://images.philips.com/is/image/philipsconsumer/9185ffed13e24e8e9718ac2b00a330ea?wid=1024&$jpglarge$"
+      "https://images.philips.com/is/image/philipsconsumer/ec1d9f99c67844b28f9ab1500182ca45?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/423bc2e661a945c493bbb150018478ca?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/e8f4337dc98244058019b15001845052?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/6782a4917fa44328a491b1500182f6a1?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/d9777f78964147e5911cb15001820aa1?wid=1024&$jpglarge$"
     ],
     thumbnail: "https://images.philips.com/is/image/philipsconsumer/592e3788937443348a80adcf01135216?wid=1024&$jpglarge$",
     sourceUrl: "https://www.usa.philips.com/healthcare/product/795190/affiniti-cvx-everyday-ultrasound-system",
@@ -585,11 +638,16 @@ export const PHILIPS_PRODUCTS = [
       en: "EPIQ CVx is Philips' premium cardiology ultrasound platform — innovative, modular with advanced diagnostic solutions for the most complex cardiovascular cases."
     },
     images: [
+      "https://images.philips.com/is/image/philipsconsumer/683c5f818a1e48a79e36a91900e78db5?wid=1024&$jpglarge$",
       "https://images.philips.com/is/image/philipsconsumer/09deb85123eb4a98b04fb14f01513c0a?wid=1024&$jpglarge$",
-      "https://images.philips.com/is/image/philipsconsumer/ae994d787589496aa913b0d00163ca5d?wid=1024&$jpglarge$",
-      "https://images.philips.com/is/image/philipsconsumer/c1435efd194646cdad3bb14f01532d69?wid=1024&$jpglarge$"
+      "https://images.philips.com/is/image/philipsconsumer/0df8069bddbc41ab8040adb4014370ba?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/ae7c5ae0647142278b48adb4014368c8?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/55b7f343c9db4e548e81adb4014367e1?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/e69fb4c0728a40678051adb401436a6d?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/a3a029dca5b94d6da810adb40143691a?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/17a29fb12f8444f78d83b14f01515798?wid=1024&$jpglarge$"
     ],
-    thumbnail: "https://images.philips.com/is/image/philipsconsumer/3543d4dd7d054e568bb0a8d40092f69f?$jpglarge$",
+    thumbnail: "https://images.philips.com/is/image/philipsconsumer/683c5f818a1e48a79e36a91900e78db5?wid=1024&$jpglarge$",
     sourceUrl: "https://www.usa.philips.com/healthcare/product/HC795231/epiq-cvx-premium-cardiology-ultrasound-system",
     videoUrl: "https://www.youtube.com/watch?v=seUKIvhQoHY",
     highlights: {
@@ -641,8 +699,13 @@ export const PHILIPS_PRODUCTS = [
     },
     images: [
       "https://images.philips.com/is/image/philipsconsumer/0fcef27f42a74975b38db0bd017fe30d?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/088c8cbf842e441185afb0590134b62b?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/20c701b27c224d25aca0b220013be0d7?wid=1024&$jpglarge$",
       "https://images.philips.com/is/image/philipsconsumer/28ceafe652cb4bcea28bb05901289ef0?wid=1024&$jpglarge$",
-      "https://images.philips.com/is/image/philipsconsumer/341c0220b91747e1a5cdb0590128a05f?wid=1024&$jpglarge$"
+      "https://images.philips.com/is/image/philipsconsumer/341c0220b91747e1a5cdb0590128a05f?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/3ff507c31b294a8cb69ba9b400a01f4a?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/58e536644ae0495283c2b0590134b7b9?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/7c705dbc28d045149f58b0590128a3de?wid=1024&$jpglarge$"
     ],
     thumbnail: "https://images.philips.com/is/image/philipsconsumer/0fcef27f42a74975b38db0bd017fe30d?wid=1024&$jpglarge$",
     sourceUrl: "https://www.usa.philips.com/healthcare/product/HC795098/epiq-elite-a-new-class-of-premium-ultrasound-has-arrived",
