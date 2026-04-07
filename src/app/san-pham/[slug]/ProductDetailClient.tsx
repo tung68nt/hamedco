@@ -372,6 +372,41 @@ export default function ProductDetailClient({ product, related }: Props) {
         </section>
       )}
 
+      {/* ═══ TÀI LIỆU TẢI VỀ (DOCUMENTATION - BOTTOM) ═══ */}
+      {product.documents && product.documents.length > 0 && (
+        <section className="pd-docs-bottom-section" style={{ padding: "5rem 0", backgroundColor: "#F7F8F9" }}>
+          <div className="container">
+            <h2 style={{ fontSize: "2.5rem", fontWeight: 700, color: "var(--color-text)", textAlign: "center", marginBottom: "3rem" }}>
+              {t("Tài liệu sản phẩm", "Documentation")}
+            </h2>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "1.5rem", maxWidth: "1000px", margin: "0 auto" }}>
+              {product.documents.map((doc, i) => (
+                <a key={i} href={doc.url} download target="_blank" rel="noopener noreferrer" style={{
+                  display: "flex", alignItems: "center", justifyContent: "space-between",
+                  padding: "1.5rem", backgroundColor: "#fff", borderRadius: "8px",
+                  boxShadow: "0 4px 12px rgba(0,0,0,0.05)", textDecoration: "none", color: "inherit",
+                  transition: "transform 0.2s, box-shadow 0.2s"
+                }}
+                className="doc-card"
+                onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = "0 8px 24px rgba(0,0,0,0.1)"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.transform = "none"; e.currentTarget.style.boxShadow = "0 4px 12px rgba(0,0,0,0.05)"; }}
+                >
+                  <div style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}>
+                    <span style={{ fontWeight: 600, fontSize: "1.0625rem", color: "var(--color-text)" }}>{doc.label}</span>
+                    <span style={{ fontSize: "0.875rem", color: "var(--color-neutral)" }}>PDF {doc.size ? `| ${doc.size}` : ""}</span>
+                  </div>
+                  <div style={{ width: "40px", height: "40px", borderRadius: "50%", border: "1px solid var(--border-color)", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--color-primary)" }}>
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ═══ SOURCE LINK ═══ */}
       <section className="pd-source-section">
         <div className="container">
