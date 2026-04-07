@@ -3,7 +3,7 @@
 import { useLocale } from "../LocaleProvider";
 
 /**
- * VisionMissionValues — Tầm nhìn, Sứ mệnh & Giá trị cốt lõi
+ * VisionMissionValues — Tầm nhìn, Sứ mệnh & Giá trị cốt lõi (Light theme)
  */
 export default function VisionMissionValues() {
   const { t } = useLocale();
@@ -12,7 +12,6 @@ export default function VisionMissionValues() {
     {
       key: "TÍN",
       label: "Trust",
-      color: "value-teal",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M8 11l3 3 5-5m-4-8s-6 2.5-6 9.5c0 3.5 2.5 6.5 6 8.5 3.5-2 6-5 6-8.5C18 5.5 12 3 12 3z" />
@@ -26,7 +25,6 @@ export default function VisionMissionValues() {
     {
       key: "TÂM",
       label: "Heart",
-      color: "value-orange",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -40,21 +38,19 @@ export default function VisionMissionValues() {
     {
       key: "CHẤT",
       label: "Quality",
-      color: "value-blue",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
         </svg>
       ),
       desc: {
-        vi: "Khắt khe trong lựa chọn, chỉ cung cấp những sản phẩm đạt chuẩn quốc tế (FDA, CE, ISO).",
-        en: "Strict in selection, only providing products meeting international standards (FDA, CE, ISO)."
+        vi: "Khắt khe trong lựa chọn, chỉ cung cấp những sản phẩm đạt chuẩn quốc tế (CE, ISO).",
+        en: "Strict in selection, only providing products meeting international standards (CE, ISO)."
       }
     },
     {
       key: "TỐC",
       label: "Speed",
-      color: "value-green",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -68,12 +64,11 @@ export default function VisionMissionValues() {
   ];
 
   return (
-    <section className="vmv-section section bg-dark">
-      <div className="vmv-bg-pattern" />
-      <div className="container" style={{ position: "relative", zIndex: 2 }}>
+    <section className="vmv-section section bg-white">
+      <div className="container">
         <div className="section-header text-center fade-in-up">
-          <span className="overline overline-light">{t("Định hướng chiến lược", "Strategic Direction")}</span>
-          <h2 className="text-white">{t("Tầm nhìn – Sứ mệnh – Giá trị cốt lõi", "Vision – Mission – Core Values")}</h2>
+          <span className="overline overline-brand">{t("Định hướng chiến lược", "Strategic Direction")}</span>
+          <h2>{t("Tầm nhìn – Sứ mệnh – Giá trị cốt lõi", "Vision – Mission – Core Values")}</h2>
         </div>
 
         {/* Vision & Mission */}
@@ -112,18 +107,18 @@ export default function VisionMissionValues() {
 
         {/* Core Values */}
         <div className="section-header text-center fade-in-up" style={{ marginTop: "64px" }}>
-          <span className="overline overline-light">{t("Triết lý vận hành", "Operational Philosophy")}</span>
-          <h3 className="text-white">{t("Giá trị cốt lõi", "Core Values")}</h3>
+          <span className="overline overline-brand">{t("Triết lý vận hành", "Operational Philosophy")}</span>
+          <h3>{t("Giá trị cốt lõi", "Core Values")}</h3>
         </div>
 
         <div className="core-values-grid fade-in-up stagger-2">
           {coreValues.map((val, idx) => (
-            <div className={`core-value-card ${val.color}`} key={val.key} style={{ animationDelay: `${idx * 0.1}s` }}>
+            <div className="core-value-card" key={val.key} style={{ animationDelay: `${idx * 0.1}s` }}>
+              <div className="core-value-icon">{val.icon}</div>
               <div className="core-value-key">
                 <span className="core-value-vi">{val.key}</span>
                 <span className="core-value-en">({val.label})</span>
               </div>
-              <div className="core-value-icon">{val.icon}</div>
               <p className="core-value-desc">{val.desc.vi}</p>
             </div>
           ))}

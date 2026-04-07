@@ -231,11 +231,10 @@ export default function Home() {
           </div>
           <div className="cert-grid fade-in-up">
             {[
-              { name: "CE Mark", detail: "European Conformity" },
-              { name: "FDA 510(k)", detail: "U.S. Cleared" },
-              { name: "ISO 13485", detail: "Medical Devices QMS" },
-              { name: "IEC 60601", detail: "Electrical Safety" },
-              { name: t("Bộ Y tế VN", "Vietnam Ministry of Health"), detail: t("Giấy phép TTBYT", "Medical Equipment License") },
+              { name: "ISO 13485", detail: t("Quản lý chất lượng TBYT", "Medical Devices QMS") },
+              { name: t("CFS", "CFS"), detail: t("Giấy chứng nhận lưu hành tự do", "Certificate of Free Sale") },
+              { name: "CE", detail: t("Chứng nhận Châu Âu", "European Conformity") },
+              { name: t("Giấy phép TTBYT", "Medical Equipment License"), detail: t("Bộ Y tế Việt Nam", "Vietnam Ministry of Health") },
             ].map((cert) => (
               <div className="cert-item" key={cert.name}>
                 <div className="cert-icon">
