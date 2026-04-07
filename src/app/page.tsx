@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { PHILIPS_PRODUCTS } from "../data/products";
+import { CATEGORIES } from "../data/categories";
 import HeroCarousel from "../components/HeroCarousel";
 import FaqAccordion from "../components/FaqAccordion";
 import { useLocale } from "../components/LocaleProvider";
@@ -79,7 +80,12 @@ export default function Home() {
             )}</p>
           </div>
           <div className="products-grid">
-            {topProducts.map((p) => (
+            {topProducts.map((p) => {
+              const pCatId = (p as any).categoryIds?.[0];
+              const pCat = pCatId ? CATEGORIES.find(c => c.id === pCatId) : null;
+              const badgeLabel = pCat ? ((pCat.name as any)[locale] || pCat.name.vi) : "";
+
+              return (
               <div 
                 className="product-card" 
                 key={p.id}
@@ -90,7 +96,7 @@ export default function Home() {
               >
                 <div className="product-image">
                   <img src={p.thumbnail} alt={p.name} loading="lazy" />
-                  <div className="product-badge">{p.categoryLabel[locale]}</div>
+                  {badgeLabel && <div className="product-badge">{badgeLabel}</div>}
                 </div>
                 <div className="product-content">
                   <div className="product-brand">{p.brand}</div>
@@ -110,7 +116,8 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
           <div className="text-center" style={{ marginTop: "40px" }}>
             <Link href="/san-pham" className="btn btn-primary btn-lg">{t("Xem tất cả sản phẩm", "View All Products")}</Link>

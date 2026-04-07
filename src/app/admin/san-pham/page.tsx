@@ -1,17 +1,12 @@
 import Link from "next/link";
 import { PHILIPS_PRODUCTS } from "@/data/products";
-
-const categoryMap: Record<string, { label: string; color: string }> = {
-  "di-dong": { label: "Di động", color: "teal" },
-  "tam-trung": { label: "Tầm trung", color: "orange" },
-  "cao-cap": { label: "Cao cấp", color: "green" },
-};
+import { CATEGORIES } from "@/data/categories";
 
 export default function AdminProductsPage() {
   const total = PHILIPS_PRODUCTS.length;
-  const mobile = PHILIPS_PRODUCTS.filter((p) => p.category === "di-dong").length;
-  const mid = PHILIPS_PRODUCTS.filter((p) => p.category === "tam-trung").length;
-  const premium = PHILIPS_PRODUCTS.filter((p) => p.category === "cao-cap").length;
+  const mobile = PHILIPS_PRODUCTS.filter((p: any) => p.categoryIds?.includes("di-dong")).length;
+  const mid = PHILIPS_PRODUCTS.filter((p: any) => p.categoryIds?.includes("tam-trung")).length;
+  const premium = PHILIPS_PRODUCTS.filter((p: any) => p.categoryIds?.includes("cao-cap")).length;
 
   return (
     <>
@@ -88,9 +83,9 @@ export default function AdminProductsPage() {
               </thead>
               <tbody>
                 {PHILIPS_PRODUCTS.map((p: any) => {
-                  const cat = categoryMap[p.category] || { label: p.category, color: "gray" };
                   const thumb = p.thumbnail || p.images?.[0] || "";
                   const featureCount = p.features?.length || 0;
+                  const itemCats = (p.categoryIds || []).map((id: string) => CATEGORIES.find(c => c.id === id)).filter(Boolean);
 
                   return (
                     <tr key={p.id}>
@@ -113,7 +108,17 @@ export default function AdminProductsPage() {
                         </span>
                       </td>
                       <td>
-                        <span className={`admin-badge ${cat.color}`}>{cat.label}</span>
+                        <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
+                          {itemCats.length > 0 ? (
+                            itemCats.map((cat: any) => (
+                              <span key={cat.id} className={`admin-badge ${cat.type === 'main' ? 'teal' : 'gray'}`}>
+                                {cat.name.vi}
+                              </span>
+                            ))
+                          ) : (
+                            <span className="admin-badge gray">Không có</span>
+                          )}
+                        </div>
                       </td>
                       <td>
                         <span style={{ fontSize: "0.85rem", color: featureCount > 0 ? "var(--color-gray-700)" : "var(--color-gray-300)" }}>

@@ -26,9 +26,10 @@ export default async function ProductDetailPage({ params }: Props) {
     notFound();
   }
 
-  // Find related products (same category, exclude self)
+  // Find related products (shared categoryIds, exclude self)
+  const productCatIds = (product as any).categoryIds || [];
   const related = PHILIPS_PRODUCTS
-    .filter((p) => p.category === product.category && p.id !== product.id)
+    .filter((p: any) => p.id !== product.id && p.categoryIds?.some((id: string) => productCatIds.includes(id)))
     .slice(0, 3);
 
   // If not enough related in same category, fill from other categories

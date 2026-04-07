@@ -3,14 +3,14 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useLocale } from "../../../components/LocaleProvider";
+import { CATEGORIES } from "@/data/categories";
 
 interface Product {
   id: string;
   slug: string;
   name: string;
   subtitle: { vi: string; en: string };
-  category: string;
-  categoryLabel: { vi: string; en: string };
+  categoryIds?: string[];
   brand: string;
   description: { vi: string; en: string };
   longDescription?: { vi: string; en: string };
@@ -36,7 +36,11 @@ export default function ProductDetailClient({ product, related }: Props) {
   const title = product.name;
   const subtitle = product.subtitle[locale];
   const desc = product.description[locale];
-  const category = product.categoryLabel[locale];
+  
+  const primaryCatId = product.categoryIds?.[0];
+  const primaryCat = primaryCatId ? CATEGORIES.find(c => c.id === primaryCatId) : null;
+  const category = primaryCat ? ((primaryCat.name as any)[locale] || primaryCat.name.vi) : "";
+
   const highlights = product.highlights[locale];
   
   // Local state for main image gallery
@@ -434,16 +438,21 @@ export default function ProductDetailClient({ product, related }: Props) {
               {t("Khám phá thêm giải pháp Philips", "Explore more Philips solutions")}
             </h2>
             <div className="products-grid">
-              {related.map((p) => (
-                <div className="product-card fade-in-up" key={p.id} style={{ cursor: "pointer" }} onClick={(e) => {
-                  window.location.href = `/san-pham/${p.slug}`;
-                }}>
-                  <div className="product-image">
-                    <img src={p.thumbnail} alt={p.name} loading="lazy" />
-                    <div className="product-badge">{p.categoryLabel[locale]}</div>
-                  </div>
-                  <div className="product-content">
-                    <div className="product-brand">{p.brand}</div>
+              {related.map((p) => {
+                const relPrimaryCatId = p.categoryIds?.[0];
+                const relPrimaryCat = relPrimaryCatId ? CATEGORIES.find(c => c.id === relPrimaryCatId) : null;
+                const badgeLabel = relPrimaryCat ? ((relPrimaryCat.name as any)[locale] || relPrimaryCat.name.vi) : "";
+
+                return (
+                  <div className="product-card fade-in-up" key={p.id} style={{ cursor: "pointer" }} onClick={(e) => {
+                    window.location.href = `/san-pham/${p.slug}`;
+                  }}>
+                    <div className="product-image">
+                      <img src={p.thumbnail} alt={p.name} loading="lazy" />
+                      {badgeLabel && <div className="product-badge">{badgeLabel}</div>}
+                    </div>
+                    <div className="product-content">
+                      <div className="product-brand">{p.brand}</div>
                     <Link href={`/san-pham/${p.slug}`} className="product-title" style={{ textDecoration: "none", color: "inherit", cursor: "pointer", display: "block", marginTop: "4px" }}>{p.name}</Link>
                     <p className="product-desc line-clamp-2">{p.description[locale]}</p>
                     <Link href={`/san-pham/${p.slug}`} className="product-action" onClick={(e) => e.stopPropagation()}>
@@ -454,7 +463,8 @@ export default function ProductDetailClient({ product, related }: Props) {
                     </Link>
                   </div>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>

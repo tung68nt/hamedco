@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { PHILIPS_PRODUCTS } from "../../data/products";
+import { CATEGORIES } from "../../data/categories";
 import ProductFilterWrapper from "./ProductFilterWrapper";
 
 export const metadata: Metadata = {
@@ -9,18 +9,16 @@ export const metadata: Metadata = {
     "Danh mục sản phẩm Philips Healthcare chính hãng: siêu âm, chẩn đoán hình ảnh, theo dõi bệnh nhân, giải pháp tin học y tế. HAMEDCO — nhà phân phối chính thức tại Việt Nam.",
 };
 
-// Product categories for filtering
-const CATEGORIES = [
-  { id: "all", label: { vi: "Tất cả", en: "All" } },
-  { id: "di-dong", label: { vi: "Siêu âm di động", en: "Portable Ultrasound" } },
-  { id: "tam-trung", label: { vi: "Phân khúc Tầm trung", en: "Mid-range Segment" } },
-  { id: "cao-cap", label: { vi: "Phân khúc Cao cấp", en: "Premium Segment" } },
-];
-
 export default function ProductsPage() {
+  // Only pass segment-type categories as filter tabs on the all-products page
+  const segmentCategories = CATEGORIES.filter(c => c.type === "segment").map(c => ({
+    id: c.id,
+    name: c.name,
+  }));
+
   return (
     <>
-      <ProductFilterWrapper categories={CATEGORIES} products={PHILIPS_PRODUCTS} />
+      <ProductFilterWrapper categories={segmentCategories} products={PHILIPS_PRODUCTS} />
     </>
   );
 }

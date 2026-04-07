@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { updateProduct } from "../actions";
+import { CATEGORIES } from "@/data/categories";
 
 export default function ProductEditForm({ initialData }: { initialData: any }) {
   const [formData, setFormData] = useState(initialData);
@@ -122,17 +123,35 @@ export default function ProductEditForm({ initialData }: { initialData: any }) {
               <label className="form-label">Tên sản phẩm</label>
               <input type="text" className="form-input" value={formData.name} onChange={(e) => handleChange(e, "name")} />
             </div>
-            <div className="form-group">
-              <label className="form-label">Phân loại</label>
-              <select className="form-select" value={formData.category} onChange={(e) => handleChange(e, "category")}>
-                <option value="di-dong">Di động / POC</option>
-                <option value="tam-trung">Tầm trung</option>
-                <option value="cao-cap">Cao cấp</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <label className="form-label">Thương hiệu</label>
-              <input type="text" className="form-input" value={formData.brand} onChange={(e) => handleChange(e, "brand")} readOnly style={{ background: "#f9fafb" }} />
+            <div className="form-group" style={{ gridColumn: "span 3" }}>
+              <label className="form-label">Danh mục kết nối (Có thể chọn nhiều)</label>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px", background: "#f9fafb", border: "1px solid #e5e7eb", padding: "16px", borderRadius: "8px" }}>
+                {CATEGORIES.map(cat => {
+                  const isChecked = formData.categoryIds?.includes(cat.id);
+                  return (
+                    <label key={cat.id} style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "0.85rem", cursor: "pointer" }}>
+                      <input 
+                        type="checkbox" 
+                        checked={isChecked}
+                        onChange={(e) => {
+                          const currentIds = formData.categoryIds || [];
+                          if (e.target.checked) {
+                            setFormData({ ...formData, categoryIds: [...currentIds, cat.id] });
+                          } else {
+                            setFormData({ ...formData, categoryIds: currentIds.filter((id: string) => id !== cat.id) });
+                          }
+                        }}
+                        style={{ width: "16px", height: "16px" }}
+                      />
+                      <span style={{ fontWeight: cat.type === 'main' ? 600 : 400 }}>
+                        {cat.name.vi} 
+                        {cat.type === 'main' && <span style={{ color: "var(--color-primary)", marginLeft: "6px", fontSize: "0.7rem", padding: "2px 6px", background: "#e0f2fe", borderRadius: "10px" }}>Chính</span>}
+                        {cat.type === 'segment' && <span style={{ color: "var(--color-gray-500)", marginLeft: "6px", fontSize: "0.7rem", padding: "2px 6px", background: "#f3f4f6", borderRadius: "10px" }}>Phân khúc</span>}
+                      </span>
+                    </label>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
@@ -142,7 +161,6 @@ export default function ProductEditForm({ initialData }: { initialData: any }) {
       <DualLang label="Phụ tiêu đề (Subtitle)" icon={iconText} fieldKey="subtitle" />
       <DualLang label="Mô tả ngắn (Description)" icon={iconDesc} fieldKey="description" textarea />
       <DualLang label="Mô tả chuyên sâu (Long Description)" icon={iconDesc} fieldKey="longDescription" textarea />
-      <DualLang label="Nhãn danh mục (Category Label)" icon={iconText} fieldKey="categoryLabel" />
 
       {/* Gallery Preview */}
       {formData.images?.length > 0 && (

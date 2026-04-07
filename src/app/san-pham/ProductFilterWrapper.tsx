@@ -9,8 +9,7 @@ interface Product {
   slug: string;
   name: string;
   subtitle: { vi: string; en: string };
-  category: string;
-  categoryLabel: { vi: string; en: string };
+  categoryIds?: string[];
   brand: string;
   description: { vi: string; en: string };
   thumbnail: string;
@@ -19,7 +18,7 @@ interface Product {
 
 interface Category {
   id: string;
-  label: { vi: string; en: string };
+  name: { vi: string; en: string };
 }
 
 interface Props {

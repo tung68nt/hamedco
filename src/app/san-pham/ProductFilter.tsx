@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { useLocale } from "../../components/LocaleProvider";
 
 interface Product {
@@ -9,8 +10,7 @@ interface Product {
   slug: string;
   name: string;
   subtitle: { vi: string; en: string };
-  category: string;
-  categoryLabel: { vi: string; en: string };
+  categoryIds?: string[];
   brand: string;
   description: { vi: string; en: string };
   thumbnail: string;
@@ -19,7 +19,7 @@ interface Product {
 
 interface Category {
   id: string;
-  label: { vi: string; en: string };
+  name: { vi: string; en: string };
 }
 
 interface Props {
@@ -27,17 +27,23 @@ interface Props {
   products: Product[];
 }
 
-export default function ProductFilter({ categories, products }: Props) {
-  const [activeCategory, setActiveCategory] = useState("all");
+function ProductFilterInner({ categories, products }: Props) {
+  const searchParams = useSearchParams();
+  const initCat = searchParams?.get("category") || "all";
+  const [activeCategory, setActiveCategory] = useState(initCat);
   const { locale, t } = useLocale();
+
+  useEffect(() => {
+    const cat = searchParams?.get("category");
+    if (cat) setActiveCategory(cat);
+  }, [searchParams]);
 
   const filtered = activeCategory === "all"
     ? products
-    : products.filter((p) => p.category === activeCategory);
+    : products.filter((p) => p.categoryIds?.includes(activeCategory));
 
   return (
     <>
-      {/* Filter Bar */}
       <div className="filter-bar fade-in-up" style={{
         display: "flex",
         justifyContent: "space-between",
@@ -55,6 +61,25 @@ export default function ProductFilter({ categories, products }: Props) {
           scrollbarWidth: "none",
           msOverflowStyle: "none"
         }} className="hide-scrollbar">
+          <button
+            onClick={() => setActiveCategory("all")}
+            style={{
+              padding: "0.625rem 1.25rem",
+              borderRadius: "99px",
+              whiteSpace: "nowrap",
+              fontWeight: activeCategory === "all" ? 600 : 500,
+              fontSize: "0.9375rem",
+              color: activeCategory === "all" ? "var(--color-primary)" : "var(--color-neutral)",
+              backgroundColor: activeCategory === "all" ? "#fff" : "transparent",
+              boxShadow: activeCategory === "all" ? "0 2px 8px rgba(0,0,0,0.06)" : "none",
+              border: "none",
+              cursor: "pointer",
+              transition: "all 0.2s ease"
+            }}
+          >
+            {t("Tất cả", "All")}
+          </button>
+          
           {categories.map((cat) => {
             const isActive = activeCategory === cat.id;
             return (
@@ -75,7 +100,7 @@ export default function ProductFilter({ categories, products }: Props) {
                   transition: "all 0.2s ease"
                 }}
               >
-                {cat.label[locale] || cat.label.vi}
+                {(cat.name as any)[locale] || cat.name.vi}
               </button>
             );
           })}
@@ -85,40 +110,45 @@ export default function ProductFilter({ categories, products }: Props) {
         </div>
       </div>
 
-      {/* Products Grid */}
       <div className="products-grid">
-        {filtered.map((p) => (
-          <div 
-            className="product-card" 
-            key={p.id} 
-            style={{ cursor: "pointer", position: "relative" }}
-            onClick={(e) => {
-              window.location.href = `/san-pham/${p.slug}`;
-            }}
-          >
-            <div className="product-image">
-              <img src={p.thumbnail} alt={p.name} loading="lazy" />
-              <div className="product-badge">{(p.categoryLabel as any)[locale] || p.categoryLabel.vi}</div>
+        {filtered.map((p) => {
+          const primaryCatId = p.categoryIds?.[0];
+          const primaryCat = primaryCatId ? categories.find(c => c.id === primaryCatId) : null;
+          const badgeLabel = primaryCat ? ((primaryCat.name as any)[locale] || primaryCat.name.vi) : "";
+
+          return (
+            <div 
+              className="product-card" 
+              key={p.id} 
+              style={{ cursor: "pointer", position: "relative" }}
+              onClick={(e) => {
+                window.location.href = `/san-pham/${p.slug}`;
+              }}
+            >
+              <div className="product-image">
+                <img src={p.thumbnail} alt={p.name} loading="lazy" />
+                {badgeLabel && <div className="product-badge">{badgeLabel}</div>}
+              </div>
+              <div className="product-content">
+                <div className="product-brand">{p.brand}</div>
+                <Link href={`/san-pham/${p.slug}`} className="product-title" style={{ textDecoration: "none", color: "inherit", cursor: "pointer", display: "block", marginTop: "4px" }}>
+                  {p.name}
+                </Link>
+                <p className="product-desc line-clamp-3">{(p.description as any)[locale] || p.description.vi}</p>
+                <Link 
+                  href={`/san-pham/${p.slug}`} 
+                  className="product-action"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {t("Chi tiết sản phẩm", "View Details")}
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
             </div>
-            <div className="product-content">
-              <div className="product-brand">{p.brand}</div>
-              <Link href={`/san-pham/${p.slug}`} className="product-title" style={{ textDecoration: "none", color: "inherit", cursor: "pointer", display: "block", marginTop: "4px" }}>
-                {p.name}
-              </Link>
-              <p className="product-desc line-clamp-3">{(p.description as any)[locale] || p.description.vi}</p>
-              <Link 
-                href={`/san-pham/${p.slug}`} 
-                className="product-action"
-                onClick={(e) => e.stopPropagation()}
-              >
-                {t("Chi tiết sản phẩm", "View Details")}
-                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {filtered.length === 0 && (
@@ -129,5 +159,13 @@ export default function ProductFilter({ categories, products }: Props) {
         </div>
       )}
     </>
+  );
+}
+
+export default function ProductFilter(props: Props) {
+  return (
+    <Suspense fallback={<div>Loading filters...</div>}>
+      <ProductFilterInner {...props} />
+    </Suspense>
   );
 }

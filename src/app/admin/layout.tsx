@@ -21,6 +21,15 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       ),
     },
     {
+      label: "Quản lý Danh mục",
+      href: "/admin/danh-muc",
+      icon: (
+        <svg className="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+        </svg>
+      ),
+    },
+    {
       label: "Tin tức & Blog",
       href: "#",
       icon: (
