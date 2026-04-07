@@ -190,7 +190,7 @@ export default function Home() {
               <span>{t("Nhà phân phối Philips Healthcare", "Philips Healthcare Distributor")}</span>
             </div>
             <div style={{ margin: "8px 0 32px", display: "flex", justifyContent: "center" }}>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Philips_logo_new.svg/1280px-Philips_logo_new.svg.png" alt="Philips Logo" width="350" style={{ objectFit: "contain" }} />
+              <img src="https://medicaldialogues.in/wp-content/uploads/2015/08/Philips_Logo_09.png" alt="Philips Logo" width="350" style={{ objectFit: "contain" }} />
             </div>
             <h2>{t("HAMEDCO – Nhà phân phối Philips Healthcare tại Việt Nam", "HAMEDCO – Philips Healthcare Distributor in Vietnam")}</h2>
             <p>{t(
