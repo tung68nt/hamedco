@@ -72,13 +72,13 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Highlight quote */}
-        <div className="why-quote fade-in-up text-center" style={{ marginTop: "40px", fontStyle: "italic", fontWeight: 500, color: "var(--color-primary-dark)", fontSize: "1.125rem" }}>
+        <div className="why-quote fade-in-up text-center" style={{ marginTop: "40px", marginBottom: "40px", fontStyle: "italic", fontWeight: 500, color: "var(--color-primary-dark)", fontSize: "1.125rem" }}>
           <p>"{t("HAMEDCO không chỉ bán thiết bị — chúng tôi chịu trách nhiệm cho hiệu quả vận hành của toàn bộ hệ thống.", "HAMEDCO does not just sell equipment — we take responsibility for the operational effectiveness of the entire system.")}"</p>
         </div>
 
         {/* Philips badge */}
         <div className="why-philips-badge fade-in-up">
-          <img src="/assets/images/philips-logo.svg" alt="Philips Healthcare" className="why-philips-logo" />
+          <img src="https://medicaldialogues.in/wp-content/uploads/2015/08/Philips_Logo_09.png" alt="Philips Healthcare" className="why-philips-logo" />
           <div className="why-philips-text">
             <strong>{t("Nhà phân phối chính thức Philips Healthcare", "Official Philips Healthcare Distributor")}</strong>
             <span>{t("Đại diện phân phối sản phẩm siêu âm Philips tại Việt Nam", "Distributor of Philips ultrasound products in Vietnam")}</span>
