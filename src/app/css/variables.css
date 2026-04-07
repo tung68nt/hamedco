@@ -126,6 +126,7 @@
 }
 
 /* Force specific sections to maintain original Light theme structure specifically for permanently dark components like Footer/Hero */
+[data-theme='dark'] .top-bar,
 [data-theme='dark'] .footer,
 [data-theme='dark'] .about-banner,
 [data-theme='dark'] .page-hero,
