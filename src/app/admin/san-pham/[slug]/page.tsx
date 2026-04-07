@@ -3,25 +3,38 @@ import ProductEditForm from "./ProductEditForm";
 import { redirect } from "next/navigation";
 
 export default function AdminProductEditPage({ params }: { params: { slug: string } }) {
-  const product = PHILIPS_PRODUCTS.find((p) => p.slug === params.slug);
-  
+  const product = PHILIPS_PRODUCTS.find((p) => p.slug === params.slug) as any;
+
   if (!product) {
     redirect("/admin/san-pham");
   }
 
+  const thumb = product.thumbnail || product.images?.[0] || "";
+
   return (
-    <div className="admin-header">
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <div>
-          <p style={{ margin: 0, fontSize: "0.85rem", textTransform: "uppercase", letterSpacing: "1px" }}>
-            <a href="/admin/san-pham" style={{ color: "var(--color-primary)", textDecoration: "none" }}>&larr; Quay lại danh sách</a>
+    <>
+      {/* Edit Hero Bar */}
+      <div className="admin-edit-hero">
+        {thumb ? (
+          <img src={thumb} alt={product.name} className="admin-edit-thumb" />
+        ) : (
+          <div className="admin-edit-thumb" style={{ display: "flex", alignItems: "center", justifyContent: "center", color: "#ccc" }}>N/A</div>
+        )}
+        <div className="admin-edit-meta">
+          <p>
+            <a href="/admin/san-pham" style={{ color: "var(--color-primary)", textDecoration: "none", fontSize: "0.8rem", fontWeight: 500 }}>
+              ← Quay lại danh sách
+            </a>
           </p>
-          <h1 style={{ marginTop: "16px" }}>Chỉnh sửa: {(product as any).baseName || product.name}</h1>
+          <h1>{product.name}</h1>
+          <p style={{ fontFamily: "var(--font-mono, monospace)" }}>{product.slug}</p>
         </div>
       </div>
-      
-      {/* Client Component Form */}
-      <ProductEditForm initialData={product} />
-    </div>
+
+      {/* Content */}
+      <div className="admin-content">
+        <ProductEditForm initialData={product} />
+      </div>
+    </>
   );
 }
