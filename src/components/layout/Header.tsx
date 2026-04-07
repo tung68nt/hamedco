@@ -60,10 +60,9 @@ export default function Header() {
                 {t("Sản phẩm", "Products")} <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
               </Link>
               <div className="nav-dropdown-menu">
-                <Link href="/san-pham#medical-imaging" className="nav-dropdown-item">{t("Chẩn đoán hình ảnh (MRI, CT)", "Medical Imaging (MRI, CT)")}</Link>
-                <Link href="/san-pham#ultrasound" className="nav-dropdown-item">{t("Siêu âm y tế", "Ultrasound")}</Link>
-                <Link href="/san-pham#patient-monitoring" className="nav-dropdown-item">{t("Theo dõi bệnh nhân (ICU)", "Patient Monitoring (ICU)")}</Link>
-                <Link href="/san-pham#informatics" className="nav-dropdown-item">{t("Giải pháp Tin học Y tế", "Healthcare Informatics")}</Link>
+                <Link href="/san-pham?category=di-dong" className="nav-dropdown-item">{t("Siêu âm di động", "Portable Ultrasound")}</Link>
+                <Link href="/san-pham?category=tam-trung" className="nav-dropdown-item">{t("Phân khúc Tầm trung", "Mid-range Segment")}</Link>
+                <Link href="/san-pham?category=cao-cap" className="nav-dropdown-item">{t("Phân khúc Cao cấp", "Premium Segment")}</Link>
               </div>
             </div>
             <Link href="/dich-vu" className="nav-link">{t("Dịch vụ", "Services")}</Link>
