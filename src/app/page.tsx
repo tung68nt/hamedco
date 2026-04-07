@@ -415,45 +415,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ CAM KẾT TỪ BAN LÃNH ĐẠO ═══ */}
-      <section className="section bg-white" id="leadership-commitment">
-        <div className="container">
-          <div className="section-header fade-in-up">
-            <span className="overline">{t("Cam kết từ Ban lãnh đạo", "Message from Leadership")}</span>
-            <h2>{t("Tầm nhìn & Sứ mệnh", "Vision & Mission")}</h2>
-            <p>{t(
-              "Tại HAMEDCO, chúng tôi tin rằng công nghệ y tế hiện đại chỉ thực sự giá trị khi được vận hành bằng sự thấu hiểu và trách nhiệm cao nhất. Với hơn 20 năm kinh nghiệm và vị thế đối tác chiến lược của Philips, chúng tôi không chỉ cung ứng thiết bị, mà còn đồng hành cùng các y bác sĩ kiến tạo nên những hệ sinh thái y tế thông minh, an toàn và hiệu quả.",
-              "At HAMEDCO, we believe that modern medical technology is only truly valuable when driven by deep understanding and the highest sense of responsibility. With over 20 years of experience and our status as a strategic partner of Philips, we do more than just supply equipment; we partner with medical professionals to create smart, safe, and efficient healthcare ecosystems."
-            )}</p>
-            <p style={{ marginTop: "12px", fontStyle: "italic", fontWeight: 500, color: "var(--color-primary)" }}>
-              {t(
-                "Sứ mệnh của chúng tôi là mang những chuẩn mực y tế toàn cầu tới mọi tỉnh thành tại Việt Nam, vì một nền y tế bền vững và sức khỏe của hàng triệu người dân.",
-                "Our mission is to bring global healthcare standards to every province in Vietnam, for a sustainable healthcare system and the well-being of millions."
-              )}
-            </p>
-          </div>
-          <div className="leadership-grid fade-in-up" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "32px", maxWidth: "900px", margin: "0 auto" }}>
-            <div className="leadership-card" style={{ textAlign: "center", padding: "32px 24px", background: "var(--color-gray-50)", borderRadius: "16px" }}>
-              <div style={{ width: "120px", height: "120px", borderRadius: "50%", background: "linear-gradient(135deg, var(--color-primary), var(--color-accent))", margin: "0 auto 20px", display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontSize: "2.5rem", fontWeight: 700 }}>TGĐ</div>
-              <h3 style={{ fontSize: "1.125rem", marginBottom: "4px" }}>[Họ và tên – Đang cập nhật]</h3>
-              <p style={{ color: "var(--color-primary)", fontWeight: 600, fontSize: "0.875rem", marginBottom: "12px" }}>{t("Tổng Giám đốc", "General Director")}</p>
-              <p style={{ color: "var(--color-gray-500)", fontSize: "0.875rem", lineHeight: 1.6 }}>{t(
-                "\"Chúng tôi cam kết mang đến những giải pháp thiết bị y tế chất lượng nhất, góp phần nâng cao năng lực chẩn đoán và điều trị cho hệ thống y tế Việt Nam.\"",
-                "\"We are committed to providing the highest quality medical equipment solutions, contributing to enhancing the diagnostic and treatment capabilities of Vietnam's healthcare system.\""
-              )}</p>
-            </div>
-            <div className="leadership-card" style={{ textAlign: "center", padding: "32px 24px", background: "var(--color-gray-50)", borderRadius: "16px" }}>
-              <div style={{ width: "120px", height: "120px", borderRadius: "50%", background: "linear-gradient(135deg, var(--color-accent), var(--color-primary))", margin: "0 auto 20px", display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontSize: "2.5rem", fontWeight: 700 }}>PGĐ</div>
-              <h3 style={{ fontSize: "1.125rem", marginBottom: "4px" }}>[Họ và tên – Đang cập nhật]</h3>
-              <p style={{ color: "var(--color-primary)", fontWeight: 600, fontSize: "0.875rem", marginBottom: "12px" }}>{t("Phó Giám đốc Kỹ thuật", "Technical Deputy Director")}</p>
-              <p style={{ color: "var(--color-gray-500)", fontSize: "0.875rem", lineHeight: 1.6 }}>{t(
-                "\"Đội ngũ kỹ thuật HAMEDCO sẵn sàng 24/7, đảm bảo tất cả hệ thống thiết bị vận hành ổn định, phục vụ công tác chăm sóc sức khỏe nhân dân.\"",
-                "\"The HAMEDCO technical team is available 24/7, ensuring all equipment systems operate stably to serve public healthcare needs.\""
-              )}</p>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* ═══ FAQ ═══ */}
       <section className="section bg-white">

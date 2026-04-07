@@ -76,17 +76,6 @@ const I18N_TRANSLATIONS = {
     "footer.hours": "Mon – Fri: 08:00 – 17:00 | Sat: 08:00 – 11:45",
     "footer.badge.support": "Quick 24/7 Support",
 
-    // === LEADERSHIP ===
-    "leadership.overline": "LEADERSHIP COMMITMENT",
-    "leadership.title": "Vision & Mission",
-    "leadership.desc": "With the philosophy of \"Partnership – Dedication – Expertise\", HAMEDCO's leadership commits to delivering the best medical equipment solutions, prioritizing service quality and patient safety above all.",
-    "leadership.ceo.name": "[Full Name – To be updated]",
-    "leadership.ceo.title": "Chief Executive Officer",
-    "leadership.ceo.quote": "\"We are committed to delivering the highest quality medical equipment solutions, contributing to enhancing diagnostic and treatment capabilities for Vietnam's healthcare system.\"",
-    "leadership.vp.name": "[Full Name – To be updated]",
-    "leadership.vp.title": "Vice Director of Engineering",
-    "leadership.vp.quote": "\"HAMEDCO's technical team is ready 24/7, ensuring all equipment systems operate stably to serve the healthcare needs of the people.\"",
-
     // === NAVIGATION ===
     "nav.home": "Home",
     "nav.about": "About Us",
