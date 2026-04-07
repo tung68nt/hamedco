@@ -288,7 +288,7 @@ export default function Home() {
             <div className="why-item fade-in-up stagger-1">
               <div className="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
               <div>
-                <h3>{t("1. Chính hãng 100%", "1. 100% Genuine")}</h3>
+                <h3>{t("Chính hãng 100%", "100% Genuine")}</h3>
                 <p>{t(
                   "Cam kết phân phối sản phẩm chính hãng từ các nhà sản xuất hàng đầu thế giới như Philips. Hồ sơ pháp lý đầy đủ, bao gồm CO, CQ, giấy phép nhập khẩu và giấy phép lưu hành trang thiết bị y tế theo quy định.",
                   "Committed to distributing genuine products from top global manufacturers like Philips. Full legal documentation including CO, CQ, import licenses and medical device circulation permits."
@@ -298,7 +298,7 @@ export default function Home() {
             <div className="why-item fade-in-up stagger-2">
               <div className="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
               <div>
-                <h3>{t("2. Phản hồi kỹ thuật 24/7", "2. 24/7 Technical Response")}</h3>
+                <h3>{t("Phản hồi kỹ thuật 24/7", "24/7 Technical Response")}</h3>
                 <p>{t(
                   "Đội ngũ kỹ thuật chuyên sâu luôn sẵn sàng hỗ trợ 24/7. Chúng tôi cam kết phản hồi nhanh chóng và đưa ra phương án xử lý kịp thời, góp phần bảo đảm hệ thống thiết bị y tế vận hành ổn định, liên tục.",
                   "Our expert technical team is always ready and available 24/7. We commit to rapid response and timely resolution to ensure your medical systems operate stably and continuously."
@@ -308,7 +308,7 @@ export default function Home() {
             <div className="why-item fade-in-up stagger-3">
               <div className="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></div>
               <div>
-                <h3>{t("3. Chuyển giao công nghệ chuyên sâu", "3. In-depth Technology Transfer")}</h3>
+                <h3>{t("Chuyển giao công nghệ chuyên sâu", "In-depth Technology Transfer")}</h3>
                 <p>{t(
                   "HAMEDCO chú trọng đào tạo và chuyển giao công nghệ bài bản. Đội ngũ y bác sĩ được hướng dẫn vận hành chi tiết, giúp khai thác tối đa hiệu quả thiết bị trong chẩn đoán và điều trị.",
                   "HAMEDCO prioritizes comprehensive training and technology transfer. Medical staff receive detailed guidance, helping maximize equipment efficiency in diagnosis and treatment."
@@ -318,7 +318,7 @@ export default function Home() {
             <div className="why-item fade-in-up stagger-4">
               <div className="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg></div>
               <div>
-                <h3>{t("4. Bảo hành và bảo trì toàn diện", "4. Comprehensive Warranty & Maintenance")}</h3>
+                <h3>{t("Bảo hành và bảo trì toàn diện", "Comprehensive Warranty & Maintenance")}</h3>
                 <p>{t(
                   "Chính sách bảo hành chính hãng từ 12 đến 24 tháng. Đồng thời, chúng tôi xây dựng kế hoạch bảo trì định kỳ và duy trì kho linh kiện dự phòng, giúp rút ngắn thời gian xử lý khi phát sinh sự cố.",
                   "Official warranty policy from 12 to 24 months. We also establish regular maintenance plans and maintain on-site spare parts reserves, minimizing downtime when incidents occur."
@@ -328,7 +328,7 @@ export default function Home() {
             <div className="why-item fade-in-up stagger-5">
               <div className="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
               <div>
-                <h3>{t("5. Hơn 20 năm kinh nghiệm thực chiến", "5. Over 20 Years of Practical Experience")}</h3>
+                <h3>{t("Hơn 20 năm kinh nghiệm thực chiến", "Over 20 Years of Practical Experience")}</h3>
                 <p>{t(
                   "Với hơn 20 năm đồng hành cùng ngành y tế Việt Nam, HAMEDCO thấu hiểu sâu sắc quy trình vận hành và nhu cầu thực tiễn của các bệnh viện, từ đó mang đến các giải pháp phù hợp và hiệu quả.",
                   "With more than 20 years supporting Vietnam's healthcare sector, HAMEDCO deeply understands the operational processes and practical needs of hospitals, ensuring tailored and effective solutions."
@@ -340,7 +340,7 @@ export default function Home() {
       </section>
 
       {/* ═══ COOPERATION PROCESS ═══ */}
-      <section className="section bg-white">
+      <section className="process-section">
         <div className="container">
           <div className="section-header fade-in-up">
             <span className="overline">{t("Quy trình hợp tác", "Collaboration Process")}</span>
@@ -350,30 +350,62 @@ export default function Home() {
               "Professional and transparent process — from consultation to handover and operation."
             )}</p>
           </div>
-          <div className="process-steps fade-in-up">
-            <div className="process-step">
+
+          <div className="process-timeline fade-in-up">
+            {/* Step 1 */}
+            <div className="process-card">
+              <div className="process-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>
+              </div>
               <h3>{t("Tư vấn & Khảo sát", "Consulting & Surveying")}</h3>
               <p>{t(
                 "Đội ngũ chuyên gia đến khảo sát thực tế, phân tích nhu cầu và đề xuất giải pháp phù hợp.",
                 "Our team of experts conducts on-site surveys, analyzes needs, and proposes suitable solutions."
               )}</p>
             </div>
-            <div className="process-step">
+
+            <div className="process-connector">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            </div>
+
+            {/* Step 2 */}
+            <div className="process-card">
+              <div className="process-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
+              </div>
               <h3>{t("Báo giá & Hợp đồng", "Quotation & Contract")}</h3>
               <p>{t(
                 "Cung cấp báo giá chi tiết, đàm phán điều khoản hợp đồng minh bạch và có lợi nhất.",
                 "Provide detailed quotations and negotiate transparent and most advantageous contract terms."
               )}</p>
             </div>
-            <div className="process-step">
+
+            <div className="process-connector">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            </div>
+
+            {/* Step 3 */}
+            <div className="process-card">
+              <div className="process-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-5.83-2.02a.75.75 0 01-.01-1.42l10.68-3.73a.75.75 0 01.95.95l-3.73 10.68a.75.75 0 01-1.42-.01l-2.02-5.83a.75.75 0 00-.46-.46z" /><path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L15.5 11.09" /></svg>
+              </div>
               <h3>{t("Lắp đặt & Chuyển giao", "Installation & Training")}</h3>
               <p>{t(
-                "Triển khai lắp đặt đúng tiêu chuẩn, Chuyển giao, đào tạo, hướng dẫn sử dụng cho toàn bộ đội ngũ vận hành.",
+                "Triển khai lắp đặt đúng tiêu chuẩn. Chuyển giao, đào tạo, hướng dẫn sử dụng cho toàn bộ đội ngũ vận hành.",
                 "Implement installation according to standards and provide training on usage for the entire operating team."
               )}</p>
             </div>
-            <div className="process-step">
-              <h3 className="h4">{t("Bảo hành & Hỗ trợ", "Warranty & Support")}</h3>
+
+            <div className="process-connector">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            </div>
+
+            {/* Step 4 */}
+            <div className="process-card">
+              <div className="process-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
+              </div>
+              <h3>{t("Bảo hành & Hỗ trợ", "Warranty & Support")}</h3>
               <p>{t(
                 "Bảo hành chính hãng, bảo trì định kỳ và hỗ trợ kỹ thuật xuyên suốt vòng đời thiết bị.",
                 "Manufacturer's warranty, regular maintenance, and technical support throughout the equipment's lifecycle."
