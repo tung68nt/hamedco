@@ -5,8 +5,13 @@ import { PHILIPS_PRODUCTS } from "@/data/products";
 import PageHero from "@/components/layout/PageHero";
 import ClientCategoryPage from "./ClientCategoryPage";
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const cat = CATEGORIES.find((c) => c.slug === params.slug);
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
+  const cat = CATEGORIES.find((c) => c.slug === slug);
   if (!cat) return { title: "Không tìm thấy danh mục — HAMEDCO" };
 
   return {
@@ -22,8 +27,9 @@ export function generateStaticParams() {
   }));
 }
 
-export default function CategoryPage({ params }: { params: { slug: string } }) {
-  const cat = CATEGORIES.find((c) => c.slug === params.slug);
+export default async function CategoryPage({ params }: Props) {
+  const { slug } = await params;
+  const cat = CATEGORIES.find((c) => c.slug === slug);
   
   if (!cat) {
     notFound();
