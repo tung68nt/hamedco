@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
       <div className="container">
         <div className="section-header text-center fade-in-up">
           <span className="overline">{t("Lý do tin chọn", "Reasons to Trust")}</span>
-          <h2>{t("Vi sao các bệnh viện hàng đầu lựa chọn HAMEDCO?", "Why Leading Hospitals Choose HAMEDCO?")}</h2>
+          <h2>{t("Vì sao các bệnh viện hàng đầu lựa chọn HAMEDCO?", "Why Leading Hospitals Choose HAMEDCO?")}</h2>
           <p>
             {t(
               "Không chỉ cung cấp thiết bị, HAMEDCO được lựa chọn bởi năng lực bảo chứng cho sự vận hành ổn định, an toàn và xuyên suốt của toàn bộ hệ thống y tế.",
