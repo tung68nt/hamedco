@@ -599,15 +599,14 @@
 }
 
 .product-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-1);
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--color-gray-500);
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--color-gray-400);
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: var(--space-2);
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+  line-height: 1;
 }
 
 /* ── Badges ─────────────────────────────────────────────── */

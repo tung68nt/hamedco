@@ -52,8 +52,8 @@ export default function Home() {
               )}</h2>
               <p className="body-lg" style={{ margin: "20px 0", color: "var(--color-gray-500)" }}>
                 {t(
-                  "Thành lập từ năm 2005, Công ty Cổ phần Vật tư và Thiết bị Y tế Hà Nội (HAMEDCO) là Nhà phân phối chính thức của Philips tại thị trường Việt Nam. Với hơn 20 năm kinh nghiệm, chúng tôi cung cấp các hệ thống chẩn đoán hình ảnh và giải pháp hồi sức cấp cứu tiên tiến, đồng thời mang đến giải pháp y tế tổng thể giúp các bệnh viện tối ưu vận hành, nâng cao độ chính xác trong chẩn đoán và cải thiện chất lượng điều trị.",
-                  "Established in 2005, Hanoi Medical Supplies and Equipment Joint Stock Company (HAMEDCO) is the official distributor of Philips in the Vietnamese market. With over 20 years of experience, we provide advanced imaging diagnostics and critical care solutions, delivering comprehensive healthcare solutions to optimize hospital operations, improve diagnostic accuracy, and enhance treatment quality."
+                  "Thành lập từ năm 2005, Công ty Cổ phần Vật tư và Thiết bị Y tế Hà Nội (HAMEDCO) đã khẳng định vị thế vững chắc với hơn 20 năm kinh nghiệm trong ngành y tế. Đánh dấu bước ngoặt quan trọng vào năm 2022, chúng tôi chính thức trở thành Nhà phân phối của Philips tại Việt Nam. Sự kết hợp giữa bề dày am hiểu thị trường và công nghệ tiên tiến từ Philips giúp HAMEDCO cung cấp các hệ thống chẩn đoán hình ảnh, giải pháp hồi sức cấp cứu vượt trội. Chúng tôi tập trung vào đội ngũ kỹ sư được đào tạo bài bản và khắt khe, cam kết đồng hành cùng các bệnh viện để tối ưu vận hành, nâng cao độ chính xác trong chẩn đoán và cải thiện chất lượng điều trị.",
+                  "Established in 2005, Hanoi Medical Supplies and Equipment Joint Stock Company (HAMEDCO) has firmly established its position with over 20 years of experience in the healthcare industry. Marking an important milestone in 2022, we officially became the distributor of Philips in Vietnam. The combination of deep market knowledge and advanced technology from Philips enables HAMEDCO to provide outstanding imaging diagnostic systems and critical care solutions. We focus on a team of rigorously trained engineers, committed to partnering with hospitals to optimize operations, improve diagnostic accuracy and enhance treatment quality."
                 )}
               </p>
               <div className="flex gap-4 flex-wrap">
@@ -62,7 +62,7 @@ export default function Home() {
               </div>
             </div>
             <div className="about-intro-image fade-in-up stagger-2">
-              <img src="/assets/images/hero/hero-banner.webp" alt="HAMEDCO" width="600" height="450" loading="lazy" />
+              <img src="/assets/images/products/epiq-elite.jpg" alt="Philips EPIQ Elite - Máy siêu âm cao cấp" width="600" height="450" loading="lazy" style={{ objectFit: "cover", borderRadius: "12px" }} />
             </div>
           </div>
         </div>
@@ -99,11 +99,11 @@ export default function Home() {
                   {badgeLabel && <div className="product-badge">{badgeLabel}</div>}
                 </div>
                 <div className="product-content">
-                  <div className="product-brand">{p.brand}</div>
-                  <Link href={`/san-pham/${p.slug}`} className="product-title" style={{ textDecoration: "none", color: "inherit", cursor: "pointer", display: "block", marginTop: "4px" }}>
+                  <div className="product-brand" style={{ marginBottom: "4px" }}>{p.brand}</div>
+                  <Link href={`/san-pham/${p.slug}`} className="product-title" style={{ textDecoration: "none", color: "inherit", cursor: "pointer", display: "block", marginTop: "0" }}>
                     {p.name}
                   </Link>
-                  <p className="product-desc line-clamp-3">{p.description[locale]}</p>
+                  <p className="product-desc line-clamp-3" style={{ marginTop: "8px" }}>{p.description[locale]}</p>
                   <Link 
                     href={`/san-pham/${p.slug}`} 
                     className="product-action"
@@ -244,8 +244,8 @@ export default function Home() {
       <section className="cert-section">
         <div className="container">
           <div className="section-header fade-in-up">
-            <span className="overline">{t("TIÊU CHUẨN & CHỨNG NHẬN CHẤT LƯỢNG", "Certifications & Quality Standards")}</span>
-            <h2>{t("Cam kết chất lượng quốc tế", "Commitment to International Quality")}</h2>
+            <span className="overline">{t("Chứng nhận & Tiêu chuẩn", "Certifications & Standards")}</span>
+            <h2>{t("TIÊU CHUẨN & CHỨNG NHẬN CHẤT LƯỢNG", "Quality Standards & Certifications")}</h2>
             <p>{t(
               "Sản phẩm đạt chứng nhận quốc tế đảm bảo sự an toàn tuyệt đối và tính pháp lý minh bạch cho mọi dự án y tế.",
               "Products achieve international certifications ensuring absolute safety and transparent legal compliance for all medical projects."
@@ -290,8 +290,8 @@ export default function Home() {
               <div>
                 <h3>{t("Chính hãng 100%", "100% Genuine")}</h3>
                 <p>{t(
-                  "Cam kết phân phối sản phẩm chính hãng từ các nhà sản xuất hàng đầu thế giới như Philips. Hồ sơ pháp lý đầy đủ, bao gồm CO, CQ, giấy phép nhập khẩu và giấy phép lưu hành trang thiết bị y tế theo quy định.",
-                  "Committed to distributing genuine products from top global manufacturers like Philips. Full legal documentation including CO, CQ, import licenses and medical device circulation permits."
+                  "Cam kết phân phối sản phẩm chính hãng từ các nhà sản xuất hàng đầu thế giới. Hồ sơ pháp lý đầy đủ, bao gồm CO, CQ, giấy phép lưu hành trang thiết bị y tế theo quy định.",
+                  "Committed to distributing genuine products from world-leading manufacturers. Full legal documentation including CO, CQ, and medical device circulation permits as required."
                 )}</p>
               </div>
             </div>
@@ -301,7 +301,7 @@ export default function Home() {
                 <h3>{t("Phản hồi kỹ thuật 24/7", "24/7 Technical Response")}</h3>
                 <p>{t(
                   "Đội ngũ kỹ thuật chuyên sâu luôn sẵn sàng hỗ trợ 24/7. Chúng tôi cam kết phản hồi nhanh chóng và đưa ra phương án xử lý kịp thời, góp phần bảo đảm hệ thống thiết bị y tế vận hành ổn định, liên tục.",
-                  "Our expert technical team is always ready and available 24/7. We commit to rapid response and timely resolution to ensure your medical systems operate stably and continuously."
+                  "Our expert technical team is always ready and available 24/7. We commit to rapid response and timely solutions, helping ensure medical equipment systems operate stably and continuously."
                 )}</p>
               </div>
             </div>
@@ -310,8 +310,8 @@ export default function Home() {
               <div>
                 <h3>{t("Chuyển giao công nghệ chuyên sâu", "In-depth Technology Transfer")}</h3>
                 <p>{t(
-                  "HAMEDCO chú trọng đào tạo và chuyển giao công nghệ bài bản. Đội ngũ y bác sĩ được hướng dẫn vận hành chi tiết, giúp khai thác tối đa hiệu quả thiết bị trong chẩn đoán và điều trị.",
-                  "HAMEDCO prioritizes comprehensive training and technology transfer. Medical staff receive detailed guidance, helping maximize equipment efficiency in diagnosis and treatment."
+                  "HAMEDCO đặc biệt chú trọng chuyển giao công nghệ chuẩn hóa với trọng tâm là đội ngũ kỹ sư, chuyên viên được đào tạo bài bản và khắt khe. Từ nền tảng chuyên môn vững chắc đó, chúng tôi cam kết hướng dẫn y bác sĩ vận hành chi tiết, giúp khai thác tối đa công năng thiết bị trong chẩn đoán và điều trị.",
+                  "HAMEDCO places special emphasis on standardized technology transfer, focusing on rigorously trained engineers and specialists. From that solid professional foundation, we commit to guiding doctors and medical staff in detailed equipment operation, maximizing device capabilities in diagnosis and treatment."
                 )}</p>
               </div>
             </div>
@@ -321,7 +321,7 @@ export default function Home() {
                 <h3>{t("Bảo hành và bảo trì toàn diện", "Comprehensive Warranty & Maintenance")}</h3>
                 <p>{t(
                   "Chính sách bảo hành chính hãng từ 12 đến 24 tháng. Đồng thời, chúng tôi xây dựng kế hoạch bảo trì định kỳ và duy trì kho linh kiện dự phòng, giúp rút ngắn thời gian xử lý khi phát sinh sự cố.",
-                  "Official warranty policy from 12 to 24 months. We also establish regular maintenance plans and maintain on-site spare parts reserves, minimizing downtime when incidents occur."
+                  "Official manufacturer warranty from 12 to 24 months. We also develop periodic maintenance plans and maintain spare parts inventory to minimize resolution time when incidents occur."
                 )}</p>
               </div>
             </div>
@@ -331,7 +331,7 @@ export default function Home() {
                 <h3>{t("Hơn 20 năm kinh nghiệm thực chiến", "Over 20 Years of Practical Experience")}</h3>
                 <p>{t(
                   "Với hơn 20 năm đồng hành cùng ngành y tế Việt Nam, HAMEDCO thấu hiểu sâu sắc quy trình vận hành và nhu cầu thực tiễn của các bệnh viện, từ đó mang đến các giải pháp phù hợp và hiệu quả.",
-                  "With more than 20 years supporting Vietnam's healthcare sector, HAMEDCO deeply understands the operational processes and practical needs of hospitals, ensuring tailored and effective solutions."
+                  "With more than 20 years supporting Vietnam's healthcare sector, HAMEDCO deeply understands the operational processes and practical needs of hospitals, delivering tailored and effective solutions."
                 )}</p>
               </div>
             </div>
