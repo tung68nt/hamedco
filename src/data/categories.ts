@@ -3,80 +3,101 @@ export interface Category {
   slug: string;
   name: { vi: string; en: string };
   description: { vi: string; en: string };
-  type: "main" | "segment"; // helps distinguish top-level categories vs specific subgroups
+  icon?: string; // SVG path for navbar mega-menu
+  type: "device-type" | "price-tier";
 }
 
-export const CATEGORIES: Category[] = [
+/* ═══ LOẠI THIẾT BỊ (Device Types) — dùng cho navbar submenu + routing ═══ */
+export const DEVICE_TYPES: Category[] = [
   {
-    id: "chan-doan-hinh-anh",
-    slug: "chan-doan-hinh-anh",
-    name: { vi: "Chẩn đoán hình ảnh (MRI, CT)", en: "Medical Imaging (MRI, CT)" },
+    id: "sieu-am",
+    slug: "sieu-am",
+    name: { vi: "Siêu âm", en: "Ultrasound" },
     description: {
-      vi: "Hệ thống chẩn đoán hình ảnh cao cấp bao gồm Cộng hưởng từ (MRI) và Cắt lớp vi tính (CT).",
-      en: "Advanced medical imaging systems including Magnetic Resonance Imaging (MRI) and Computed Tomography (CT).",
+      vi: "Hệ thống siêu âm từ cầm tay đến cao cấp cho mọi chuyên khoa",
+      en: "Ultrasound systems from handheld to premium for all specialties",
     },
-    type: "main",
+    icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z",
+    type: "device-type",
   },
   {
-    id: "sieu-am-y-te",
-    slug: "sieu-am-y-te",
-    name: { vi: "Siêu âm y tế", en: "Ultrasound" },
+    id: "ct",
+    slug: "ct",
+    name: { vi: "CT Scanner", en: "CT Scanner" },
     description: {
-      vi: "Các giải pháp siêu âm hiện đại, từ thiết bị xách tay đến hệ thống chuyên dụng cho tim mạch và sản khoa.",
-      en: "Modern ultrasound solutions, from portable devices to specialized systems for cardiology and obstetrics.",
+      vi: "Hệ thống chụp cắt lớp vi tính thế hệ mới",
+      en: "Next-generation computed tomography systems",
     },
-    type: "main",
+    icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z",
+    type: "device-type",
   },
   {
-    id: "theo-doi-benh-nhan",
-    slug: "theo-doi-benh-nhan",
-    name: { vi: "Theo dõi bệnh nhân (ICU)", en: "Patient Monitoring (ICU)" },
+    id: "mri",
+    slug: "mri",
+    name: { vi: "MRI", en: "MRI" },
     description: {
-      vi: "Giải pháp theo dõi bệnh nhân toàn diện tại giường và khu vực hồi sức cấp cứu.",
-      en: "Comprehensive patient monitoring solutions at the bedside and in the intensive care unit.",
+      vi: "Hệ thống cộng hưởng từ hiệu suất cao",
+      en: "High-performance magnetic resonance imaging systems",
     },
-    type: "main",
+    icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z",
+    type: "device-type",
   },
   {
-    id: "giai-phap-tin-hoc",
-    slug: "giai-phap-tin-hoc",
-    name: { vi: "Giải pháp Tin học Y tế", en: "Healthcare Informatics" },
+    id: "x-quang",
+    slug: "x-quang",
+    name: { vi: "X-quang", en: "Radiography" },
     description: {
-      vi: "Kết nối dữ liệu y khoa, quản lý hình ảnh PACS, tối ưu hoá quy trình làm việc lâm sàng.",
-      en: "Connecting medical data, PACS imaging management, and optimizing clinical workflows.",
+      vi: "Hệ thống X-quang kỹ thuật số linh hoạt",
+      en: "Flexible digital radiography systems",
     },
-    type: "main",
+    icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z",
+    type: "device-type",
   },
+];
 
-  /* ─── PHÂN KHÚC (SEGMENTS) DÀNH CHO SIÊU ÂM ─── */
+/* ═══ PHÂN KHÚC GIÁ (Price Tiers) — dùng cho filter bên trong trang ═══ */
+export const PRICE_TIERS: Category[] = [
   {
-    id: "di-dong",
-    slug: "di-dong",
-    name: { vi: "Siêu âm di động", en: "Portable Ultrasound" },
+    id: "pho-thong",
+    slug: "pho-thong",
+    name: { vi: "Phổ thông", en: "Entry-level" },
     description: {
-      vi: "Các thiết bị siêu âm nhỏ gọn, linh hoạt, phù hợp thăm khám tại giường và cấp cứu.",
-      en: "Compact, flexible ultrasound devices suitable for bedside examinations and emergencies.",
+      vi: "Giải pháp hiệu quả cho phòng khám và bệnh viện tuyến đầu",
+      en: "Cost-effective solutions for clinics and frontline hospitals",
     },
-    type: "segment",
+    type: "price-tier",
   },
   {
     id: "tam-trung",
     slug: "tam-trung",
-    name: { vi: "Phân khúc Tầm trung", en: "Mid-range Segment" },
+    name: { vi: "Tầm trung", en: "Mid-range" },
     description: {
-      vi: "Hệ thống siêu âm mang lại hiệu suất đáng tin cậy phục vụ khối lượng bệnh nhân lớn mỗi ngày.",
-      en: "Ultrasound systems delivering reliable performance for high daily patient throughput.",
+      vi: "Cân bằng hiệu suất và giá trị cho bệnh viện đa khoa",
+      en: "Balanced performance and value for general hospitals",
     },
-    type: "segment",
+    type: "price-tier",
   },
   {
     id: "cao-cap",
     slug: "cao-cap",
-    name: { vi: "Phân khúc Cao cấp", en: "Premium Segment" },
+    name: { vi: "Cao cấp", en: "Premium" },
     description: {
-      vi: "Nền tảng siêu âm tiên phong, trang bị công nghệ AI và hình ảnh vượt trội cho chẩn đoán phức tạp.",
-      en: "Pioneering ultrasound platforms equipped with AI and superior imaging for complex diagnoses.",
+      vi: "Công nghệ đỉnh cao cho trung tâm y tế hàng đầu",
+      en: "Cutting-edge technology for leading medical centers",
     },
-    type: "segment",
+    type: "price-tier",
   },
 ];
+
+/* ═══ TẤT CẢ CATEGORIES ═══ */
+export const CATEGORIES: Category[] = [...DEVICE_TYPES, ...PRICE_TIERS];
+
+/* Helper: tìm device type theo id */
+export function getDeviceType(id: string) {
+  return DEVICE_TYPES.find((d) => d.id === id);
+}
+
+/* Helper: tìm price tier theo id */
+export function getPriceTier(id: string) {
+  return PRICE_TIERS.find((p) => p.id === id);
+}

@@ -1,9 +1,9 @@
-import { PHILIPS_PRODUCTS } from "@/data/products";
+import { ALL_PRODUCTS } from "@/data/products";
 import ProductEditForm from "./ProductEditForm";
 import { redirect } from "next/navigation";
 
 export default function AdminProductEditPage({ params }: { params: { slug: string } }) {
-  const product = PHILIPS_PRODUCTS.find((p) => p.slug === params.slug) as any;
+  const product = ALL_PRODUCTS.find((p) => p.slug === params.slug) as any;
 
   if (!product) {
     redirect("/admin/san-pham");

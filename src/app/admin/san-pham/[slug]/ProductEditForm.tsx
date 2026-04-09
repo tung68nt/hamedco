@@ -143,10 +143,10 @@ export default function ProductEditForm({ initialData }: { initialData: any }) {
                         }}
                         style={{ width: "16px", height: "16px" }}
                       />
-                      <span style={{ fontWeight: cat.type === 'main' ? 600 : 400 }}>
+                      <span style={{ fontWeight: cat.type === 'device-type' ? 600 : 400 }}>
                         {cat.name.vi} 
-                        {cat.type === 'main' && <span style={{ color: "var(--color-primary)", marginLeft: "6px", fontSize: "0.7rem", padding: "2px 6px", background: "#e0f2fe", borderRadius: "10px" }}>Chính</span>}
-                        {cat.type === 'segment' && <span style={{ color: "var(--color-gray-500)", marginLeft: "6px", fontSize: "0.7rem", padding: "2px 6px", background: "#f3f4f6", borderRadius: "10px" }}>Phân khúc</span>}
+                        {cat.type === 'device-type' && <span style={{ color: "var(--color-primary)", marginLeft: "6px", fontSize: "0.7rem", padding: "2px 6px", background: "#e0f2fe", borderRadius: "10px" }}>Chính</span>}
+                        {cat.type === 'price-tier' && <span style={{ color: "var(--color-gray-500)", marginLeft: "6px", fontSize: "0.7rem", padding: "2px 6px", background: "#f3f4f6", borderRadius: "10px" }}>Phân khúc</span>}
                       </span>
                     </label>
                   );

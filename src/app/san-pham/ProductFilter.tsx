@@ -1,171 +1,201 @@
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useLocale } from "../../components/LocaleProvider";
-
-interface Product {
-  id: string;
-  slug: string;
-  name: string;
-  subtitle: { vi: string; en: string };
-  categoryIds?: string[];
-  brand: string;
-  description: { vi: string; en: string };
-  thumbnail: string;
-  highlights: { vi: string[]; en: string[] };
-}
-
-interface Category {
-  id: string;
-  name: { vi: string; en: string };
-}
+import { ALL_PRODUCTS } from "../../data/products";
+import { DEVICE_TYPES, PRICE_TIERS } from "../../data/categories";
 
 interface Props {
-  categories: Category[];
-  products: Product[];
+  initialDeviceType?: string;
+  disableDeviceTypeSelect?: boolean;
 }
 
-function ProductFilterInner({ categories, products }: Props) {
+export default function ProductFilter({ initialDeviceType = "all", disableDeviceTypeSelect = false }: Props) {
   const searchParams = useSearchParams();
-  const initCat = searchParams?.get("category") || "all";
-  const [activeCategory, setActiveCategory] = useState(initCat);
+  const initPrice = searchParams?.get("price") || "all";
+  
+  // States for filtering
+  const [activeDevice, setActiveDevice] = useState(initialDeviceType);
+  const [activePrice, setActivePrice] = useState(initPrice);
+  
   const { locale, t } = useLocale();
 
   useEffect(() => {
-    const cat = searchParams?.get("category");
-    if (cat) setActiveCategory(cat);
+    const price = searchParams?.get("price");
+    if (price) setActivePrice(price);
   }, [searchParams]);
 
-  const filtered = activeCategory === "all"
-    ? products
-    : products.filter((p) => p.categoryIds?.includes(activeCategory));
+  // Derived filtered products
+  const filteredProducts = ALL_PRODUCTS.filter((p) => {
+    const matchDevice = activeDevice === "all" || p.deviceType === activeDevice;
+    const matchPrice = activePrice === "all" || p.priceTier === activePrice;
+    return matchDevice && matchPrice;
+  });
 
   return (
     <>
+      {/* ═══ FILTER CONTROLS ═══ */}
       <div className="filter-bar fade-in-up" style={{
         display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        flexWrap: "wrap",
-        gap: "1rem",
+        flexDirection: "column",
+        gap: "1.5rem",
         marginBottom: "2.5rem"
       }}>
-        <div style={{
-          display: "flex",
-          gap: "0.25rem",
-          overflowX: "auto",
-          paddingBottom: "8px",
-          WebkitOverflowScrolling: "touch",
-          scrollbarWidth: "none",
-          msOverflowStyle: "none"
-        }} className="hide-scrollbar">
-          <button
-            onClick={() => setActiveCategory("all")}
-            style={{
-              padding: "0.625rem 1.25rem",
-              borderRadius: "99px",
-              whiteSpace: "nowrap",
-              fontWeight: activeCategory === "all" ? 600 : 500,
-              fontSize: "0.9375rem",
-              color: activeCategory === "all" ? "var(--color-primary)" : "var(--color-neutral)",
-              backgroundColor: activeCategory === "all" ? "#fff" : "transparent",
-              boxShadow: activeCategory === "all" ? "0 2px 8px rgba(0,0,0,0.06)" : "none",
-              border: "none",
-              cursor: "pointer",
-              transition: "all 0.2s ease"
-            }}
-          >
-            {t("Tất cả", "All")}
-          </button>
-          
-          {categories.map((cat) => {
-            const isActive = activeCategory === cat.id;
-            return (
+        {/* Device Type Filter (Only show if not disabled) */}
+        {!disableDeviceTypeSelect && (
+          <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", alignItems: "center" }}>
+            <span style={{ fontWeight: 600, fontSize: "0.875rem", color: "var(--color-neutral-dark)", width: "100px" }}>
+              {t("Thiết bị:", "Device Type:")}
+            </span>
+            <div style={{ display: "flex", gap: "0.25rem", overflowX: "auto" }}>
               <button
-                key={cat.id}
-                onClick={() => setActiveCategory(cat.id)}
-                style={{
-                  padding: "0.625rem 1.25rem",
-                  borderRadius: "99px",
-                  whiteSpace: "nowrap",
-                  fontWeight: isActive ? 600 : 500,
-                  fontSize: "0.9375rem",
-                  color: isActive ? "var(--color-primary)" : "var(--color-neutral)",
-                  backgroundColor: isActive ? "#fff" : "transparent",
-                  boxShadow: isActive ? "0 2px 8px rgba(0,0,0,0.06)" : "none",
-                  border: "none",
-                  cursor: "pointer",
-                  transition: "all 0.2s ease"
-                }}
+                onClick={() => setActiveDevice("all")}
+                className={`btn btn-sm ${activeDevice === "all" ? "btn-primary" : "btn-outline"}`}
+                style={{ borderRadius: "99px" }}
               >
-                {(cat.name as any)[locale] || cat.name.vi}
+                {t("Tất cả", "All")}
               </button>
-            );
-          })}
-        </div>
-        <div className="body-sm" style={{ color: "var(--color-neutral)", whiteSpace: "nowrap", fontSize: "0.9375rem" }}>
-          {t(`Hiển thị ${filtered.length} sản phẩm`, `Showing ${filtered.length} products`)}
-        </div>
-      </div>
-
-      <div className="products-grid">
-        {filtered.map((p) => {
-          const primaryCatId = p.categoryIds?.[0];
-          const primaryCat = primaryCatId ? categories.find(c => c.id === primaryCatId) : null;
-          const badgeLabel = primaryCat ? ((primaryCat.name as any)[locale] || primaryCat.name.vi) : "";
-
-          return (
-            <div 
-              className="product-card" 
-              key={p.id} 
-              style={{ cursor: "pointer", position: "relative" }}
-              onClick={(e) => {
-                window.location.href = `/san-pham/${p.slug}`;
-              }}
-            >
-              <div className="product-image">
-                <img src={p.thumbnail} alt={p.name} loading="lazy" />
-                {badgeLabel && <div className="product-badge">{badgeLabel}</div>}
-              </div>
-              <div className="product-content">
-                <div className="product-brand">{p.brand}</div>
-                <Link href={`/san-pham/${p.slug}`} className="product-title" style={{ textDecoration: "none", color: "inherit", cursor: "pointer", display: "block", marginTop: "4px" }}>
-                  {p.name}
-                </Link>
-                <p className="product-desc line-clamp-3">{(p.description as any)[locale] || p.description.vi}</p>
-                <Link 
-                  href={`/san-pham/${p.slug}`} 
-                  className="product-action"
-                  onClick={(e) => e.stopPropagation()}
+              {DEVICE_TYPES.map((cat) => (
+                <button
+                  key={cat.id}
+                  onClick={() => setActiveDevice(cat.id)}
+                  className={`btn btn-sm ${activeDevice === cat.id ? "btn-primary" : "btn-outline"}`}
+                  style={{ borderRadius: "99px" }}
                 >
-                  {t("Chi tiết sản phẩm", "View Details")}
-                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
+                  {t(cat.name.vi, cat.name.en)}
+                </button>
+              ))}
             </div>
-          );
-        })}
+          </div>
+        )}
+
+        {/* Price Tier Filter */}
+        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", alignItems: "center" }}>
+          <span style={{ fontWeight: 600, fontSize: "0.875rem", color: "var(--color-neutral-dark)", width: "100px" }}>
+            {t("Phân khúc:", "Price Tier:")}
+          </span>
+          <div style={{ display: "flex", gap: "0.25rem", overflowX: "auto" }}>
+            <button
+              onClick={() => setActivePrice("all")}
+              className={`btn btn-sm ${activePrice === "all" ? "btn-primary" : "btn-outline"}`}
+              style={{ borderRadius: "99px" }}
+            >
+              {t("Tất cả", "All")}
+            </button>
+            {PRICE_TIERS.map((tier) => (
+              <button
+                key={tier.id}
+                onClick={() => setActivePrice(tier.id)}
+                className={`btn btn-sm ${activePrice === tier.id ? "btn-primary" : "btn-outline"}`}
+                style={{ borderRadius: "99px" }}
+              >
+                {t(tier.name.vi, tier.name.en)}
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
 
-      {filtered.length === 0 && (
-        <div className="text-center" style={{ padding: "60px 0", color: "var(--color-gray-500)" }}>
-          <p style={{ fontSize: "1.125rem" }}>
-            {t("Không tìm thấy sản phẩm trong danh mục này.", "No products found in this category.")}
-          </p>
-        </div>
-      )}
-    </>
-  );
-}
+      {/* ═══ RESULTS INFO ═══ */}
+      <div className="filter-results-info fade-in-up" style={{ marginBottom: "1.5rem" }}>
+        <p style={{ fontSize: "0.875rem", color: "var(--color-neutral)" }}>
+          {t(`Hiển thị ${filteredProducts.length} sản phẩm`, `Showing ${filteredProducts.length} products`)}
+        </p>
+      </div>
 
-export default function ProductFilter(props: Props) {
-  return (
-    <Suspense fallback={<div>Loading filters...</div>}>
-      <ProductFilterInner {...props} />
-    </Suspense>
+      {/* ═══ PRODUCT GRID ═══ */}
+      <div className="product-grid">
+        {filteredProducts.map((product, index) => (
+          <div key={product.id} className="product-card fade-in-up" style={{ animationDelay: `${index * 0.05}s` }}>
+            <Link href={`/san-pham/chi-tiet/${product.slug}`} className="product-card-img">
+              <img
+                src={product.thumbnail}
+                alt={product.name}
+                loading="lazy"
+              />
+              <div className="product-card-badge">{product.brand}</div>
+            </Link>
+            <div className="product-card-body">
+              <div style={{ marginBottom: "0.5rem" }}>
+                <span style={{ fontSize: "0.75rem", fontWeight: 600, color: "var(--color-primary)", textTransform: "uppercase", letterSpacing: "1px" }}>
+                  {t(
+                    DEVICE_TYPES.find((c) => c.id === product.deviceType)?.name.vi || "",
+                    DEVICE_TYPES.find((c) => c.id === product.deviceType)?.name.en || ""
+                  )}{" "}
+                  •{" "}
+                  {t(
+                    PRICE_TIERS.find((c) => c.id === product.priceTier)?.name.vi || "",
+                    PRICE_TIERS.find((c) => c.id === product.priceTier)?.name.en || ""
+                  )}
+                </span>
+              </div>
+              <h3 className="product-card-title">
+                <Link href={`/san-pham/chi-tiet/${product.slug}`}>{product.name}</Link>
+              </h3>
+              <p className="product-card-desc">
+                {t(product.subtitle.vi, product.subtitle.en)}
+              </p>
+              
+              <ul style={{ 
+                listStyle: "none", 
+                padding: 0, 
+                margin: "1rem 0 1.5rem",
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.5rem"
+              }}>
+                {(locale === "vi" ? product.highlights.vi : product.highlights.en).slice(0, 3).map((hl: string, i: number) => (
+                  <li key={i} style={{ 
+                    fontSize: "0.875rem", 
+                    color: "var(--color-neutral)",
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: "0.5rem"
+                  }}>
+                    <svg width="16" height="16" fill="var(--color-primary)" viewBox="0 0 20 20" style={{ flexShrink: 0, marginTop: "2px" }}>
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    {hl}
+                  </li>
+                ))}
+              </ul>
+              
+              <Link href={`/san-pham/chi-tiet/${product.slug}`} className="btn btn-outline" style={{ width: "100%" }}>
+                {t("Xem chi tiết", "View Details")}
+              </Link>
+            </div>
+          </div>
+        ))}
+        
+        {filteredProducts.length === 0 && (
+          <div className="product-empty-state" style={{ 
+            gridColumn: "1 / -1", 
+            padding: "4rem 2rem", 
+            textAlign: "center",
+            backgroundColor: "#fff",
+            borderRadius: "1rem",
+            border: "1px dashed rgba(0,0,0,0.1)"
+          }}>
+            <svg width="48" height="48" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ margin: "0 auto 1rem", color: "var(--color-neutral-light)" }}>
+              <path strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+            <h3 style={{ fontSize: "1.25rem", fontWeight: 600, color: "var(--color-neutral-dark)", marginBottom: "0.5rem" }}>
+              {t("Không tìm thấy sản phẩm", "No products found")}
+            </h3>
+            <p style={{ color: "var(--color-neutral)", marginBottom: "1.5rem" }}>
+              {t("Vui lòng thay đổi tiêu chí bộ lọc để xem các sản phẩm khác.", "Please change your filter criteria to see other products.")}
+            </p>
+            <button 
+              onClick={() => { setActiveDevice("all"); setActivePrice("all"); }}
+              className="btn btn-primary"
+            >
+              {t("Xóa bộ lọc", "Clear filters")}
+            </button>
+          </div>
+        )}
+      </div>
+    </>
   );
 }

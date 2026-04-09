@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { useLocale } from "../../../components/LocaleProvider";
+import { useLocale } from "@/components/LocaleProvider";
 import { CATEGORIES } from "@/data/categories";
 
 interface Product {
@@ -10,7 +10,8 @@ interface Product {
   slug: string;
   name: string;
   subtitle: { vi: string; en: string };
-  categoryIds?: string[];
+  deviceType?: string;
+  priceTier?: string;
   brand: string;
   description: { vi: string; en: string };
   longDescription?: { vi: string; en: string };
@@ -37,7 +38,7 @@ export default function ProductDetailClient({ product, related }: Props) {
   const subtitle = product.subtitle[locale];
   const desc = product.description[locale];
   
-  const primaryCatId = product.categoryIds?.[0];
+  const primaryCatId = product.deviceType;
   const primaryCat = primaryCatId ? CATEGORIES.find(c => c.id === primaryCatId) : null;
   const category = primaryCat ? ((primaryCat.name as any)[locale] || primaryCat.name.vi) : "";
 
@@ -439,13 +440,13 @@ export default function ProductDetailClient({ product, related }: Props) {
             </h2>
             <div className="products-grid">
               {related.map((p) => {
-                const relPrimaryCatId = p.categoryIds?.[0];
+                const relPrimaryCatId = p.deviceType;
                 const relPrimaryCat = relPrimaryCatId ? CATEGORIES.find(c => c.id === relPrimaryCatId) : null;
                 const badgeLabel = relPrimaryCat ? ((relPrimaryCat.name as any)[locale] || relPrimaryCat.name.vi) : "";
 
                 return (
                   <div className="product-card fade-in-up" key={p.id} style={{ cursor: "pointer" }} onClick={(e) => {
-                    window.location.href = `/san-pham/${p.slug}`;
+                    window.location.href = `/san-pham/chi-tiet/${p.slug}`;
                   }}>
                     <div className="product-image">
                       <img src={p.thumbnail} alt={p.name} loading="lazy" />
@@ -453,9 +454,9 @@ export default function ProductDetailClient({ product, related }: Props) {
                     </div>
                     <div className="product-content">
                       <div className="product-brand">{p.brand}</div>
-                    <Link href={`/san-pham/${p.slug}`} className="product-title" style={{ textDecoration: "none", color: "inherit", cursor: "pointer", display: "block", marginTop: "4px" }}>{p.name}</Link>
+                    <Link href={`/san-pham/chi-tiet/${p.slug}`} className="product-title" style={{ textDecoration: "none", color: "inherit", cursor: "pointer", display: "block", marginTop: "4px" }}>{p.name}</Link>
                     <p className="product-desc line-clamp-2">{p.description[locale]}</p>
-                    <Link href={`/san-pham/${p.slug}`} className="product-action" onClick={(e) => e.stopPropagation()}>
+                    <Link href={`/san-pham/chi-tiet/${p.slug}`} className="product-action" onClick={(e) => e.stopPropagation()}>
                       {t("Chi tiết sản phẩm", "View Details")}
                       <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />

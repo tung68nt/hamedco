@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { PHILIPS_PRODUCTS } from "@/data/products";
-import { CATEGORIES } from "@/data/categories";
+import { ALL_PRODUCTS } from "@/data/products";
+import { DEVICE_TYPES, PRICE_TIERS } from "@/data/categories";
 
 export default function AdminProductsPage() {
-  const total = PHILIPS_PRODUCTS.length;
-  const mobile = PHILIPS_PRODUCTS.filter((p: any) => p.categoryIds?.includes("di-dong")).length;
-  const mid = PHILIPS_PRODUCTS.filter((p: any) => p.categoryIds?.includes("tam-trung")).length;
-  const premium = PHILIPS_PRODUCTS.filter((p: any) => p.categoryIds?.includes("cao-cap")).length;
+  const total = ALL_PRODUCTS.length;
+  const sieuam = ALL_PRODUCTS.filter((p: any) => p.deviceType === "sieu-am").length;
+  const mri = ALL_PRODUCTS.filter((p: any) => p.deviceType === "mri").length;
+  const ct = ALL_PRODUCTS.filter((p: any) => p.deviceType === "ct").length;
 
   return (
     <>
@@ -41,8 +41,8 @@ export default function AdminProductsPage() {
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
             </div>
             <div>
-              <div className="admin-stat-value">{mobile}</div>
-              <div className="admin-stat-label">Di động / POC</div>
+              <div className="admin-stat-value">{sieuam}</div>
+              <div className="admin-stat-label">Siêu âm</div>
             </div>
           </div>
           <div className="admin-stat-card">
@@ -50,8 +50,8 @@ export default function AdminProductsPage() {
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="2" y="3" width="20" height="14" rx="2" /><path d="M8 21h8M12 17v4" /></svg>
             </div>
             <div>
-              <div className="admin-stat-value">{mid}</div>
-              <div className="admin-stat-label">Tầm trung</div>
+              <div className="admin-stat-value">{mri}</div>
+              <div className="admin-stat-label">Cộng hưởng từ</div>
             </div>
           </div>
           <div className="admin-stat-card">
@@ -59,8 +59,8 @@ export default function AdminProductsPage() {
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z" /><path d="M2 17l10 5 10-5" /><path d="M2 12l10 5 10-5" /></svg>
             </div>
             <div>
-              <div className="admin-stat-value">{premium}</div>
-              <div className="admin-stat-label">Cao cấp</div>
+              <div className="admin-stat-value">{ct}</div>
+              <div className="admin-stat-label">CT Scanner</div>
             </div>
           </div>
         </div>
@@ -82,10 +82,11 @@ export default function AdminProductsPage() {
                 </tr>
               </thead>
               <tbody>
-                {PHILIPS_PRODUCTS.map((p: any) => {
+                {ALL_PRODUCTS.map((p: any) => {
                   const thumb = p.thumbnail || p.images?.[0] || "";
                   const featureCount = p.features?.length || 0;
-                  const itemCats = (p.categoryIds || []).map((id: string) => CATEGORIES.find(c => c.id === id)).filter(Boolean);
+                  const itemDevice = DEVICE_TYPES.find(c => c.id === p.deviceType);
+                  const itemPrice = PRICE_TIERS.find(c => c.id === p.priceTier);
 
                   return (
                     <tr key={p.id}>
@@ -109,13 +110,17 @@ export default function AdminProductsPage() {
                       </td>
                       <td>
                         <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
-                          {itemCats.length > 0 ? (
-                            itemCats.map((cat: any) => (
-                              <span key={cat.id} className={`admin-badge ${cat.type === 'main' ? 'teal' : 'gray'}`}>
-                                {cat.name.vi}
+                          {itemDevice && (
+                              <span className="admin-badge teal">
+                                {itemDevice.name.vi}
                               </span>
-                            ))
-                          ) : (
+                          )}
+                          {itemPrice && (
+                              <span className="admin-badge gray">
+                                {itemPrice.name.vi}
+                              </span>
+                          )}
+                          {!itemDevice && !itemPrice && (
                             <span className="admin-badge gray">Không có</span>
                           )}
                         </div>

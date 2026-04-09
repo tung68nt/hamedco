@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import ThemeToggle from "../ThemeToggle";
 import QuoteModal from "../QuoteModal";
+import { DEVICE_TYPES } from "@/data/categories";
 
 export default function Header() {
   const { t } = useLocale();
@@ -72,9 +73,11 @@ export default function Header() {
                 {t("Sản phẩm", "Products")} <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
               </Link>
               <div className="nav-dropdown-menu">
-                <Link href="/san-pham/danh-muc/di-dong" className="nav-dropdown-item">{t("Siêu âm di động", "Portable Ultrasound")}</Link>
-                <Link href="/san-pham/danh-muc/tam-trung" className="nav-dropdown-item">{t("Phân khúc Tầm trung", "Mid-range Segment")}</Link>
-                <Link href="/san-pham/danh-muc/cao-cap" className="nav-dropdown-item">{t("Phân khúc Cao cấp", "Premium Segment")}</Link>
+                {DEVICE_TYPES.map(cat => (
+                  <Link key={cat.id} href={`/san-pham/${cat.slug}`} className="nav-dropdown-item">
+                    {t(cat.name.vi, cat.name.en)}
+                  </Link>
+                ))}
               </div>
             </div>
             <Link href="/dich-vu" className={`nav-link ${isActive("/dich-vu") ? "active" : ""}`}>{t("Dịch vụ", "Services")}</Link>

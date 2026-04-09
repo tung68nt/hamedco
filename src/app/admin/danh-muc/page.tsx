@@ -2,8 +2,8 @@ import Link from "next/link";
 import { CATEGORIES } from "@/data/categories";
 
 export default function AdminCategoriesPage() {
-  const mainCount = CATEGORIES.filter(c => c.type === 'main').length;
-  const segmentCount = CATEGORIES.filter(c => c.type === 'segment').length;
+  const mainCount = CATEGORIES.filter(c => c.type === 'device-type').length;
+  const segmentCount = CATEGORIES.filter(c => c.type === 'price-tier').length;
 
   return (
     <>
@@ -70,8 +70,8 @@ export default function AdminCategoriesPage() {
                       </span>
                     </td>
                     <td>
-                      <span className={`admin-badge ${cat.type === 'main' ? 'teal' : 'gray'}`}>
-                        {cat.type === 'main' ? 'Chính (Menu)' : 'Phân khúc (Tabs)'}
+                      <span className={`admin-badge ${cat.type === 'device-type' ? 'teal' : 'gray'}`}>
+                        {cat.type === 'device-type' ? 'Chính (Loại Thiết bị)' : 'Phân khúc (Tabs)'}
                       </span>
                     </td>
                     <td style={{ textAlign: "right" }}>

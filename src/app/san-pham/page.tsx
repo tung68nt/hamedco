@@ -1,24 +1,34 @@
 import type { Metadata } from "next";
-import { PHILIPS_PRODUCTS } from "../../data/products";
-import { CATEGORIES } from "../../data/categories";
 import ProductFilterWrapper from "./ProductFilterWrapper";
 
 export const metadata: Metadata = {
   title: "Sản phẩm — HAMEDCO | Thiết Bị Y Tế Philips Healthcare",
   description:
-    "Danh mục sản phẩm Philips Healthcare chính hãng: siêu âm, chẩn đoán hình ảnh, theo dõi bệnh nhân, giải pháp tin học y tế. HAMEDCO — nhà phân phối chính thức tại Việt Nam.",
+    "Danh mục sản phẩm Philips Healthcare chính hãng: CT Scanner, MRI, X-quang và siêu âm. HAMEDCO — nhà phân phối chính thức tại Việt Nam.",
 };
 
 export default function ProductsPage() {
-  // Only pass segment-type categories as filter tabs on the all-products page
-  const segmentCategories = CATEGORIES.filter(c => c.type === "segment").map(c => ({
-    id: c.id,
-    name: c.name,
-  }));
-
   return (
-    <>
-      <ProductFilterWrapper categories={segmentCategories} products={PHILIPS_PRODUCTS} />
-    </>
+    <main className="main-content">
+      <section className="page-hero">
+        <div className="container">
+          <div className="breadcrumbs">
+            <span className="breadcrumb-item">Trang chủ</span>
+            <span className="breadcrumb-separator">/</span>
+            <span className="breadcrumb-current">Sản phẩm</span>
+          </div>
+          <h1>Sản phẩm Philips Healthcare</h1>
+          <p>
+            Danh mục đầy đủ các giải pháp chẩn đoán hình ảnh Philips — từ siêu âm di động đến hệ thống MRI, CT cao cấp.
+          </p>
+        </div>
+      </section>
+
+      <section className="section bg-gray-50">
+        <div className="container">
+          <ProductFilterWrapper />
+        </div>
+      </section>
+    </main>
   );
 }

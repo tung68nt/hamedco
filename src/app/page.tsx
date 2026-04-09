@@ -1,14 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { PHILIPS_PRODUCTS } from "../data/products";
+import { ALL_PRODUCTS } from "../data/products";
 import { CATEGORIES } from "../data/categories";
 import HeroCarousel from "../components/HeroCarousel";
 import FaqAccordion from "../components/FaqAccordion";
 import { useLocale } from "../components/LocaleProvider";
 
 export default function Home() {
-  const topProducts = PHILIPS_PRODUCTS.slice(0, 6);
+  const topProducts = ALL_PRODUCTS.slice(0, 6);
   const { locale, t } = useLocale();
 
   return (
@@ -81,8 +81,7 @@ export default function Home() {
           </div>
           <div className="products-grid">
             {topProducts.map((p) => {
-              const pCatId = (p as any).categoryIds?.[0];
-              const pCat = pCatId ? CATEGORIES.find(c => c.id === pCatId) : null;
+              const pCat = p.deviceType ? CATEGORIES.find(c => c.id === p.deviceType) : null;
               const badgeLabel = pCat ? ((pCat.name as any)[locale] || pCat.name.vi) : "";
 
               return (
