@@ -1,0 +1,150 @@
+/* ============================================================
+   HAMEDCO — Layout System
+   Grid, Container, Responsive
+   ============================================================ */
+
+/* ── Container ──────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.container-narrow {
+  max-width: 960px;
+}
+
+.container-wide {
+  max-width: 1440px;
+}
+
+/* ── Section Spacing ────────────────────────────────────── */
+.section {
+  padding-top: var(--space-20);
+  padding-bottom: var(--space-20);
+}
+
+.section-sm {
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-12);
+}
+
+.section-lg {
+  padding-top: var(--space-24);
+  padding-bottom: var(--space-24);
+}
+
+@media (max-width: 639px) {
+  .section { padding-top: var(--space-12); padding-bottom: var(--space-12); }
+  .section-sm { padding-top: var(--space-8); padding-bottom: var(--space-8); }
+  .section-lg { padding-top: var(--space-16); padding-bottom: var(--space-16); }
+}
+
+/* ── Grid System ────────────────────────────────────────── */
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+.grid-5 { grid-template-columns: repeat(5, 1fr); }
+.grid-6 { grid-template-columns: repeat(6, 1fr); }
+
+@media (max-width: 1023px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-5 { grid-template-columns: repeat(3, 1fr); }
+  .grid-6 { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 767px) {
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: 1fr; }
+  .grid-5 { grid-template-columns: repeat(2, 1fr); }
+  .grid-6 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── Flex Utilities ─────────────────────────────────────── */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-center { align-items: center; justify-content: center; }
+.flex-between { justify-content: space-between; }
+.flex-start { align-items: flex-start; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.gap-1 { gap: var(--space-1); }
+.gap-2 { gap: var(--space-2); }
+.gap-3 { gap: var(--space-3); }
+.gap-4 { gap: var(--space-4); }
+.gap-6 { gap: var(--space-6); }
+.gap-8 { gap: var(--space-8); }
+.gap-10 { gap: var(--space-10); }
+
+/* ── Split Layout ───────────────────────────────────────── */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.split-60-40 {
+  grid-template-columns: 3fr 2fr;
+}
+
+.split-40-60 {
+  grid-template-columns: 2fr 3fr;
+}
+
+@media (max-width: 767px) {
+  .split,
+  .split-60-40,
+  .split-40-60 {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}
+
+/* ── Section Header ─────────────────────────────────────── */
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto var(--space-12);
+}
+
+.section-header .overline {
+  margin-bottom: var(--space-3);
+  display: inline-flex;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  margin-bottom: var(--space-4);
+  color: var(--color-gray-900);
+  text-wrap: balance;
+}
+
+.section-header p {
+  color: var(--color-gray-500);
+  font-size: 1.125rem;
+}
+
+/* ── Divider ────────────────────────────────────────────── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--color-gray-200);
+  margin: var(--space-8) 0;
+}
+
+/* ── Full-width Section ─────────────────────────────────── */
+.full-width {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}

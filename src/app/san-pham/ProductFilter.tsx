@@ -106,35 +106,41 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
       </div>
 
       {/* ═══ PRODUCT GRID ═══ */}
-      <div className="product-grid">
+      <div className="products-grid">
         {filteredProducts.map((product, index) => (
-          <div key={product.id} className="product-card fade-in-up" style={{ animationDelay: `${index * 0.05}s` }}>
-            <Link href={`/san-pham/chi-tiet/${product.slug}`} className="product-card-img">
+          <div 
+            key={product.id} 
+            className="product-card fade-in-up" 
+            style={{ animationDelay: `${index * 0.05}s`, cursor: "pointer" }}
+            onClick={() => {
+              window.location.href = `/san-pham/chi-tiet/${product.slug}`;
+            }}
+          >
+            <div className="product-image" style={{ overflow: "hidden", position: "relative" }}>
               <img
                 src={product.thumbnail}
                 alt={product.name}
                 loading="lazy"
+                style={{ objectFit: "contain", width: "100%", height: "100%", objectPosition: "center", transform: "scale(1.15)" }}
               />
-              <div className="product-card-badge">{product.brand}</div>
-            </Link>
-            <div className="product-card-body">
-              <div style={{ marginBottom: "0.5rem" }}>
-                <span style={{ fontSize: "0.75rem", fontWeight: 600, color: "var(--color-primary)", textTransform: "uppercase", letterSpacing: "1px" }}>
-                  {t(
-                    DEVICE_TYPES.find((c) => c.id === product.deviceType)?.name.vi || "",
-                    DEVICE_TYPES.find((c) => c.id === product.deviceType)?.name.en || ""
-                  )}{" "}
-                  •{" "}
-                  {t(
-                    PRICE_TIERS.find((c) => c.id === product.priceTier)?.name.vi || "",
-                    PRICE_TIERS.find((c) => c.id === product.priceTier)?.name.en || ""
-                  )}
-                </span>
+              <div className="product-badge">{product.brand}</div>
+            </div>
+            <div className="product-content">
+              <div className="product-brand" style={{ marginBottom: "4px" }}>
+                {t(
+                  DEVICE_TYPES.find((c) => c.id === product.deviceType)?.name.vi || "",
+                  DEVICE_TYPES.find((c) => c.id === product.deviceType)?.name.en || ""
+                )}{" "}
+                •{" "}
+                {t(
+                  PRICE_TIERS.find((c) => c.id === product.priceTier)?.name.vi || "",
+                  PRICE_TIERS.find((c) => c.id === product.priceTier)?.name.en || ""
+                )}
               </div>
-              <h3 className="product-card-title">
-                <Link href={`/san-pham/chi-tiet/${product.slug}`}>{product.name}</Link>
-              </h3>
-              <p className="product-card-desc">
+              <Link href={`/san-pham/chi-tiet/${product.slug}`} className="product-title" style={{ textDecoration: "none", color: "inherit", cursor: "pointer", display: "block", marginTop: "0" }}>
+                {product.name}
+              </Link>
+              <p className="product-desc line-clamp-3" style={{ marginTop: "8px" }}>
                 {t(product.subtitle.vi, product.subtitle.en)}
               </p>
               
@@ -162,8 +168,15 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
                 ))}
               </ul>
               
-              <Link href={`/san-pham/chi-tiet/${product.slug}`} className="btn btn-outline" style={{ width: "100%" }}>
+              <Link 
+                href={`/san-pham/chi-tiet/${product.slug}`} 
+                className="product-action"
+                onClick={(e) => e.stopPropagation()}
+              >
                 {t("Xem chi tiết", "View Details")}
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
               </Link>
             </div>
           </div>

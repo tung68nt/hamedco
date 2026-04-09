@@ -24,9 +24,9 @@ export const CT_PRODUCTS = [
       en: 'CT 3500 is designed to meet routine CT imaging needs with consistent performance. The system integrates AI-based Precise Image reconstruction technology to enhance image quality while reducing radiation dose. With fast rotation speed and up to 64-slice capability, CT 3500 is ideal for clinics and frontline hospitals.'
     },
     images: [
-      'https://images.philips.com/is/image/PhilipsConsumer/HC728134-IMS-en_AA?wid=1024&$jpglarge$',
+      '/assets/images/products/ct-3500.png',
     ],
-    thumbnail: 'https://images.philips.com/is/image/PhilipsConsumer/HC728134-IMS-en_AA?wid=1024&$jpglarge$',
+    thumbnail: '/assets/images/products/ct-3500.png',
     sourceUrl: 'https://www.philips.com.ph/healthcare/product/HC728134/philips-ct-3500-hc728134-computed-tomography-scanner',
     videoUrl: null,
     highlights: {
@@ -90,9 +90,9 @@ export const CT_PRODUCTS = [
       en: 'Incisive CT helps healthcare organizations address their most pressing challenges. The system provides intelligence at every step, with a vMRC tube (8 MHU) and the Tube for Life guarantee helping reduce estimated operating costs by $420,000. CT Smart Workflow with AI-enabled tools enables fast reconstruction and automatic patient positioning.'
     },
     images: [
-      'https://images.philips.com/is/image/PhilipsConsumer/HC728143-IMS-en_AA?wid=1024&$jpglarge$',
+      '/assets/images/products/incisive-ct.png',
     ],
-    thumbnail: 'https://images.philips.com/is/image/PhilipsConsumer/HC728143-IMS-en_AA?wid=1024&$jpglarge$',
+    thumbnail: '/assets/images/products/incisive-ct.png',
     sourceUrl: 'https://www.philips.com.ph/healthcare/product/HC728143/incisive-ct-ct-scanner',
     videoUrl: null,
     highlights: {
@@ -174,11 +174,9 @@ export const CT_PRODUCTS = [
       en: 'The CT 5300 system is designed to overcome current imaging challenges and elevate clinical teams through comprehensive AI integration. With Precise Image (AI reconstruction), Precise Cardiac (motion compensation) and CT Smart Workflow, the system delivers superior image quality for all applications.'
     },
     images: [
-      'https://images.philips.com/is/image/PhilipsConsumer/HC728285_CT-5300-GAL-global-001?wid=1024&$jpglarge$',
-      'https://images.philips.com/is/image/PhilipsConsumer/HC728285_CT-5300-GAL-global-002?wid=1024&$jpglarge$',
-      'https://images.philips.com/is/image/PhilipsConsumer/HC728285_CT-5300-GAL-global-003?wid=1024&$jpglarge$',
+      '/assets/images/products/ct-5300.png',
     ],
-    thumbnail: 'https://images.philips.com/is/image/PhilipsConsumer/HC728285_CT-5300-GAL-global-001?wid=1024&$jpglarge$',
+    thumbnail: '/assets/images/products/ct-5300.png',
     sourceUrl: 'https://www.philips.com.ph/healthcare/product/HC728285/ct-5300-hc728285-ct-scanner',
     videoUrl: null,
     highlights: {
@@ -265,9 +263,9 @@ export const CT_PRODUCTS = [
       en: 'Spectral CT 7500 is Philips\' most advanced spectral CT system. With always-on spectral capability, the system captures spectral data in every routine scan without special protocols. Spectral results are ready in under 60 seconds, viewable on PACS with Spectral Magic Glass. Reduces follow-up scans by 26% and diagnosis time by 34%.'
     },
     images: [
-      'https://images.philips.com/is/image/PhilipsConsumer/728333-IMS-en_AA?wid=1024&$jpglarge$',
+      '/assets/images/products/spectral-ct-7500.png',
     ],
-    thumbnail: 'https://images.philips.com/is/image/PhilipsConsumer/728333-IMS-en_AA?wid=1024&$jpglarge$',
+    thumbnail: '/assets/images/products/spectral-ct-7500.png',
     sourceUrl: 'https://www.philips.com.ph/healthcare/product/728333/spectral-ct-7500-philips-all-new-spectral-detector-ct-7500',
     videoUrl: null,
     highlights: {

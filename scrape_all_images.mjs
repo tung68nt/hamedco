@@ -30,7 +30,7 @@ async function scrapeProduct(browser, id, url) {
   try {
     console.log(`Scraping ${id}...`);
     await page.goto(url, { waitUntil: 'networkidle2', timeout: 30000 });
-    await page.waitForTimeout(3000);
+    await new Promise(r => setTimeout(r, 3000));
     
     // Scroll to bottom to trigger lazy loading
     await page.evaluate(async () => {
@@ -40,7 +40,7 @@ async function scrapeProduct(browser, id, url) {
       }
       window.scrollTo(0, 0);
     });
-    await page.waitForTimeout(2000);
+    await new Promise(r => setTimeout(r, 2000));
 
     const data = await page.evaluate(() => {
       const images = new Set();

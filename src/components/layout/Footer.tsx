@@ -20,7 +20,13 @@ export default function Footer() {
               )}</p>
             </div>
             <div className="flex gap-4 flex-wrap">
-              <Link href="/bao-gia" className="btn btn-accent btn-lg">{t("Yêu cầu báo giá", "Request Quote")}</Link>
+              <Link href="/bao-gia" className="btn btn-accent btn-lg" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
+                <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                {t("Yêu cầu báo giá", "Request Quote")}
+              </Link>
               <a href="tel:+84869009486" className="btn btn-outline-white btn-lg">📞 086 900 9486</a>
             </div>
           </div>

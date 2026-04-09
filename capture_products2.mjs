@@ -1,0 +1,68 @@
+import puppeteer from 'puppeteer';
+import fs from 'fs';
+
+const PRODUCTS = [
+  { id: 'ct-3500', url: 'https://www.philips.com.ph/healthcare/product/HC728134/philips-ct-3500-hc728134-computed-tomography-scanner' },
+  { id: 'incisive-ct', url: 'https://www.philips.com.ph/healthcare/product/HC728143/incisive-ct-ct-scanner' },
+  { id: 'ct-5300', url: 'https://www.philips.com.ph/healthcare/product/HC728285/ct-5300-hc728285-ct-scanner' },
+  { id: 'spectral-ct-7500', url: 'https://www.philips.com.ph/healthcare/product/728333/spectral-ct-7500-philips-all-new-spectral-detector-ct-7500' },
+  { id: 'mr-5300', url: 'https://www.usa.philips.com/healthcare/product/782110/mr-5300-transform-mr-productivity-quickly-easily-confidently' },
+  { id: 'ingenia-ambition-1.5t-s', url: 'https://www.philips.com.au/healthcare/product/HC781359/ingenia-ambition-excel-in-your-daily-mr-services-helium-free' },
+  { id: 'ingenia-ambition-1.5t-x', url: 'https://www.philips.com.au/healthcare/product/HC781356/ingenia-ambition-excel-in-your-daily-mr-services-helium-free' },
+  { id: 'ingenia-elition-3.0t-s', url: 'https://www.philips.com.au/healthcare/product/HC781357/ingenia-elition-30t-s-30t-imaging-at-your-fingertips' },
+  { id: 'ingenia-elition-3.0t-x', url: 'https://www.philips.com.au/healthcare/product/HC781358/ingenia-elition-30t-x' },
+  { id: 'mr-7700', url: 'https://www.philips.com.au/healthcare/product/HCNMRF429/mr-7700' }
+];
+
+async function run() {
+  console.log('Launching browser...');
+  const browser = await puppeteer.launch({ headless: 'new' });
+  const page = await browser.newPage();
+  await page.setViewport({ width: 1440, height: 900 });
+
+  for (const product of PRODUCTS) {
+    const outPath = `public/assets/images/products/${product.id}.png`;
+    console.log(`\nNavigating to ${product.id}...`);
+    try {
+      await page.goto(product.url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+      await new Promise(r => setTimeout(r, 2000));
+
+      // Destroy cookie banners and sticky headers
+      await page.evaluate(() => {
+        const killList = document.querySelectorAll('*');
+        killList.forEach(el => {
+          const style = window.getComputedStyle(el);
+          if (style.position === 'fixed' || style.position === 'sticky' || style.zIndex > 1000) {
+            el.style.display = 'none';
+          }
+        });
+      });
+      // Wait a moment for layout shift
+      await new Promise(r => setTimeout(r, 1000));
+
+      let elementHandle;
+      if (product.id === 'ct-3500') {
+         elementHandle = await page.$('.p-product-hero__visual, .p-product-image');
+      } else {
+         elementHandle = await page.$('.p-product-hero__image picture img') || 
+                          await page.$('.p-product-hero__image img') ||
+                          await page.$('picture img') || 
+                          await page.$('.p-product__media img') ||
+                          await page.$('img.p-image-basic');
+      }
+      
+      if (elementHandle) {
+        await elementHandle.screenshot({ path: outPath });
+        console.log(`Saved pristine screenshot for ${product.id}`);
+      } else {
+        console.log(`No image found for ${product.id}`);
+      }
+    } catch (err) {
+      console.log(`Error processing ${product.id}: ${err.message}`);
+    }
+  }
+
+  await browser.close();
+}
+
+run().catch(console.error);

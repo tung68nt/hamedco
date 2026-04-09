@@ -24,9 +24,9 @@ export const MRI_PRODUCTS = [
       en: 'MR 5300 is a 1.5T MRI system designed to optimize daily productivity. The BlueSeal magnet operates without additional helium, significantly reducing operating costs. Compressed SENSE technology accelerates scanning by up to 50%, while SmartSpeed delivers superior image quality with shorter scan times.'
     },
     images: [
-      'https://images.philips.com/is/image/PhilipsConsumer/782110-IMS-en_AA?wid=1024&$jpglarge$',
+      '/assets/images/products/mr-5300.png',
     ],
-    thumbnail: 'https://images.philips.com/is/image/PhilipsConsumer/782110-IMS-en_AA?wid=1024&$jpglarge$',
+    thumbnail: '/assets/images/products/mr-5300.png',
     sourceUrl: 'https://www.usa.philips.com/healthcare/product/782110/mr-5300-transform-mr-productivity-quickly-easily-confidently',
     videoUrl: null,
     highlights: {
@@ -88,9 +88,9 @@ export const MRI_PRODUCTS = [
       en: 'Based on the revolutionary fully sealed BlueSeal magnet, Ingenia Ambition S delivers more productive helium-free MR operations. The system provides superb image quality with Compressed SENSE for all anatomies. Overall exam time is improved by simplifying patient setup at the bore with guided setup.'
     },
     images: [
-      'https://images.philips.com/is/image/PhilipsConsumer/HC781359-IMS-en_AA?wid=1024&$jpglarge$',
+      '/assets/images/products/ingenia-ambition-1.5t-s.png',
     ],
-    thumbnail: 'https://images.philips.com/is/image/PhilipsConsumer/HC781359-IMS-en_AA?wid=1024&$jpglarge$',
+    thumbnail: '/assets/images/products/ingenia-ambition-1.5t-s.png',
     sourceUrl: 'https://www.philips.com.au/healthcare/product/HC781359/ingenia-ambition-excel-in-your-daily-mr-services-helium-free',
     videoUrl: null,
     highlights: {
@@ -154,9 +154,9 @@ export const MRI_PRODUCTS = [
       en: 'Based on the revolutionary fully sealed BlueSeal magnet, Ingenia Ambition X delivers superb image quality with up to 80% higher sharpness, even for challenging patients. The system performs MRI exams up to 3x faster with SmartSpeed Precise accelerations for all anatomies. An immersive audio-visual experience helps calm patients and guides them through MR exams.'
     },
     images: [
-      'https://images.philips.com/is/image/PhilipsConsumer/HC781356-IMS-en_AA?wid=1024&$jpglarge$',
+      '/assets/images/products/ingenia-ambition-1.5t-x.png',
     ],
-    thumbnail: 'https://images.philips.com/is/image/PhilipsConsumer/HC781356-IMS-en_AA?wid=1024&$jpglarge$',
+    thumbnail: '/assets/images/products/ingenia-ambition-1.5t-x.png',
     sourceUrl: 'https://www.philips.com.au/healthcare/product/HC781356/ingenia-ambition-excel-in-your-daily-mr-services-helium-free',
     videoUrl: null,
     highlights: {
@@ -219,9 +219,9 @@ export const MRI_PRODUCTS = [
       en: 'The Ingenia Elition S delivers superb 3.0T image quality and performs MRI exams up to 50% faster. Compressed SENSE accelerates in both 2D and 3D scanning. High productivity is achieved with advanced imaging capabilities such as SmartExam, 4D Multi-Transmit and ScanWise Implant, from a combination of new gradient and RF designs plus acceleration technologies.'
     },
     images: [
-      'https://images.philips.com/is/image/PhilipsConsumer/HC781357-IMS-en_AA?wid=1024&$jpglarge$',
+      '/assets/images/products/ingenia-elition-3.0t-s.png',
     ],
-    thumbnail: 'https://images.philips.com/is/image/PhilipsConsumer/HC781357-IMS-en_AA?wid=1024&$jpglarge$',
+    thumbnail: '/assets/images/products/ingenia-elition-3.0t-s.png',
     sourceUrl: 'https://www.philips.com.au/healthcare/product/HC781357/ingenia-elition-30t-s-30t-imaging-at-your-fingertips',
     videoUrl: null,
     highlights: {
@@ -289,9 +289,9 @@ export const MRI_PRODUCTS = [
       en: 'The Ingenia Elition X offers cutting-edge MR imaging techniques while setting new standards for clinical research in 3.0T imaging. The system delivers superb image quality and performs MRI exams up to 50% faster. Fast overall exam-time is achieved by improving patient setup at the bore with touchless guided patient setup, combined with accelerations in both 2D and 3D scanning.'
     },
     images: [
-      'https://images.philips.com/is/image/PhilipsConsumer/HC781358-IMS-en_AA?wid=1024&$jpglarge$',
+      '/assets/images/products/ingenia-elition-3.0t-x.png',
     ],
-    thumbnail: 'https://images.philips.com/is/image/PhilipsConsumer/HC781358-IMS-en_AA?wid=1024&$jpglarge$',
+    thumbnail: '/assets/images/products/ingenia-elition-3.0t-x.png',
     sourceUrl: 'https://www.philips.com.au/healthcare/product/HC781358/ingenia-elition-30t-x',
     videoUrl: null,
     highlights: {
@@ -352,9 +352,9 @@ export const MRI_PRODUCTS = [
       en: 'MR 7700 is Philips\' most advanced 3.0T MRI system, delivering unmatched performance and precision. With Multi-Nuclei imaging capability, the system extends MR boundaries beyond conventional hydrogen — including Sodium (23Na), Phosphorus (31P) and Carbon (13C). Designed for both top-tier clinical work and advanced research.'
     },
     images: [
-      'https://images.philips.com/is/image/PhilipsConsumer/HCNMRF429-IMS-en_AA?wid=1024&$jpglarge$',
+      '/assets/images/products/mr-7700.png',
     ],
-    thumbnail: 'https://images.philips.com/is/image/PhilipsConsumer/HCNMRF429-IMS-en_AA?wid=1024&$jpglarge$',
+    thumbnail: '/assets/images/products/mr-7700.png',
     sourceUrl: 'https://www.philips.com.au/healthcare/product/HCNMRF429/mr-7700',
     videoUrl: null,
     highlights: {
