@@ -6,6 +6,7 @@ import { CATEGORIES } from "../data/categories";
 import HeroCarousel from "../components/HeroCarousel";
 import FaqAccordion from "../components/FaqAccordion";
 import { useLocale } from "../components/LocaleProvider";
+import JsonLd from "../components/JsonLd";
 
 export default function Home() {
   const topProducts = ALL_PRODUCTS.slice(0, 6);
@@ -531,6 +532,37 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "HAMEDCO",
+          "url": "https://hamedco.com.vn",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://hamedco.com.vn/san-pham?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "MedicalOrganization",
+          "name": "HAMEDCO",
+          "url": "https://hamedco.com.vn",
+          "logo": "https://hamedco.com.vn/assets/images/logo.png",
+          "description": "Nhà cung cấp thiết bị y tế hàng đầu Việt Nam, đối tác của Philips Healthcare.",
+          "telephone": "+84-86-900-9486",
+          "email": "info@hamedco.vn",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ha Noi",
+            "addressCountry": "VN"
+          }
+        }}
+      />
     </>
   );
 }

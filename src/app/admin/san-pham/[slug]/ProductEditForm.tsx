@@ -209,6 +209,36 @@ export default function ProductEditForm({ initialData }: { initialData: any }) {
         </div>
       )}
 
+      {/* SEO Configuration */}
+      <div className="dual-section" style={{ marginBottom: "20px" }}>
+        <div className="dual-section-title">
+          <svg className="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          Tối ưu hóa SEO (Tùy chọn nâng cao)
+        </div>
+        <div style={{ padding: "20px 24px", background: "#f9fafb", borderRadius: "0 0 8px 8px" }}>
+          <div className="form-group">
+            <label className="form-label">SEO Title (Tiêu đề chuẩn SEO)</label>
+            <input type="text" className="form-input" value={formData.seo?.title || ""} onChange={(e) => handleChange(e, "seo.title")} placeholder={`Mặc định: ${formData.name} | HAMEDCO`} />
+          </div>
+          <div className="form-group">
+            <label className="form-label">Meta Description (Mô tả thẻ Meta)</label>
+            <textarea className="form-input" style={{ minHeight: "80px" }} value={formData.seo?.description || ""} onChange={(e) => handleChange(e, "seo.description")} placeholder="Mô tả dưới 160 ký tự cho kết quả tìm kiếm Google..."></textarea>
+          </div>
+          <div className="form-group">
+            <label className="form-label">Tùy chỉnh URL Slug (Đường dẫn tĩnh thân thiện)</label>
+            <input type="text" className="form-input" value={formData.seo?.slug || formData.slug || ""} onChange={(e) => handleChange(e, "seo.slug")} />
+          </div>
+          <div className="form-group" style={{ marginBottom: "0" }}>
+            <label className="form-label">FAQ Schema (Cặp Câu HỎI & ĐÁP)</label>
+            <div style={{ border: "1px dashed #d1d5db", padding: "16px", borderRadius: "8px", background: "#fff", color: "#6b7280", fontSize: "0.85rem", textAlign: "center" }}>
+               Chức năng thêm Block Hỏi-Đáp tĩnh sẽ được cập nhật ở phiên bản quản trị Data kế tiếp.
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Sticky Save */}
       <div className="admin-save-bar">
         <span className="save-hint">Các thay đổi sẽ được ghi trực tiếp vào hệ thống</span>

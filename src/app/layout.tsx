@@ -7,8 +7,12 @@ import FloatingContact from "../components/FloatingContact";
 import { LocaleProvider } from "../components/LocaleProvider";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://hamedco.com.vn'),
   title: "HAMEDCO — Thiết Bị Y Tế Chất Lượng Cao",
   description: "Nhà cung cấp vật tư và thiết bị y tế hàng đầu Việt Nam với hơn 20 năm kinh nghiệm. Đối tác chiến lược của Philips.",
+  alternates: {
+    canonical: '/',
+  },
 };
 
 import { ThemeProvider } from "../components/ThemeProvider";

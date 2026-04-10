@@ -6,6 +6,7 @@ import { getDeviceType } from "@/data/categories";
 import { MODALITY_INFO } from "@/data/modality-info";
 import Link from "next/link";
 import Image from "next/image";
+import JsonLd from "@/components/JsonLd";
 
 export default function DeviceCategoryPage({ deviceType }: { deviceType: string }) {
   const { t, locale } = useLocale();
@@ -24,8 +25,34 @@ export default function DeviceCategoryPage({ deviceType }: { deviceType: string 
     );
   }
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Trang Chủ",
+        "item": "https://hamedco.com.vn"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Sản Phẩm",
+        "item": "https://hamedco.com.vn/san-pham"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": t(category.name.vi, category.name.en),
+        "item": `https://hamedco.com.vn/san-pham/${deviceType}`
+      }
+    ]
+  };
+
   return (
     <main className="main-content">
+      <JsonLd data={breadcrumbSchema} />
       {/* ═══ CATEGORY HERO ═══ */}
       <section className="about-banner" style={{ minHeight: "450px" }}>
         <div className="container">

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { useLocale } from "../../components/LocaleProvider";
 import { ALL_PRODUCTS } from "../../data/products";
@@ -117,11 +118,12 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
             }}
           >
             <div className="product-image" style={{ overflow: "hidden", position: "relative" }}>
-              <img
+              <Image
                 src={product.thumbnail}
                 alt={product.name}
-                loading="lazy"
-                style={{ objectFit: "contain", width: "100%", height: "100%", objectPosition: "center", transform: "scale(1.15)" }}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                style={{ objectFit: "contain", objectPosition: "center", transform: "scale(1.15)" }}
               />
               <div className="product-badge">{product.brand}</div>
             </div>
