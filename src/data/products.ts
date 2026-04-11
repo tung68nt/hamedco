@@ -12,7 +12,7 @@ export const ULTRASOUND_PRODUCTS = [
       vi: 'Hệ thống siêu âm cầm tay',
       en: 'Exceptional portable ultrasound system for Android'
     },
-    deviceType: 'sieu-am', priceTier: 'tam-trung',
+    deviceType: 'sieu-am', priceTier: 'di-dong',
     brand: 'Philips Healthcare',
     description: {
       vi: 'Philips Lumify kết hợp đầu dò chất lượng cao, nhẹ và ứng dụng siêu âm trực quan, mang khả năng chẩn đoán đến thiết bị Android, IOS tương thích. Thu thập dữ liệu lâm sàng quan trọng nhanh chóng tại điểm chăm sóc: cấp cứu, hồi sức, tại giường bệnh và phòng khám.',
@@ -156,7 +156,7 @@ export const ULTRASOUND_PRODUCTS = [
       vi: 'Hệ thống siêu âm compact',
       en: 'Compact ultrasound system'
     },
-    deviceType: 'sieu-am', priceTier: 'tam-trung',
+    deviceType: 'sieu-am', priceTier: 'di-dong',
     brand: 'Philips Healthcare',
     description: {
       vi: 'Philips InnoSight cho phép quét bệnh nhân tại nhiều điểm chăm sóc lâm sàng hơn. Hệ thống siêu âm compact và di động cao với thiết kế công thái học đổi mới và tính linh hoạt lâm sàng, phù hợp cho phòng khám, bệnh viện.',
@@ -367,7 +367,7 @@ export const ULTRASOUND_PRODUCTS = [
       vi: 'Hệ thống siêu âm Point-of-Care',
       en: 'Point of care ultrasound system'
     },
-    deviceType: 'sieu-am', priceTier: 'tam-trung',
+    deviceType: 'sieu-am', priceTier: 'di-dong',
     brand: 'Philips Healthcare',
     description: {
       vi: 'Flash 5100 POC mang đến hiệu suất hàng đầu của Philips và quy trình trực quan cho siêu âm đa chuyên khoa tại điểm chăm sóc. Hướng dẫn từng bước giúp người dùng ở mọi trình độ thực hiện chẩn đoán hình ảnh xuất sắc, đẩy nhanh chẩn đoán chính xác.',
@@ -511,7 +511,7 @@ export const ULTRASOUND_PRODUCTS = [
       vi: 'Hệ thống siêu âm POC nâng cao',
       en: 'Advanced point-of-care ultrasound system'
     },
-    deviceType: 'sieu-am', priceTier: 'tam-trung',
+    deviceType: 'sieu-am', priceTier: 'di-dong',
     brand: 'Philips Healthcare',
     description: {
       vi: 'Flash 5100 POC Pro mang đến hiệu suất hàng đầu và quy trình trực quan cho siêu âm đa chuyên khoa tại điểm chăm sóc, bao gồm khả năng tim mạch nâng cao với tính năng AutoStrain EF để đánh giá tim nhanh chóng.',
@@ -609,7 +609,7 @@ export const ULTRASOUND_PRODUCTS = [
       vi: 'Hệ thống siêu âm compact cao cấp',
       en: 'Premium compact ultrasound system'
     },
-    deviceType: 'sieu-am', priceTier: 'tam-trung',
+    deviceType: 'sieu-am', priceTier: 'di-dong',
     brand: 'Philips Healthcare',
     description: {
       vi: 'Philips Compact 5300 Series tích hợp hiệu suất quét mạnh mẽ vào hệ thống di động, giúp bạn nhanh chóng đạt được kết quả cần thiết trong chẩn đoán hình ảnh tổng quát, POC và Sản phụ khoa.',
@@ -800,7 +800,7 @@ export const ULTRASOUND_PRODUCTS = [
       vi: 'Hệ thống siêu âm compact cao cấp',
       en: 'Premium compact ultrasound system'
     },
-    deviceType: 'sieu-am', priceTier: 'tam-trung',
+    deviceType: 'sieu-am', priceTier: 'di-dong',
     brand: 'Philips Healthcare',
     description: {
       vi: 'Philips Compact 5500 Series tích hợp hiệu suất mạnh mẽ vào thiết kế compact. Có sẵn trong cấu hình chẩn đoán hình ảnh tổng quát, POC, tim mạch và Sản phụ khoa. Chất lượng hình ảnh sánh ngang hệ thống cart cao cấp Philips. Compact không thỏa hiệp.',
@@ -1402,7 +1402,7 @@ export const ULTRASOUND_PRODUCTS = [
       vi: 'Hệ thống siêu âm tim cao cấp',
       en: 'Premium cardiology ultrasound system'
     },
-    deviceType: 'sieu-am', priceTier: 'tam-trung',
+    deviceType: 'sieu-am', priceTier: 'cao-cap',
     brand: 'Philips Healthcare',
     description: {
       vi: 'EPIQ CVx là nền tảng siêu âm tim mạch cao cấp nhất của Philips — đổi mới, modular với giải pháp chẩn đoán tiên tiến cho các ca tim mạch phức tạp nhất.',
@@ -1546,7 +1546,7 @@ export const ULTRASOUND_PRODUCTS = [
       vi: 'Hiệu suất được tái định nghĩa',
       en: 'Performance redefined'
     },
-    deviceType: 'sieu-am', priceTier: 'tam-trung',
+    deviceType: 'sieu-am', priceTier: 'cao-cap',
     brand: 'Philips Healthcare',
     description: {
       vi: 'EPIQ Elite Elevate cung cấp hình ảnh chất lượng cao và thông tin lâm sàng tùy chỉnh giúp bác sĩ đưa ra kết quả kịp thời, tự tin cho nhiều bệnh nhân hơn trên toàn thế giới. Với trí tuệ nhân tạo tiên tiến và hiệu suất vượt trội.',

@@ -28,12 +28,25 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
     if (price) setActivePrice(price);
   }, [searchParams]);
 
+  useEffect(() => {
+    setActiveDevice(initialDeviceType);
+  }, [initialDeviceType]);
+
   // Derived filtered products
   const filteredProducts = ALL_PRODUCTS.filter((p) => {
     const matchDevice = activeDevice === "all" || p.deviceType === activeDevice;
     const matchPrice = activePrice === "all" || p.priceTier === activePrice;
     return matchDevice && matchPrice;
   });
+
+  // Derive available price tiers based only on active device type
+  const availablePriceTiers = Array.from(new Set(
+    ALL_PRODUCTS
+      .filter((p) => activeDevice === "all" || p.deviceType === activeDevice)
+      .map((p) => p.priceTier)
+  ));
+  
+  const applicablePriceTiers = PRICE_TIERS.filter(tier => availablePriceTiers.includes(tier.id));
 
   return (
     <>
@@ -85,7 +98,7 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
             >
               {t("Tất cả", "All")}
             </button>
-            {PRICE_TIERS.map((tier) => (
+            {applicablePriceTiers.map((tier) => (
               <button
                 key={tier.id}
                 onClick={() => setActivePrice(tier.id)}
@@ -203,8 +216,9 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
               {t("Vui lòng thay đổi tiêu chí bộ lọc để xem các sản phẩm khác.", "Please change your filter criteria to see other products.")}
             </p>
             <button 
-              onClick={() => { setActiveDevice("all"); setActivePrice("all"); }}
+              onClick={() => { setActiveDevice(disableDeviceTypeSelect ? initialDeviceType : "all"); setActivePrice("all"); }}
               className="btn btn-primary"
+              style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "0.75rem 1.5rem", borderRadius: "8px", fontWeight: 500, minWidth: "160px", minHeight: "44px" }}
             >
               {t("Xóa bộ lọc", "Clear filters")}
             </button>

@@ -58,6 +58,16 @@ export const DEVICE_TYPES: Category[] = [
 /* ═══ PHÂN KHÚC GIÁ (Price Tiers) — dùng cho filter bên trong trang ═══ */
 export const PRICE_TIERS: Category[] = [
   {
+    id: "di-dong",
+    slug: "di-dong",
+    name: { vi: "Siêu âm di động", en: "Portable Ultrasound" },
+    description: {
+      vi: "Hệ thống siêu âm cầm tay và compact di động",
+      en: "Handheld and portable compact ultrasound systems",
+    },
+    type: "price-tier",
+  },
+  {
     id: "pho-thong",
     slug: "pho-thong",
     name: { vi: "Phổ thông", en: "Entry-level" },
