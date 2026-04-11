@@ -11,10 +11,10 @@ const CENTRAL_HOSPITALS = [
   { name: "BV Hữu nghị Việt Đức", short: "Việt Đức", domain: "benhvienvietduc.org", logo: "/assets/images/partners/hữu-nghị-việt-đức-logo.jpg" },
   { name: "Bệnh viện Chợ Rẫy", short: "BV Chợ Rẫy", domain: "choray.vn", logo: "/assets/images/partners/choray-ddg.png" },
   { name: "BV TW Quân đội 108", short: "Quân đội 108", domain: "benhvien108.vn", logo: "/assets/images/partners/quân-đội-108-logo.png" },
-  { name: "Bệnh viện 103", short: "BV 103", domain: "benhvien103.vn" },
+  { name: "Bệnh viện 103", short: "BV 103", domain: "benhvien103.vn", logo: "/assets/images/partners/103-official.png" },
   { name: "Bệnh viện 175", short: "BV 175", domain: "benhvien175.vn", logo: "/assets/images/partners/175-ddg.png" },
   { name: "Bệnh viện K", short: "BV K", domain: "benhvienk.vn", logo: "/assets/images/partners/k-ddg.png" },
-  { name: "BV Phổi Trung ương", short: "BV Phổi TW", domain: "bvptw.org", logo: "/assets/images/partners/phoitw-ddg.png" },
+  { name: "BV Phổi Trung ương", short: "BV Phổi TW", domain: "bvptw.org", logo: "/assets/images/partners/phoitw-official.svg" },
 ];
 
 const PROVINCIAL_HOSPITALS = [
@@ -32,8 +32,8 @@ const PRIVATE_HOSPITALS = [
   { name: "Hệ thống BV Tâm Anh", short: "Tâm Anh", domain: "tamanhhospital.vn", logo: "/assets/images/partners/tamanh-ddg.png" },
   { name: "Hệ thống BV Vinmec", short: "Vinmec", domain: "vinmec.com", logo: "/assets/images/partners/vinmec-logo.svg" },
   { name: "Hệ thống BV Hoàn Mỹ", short: "Hoàn Mỹ", domain: "hoanmy.com", logo: "/assets/images/partners/hoanmy-ddg.png" },
-  { name: "Hệ thống BV Thu Cúc", short: "Thu Cúc", domain: "benhvienthucuc.vn", logo: "/assets/images/partners/thucuc-ddg.png" },
-  { name: "BV Đa khoa Quốc tế", short: "BV Quốc tế", domain: "vih.vn" },
+  { name: "Hệ thống BV Thu Cúc", short: "Thu Cúc", domain: "benhvienthucuc.vn", logo: "/assets/images/partners/thucuc-official.png" },
+  { name: "BV Đa khoa Quốc tế", short: "BV Quốc tế", domain: "vih.vn", logo: "/assets/images/partners/vih-official.jpg" },
   { name: "Phòng khám Medlatec", short: "Medlatec", domain: "medlatec.vn", logo: "https://medlatec.vn/images/logo.png" },
 ];
 
