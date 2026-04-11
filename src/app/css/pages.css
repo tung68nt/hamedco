@@ -2568,6 +2568,34 @@
   color: var(--color-white);
   letter-spacing: 0.05em;
   flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hospital-logo-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: var(--color-white);
+  z-index: 2;
+  padding: 4px;
+}
+
+.fallback-initials {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.show-initials .fallback-initials {
+  opacity: 1;
+  visibility: visible;
+}
+
+.show-initials .hospital-logo-img {
+  display: none !important;
 }
 
 .hospital-name {

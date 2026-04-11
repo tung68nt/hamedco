@@ -7,34 +7,34 @@ import { useLocale } from "../../components/LocaleProvider";
 /* ─── Data ─────────────────────────────────────────────────── */
 
 const CENTRAL_HOSPITALS = [
-  { name: "Bệnh viện Bạch Mai", short: "BV Bạch Mai" },
-  { name: "BV Hữu nghị Việt Đức", short: "Việt Đức" },
-  { name: "Bệnh viện Chợ Rẫy", short: "BV Chợ Rẫy" },
-  { name: "BV TW Quân đội 108", short: "Quân đội 108" },
-  { name: "Bệnh viện 103", short: "BV 103" },
-  { name: "Bệnh viện 175", short: "BV 175" },
-  { name: "Bệnh viện K", short: "BV K" },
-  { name: "BV Phổi Trung ương", short: "BV Phổi TW" },
+  { name: "Bệnh viện Bạch Mai", short: "BV Bạch Mai", domain: "bachmai.gov.vn", logo: "https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://bachmai.gov.vn&size=128" },
+  { name: "BV Hữu nghị Việt Đức", short: "Việt Đức", domain: "benhvienvietduc.org", logo: "/assets/images/partners/hữu-nghị-việt-đức-logo.jpg" },
+  { name: "Bệnh viện Chợ Rẫy", short: "BV Chợ Rẫy", domain: "choray.vn", logo: "https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://choray.vn&size=128" },
+  { name: "BV TW Quân đội 108", short: "Quân đội 108", domain: "benhvien108.vn", logo: "/assets/images/partners/quân-đội-108-logo.png" },
+  { name: "Bệnh viện 103", short: "BV 103", domain: "benhvien103.vn", logo: "/assets/images/partners/103-logo.ico" },
+  { name: "Bệnh viện 175", short: "BV 175", domain: "benhvien175.vn", logo: "/assets/images/partners/175-logo.png" },
+  { name: "Bệnh viện K", short: "BV K", domain: "benhvienk.vn", logo: "https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://benhvienk.vn&size=128" },
+  { name: "BV Phổi Trung ương", short: "BV Phổi TW", domain: "bvptw.org", logo: "https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://bvptw.org&size=128" },
 ];
 
 const PROVINCIAL_HOSPITALS = [
-  { name: "Sở Y tế Hà Nội", short: "SYT Hà Nội" },
-  { name: "Sở Y tế TP.HCM", short: "SYT HCM" },
-  { name: "Sở Y tế Đà Nẵng", short: "SYT Đà Nẵng" },
-  { name: "BV ĐK tỉnh Nghệ An", short: "BVĐK Nghệ An" },
-  { name: "BV ĐK tỉnh Thanh Hóa", short: "BVĐK Thanh Hóa" },
-  { name: "BV ĐK tỉnh Quảng Nam", short: "BVĐK Quảng Nam" },
-  { name: "BV ĐK tỉnh Bình Dương", short: "BVĐK Bình Dương" },
-  { name: "BV ĐK tỉnh Đồng Nai", short: "BVĐK Đồng Nai" },
+  { name: "Sở Y tế Hà Nội", short: "SYT Hà Nội", domain: "soyte.hanoi.gov.vn", logo: "/assets/images/partners/hà-nội-logo.png" },
+  { name: "Sở Y tế TP.HCM", short: "SYT HCM", domain: "medinet.gov.vn", logo: "/assets/images/partners/tp.hcm-logo.png" },
+  { name: "Sở Y tế Đà Nẵng", short: "SYT Đà Nẵng", domain: "soyte.danang.gov.vn", logo: "/assets/images/partners/đà-nẵng-logo.png" },
+  { name: "BV ĐK tỉnh Nghệ An", short: "BVĐK Nghệ An", domain: "benhviendakhoanghean.vn", logo: "https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://benhviendakhoanghean.vn&size=128" },
+  { name: "BV ĐK tỉnh Thanh Hóa", short: "BVĐK Thanh Hóa", domain: "bvdktinhtranhhoa.vn", logo: "https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://bvdktinhtranhhoa.vn&size=128" },
+  { name: "BV ĐK tỉnh Quảng Nam", short: "BVĐK Quảng Nam", domain: "bvdkquangnam.vn", logo: "https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://bvdkquangnam.vn&size=128" },
+  { name: "BV ĐK tỉnh Bình Dương", short: "BVĐK Bình Dương", domain: "benhvienbinhduong.org.vn", logo: "/assets/images/partners/bình-dương-logo.png" },
+  { name: "BV ĐK tỉnh Đồng Nai", short: "BVĐK Đồng Nai", domain: "benhviendongnai.com.vn", logo: "/assets/images/partners/đồng-nai-logo.png" },
 ];
 
 const PRIVATE_HOSPITALS = [
-  { name: "Hệ thống BV Tâm Anh", short: "Tâm Anh" },
-  { name: "Hệ thống BV Vinmec", short: "Vinmec" },
-  { name: "Hệ thống BV Hoàn Mỹ", short: "Hoàn Mỹ" },
-  { name: "Hệ thống BV Thu Cúc", short: "Thu Cúc" },
-  { name: "BV Đa khoa Quốc tế", short: "BV Quốc tế" },
-  { name: "Phòng khám Medlatec", short: "Medlatec" },
+  { name: "Hệ thống BV Tâm Anh", short: "Tâm Anh", domain: "tamanhhospital.vn", logo: "/assets/images/partners/tâm-anh-logo.png" },
+  { name: "Hệ thống BV Vinmec", short: "Vinmec", domain: "vinmec.com", logo: "/assets/images/partners/vinmec-logo.svg" },
+  { name: "Hệ thống BV Hoàn Mỹ", short: "Hoàn Mỹ", domain: "hoanmy.com", logo: "/assets/images/partners/hoàn-mỹ-logo.jpg" },
+  { name: "Hệ thống BV Thu Cúc", short: "Thu Cúc", domain: "benhvienthucuc.vn", logo: "/assets/images/partners/thu-cúc-logo.png" },
+  { name: "BV Đa khoa Quốc tế", short: "BV Quốc tế", domain: "vih.vn", logo: "/assets/images/partners/đa-khoa-quốc-tế-logo.jpg" },
+  { name: "Phòng khám Medlatec", short: "Medlatec", domain: "medlatec.vn", logo: "https://medlatec.vn/images/logo.png" },
 ];
 
 const CASE_STUDIES = [
@@ -77,12 +77,26 @@ const CASE_STUDIES = [
 ];
 
 /* ─── Hospital Logo Card ────────────────────────────────────── */
-function HospitalCard({ name, short }: { name: string; short: string }) {
+function HospitalCard({ name, short, logo }: { name: string; short: string; logo?: string }) {
   const initials = short.replace(/BV |SYT |HT /g, "").substring(0, 2).toUpperCase();
+  
   return (
     <div className="hospital-card">
       <div className="hospital-logo-placeholder">
-        <span>{initials}</span>
+        {logo ? (
+          <img 
+            src={logo} 
+            alt={`Logo ${name}`}
+            className="hospital-logo-img fade-in"
+            loading="lazy"
+            onError={(e) => {
+              // Fallback to initials if image fails to load
+              e.currentTarget.style.display = 'none';
+              e.currentTarget.parentElement!.classList.add('show-initials');
+            }}
+          />
+        ) : null}
+        <span className={logo ? "fallback-initials" : ""}>{initials}</span>
       </div>
       <div className="hospital-name">{name}</div>
     </div>
@@ -90,7 +104,7 @@ function HospitalCard({ name, short }: { name: string; short: string }) {
 }
 
 /* ─── Client Group ──────────────────────────────────────────── */
-function ClientGroup({ title, icon, items }: { title: string; icon: React.ReactNode; items: { name: string; short: string }[] }) {
+function ClientGroup({ title, icon, items }: { title: string; icon: React.ReactNode; items: { name: string; short: string; logo?: string }[] }) {
   return (
     <div className="client-group fade-in-up">
       <div className="client-group-header">
@@ -98,7 +112,7 @@ function ClientGroup({ title, icon, items }: { title: string; icon: React.ReactN
         <h3 className="client-group-title">{title}</h3>
       </div>
       <div className="hospital-grid">
-        {items.map((h) => <HospitalCard key={h.name} name={h.name} short={h.short} />)}
+        {items.map((h) => <HospitalCard key={h.name} name={h.name} short={h.short} logo={h.logo} />)}
       </div>
     </div>
   );
