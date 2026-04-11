@@ -2540,6 +2540,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   gap: var(--space-3);
   padding: var(--space-5) var(--space-4);
   background: var(--color-white);
@@ -2547,12 +2548,34 @@
   border-radius: var(--radius-lg);
   text-align: center;
   transition: all var(--transition-base);
+  height: 100%;
+  min-height: 140px;
 }
 
 .hospital-card:hover {
   border-color: var(--color-primary);
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
+}
+
+.hospital-logo-wrapper {
+  height: 56px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-2);
+}
+
+.hospital-logo-img {
+  max-width: 140px;
+  max-height: 56px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  z-index: 2;
+  transition: opacity 0.3s ease;
 }
 
 .hospital-logo-placeholder {
@@ -2568,34 +2591,17 @@
   color: var(--color-white);
   letter-spacing: 0.05em;
   flex-shrink: 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.hospital-logo-img {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background-color: var(--color-white);
-  z-index: 2;
-  padding: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
-.fallback-initials {
+.hidden-initials {
   opacity: 0;
   visibility: hidden;
-}
-
-.show-initials .fallback-initials {
-  opacity: 1;
-  visibility: visible;
-}
-
-.show-initials .hospital-logo-img {
-  display: none !important;
+  pointer-events: none;
 }
 
 .hospital-name {
