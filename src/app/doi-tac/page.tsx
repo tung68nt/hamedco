@@ -12,17 +12,17 @@ const CENTRAL_HOSPITALS = [
   { name: "Bệnh viện Chợ Rẫy", short: "BV Chợ Rẫy", domain: "choray.vn", logo: "/assets/images/partners/choray-ddg.png" },
   { name: "BV TW Quân đội 108", short: "Quân đội 108", domain: "benhvien108.vn", logo: "/assets/images/partners/quân-đội-108-logo.png" },
   { name: "Bệnh viện 103", short: "BV 103", domain: "benhvien103.vn" },
-  { name: "Bệnh viện 175", short: "BV 175", domain: "benhvien175.vn" },
+  { name: "Bệnh viện 175", short: "BV 175", domain: "benhvien175.vn", logo: "/assets/images/partners/175-ddg.png" },
   { name: "Bệnh viện K", short: "BV K", domain: "benhvienk.vn", logo: "/assets/images/partners/k-ddg.png" },
-  { name: "BV Phổi Trung ương", short: "BV Phổi TW", domain: "bvptw.org" },
+  { name: "BV Phổi Trung ương", short: "BV Phổi TW", domain: "bvptw.org", logo: "/assets/images/partners/phoitw-ddg.png" },
 ];
 
 const PROVINCIAL_HOSPITALS = [
-  { name: "Sở Y tế Hà Nội", short: "SYT Hà Nội", domain: "soyte.hanoi.gov.vn" },
-  { name: "Sở Y tế TP.HCM", short: "SYT HCM", domain: "medinet.gov.vn" },
-  { name: "Sở Y tế Đà Nẵng", short: "SYT Đà Nẵng", domain: "soyte.danang.gov.vn" },
+  { name: "Sở Y tế Hà Nội", short: "SYT Hà Nội", domain: "soyte.hanoi.gov.vn", logo: "/assets/images/partners/sohanoi-ddg.png" },
+  { name: "Sở Y tế TP.HCM", short: "SYT HCM", domain: "medinet.gov.vn", logo: "/assets/images/partners/sotphcm-ddg.png" },
+  { name: "Sở Y tế Đà Nẵng", short: "SYT Đà Nẵng", domain: "soyte.danang.gov.vn", logo: "/assets/images/partners/sodanang-ddg.png" },
   { name: "BV ĐK tỉnh Nghệ An", short: "BVĐK Nghệ An", domain: "benhviendakhoanghean.vn" },
-  { name: "BV ĐK tỉnh Thanh Hóa", short: "BVĐK Thanh Hóa", domain: "bvdktinhtranhhoa.vn" },
+  { name: "BV ĐK tỉnh Thanh Hóa", short: "BVĐK Thanh Hóa", domain: "bvdktinhtranhhoa.vn", logo: "/assets/images/partners/thanhhoa-ddg.png" },
   { name: "BV ĐK tỉnh Quảng Nam", short: "BVĐK Quảng Nam", domain: "bvdkquangnam.vn" },
   { name: "BV ĐK tỉnh Bình Dương", short: "BVĐK Bình Dương", domain: "benhvienbinhduong.org.vn", logo: "/assets/images/partners/bình-dương-logo.png" },
   { name: "BV ĐK tỉnh Đồng Nai", short: "BVĐK Đồng Nai", domain: "benhviendongnai.com.vn", logo: "https://benhviendongnai.com.vn/wp-content/uploads/2022/08/logo.svg" },
@@ -32,7 +32,7 @@ const PRIVATE_HOSPITALS = [
   { name: "Hệ thống BV Tâm Anh", short: "Tâm Anh", domain: "tamanhhospital.vn", logo: "/assets/images/partners/tamanh-ddg.png" },
   { name: "Hệ thống BV Vinmec", short: "Vinmec", domain: "vinmec.com", logo: "/assets/images/partners/vinmec-logo.svg" },
   { name: "Hệ thống BV Hoàn Mỹ", short: "Hoàn Mỹ", domain: "hoanmy.com", logo: "/assets/images/partners/hoanmy-ddg.png" },
-  { name: "Hệ thống BV Thu Cúc", short: "Thu Cúc", domain: "benhvienthucuc.vn", logo: "https://benhvienthucuc.vn/wp-content/themes/thucuc/images/logo.svg" },
+  { name: "Hệ thống BV Thu Cúc", short: "Thu Cúc", domain: "benhvienthucuc.vn", logo: "/assets/images/partners/thucuc-ddg.png" },
   { name: "BV Đa khoa Quốc tế", short: "BV Quốc tế", domain: "vih.vn" },
   { name: "Phòng khám Medlatec", short: "Medlatec", domain: "medlatec.vn", logo: "https://medlatec.vn/images/logo.png" },
 ];
