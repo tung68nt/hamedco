@@ -1419,8 +1419,12 @@
 @media (max-width: 639px) {
   .footer-grid { grid-template-columns: 1fr; }
   .footer-cta-inner { text-align: center; justify-content: center; }
-  .footer-cta-inner .flex { justify-content: center; }
+  .footer-cta-inner .flex { flex-direction: column; width: 100%; gap: var(--space-3); }
+  .footer-cta-inner .flex .btn { width: 100%; justify-content: center; }
   .footer-bottom { flex-direction: column; text-align: center; }
+  
+  .cta-section-actions { flex-direction: column; width: 100%; }
+  .cta-section-actions .cta-btn { width: 100%; justify-content: center; }
 }
 
 @media (max-width: 1023px) {

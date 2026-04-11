@@ -39,6 +39,15 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
     return matchDevice && matchPrice;
   });
 
+  // Handle CSS transition replay and visibility on filter changes
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const elements = document.querySelectorAll(".products-grid .fade-in-up, .filter-results-info.fade-in-up");
+      elements.forEach(el => el.classList.add("is-visible"));
+    }, 50);
+    return () => clearTimeout(timer);
+  }, [activeDevice, activePrice, filteredProducts]);
+
   // Derive available price tiers based only on active device type
   const availablePriceTiers = Array.from(new Set(
     ALL_PRODUCTS
@@ -123,9 +132,9 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
       <div className="products-grid">
         {filteredProducts.map((product, index) => (
           <div 
-            key={product.id} 
+            key={`${product.id}-${activeDevice}-${activePrice}`} 
             className="product-card fade-in-up" 
-            style={{ animationDelay: `${index * 0.05}s`, cursor: "pointer" }}
+            style={{ transitionDelay: `${index * 0.05}s`, cursor: "pointer" }}
             onClick={() => {
               window.location.href = `/san-pham/chi-tiet/${product.slug}`;
             }}
@@ -198,7 +207,7 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
         ))}
         
         {filteredProducts.length === 0 && (
-          <div className="product-empty-state" style={{ 
+          <div className="product-empty-state fade-in-up" style={{ 
             gridColumn: "1 / -1", 
             padding: "4rem 2rem", 
             textAlign: "center",

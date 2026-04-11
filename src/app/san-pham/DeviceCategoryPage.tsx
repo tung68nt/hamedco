@@ -68,7 +68,7 @@ export default function DeviceCategoryPage({ deviceType }: { deviceType: string 
             <span className="breadcrumb-current">{t(category.name.vi, category.name.en)}</span>
           </div>
 
-          <div className="open-letter-layout" style={{ gap: "4rem" }}>
+          <div className="open-letter-layout" style={{}}>
             <div className="about-banner-content">
               <div className="about-banner-badge">
                 {t("Giải pháp chuẩn đoán hình ảnh", "Diagnostic Imaging Solutions")}
@@ -100,7 +100,7 @@ export default function DeviceCategoryPage({ deviceType }: { deviceType: string 
       {info && info.features && (
         <section className="section bg-white" style={{ paddingBottom: "2rem" }}>
           <div className="container">
-            <div className="core-values-grid" style={{ gridTemplateColumns: "repeat(3, 1fr)", marginTop: "-4rem", position: "relative", zIndex: 10 }}>
+            <div className="grid grid-3" style={{ marginTop: "-4rem", position: "relative", zIndex: 10 }}>
               {info.features.map((feat: any, idx: number) => (
                 <div key={idx} className="core-value-card" style={{ textAlign: "left", padding: "2rem" }}>
                   <div className="core-value-icon" style={{ margin: "0 0 1.5rem 0", background: "var(--color-primary-light)", color: "var(--color-primary-dark)" }}>
