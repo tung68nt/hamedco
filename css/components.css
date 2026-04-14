@@ -315,9 +315,7 @@
 
 @media (max-width: 1023px) {
   .nav-desktop { display: none; }
-  .header-actions .btn { display: none; }
-  .header-actions .theme-toggle { display: none; }
-  .header-actions .lang-switcher { display: none; }
+  .header-desktop-actions { display: none; }
   .nav-toggle { display: flex; }
 }
 

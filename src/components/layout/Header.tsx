@@ -86,7 +86,7 @@ export default function Header() {
             <Link href="/lien-he" className={`nav-link ${isActive("/lien-he") ? "active" : ""}`}>{t("Liên hệ", "Contact")}</Link>
           </nav>
 
-          <div className="header-actions">
+          <div className="header-desktop-actions">
             <ThemeToggle />
             <LanguageSwitcher />
             <button onClick={() => setQuoteOpen(true)} className="btn btn-accent btn-md" style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
