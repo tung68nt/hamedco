@@ -1,0 +1,102 @@
+/* ============================================================
+   HAMEDCO — Page Styles (modular)
+   Auto-generated from pages.css
+   ============================================================ */
+
+/* ── Responsive ─────────────────── */
+@media (max-width: 1023px) {
+  .pd-hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .pd-gallery {
+    position: static;
+  }
+
+  .pd-title {
+    font-size: 1.75rem;
+  }
+
+  .pd-highlights-list {
+    grid-template-columns: 1fr;
+  }
+
+  .pd-trust {
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+}
+
+@media (max-width: 639px) {
+  .pd-hero {
+    padding: var(--space-8) 0 var(--space-10);
+  }
+
+  .pd-image-main {
+    padding: var(--space-4);
+  }
+
+  .pd-actions {
+    flex-direction: column;
+  }
+
+  .pd-trust {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PARTNERS PAGE
+   ═══════════════════════════════════════════════════════════════ */
+
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 1023px) {
+  .philips-feature-card {
+    grid-template-columns: 1fr;
+  }
+  .philips-logo-showcase {
+    padding: var(--space-8);
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-6);
+  }
+  .philips-logo-xl {
+    width: 140px;
+  }
+  .case-study-item,
+  .case-study-item.reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: var(--space-8);
+  }
+}
+
+@media (max-width: 767px) {
+  .philips-stats {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  .hospital-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .case-study-stats {
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+  .philips-feature-content {
+    padding: var(--space-6);
+  }
+  .partners-intro-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hospital-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
