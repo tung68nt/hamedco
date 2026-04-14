@@ -2,16 +2,12 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import ThemeToggle from "../ThemeToggle";
+import LanguageSwitcher from "../LanguageSwitcher";
 
-/**
- * MobileHeader — Client wrapper for Header interactive features:
- *  - Hamburger menu toggle
- *  - Header scroll shadow
- */
 export default function MobileHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Toggle body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
     return () => {
@@ -19,7 +15,6 @@ export default function MobileHeader() {
     };
   }, [menuOpen]);
 
-  // Add scrolled class to header
   useEffect(() => {
     const header = document.getElementById("header");
     if (!header) return;
@@ -33,16 +28,14 @@ export default function MobileHeader() {
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll(); // initial check
+    onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close menu when nav link clicked
   const closeMenu = () => setMenuOpen(false);
 
   return (
     <>
-      {/* Hamburger toggle button — rendered over the server button via portal-like approach */}
       <button
         className={`nav-toggle${menuOpen ? " active" : ""}`}
         aria-label="Menu"
@@ -54,7 +47,6 @@ export default function MobileHeader() {
         <span></span>
       </button>
 
-      {/* Mobile Nav */}
       <nav className={`nav-mobile${menuOpen ? " open" : ""}`} aria-label="Mobile navigation">
         <Link href="/" className="nav-mobile-link" onClick={closeMenu}>Trang chủ</Link>
         <Link href="/gioi-thieu" className="nav-mobile-link" onClick={closeMenu}>Giới thiệu</Link>
@@ -63,6 +55,16 @@ export default function MobileHeader() {
         <Link href="/doi-tac" className="nav-mobile-link" onClick={closeMenu}>Đối tác</Link>
         <Link href="/tin-tuc" className="nav-mobile-link" onClick={closeMenu}>Tin tức</Link>
         <Link href="/lien-he" className="nav-mobile-link" onClick={closeMenu}>Liên hệ</Link>
+        
+        <div className="nav-mobile-actions">
+          <div className="nav-mobile-actions-row">
+            <ThemeToggle />
+            <LanguageSwitcher />
+          </div>
+          <Link href="/bao-gia" className="btn btn-accent btn-md" style={{ width: "100%", justifyContent: "center" }} onClick={closeMenu}>
+            Yêu cầu báo giá
+          </Link>
+        </div>
       </nav>
     </>
   );
