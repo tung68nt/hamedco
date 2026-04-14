@@ -510,6 +510,95 @@
   line-height: 1.7;
 }
 
+/* ── Article Hero (Detail Page) ─────────────────────────── */
+.article-hero {
+  background: linear-gradient(135deg, var(--color-gray-900) 0%, var(--color-gray-800) 100%);
+  padding: var(--space-10) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.article-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.article-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.article-hero .breadcrumbs {
+  margin-bottom: var(--space-5);
+}
+
+.article-hero .breadcrumbs .breadcrumb-item,
+.article-hero .breadcrumbs .breadcrumb-separator {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.article-hero .breadcrumbs .breadcrumb-current,
+.article-hero .breadcrumbs .breadcrumb-item:hover {
+  color: white;
+}
+
+.article-hero-category {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-3);
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  margin-bottom: var(--space-4);
+}
+
+.article-hero-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1.25;
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.02em;
+  max-width: 800px;
+}
+
+.article-hero-subtitle {
+  font-size: 1.0625rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: var(--space-5);
+  max-width: 700px;
+}
+
+.article-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.article-hero-meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.article-hero-meta-item svg {
+  width: 16px;
+  height: 16px;
+  opacity: 0.7;
+}
+
 .blog-categories {
   display: flex;
   flex-wrap: wrap;
@@ -723,5 +812,18 @@
   .article-share {
     padding: var(--space-4);
     margin-top: var(--space-6);
+  }
+  .article-hero {
+    padding: var(--space-8) 0;
+  }
+  .article-hero-title {
+    font-size: 1.5rem;
+  }
+  .article-hero-subtitle {
+    font-size: 1rem;
+  }
+  .article-hero-meta {
+    gap: var(--space-3);
+    font-size: 0.8125rem;
   }
 }

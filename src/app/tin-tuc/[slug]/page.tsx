@@ -4,6 +4,7 @@ import Link from "next/link";
 import { BLOG_POSTS, getBlogPostBySlug, getRelatedPosts, BLOG_CATEGORIES } from "@/data/blog";
 import ArticleSchema from "@/components/ArticleSchema";
 import JsonLd from "@/components/JsonLd";
+import TableOfContents from "@/components/TableOfContents";
 import "@/app/css/article.css";
 
 type Props = {
@@ -67,42 +68,6 @@ const categoryColors: Record<string, string> = {
   "nganh-y-te": "primary",
   "kien-thuc": "outline",
 };
-
-function TableOfContents({ content }: { content: string }) {
-  const headings = content.match(/##\s+(.+)|###\s+(.+)/g) || [];
-  
-  if (headings.length === 0) return null;
-
-  const items = headings.map((h, i) => {
-    const isH2 = h.startsWith('##');
-    const text = h.replace(/^##+\s+/, '');
-    const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-    return { id, text, level: isH2 ? 2 : 3 };
-  });
-
-  return (
-    <nav className="toc-container" aria-label="Table of contents">
-      <div className="toc-header">
-        <svg className="toc-header-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
-        </svg>
-        <h4 className="toc-title">Nội dung bài viết</h4>
-      </div>
-      <ul className="toc-list">
-        {items.map((item) => (
-          <li key={item.id} className="toc-item">
-            <a 
-              href={`#${item.id}`} 
-              className={`toc-link ${item.level === 3 ? 'toc-link-h3' : ''}`}
-            >
-              {item.text}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  );
-}
 
 function renderContent(content: string): string {
   let html = content
@@ -186,88 +151,63 @@ export default async function BlogPostPage({ params }: Props) {
       )}
 
       <main className="main-content">
-        {/* Breadcrumb */}
-        <div className="container">
-          <nav className="breadcrumbs" aria-label="Breadcrumb">
-            <Link href="/" className="breadcrumb-item">Trang chủ</Link>
-            <span className="breadcrumb-separator">/</span>
-            <Link href="/tin-tuc" className="breadcrumb-item">Tin tức</Link>
-            <span className="breadcrumb-separator">/</span>
-            <span className="breadcrumb-current">{post.title}</span>
-          </nav>
-        </div>
+        {/* Article Hero */}
+        <section className="article-hero">
+          <div className="container">
+            <nav className="breadcrumbs" aria-label="Breadcrumb">
+              <Link href="/" className="breadcrumb-item">Trang chủ</Link>
+              <span className="breadcrumb-separator">/</span>
+              <Link href="/tin-tuc" className="breadcrumb-item">Tin tức</Link>
+              <span className="breadcrumb-separator">/</span>
+              <span className="breadcrumb-current">{post.title}</span>
+            </nav>
+            
+            <Link 
+              href={`/tin-tuc?danh-muc=${post.category}`} 
+              className="article-hero-category"
+            >
+              {categoryNames[post.category]}
+            </Link>
+            
+            <h1 className="article-hero-title">
+              {post.title}
+            </h1>
+            
+            <p className="article-hero-subtitle">
+              {post.subtitle}
+            </p>
+
+            <div className="article-hero-meta">
+              <div className="article-hero-meta-item">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <time dateTime={post.publishedAt}>
+                  {new Date(post.publishedAt).toLocaleDateString("vi-VN", { day: "numeric", month: "long", year: "numeric" })}
+                </time>
+              </div>
+              {post.updatedAt && post.updatedAt !== post.publishedAt && (
+                <div className="article-hero-meta-item">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                  </svg>
+                  <span>Cập nhật: {new Date(post.updatedAt).toLocaleDateString("vi-VN")}</span>
+                </div>
+              )}
+              <div className="article-hero-meta-item">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                <span>{post.author.name}</span>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Article Layout */}
         <div className="article-layout">
           {/* Main Content */}
           <article>
-            {/* Header */}
-            <header style={{ marginBottom: "var(--space-10)" }}>
-              <div style={{ display: "flex", gap: "var(--space-3)", marginBottom: "var(--space-5)", flexWrap: "wrap" }}>
-                <Link 
-                  href={`/tin-tuc?danh-muc=${post.category}`} 
-                  className={`category-badge${categoryColors[post.category] === 'accent' ? '-accent' : categoryColors[post.category] === 'outline' ? '-outline' : ''}`}
-                >
-                  {categoryNames[post.category]}
-                </Link>
-              </div>
-              
-              <h1 style={{ 
-                fontSize: "2.5rem", 
-                fontWeight: 800, 
-                lineHeight: 1.25, 
-                color: "var(--color-gray-900)",
-                marginBottom: "var(--space-5)",
-                letterSpacing: "-0.02em"
-              }}>
-                {post.title}
-              </h1>
-              
-              <p style={{ 
-                fontSize: "1.25rem", 
-                color: "var(--color-gray-600)", 
-                lineHeight: 1.6,
-                marginBottom: "var(--space-6)"
-              }}>
-                {post.subtitle}
-              </p>
-
-              <div className="article-meta">
-                <div className="article-meta-item">
-                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  <time dateTime={post.publishedAt}>
-                    {new Date(post.publishedAt).toLocaleDateString("vi-VN", { day: "numeric", month: "long", year: "numeric" })}
-                  </time>
-                </div>
-                {post.updatedAt && post.updatedAt !== post.publishedAt && (
-                  <div className="article-meta-item">
-                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                    </svg>
-                    <span>Cập nhật: {new Date(post.updatedAt).toLocaleDateString("vi-VN")}</span>
-                  </div>
-                )}
-                <div className="article-meta-item">
-                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                  <span>Tác giả: {post.author.name}</span>
-                </div>
-                <div className="article-meta-item">
-                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
-                  </svg>
-                  <div className="tag-group">
-                    {post.tags.slice(0, 3).map((tag) => (
-                      <span key={tag} className="tag tag-default">#{tag}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </header>
-
             {/* Cover Image */}
             <figure style={{ margin: "0 0 var(--space-10) 0" }}>
               <img 
