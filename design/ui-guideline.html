@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="../css/layout.css">
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/pages.css">
+  <link rel="stylesheet" href="../css/article.css">
+  <link rel="stylesheet" href="../css/blog.css">
   <style>
     /* === Layout === */
     body { display: flex; margin: 0; background: var(--color-gray-50); height: 100vh; overflow: hidden; font-family: var(--font-sans); }
@@ -451,22 +453,204 @@
 
   <section class="guide-section" id="tpl-blog">
     <div class="guide-section-title">Blog Template Blocks</div>
-    <h4>Blog Cover</h4>
+
+    <!-- Blog Hero -->
+    <h4>Blog Hero (Listing Page)</h4>
     <div class="guide-wrapper" style="padding:0; overflow:hidden; margin-bottom:24px;">
-      <div class="blog-cover">
-         <div class="blog-cover-header">
-           <span class="cover-cat">Tin Y Tế</span>
-           <h1>Xu hướng Công nghệ AI trong Chẩn đoán hình ảnh 2026</h1>
-         </div>
-         <div class="blog-cover-img" style="background:#ddd; height:200px;"></div>
+      <div class="blog-hero">
+        <div class="container" style="max-width:800px; margin:0 auto;">
+          <h1 class="blog-hero-title">Tin tức & Kiến thức</h1>
+          <p class="blog-hero-subtitle">Cập nhật tin tức ngành y tế, xu hướng công nghệ và hoạt động của HAMEDCO</p>
+        </div>
       </div>
     </div>
-    
-    <h4>Article Content (TOC + Layout)</h4>
-    <div class="guide-wrapper">
-      <div class="blog-layout">
-        <div class="article-body"><h2>1. Tầm quan trọng</h2><p>Đoạn văn bài viết chi tiết, hiển thị nội dung phân bổ rõ ràng.</p></div>
-        <aside class="toc-sidebar"><div class="toc-box"><h4>Mục lục</h4><ul class="toc-list"><li><a class="active">1. Tầm quan trọng</a></li></ul></div></aside>
+
+    <!-- Breadcrumbs -->
+    <h4>Breadcrumbs</h4>
+    <div class="guide-wrapper" style="margin-bottom:24px;">
+      <nav class="breadcrumbs">
+        <a href="#" class="breadcrumb-item">Trang chủ</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="#" class="breadcrumb-item">Tin tức</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">Tiêu đề bài viết hiện tại</span>
+      </nav>
+    </div>
+
+    <!-- Category Badges -->
+    <h4>Category Badge</h4>
+    <div class="guide-wrapper" style="margin-bottom:24px; display:flex; gap:12px; flex-wrap:wrap;">
+      <a href="#" class="category-badge">Tin công ty</a>
+      <a href="#" class="category-badge category-badge-outline">Ngành y tế</a>
+      <a href="#" class="category-badge category-badge-accent">Kiến thức</a>
+    </div>
+
+    <!-- Article Header -->
+    <h4>Article Header</h4>
+    <div class="guide-wrapper" style="margin-bottom:24px;">
+      <header style="margin-bottom: var(--space-10);">
+        <div style="display:flex; gap:var(--space-3); margin-bottom:var(--space-5); flex-wrap:wrap;">
+          <a href="#" class="category-badge">Ngành y tế</a>
+        </div>
+        <h1 style="font-size:2.5rem; font-weight:800; line-height:1.25; color:var(--color-gray-900); margin-bottom:var(--space-5); letter-spacing:-0.02em;">Xu hướng Công nghệ AI trong Chẩn đoán Hình ảnh 2026</h1>
+        <p style="font-size:1.25rem; color:var(--color-gray-600); line-height:1.6; margin-bottom:var(--space-6);">Trí tuệ nhân tạo đang cách mạng hóa ngành y tế, đặc biệt trong lĩnh vực chẩn đoán hình ảnh với độ chính xác vượt trội.</p>
+        <div class="article-meta">
+          <div class="article-meta-item">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <time>14/04/2026</time>
+          </div>
+          <div class="article-meta-item">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            <span>HAMEDCO</span>
+          </div>
+          <div class="article-meta-item">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+            <div class="tag-group">
+              <span class="tag tag-default">#ai</span>
+              <span class="tag tag-default">#chẩn-đoán</span>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- Article Layout with TOC -->
+    <h4>Article Layout + TOC</h4>
+    <div class="guide-wrapper" style="margin-bottom:24px;">
+      <div class="article-layout">
+        <article>
+          <div class="article-content">
+            <h2 id="chuong-1">1. Giới thiệu về AI trong chẩn đoán hình ảnh</h2>
+            <p>Trí tuệ nhân tạo (AI) đang revolutionizing cách các bác sĩ chẩn đoán bệnh. Với khả năng phân tích hình ảnh y tế nhanh chóng và chính xác, AI giúp phát hiện sớm các bệnh lý nguy hiểm.</p>
+            <h3 id="ai-hoat-dong-the-nao">1.1 Cách AI hoạt động</h3>
+            <p>Hệ thống AI sử dụng deep learning để phân tích hình ảnh X-quang, MRI, CT scan và siêu âm. Thuật toán được trained trên hàng triệu hình ảnh y tế để nhận diện các pattern của bệnh lý.</p>
+            <ul>
+              <li>Phân tích hình ảnh nhanh hơn 10 lần so với con người</li>
+              <li>Độ chính xác lên đến 95% trong nhiều trường hợp</li>
+              <li>Hỗ trợ bác sĩ đưa ra quyết định chính xác hơn</li>
+            </ul>
+          </div>
+        </article>
+        <aside class="article-sidebar">
+          <nav class="toc-container" aria-label="Table of contents">
+            <div class="toc-title">Nội dung bài viết</div>
+            <ul class="toc-list">
+              <li class="toc-item">
+                <a href="#chuong-1" class="toc-link">1. Giới thiệu về AI</a>
+              </li>
+              <li class="toc-item">
+                <a href="#chuong-1" class="toc-link toc-link-h3">1.1 Cách AI hoạt động</a>
+              </li>
+              <li class="toc-item">
+                <a href="#chuong-2" class="toc-link">2. Lợi ích của AI</a>
+              </li>
+              <li class="toc-item">
+                <a href="#chuong-3" class="toc-link">3. Ứng dụng thực tế</a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+      </div>
+    </div>
+
+    <!-- Tags -->
+    <h4>Tags</h4>
+    <div class="guide-wrapper" style="margin-bottom:24px;">
+      <div style="display:flex; gap:var(--space-3); flex-wrap:wrap; align-items:center; margin-bottom:var(--space-4);">
+        <span style="font-weight:600; color:var(--color-gray-700);">Tags:</span>
+        <div class="tag-group">
+          <span class="tag tag-default">#ai</span>
+          <span class="tag tag-default">#chẩn-đoán-hình-ảnh</span>
+          <span class="tag tag-default">#y-tế</span>
+          <span class="tag tag-primary"># công-nghệ-mới</span>
+          <span class="tag tag-accent">#xu-hướng-2026</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article Share -->
+    <h4>Article Share</h4>
+    <div class="guide-wrapper" style="margin-bottom:24px;">
+      <div class="article-share">
+        <span class="article-share-label">Chia sẻ:</span>
+        <a href="#" class="btn btn-outline btn-sm">Facebook</a>
+        <a href="#" class="btn btn-outline btn-sm">LinkedIn</a>
+        <a href="#" class="btn btn-outline btn-sm">Twitter</a>
+      </div>
+    </div>
+
+    <!-- Related Articles -->
+    <h4>Related Articles</h4>
+    <div class="guide-wrapper" style="margin-bottom:24px;">
+      <section class="related-articles">
+        <h2 class="related-articles-title">Bài viết liên quan</h2>
+        <div class="related-articles-grid">
+          <a href="#" class="related-article-card">
+            <div class="related-article-image">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='225' fill='%23E5E7EB'%3E%3Crect width='400' height='225'/%3E%3C/svg%3E" alt="">
+            </div>
+            <div class="related-article-content">
+              <div class="related-article-category">Ngành y tế</div>
+              <h3 class="related-article-title">Máy siêu âm Philips EPIQ 7 - Đột phá công nghệ</h3>
+              <time class="related-article-date">10/04/2026</time>
+            </div>
+          </a>
+          <a href="#" class="related-article-card">
+            <div class="related-article-image">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='225' fill='%23E5E7EB'%3E%3Crect width='400' height='225'/%3E%3C/svg%3E" alt="">
+            </div>
+            <div class="related-article-content">
+              <div class="related-article-category">Kiến thức</div>
+              <h3 class="related-article-title">Hướng dẫn chọn máy X-quang phù hợp</h3>
+              <time class="related-article-date">08/04/2026</time>
+            </div>
+          </a>
+          <a href="#" class="related-article-card">
+            <div class="related-article-image">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='225' fill='%23E5E7EB'%3E%3Crect width='400' height='225'/%3E%3C/svg%3E" alt="">
+            </div>
+            <div class="related-article-content">
+              <div class="related-article-category">Tin công ty</div>
+              <h3 class="related-article-title">HAMEDCO khai trương trung tâm phân phối mới</h3>
+              <time class="related-article-date">05/04/2026</time>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Blog Card (Listing) -->
+    <h4>Blog Card (Listing Page)</h4>
+    <div class="guide-wrapper" style="margin-bottom:24px;">
+      <div class="blog-grid">
+        <a href="#" class="blog-card">
+          <div class="blog-card-image">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' fill='%23E5E7EB'%3E%3Crect width='400' height='250'/%3E%3C/svg%3E" alt="">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-card-category">Ngành y tế</div>
+            <h3 class="blog-card-title">Xu hướng Công nghệ AI trong Chẩn đoán Hình ảnh</h3>
+            <p class="blog-card-excerpt">Trí tuệ nhân tạo đang cách mạng hóa ngành y tế với độ chính xác vượt trội trong chẩn đoán hình ảnh.</p>
+            <div class="blog-card-meta">
+              <time>14/04/2026</time>
+              <span class="blog-card-cta">Đọc tiếp →</span>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="blog-card">
+          <div class="blog-card-image">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' fill='%23E5E7EB'%3E%3Crect width='400' height='250'/%3E%3C/svg%3E" alt="">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-card-category">Kiến thức</div>
+            <h3 class="blog-card-title">Hướng dẫn chọn máy siêu âm phù hợp với nhu cầu</h3>
+            <p class="blog-card-excerpt">Những tiêu chí quan trọng khi lựa chọn máy siêu âm cho phòng khám và bệnh viện.</p>
+            <div class="blog-card-meta">
+              <time>12/04/2026</time>
+              <span class="blog-card-cta">Đọc tiếp →</span>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
   </section>
