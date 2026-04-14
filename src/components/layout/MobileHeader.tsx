@@ -63,11 +63,6 @@ export default function MobileHeader() {
         <Link href="/doi-tac" className="nav-mobile-link" onClick={closeMenu}>Đối tác</Link>
         <Link href="/tin-tuc" className="nav-mobile-link" onClick={closeMenu}>Tin tức</Link>
         <Link href="/lien-he" className="nav-mobile-link" onClick={closeMenu}>Liên hệ</Link>
-        <div style={{ padding: "24px 16px" }}>
-          <Link href="/bao-gia" className="btn btn-accent btn-lg" style={{ width: "100%" }} onClick={closeMenu}>
-            Yêu cầu báo giá
-          </Link>
-        </div>
       </nav>
     </>
   );
