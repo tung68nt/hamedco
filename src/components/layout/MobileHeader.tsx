@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import ThemeToggle from "../ThemeToggle";
-import LanguageSwitcher from "../LanguageSwitcher";
 
 export default function MobileHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -55,16 +53,6 @@ export default function MobileHeader() {
         <Link href="/doi-tac" className="nav-mobile-link" onClick={closeMenu}>Đối tác</Link>
         <Link href="/tin-tuc" className="nav-mobile-link" onClick={closeMenu}>Tin tức</Link>
         <Link href="/lien-he" className="nav-mobile-link" onClick={closeMenu}>Liên hệ</Link>
-        
-        <div className="nav-mobile-actions">
-          <div className="nav-mobile-actions-row">
-            <ThemeToggle />
-            <LanguageSwitcher />
-          </div>
-          <Link href="/bao-gia" className="btn btn-accent btn-md" style={{ width: "100%", justifyContent: "center" }} onClick={closeMenu}>
-            Yêu cầu báo giá
-          </Link>
-        </div>
       </nav>
     </>
   );

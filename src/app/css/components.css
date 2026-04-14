@@ -319,20 +319,6 @@
   .nav-toggle { display: flex; }
 }
 
-.nav-mobile-actions {
-  padding: var(--space-6) var(--space-4);
-  border-top: 1px solid var(--color-gray-200);
-  margin-top: auto;
-}
-
-.nav-mobile-actions-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-4);
-  margin-bottom: var(--space-4);
-}
-
 /* ── Product Cards (Homepage & Listing grid) ───────────── */
 .product-card {
   background: var(--color-white);
