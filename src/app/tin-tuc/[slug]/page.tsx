@@ -82,7 +82,12 @@ function TableOfContents({ content }: { content: string }) {
 
   return (
     <nav className="toc-container" aria-label="Table of contents">
-      <div className="toc-title">Nội dung bài viết</div>
+      <div className="toc-header">
+        <svg className="toc-header-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+        </svg>
+        <h4 className="toc-title">Nội dung bài viết</h4>
+      </div>
       <ul className="toc-list">
         {items.map((item) => (
           <li key={item.id} className="toc-item">
