@@ -288,7 +288,8 @@
   background: var(--color-white);
   padding: var(--space-6);
   overflow-y: auto;
-  z-index: 999;
+  z-index: var(--z-mobile-nav, 1100);
+  box-shadow: var(--shadow-xl);
 }
 
 .nav-mobile.open {
