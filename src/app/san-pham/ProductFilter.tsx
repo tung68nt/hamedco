@@ -461,6 +461,21 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
           color: var(--color-gray-600);
           margin-bottom: 1.5rem;
         }
+        .product-empty-state .btn {
+          background: var(--color-primary);
+          color: var(--color-white);
+          border: none;
+          padding: 0.625rem 1.5rem;
+          font-size: 0.875rem;
+          font-weight: 600;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: all 0.2s ease;
+        }
+        .product-empty-state .btn:hover {
+          background: var(--color-primary-dark, #1a5f7a);
+          transform: translateY(-1px);
+        }
         @media (max-width: 1024px) {
           .filter-layout {
             grid-template-columns: 220px 1fr;
