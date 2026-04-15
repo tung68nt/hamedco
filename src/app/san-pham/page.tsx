@@ -15,9 +15,17 @@ const SOLUTIONS = [
     desc: "Từ máy siêu âm cầm tay đến hệ thống cao cấp EPIQ, Philips mang đến chất lượng hình ảnh vượt trội cho mọi chuyên khoa.",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
-        <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-        <line x1="12" x2="12" y1="19" y2="22"/>
+        <path d="M2 12h2"/>
+        <path d="M6 12h2"/>
+        <path d="M10 12h2"/>
+        <path d="M14 12h2"/>
+        <path d="M18 12h2"/>
+        <path d="M20 12h2"/>
+        <path d="M3 8a4 4 0 0 1 4-4h.5"/>
+        <path d="M3 16a4 4 0 0 0 4 4h.5"/>
+        <path d="M21 8a4 4 0 0 0-4-4h-.5"/>
+        <path d="M21 16a4 4 0 0 1-4-4h-.5"/>
+        <rect x="7" y="8" width="10" height="8" rx="1"/>
       </svg>
     ),
     link: "/san-pham/sieu-am",
@@ -29,16 +37,17 @@ const SOLUTIONS = [
     desc: "CT Scanner Philips với AI Precise Image, giảm liều xạ và nâng cao chất lượng hình ảnh chẩn đoán.",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10"/>
-        <circle cx="12" cy="12" r="4"/>
-        <line x1="4.93" x2="9.17" y1="4.93" y2="9.17"/>
-        <line x1="14.83" x2="19.07" y1="14.83" y2="19.07"/>
-        <line x1="14.83" x2="19.07" y1="9.17" y2="4.93"/>
-        <line x1="4.93" x2="9.17" y1="19.07" y2="14.83"/>
+        <circle cx="12" cy="12" r="9"/>
+        <circle cx="12" cy="12" r="5"/>
+        <circle cx="12" cy="12" r="1"/>
+        <line x1="12" y1="3" x2="12" y2="7"/>
+        <line x1="12" y1="17" x2="12" y2="21"/>
+        <line x1="3" y1="12" x2="7" y2="12"/>
+        <line x1="17" y1="12" x2="21" y2="12"/>
       </svg>
     ),
     link: "/san-pham/ct",
-    color: "#0088CC",
+    color: "#2B9EB3",
   },
   {
     id: "mri",
@@ -46,14 +55,14 @@ const SOLUTIONS = [
     desc: "Hệ thống MRI nam châm BlueSeal không bay hơi Helium, vận hành bền bỉ và rút ngắn thời gian chụp.",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="4" width="20" height="16" rx="2"/>
-        <path d="M8 4v16"/>
-        <path d="M16 4v16"/>
-        <path d="M2 12h20"/>
+        <rect x="3" y="3" width="18" height="18" rx="3"/>
+        <ellipse cx="12" cy="12" rx="4" ry="8"/>
+        <ellipse cx="12" cy="12" rx="2" ry="4"/>
+        <circle cx="12" cy="12" r="1"/>
       </svg>
     ),
     link: "/san-pham/mri",
-    color: "#7B2D8E",
+    color: "#2B9EB3",
   },
   {
     id: "x-quang",
@@ -61,15 +70,15 @@ const SOLUTIONS = [
     desc: "Thiết bị X-quang kỹ thuật số Philips với xử lý hình ảnh UNIQUE 2, hỗ trợ chẩn đoán chính xác từ lần bấm chụp đầu tiên.",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M4 4l4 4m0 0l4-4 4 4-4 4-4-4 4-4z"/>
-        <path d="M4 20l16-16"/>
-        <path d="M14.5 9.5L18 6"/>
-        <path d="M9.5 14.5L6 18"/>
-        <circle cx="12" cy="12" r="2"/>
+        <circle cx="12" cy="12" r="9"/>
+        <line x1="12" y1="3" x2="12" y2="21"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="12" cy="12" r="1"/>
       </svg>
     ),
     link: "/san-pham/x-quang",
-    color: "#E07B39",
+    color: "#2B9EB3",
   },
 ];
 
