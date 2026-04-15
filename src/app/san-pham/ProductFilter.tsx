@@ -14,15 +14,16 @@ interface Props {
 }
 
 function getProductDisplayName(product: any): string {
-  const deviceTypeNames: Record<string, { prefix: string; brand: string }> = {
-    "sieu-am": { prefix: "Máy siêu âm Philips", brand: "Philips" },
-    "ct": { prefix: "Máy chụp cắt lớp vi tính (CT Scanner)", brand: "Philips" },
-    "mri": { prefix: "Máy chụp cộng hưởng từ (MRI)", brand: "Philips" },
-    "x-quang": { prefix: "Máy X-quang", brand: "Philips" },
+  const deviceTypeNames: Record<string, string> = {
+    "sieu-am": "Máy siêu âm Philips",
+    "ct": "Máy chụp cắt lớp vi tính (CT Scanner)",
+    "mri": "Máy chụp cộng hưởng từ (MRI)",
+    "x-quang": "Máy X-quang",
   };
 
-  const info = deviceTypeNames[product.deviceType] || { prefix: "", brand: "Philips" };
+  const prefix = deviceTypeNames[product.deviceType] || "";
   
+  // Exception cases
   if (product.name.includes("Compact 5300")) {
     return "Máy siêu âm xách tay Philips 5300 Series";
   }
@@ -30,12 +31,13 @@ function getProductDisplayName(product: any): string {
     return "Máy siêu âm Xách tay Philips 5500 Series";
   }
   
+  // Handle special cases where brand is already in the name
   let modelName = product.name;
   if (modelName.startsWith("Philips ")) {
     modelName = modelName.replace("Philips ", "");
   }
   
-  return `${info.prefix} ${modelName}`;
+  return `${prefix} ${modelName}`;
 }
 
 export default function ProductFilter({ initialDeviceType = "all", disableDeviceTypeSelect = false }: Props) {
@@ -84,6 +86,8 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
     setActivePrice("all");
   };
 
+  const hasActiveFilters = activeDevice !== "all" || activePrice !== "all";
+
   return (
     <>
       {/* Mobile Filter Toggle */}
@@ -92,11 +96,11 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
           className="btn btn-outline"
           onClick={() => setSidebarOpen(!sidebarOpen)}
         >
-          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M4 21V14M4 10V3M12 21V12M12 8V3M20 21V16M20 12V3M1 14h6M9 8h6M17 16h6"/>
           </svg>
           Bộ lọc
-          <span className="filter-count">({filteredProducts.length})</span>
+          {hasActiveFilters && <span className="filter-badge">•</span>}
         </button>
       </div>
 
@@ -104,10 +108,10 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
         {/* Sidebar */}
         <aside className="filter-sidebar">
           <div className="sidebar-header">
-            <h3>Bộ lọc sản phẩm</h3>
+            <h3>Bộ lọc</h3>
             <button className="sidebar-close" onClick={() => setSidebarOpen(false)}>
-              <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M18 6L6 18M6 6l12 12"/>
               </svg>
             </button>
           </div>
@@ -115,14 +119,14 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
           {/* Device Type Filter */}
           {!disableDeviceTypeSelect && (
             <div className="filter-group">
-              <h4>{t("Thiết bị", "Device")}</h4>
+              <h4>{t("Thiết bị", "Thiết bị")}</h4>
               <div className="filter-options">
                 <button
                   onClick={() => setActiveDevice("all")}
                   className={`filter-option ${activeDevice === "all" ? "active" : ""}`}
                 >
                   <span className="filter-radio"></span>
-                  {t("Tất cả", "All")}
+                  {t("Tất cả", "Tất cả")}
                 </button>
                 {DEVICE_TYPES.map((cat) => (
                   <button
@@ -140,14 +144,14 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
 
           {/* Price Tier Filter */}
           <div className="filter-group">
-            <h4>{t("Phân khúc", "Price Tier")}</h4>
+            <h4>{t("Phân khúc", "Phân khúc")}</h4>
             <div className="filter-options">
               <button
                 onClick={() => setActivePrice("all")}
                 className={`filter-option ${activePrice === "all" ? "active" : ""}`}
               >
                 <span className="filter-radio"></span>
-                {t("Tất cả", "All")}
+                {t("Tất cả", "Tất cả")}
               </button>
               {applicablePriceTiers.map((tier) => (
                 <button
@@ -163,12 +167,14 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
           </div>
 
           {/* Clear Filters */}
-          <button className="btn btn-outline btn-block" onClick={clearFilters}>
-            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-            {t("Xóa bộ lọc", "Clear filters")}
-          </button>
+          {hasActiveFilters && (
+            <button className="clear-filters-btn" onClick={clearFilters}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M18 6L6 18M6 6l12 12"/>
+              </svg>
+              Xóa bộ lọc
+            </button>
+          )}
         </aside>
 
         {/* Main Content */}
@@ -176,17 +182,7 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
           {/* Results Info */}
           <div className="filter-results-info">
             <p>
-              {t(`Hiển thị ${filteredProducts.length} sản phẩm`, `Showing ${filteredProducts.length} products`)}
-              {activeDevice !== "all" && (
-                <span className="active-filter">
-                  • {t(DEVICE_TYPES.find(d => d.id === activeDevice)?.name.vi || "", "")}
-                </span>
-              )}
-              {activePrice !== "all" && (
-                <span className="active-filter">
-                  • {t(PRICE_TIERS.find(p => p.id === activePrice)?.name.vi || "", "")}
-                </span>
-              )}
+              {t(`Hiển thị ${filteredProducts.length} sản phẩm`, `Hiển thị ${filteredProducts.length} sản phẩm`)}
             </p>
           </div>
 
@@ -195,75 +191,57 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
             {filteredProducts.map((product, index) => (
               <div 
                 key={`${product.id}-${activeDevice}-${activePrice}`} 
-                className="product-card fade-in-up" 
-                style={{ transitionDelay: `${index * 0.05}s`, cursor: "pointer" }}
-                onClick={() => {
-                  window.location.href = `/san-pham/chi-tiet/${product.slug}`;
-                }}
+                className="product-card fade-in-up"
+                style={{ transitionDelay: `${index * 0.05}s` }}
               >
                 <div className="product-image">
                   <Image
                     src={product.thumbnail}
-                    alt={product.name}
+                    alt={getProductDisplayName(product)}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    style={{ objectFit: "contain", objectPosition: "center", transform: "scale(1.15)" }}
+                    style={{ objectFit: "contain", objectPosition: "center" }}
                   />
-                  <div className="product-badge">{product.brand}</div>
                 </div>
                 <div className="product-content">
-                  <div className="product-brand">
+                  <div className="product-category">
                     {t(
                       DEVICE_TYPES.find((c) => c.id === product.deviceType)?.name.vi || "",
                       DEVICE_TYPES.find((c) => c.id === product.deviceType)?.name.en || ""
-                    )}{" "}
-                    •{" "}
-                    {t(
-                      PRICE_TIERS.find((c) => c.id === product.priceTier)?.name.vi || "",
-                      PRICE_TIERS.find((c) => c.id === product.priceTier)?.name.en || ""
                     )}
                   </div>
                   <Link href={`/san-pham/chi-tiet/${product.slug}`} className="product-title">
                     {getProductDisplayName(product)}
                   </Link>
-                  <p className="product-desc line-clamp-3">
+                  <p className="product-desc">
                     {t(product.subtitle.vi, product.subtitle.en)}
                   </p>
                   
-                  <ul className="product-highlights">
-                    {(locale === "vi" ? product.highlights.vi : product.highlights.en).slice(0, 3).map((hl: string, i: number) => (
-                      <li key={i}>
-                        <svg width="16" height="16" fill="var(--color-primary)" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                        {hl}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <Link 
-                    href={`/san-pham/chi-tiet/${product.slug}`} 
-                    className="product-action"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    {t("Xem chi tiết", "View Details")}
-                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                  </Link>
+                  <div className="product-footer">
+                    <Link 
+                      href={`/san-pham/chi-tiet/${product.slug}`} 
+                      className="product-action"
+                    >
+                      Xem chi tiết
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                      </svg>
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
             
             {filteredProducts.length === 0 && (
               <div className="product-empty-state" style={{ gridColumn: "1 / -1" }}>
-                <svg width="48" height="48" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <circle cx="11" cy="11" r="8"/>
+                  <path d="M21 21l-4.35-4.35"/>
                 </svg>
-                <h3>{t("Không tìm thấy sản phẩm", "No products found")}</h3>
-                <p>{t("Vui lòng thay đổi tiêu chí bộ lọc.", "Please change filter criteria.")}</p>
+                <h3>{t("Không tìm thấy sản phẩm", "Không tìm thấy sản phẩm")}</h3>
+                <p>{t("Vui lòng thay đổi bộ lọc để xem sản phẩm khác.", "Vui lòng thay đổi bộ lọc.")}</p>
                 <button className="btn btn-primary" onClick={clearFilters}>
-                  {t("Xóa bộ lọc", "Clear filters")}
+                  Xóa bộ lọc
                 </button>
               </div>
             )}
@@ -276,38 +254,34 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
           display: none;
           margin-bottom: 1.5rem;
         }
-        .filter-count {
-          background: var(--color-primary);
-          color: white;
-          padding: 0.125rem 0.5rem;
-          border-radius: 99px;
-          font-size: 0.75rem;
-          margin-left: 0.5rem;
+        .filter-badge {
+          color: var(--color-primary);
+          font-weight: 700;
         }
         .filter-layout {
           display: grid;
-          grid-template-columns: 280px 1fr;
-          gap: 2.5rem;
+          grid-template-columns: 260px 1fr;
+          gap: 2rem;
           align-items: start;
         }
         .filter-sidebar {
           background: white;
           border-radius: var(--radius-lg);
-          padding: 1.5rem;
+          padding: 1.25rem;
           border: 1px solid var(--color-gray-200);
           position: sticky;
-          top: 100px;
+          top: 90px;
         }
         .sidebar-header {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          margin-bottom: 1.5rem;
+          margin-bottom: 1.25rem;
           padding-bottom: 1rem;
           border-bottom: 1px solid var(--color-gray-100);
         }
         .sidebar-header h3 {
-          font-size: 1.125rem;
+          font-size: 1rem;
           font-weight: 700;
           color: var(--color-gray-900);
           margin: 0;
@@ -316,43 +290,45 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
           display: none;
           background: none;
           border: none;
-          padding: 0.5rem;
+          padding: 0.25rem;
           cursor: pointer;
           color: var(--color-gray-500);
         }
         .filter-group {
-          margin-bottom: 1.5rem;
+          margin-bottom: 1.25rem;
+        }
+        .filter-group:last-of-type {
+          margin-bottom: 1rem;
         }
         .filter-group h4 {
-          font-size: 0.875rem;
+          font-size: 0.75rem;
           font-weight: 600;
-          color: var(--color-gray-700);
-          margin-bottom: 0.75rem;
+          color: var(--color-gray-500);
+          margin-bottom: 0.5rem;
           text-transform: uppercase;
           letter-spacing: 0.5px;
         }
         .filter-options {
           display: flex;
           flex-direction: column;
-          gap: 0.25rem;
+          gap: 2px;
         }
         .filter-option {
           display: flex;
           align-items: center;
-          gap: 0.75rem;
-          padding: 0.625rem 0.75rem;
+          gap: 0.625rem;
+          padding: 0.5rem 0.75rem;
           background: none;
           border: none;
           border-radius: var(--radius-md);
           cursor: pointer;
           text-align: left;
-          font-size: 0.9375rem;
+          font-size: 0.875rem;
           color: var(--color-gray-700);
-          transition: all 0.2s;
+          transition: all 0.15s;
         }
         .filter-option:hover {
           background: var(--color-gray-50);
-          color: var(--color-gray-900);
         }
         .filter-option.active {
           background: rgba(43, 158, 179, 0.1);
@@ -360,12 +336,12 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
           font-weight: 500;
         }
         .filter-radio {
-          width: 18px;
-          height: 18px;
+          width: 16px;
+          height: 16px;
           border: 2px solid var(--color-gray-300);
           border-radius: 50%;
           flex-shrink: 0;
-          transition: all 0.2s;
+          transition: all 0.15s;
           position: relative;
         }
         .filter-option.active .filter-radio {
@@ -383,67 +359,112 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
           background: white;
           border-radius: 50%;
         }
+        .clear-filters-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          width: 100%;
+          padding: 0.625rem 1rem;
+          background: var(--color-gray-50);
+          border: 1px solid var(--color-gray-200);
+          border-radius: var(--radius-md);
+          cursor: pointer;
+          font-size: 0.875rem;
+          color: var(--color-gray-700);
+          font-weight: 500;
+          transition: all 0.2s;
+        }
+        .clear-filters-btn:hover {
+          background: var(--color-gray-100);
+          border-color: var(--color-gray-300);
+        }
         .filter-main {
           min-width: 0;
         }
         .filter-results-info {
-          margin-bottom: 1.5rem;
+          margin-bottom: 1.25rem;
           padding-bottom: 1rem;
           border-bottom: 1px solid var(--color-gray-100);
         }
         .filter-results-info p {
-          font-size: 0.9375rem;
+          font-size: 0.875rem;
           color: var(--color-gray-600);
           margin: 0;
         }
-        .active-filter {
+        .product-category {
+          font-size: 0.75rem;
+          font-weight: 600;
           color: var(--color-primary);
-          font-weight: 500;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          margin-bottom: 0.5rem;
         }
-        .product-highlights {
-          list-style: none;
-          padding: 0;
-          margin: 1rem 0 1.5rem;
-          display: flex;
-          flex-direction: column;
+        .product-title {
+          font-size: 1rem;
+          font-weight: 700;
+          color: var(--color-gray-900);
+          text-decoration: none;
+          line-height: 1.4;
+          display: block;
+          margin-bottom: 0.5rem;
+        }
+        .product-title:hover {
+          color: var(--color-primary);
+        }
+        .product-desc {
+          font-size: 0.8125rem;
+          color: var(--color-gray-600);
+          line-height: 1.5;
+          margin: 0;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        .product-footer {
+          margin-top: 1rem;
+          padding-top: 1rem;
+          border-top: 1px solid var(--color-gray-100);
+        }
+        .product-action {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.375rem;
+          font-size: 0.8125rem;
+          font-weight: 600;
+          color: var(--color-primary);
+          text-decoration: none;
+        }
+        .product-action:hover {
           gap: 0.5rem;
-        }
-        .product-highlights li {
-          display: flex;
-          align-items: flex-start;
-          gap: 0.5rem;
-          font-size: 0.875rem;
-          color: var(--color-neutral);
-        }
-        .product-highlights svg {
-          flex-shrink: 0;
-          margin-top: 2px;
         }
         .product-empty-state {
           padding: 4rem 2rem;
           text-align: center;
           background: #fff;
-          border-radius: 1rem;
-          border: 1px dashed rgba(0,0,0,0.1);
+          border-radius: var(--radius-lg);
+          border: 1px dashed var(--color-gray-200);
         }
         .product-empty-state svg {
           margin: 0 auto 1rem;
-          color: var(--color-neutral-light);
+          color: var(--color-gray-400);
         }
         .product-empty-state h3 {
-          font-size: 1.25rem;
+          font-size: 1.125rem;
           font-weight: 600;
-          color: var(--color-neutral-dark);
+          color: var(--color-gray-900);
           margin-bottom: 0.5rem;
         }
         .product-empty-state p {
-          color: var(--color-neutral);
+          font-size: 0.875rem;
+          color: var(--color-gray-600);
           margin-bottom: 1.5rem;
         }
         @media (max-width: 1024px) {
           .filter-layout {
-            grid-template-columns: 240px 1fr;
-            gap: 2rem;
+            grid-template-columns: 220px 1fr;
+            gap: 1.5rem;
           }
         }
         @media (max-width: 768px) {
@@ -458,7 +479,7 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
             top: 0;
             left: 0;
             bottom: 0;
-            width: 300px;
+            width: 280px;
             z-index: 1000;
             border-radius: 0;
             transform: translateX(-100%);

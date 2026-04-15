@@ -14,49 +14,62 @@ const SOLUTIONS = [
     title: "Giải pháp Siêu âm",
     desc: "Từ máy siêu âm cầm tay đến hệ thống cao cấp EPIQ, Philips mang đến chất lượng hình ảnh vượt trội cho mọi chuyên khoa.",
     icon: (
-      <svg width="48" height="48" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeWidth="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+        <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+        <line x1="12" x2="12" y1="19" y2="22"/>
       </svg>
     ),
     link: "/san-pham/sieu-am",
-    color: "#0066CC",
+    color: "#2B9EB3",
   },
   {
     id: "ct",
     title: "Giải pháp Chụp cắt lớp vi tính",
     desc: "CT Scanner Philips với AI Precise Image, giảm liều xạ và nâng cao chất lượng hình ảnh chẩn đoán.",
     icon: (
-      <svg width="48" height="48" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeWidth="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <circle cx="12" cy="12" r="4"/>
+        <line x1="4.93" x2="9.17" y1="4.93" y2="9.17"/>
+        <line x1="14.83" x2="19.07" y1="14.83" y2="19.07"/>
+        <line x1="14.83" x2="19.07" y1="9.17" y2="4.93"/>
+        <line x1="4.93" x2="9.17" y1="19.07" y2="14.83"/>
       </svg>
     ),
     link: "/san-pham/ct",
-    color: "#00994C",
+    color: "#0088CC",
   },
   {
     id: "mri",
     title: "Giải pháp Cộng hưởng từ (MRI)",
     desc: "Hệ thống MRI nam châm BlueSeal không bay hơi Helium, vận hành bền bỉ và rút ngắn thời gian chụp.",
     icon: (
-      <svg width="48" height="48" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeWidth="1.5" d="M4.871 4A17.931 17.931 0 002 12c0 2.874.743 5.563 2.018 7.87.655.45.436 1.004.07 1.64-.132.255-.33.575-.468.84-.229.44-.37.715-.198.967a.737.737 0 00.91.368c.283-.126.503-.322.726-.54a8.463 8.463 0 001.45-1.58c.377-.528.64-.922.832-1.23.144.07.29.136.44.198.47.194 1.06.297 1.066.297h.002c.005 0 .595-.103 1.066-.297.15-.062.295-.127.44-.198.191.308.455.702.832 1.23.328.46.852.987 1.45 1.58.223.218.443.414.726.54a.737.737 0 00.91-.368c.172-.252.031-.527-.198-.967a8.07 8.07 0 01-.468-.84c-.365-.636-.585-1.19.07-1.64A17.932 17.932 0 0022 12c0-2.874-.743-5.563-2.018-7.87-.655-.45-.436-1.004-.07-1.64.132-.255.33-.575.468-.84.229-.44.37-.715.198-.967a.737.737 0 00-.91-.368c-.283.126-.503.322-.726.54a8.463 8.463 0 00-1.45 1.58c-.377.528-.64.922-.832 1.23a8.397 8.397 0 01-.44-.198 4.894 4.894 0 00-1.066-.297h-.002c-.005 0-.595.103-1.066.297a8.397 8.397 0 01-.44.198c-.191-.308-.455-.702-.832-1.23a8.463 8.463 0 00-1.45-1.58 7.186 7.186 0 00-.726-.54.737.737 0 00-.91.368c-.172.252-.031.527.198.967.138.265.336.585.468.84.365.636.585 1.19-.07 1.64z" />
-        <circle strokeWidth="1.5" cx="12" cy="12" r="3" />
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="4" width="20" height="16" rx="2"/>
+        <path d="M8 4v16"/>
+        <path d="M16 4v16"/>
+        <path d="M2 12h20"/>
       </svg>
     ),
     link: "/san-pham/mri",
-    color: "#9933CC",
+    color: "#7B2D8E",
   },
   {
     id: "x-quang",
     title: "Giải pháp X-quang",
     desc: "Thiết bị X-quang kỹ thuật số Philips với xử lý hình ảnh UNIQUE 2, hỗ trợ chẩn đoán chính xác từ lần bấm chụp đầu tiên.",
     icon: (
-      <svg width="48" height="48" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeWidth="1.5" d="M9 2v6m6-6v6M3 10h18M5 2a2 2 0 00-2 2v16a2 2 0 002 2h14a2 2 0 002-2v-2a2 2 0 00-2-2H5m0 2h14v16H5V4z" />
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4 4l4 4m0 0l4-4 4 4-4 4-4-4 4-4z"/>
+        <path d="M4 20l16-16"/>
+        <path d="M14.5 9.5L18 6"/>
+        <path d="M9.5 14.5L6 18"/>
+        <circle cx="12" cy="12" r="2"/>
       </svg>
     ),
     link: "/san-pham/x-quang",
-    color: "#CC6600",
+    color: "#E07B39",
   },
 ];
 
@@ -89,11 +102,11 @@ export default function ProductsPage() {
       </section>
 
       {/* ═══ SOLUTIONS SECTION ═══ */}
-      <section className="section bg-white" style={{ paddingTop: "5rem", paddingBottom: "5rem" }}>
+      <section className="section bg-white solutions-section">
         <div className="container">
-          <div className="section-header text-center" style={{ marginBottom: "3rem" }}>
+          <div className="section-header text-center">
             <h2>Giải pháp theo chuyên khoa</h2>
-            <p className="text-large opacity-80" style={{ maxWidth: "600px", margin: "0 auto" }}>
+            <p className="text-large opacity-80">
               Lựa chọn giải pháp thiết bị phù hợp với nhu cầu và quy mô của cơ sở y tế
             </p>
           </div>
@@ -104,19 +117,18 @@ export default function ProductsPage() {
                 key={solution.id} 
                 href={solution.link}
                 className="solution-card fade-in-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="solution-icon" style={{ background: `${solution.color}15`, color: solution.color }}>
                   {solution.icon}
                 </div>
                 <h3>{solution.title}</h3>
                 <p>{solution.desc}</p>
-                <div className="solution-link">
+                <span className="solution-link">
                   Xem sản phẩm
-                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
                   </svg>
-                </div>
+                </span>
               </Link>
             ))}
           </div>
@@ -124,11 +136,11 @@ export default function ProductsPage() {
       </section>
 
       {/* ═══ PRODUCTS SECTION ═══ */}
-      <section className="section bg-light" style={{ paddingTop: "4rem", paddingBottom: "5rem" }}>
+      <section className="section bg-light products-section">
         <div className="container">
-          <div className="section-header text-center" style={{ marginBottom: "2rem" }}>
+          <div className="section-header text-center">
             <h2>Sản phẩm nổi bật</h2>
-            <p className="text-large opacity-80" style={{ maxWidth: "600px", margin: "0 auto" }}>
+            <p className="text-large opacity-80">
               Danh mục thiết bị y tế Philips Healthcare chính hãng
             </p>
           </div>
