@@ -2,8 +2,9 @@ import { BLOG_POSTS } from "@/data/blog";
 import PostEditForm from "./PostEditForm";
 import { redirect } from "next/navigation";
 
-export default function AdminPostEditPage({ params }: { params: { slug: string } }) {
-  const post = BLOG_POSTS.find((p) => p.slug === params.slug);
+export default async function AdminPostEditPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = BLOG_POSTS.find((p) => p.slug === slug);
 
   if (!post) {
     redirect("/admin/tin-tuc");

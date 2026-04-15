@@ -2,8 +2,9 @@ import Link from "next/link";
 import { CATEGORIES } from "@/data/categories";
 import CategoryEditForm from "./CategoryEditForm";
 
-export default function AdminCategoryEditPage({ params }: { params: { slug: string } }) {
-  const isNew = params.slug === "new";
+export default async function AdminCategoryEditPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const isNew = slug === "new";
   const catData = isNew
     ? {
         id: "",
@@ -12,7 +13,7 @@ export default function AdminCategoryEditPage({ params }: { params: { slug: stri
         description: { vi: "", en: "" },
         type: "segment",
       }
-    : CATEGORIES.find((c) => c.id === params.slug);
+    : CATEGORIES.find((c) => c.id === slug);
 
   if (!catData) {
     return (

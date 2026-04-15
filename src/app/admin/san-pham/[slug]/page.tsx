@@ -2,8 +2,9 @@ import { ALL_PRODUCTS } from "@/data/products";
 import ProductEditForm from "./ProductEditForm";
 import { redirect } from "next/navigation";
 
-export default function AdminProductEditPage({ params }: { params: { slug: string } }) {
-  const product = ALL_PRODUCTS.find((p) => p.slug === params.slug) as any;
+export default async function AdminProductEditPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const product = ALL_PRODUCTS.find((p) => p.slug === slug) as any;
 
   if (!product) {
     redirect("/admin/san-pham");
