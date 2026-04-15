@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { deletePost } from "../actions";
+import { deletePost } from "./actions";
 
 export default function PostActions({ slug, postTitle }: { slug: string; postTitle: string }) {
   const [showConfirm, setShowConfirm] = useState(false);

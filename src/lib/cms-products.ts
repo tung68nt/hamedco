@@ -1,5 +1,3 @@
-"use server";
-
 import { promises as fs } from 'fs';
 import path from 'path';
 import { ALL_PRODUCTS } from '@/data/products';
