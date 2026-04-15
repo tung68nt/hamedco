@@ -1,14 +1,11 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 import { ALL_PRODUCTS } from '@/data/products';
-import type { Product } from './types';
 
 const DATA_FILE = path.join(process.cwd(), 'src/data/cms-products.json');
 
-export interface CMSProduct extends Product {
-  _createdAt?: string;
-  _updatedAt?: string;
-  _source?: 'cms' | 'static';
+interface CMSProduct {
+  [key: string]: any;
 }
 
 interface CMSData {
@@ -29,16 +26,16 @@ async function writeCMSData(data: CMSData): Promise<void> {
   await fs.writeFile(DATA_FILE, JSON.stringify(data, null, 2), 'utf-8');
 }
 
-export function getAllProducts(): CMSProduct[] {
-  return ALL_PRODUCTS as CMSProduct[];
+export function getAllProducts(): any[] {
+  return ALL_PRODUCTS;
 }
 
-export async function getProductBySlug(slug: string): Promise<CMSProduct | null> {
-  const product = ALL_PRODUCTS.find(p => p.slug === slug);
-  return product as CMSProduct || null;
+export async function getProductBySlug(slug: string): Promise<any | null> {
+  const product = ALL_PRODUCTS.find((p: any) => p.slug === slug);
+  return product || null;
 }
 
-export async function createProduct(productData: Omit<Product, 'id'>): Promise<{ success: boolean; product?: CMSProduct; error?: string }> {
+export async function createProduct(productData: any): Promise<{ success: boolean; product?: any; error?: string }> {
   try {
     const cmsData = await readCMSData();
     
@@ -64,15 +61,15 @@ export async function createProduct(productData: Omit<Product, 'id'>): Promise<{
 
 export async function updateProduct(
   slug: string, 
-  productData: Partial<Product>
-): Promise<{ success: boolean; product?: CMSProduct; error?: string }> {
+  productData: any
+): Promise<{ success: boolean; product?: any; error?: string }> {
   try {
     const cmsData = await readCMSData();
     
-    const index = cmsData.products.findIndex(p => p.slug === slug);
+    const index = cmsData.products.findIndex((p: CMSProduct) => p.slug === slug);
     
     if (index === -1) {
-      const staticProduct = ALL_PRODUCTS.find(p => p.slug === slug);
+      const staticProduct = ALL_PRODUCTS.find((p: any) => p.slug === slug);
       if (!staticProduct) {
         return { success: false, error: 'Sản phẩm không tồn tại' };
       }
@@ -97,7 +94,7 @@ export async function updateProduct(
     cmsData.lastUpdated = new Date().toISOString();
     await writeCMSData(cmsData);
     
-    const updated = cmsData.products.find(p => p.slug === slug);
+    const updated = cmsData.products.find((p: CMSProduct) => p.slug === slug);
     return { success: true, product: updated };
   } catch (err: any) {
     console.error('Failed to update product:', err);
@@ -109,7 +106,7 @@ export async function deleteProduct(slug: string): Promise<{ success: boolean; e
   try {
     const cmsData = await readCMSData();
     
-    const index = cmsData.products.findIndex(p => p.slug === slug);
+    const index = cmsData.products.findIndex((p: CMSProduct) => p.slug === slug);
     if (index === -1) {
       return { success: false, error: 'Sản phẩm không tồn tại trong CMS' };
     }
