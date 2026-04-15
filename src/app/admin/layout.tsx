@@ -68,11 +68,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     <div className="admin-wrapper">
       <aside className="admin-sidebar">
         <Link href="/admin/san-pham" className="brand">
-          <div className="brand-icon">H</div>
-          <div className="brand-text">
-            <span className="brand-name">HAMEDCO</span>
-            <span className="brand-sub">Content Manager</span>
-          </div>
+          <img src="/assets/logo-hamedco.png" alt="HAMEDCO" style={{ height: "32px", width: "auto" }} />
         </Link>
 
         <div className="nav-group">
@@ -112,6 +108,9 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             </svg>
             Xem trang web
           </Link>
+          <a href="https://tulie.agency" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.75rem" }}>
+            Powered by Tulie Agency
+          </a>
         </div>
       </aside>
 

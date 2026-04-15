@@ -43,10 +43,14 @@ body:has(.admin-wrapper) {
 .admin-sidebar .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
   padding: 20px 24px;
   text-decoration: none;
   border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.admin-sidebar .brand img {
+  height: 28px;
+  width: auto;
 }
 .admin-sidebar .brand-icon {
   width: 36px; height: 36px;
