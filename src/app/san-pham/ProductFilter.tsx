@@ -13,6 +13,34 @@ interface Props {
   disableDeviceTypeSelect?: boolean;
 }
 
+function getProductDisplayName(product: any): string {
+  const deviceTypeNames: Record<string, { prefix: string; brand: string }> = {
+    "sieu-am": { prefix: "Máy siêu âm Philips", brand: "Philips" },
+    "ct": { prefix: "Máy chụp cắt lớp vi tính (CT Scanner)", brand: "Philips" },
+    "mri": { prefix: "Máy chụp cộng hưởng từ (MRI)", brand: "Philips" },
+    "x-quang": { prefix: "Máy X-quang", brand: "Philips" },
+  };
+
+  const info = deviceTypeNames[product.deviceType] || { prefix: "", brand: "Philips" };
+  
+  // Exception cases
+  if (product.name.includes("Compact 5300")) {
+    return "Máy siêu âm xách tay Philips 5300 Series";
+  }
+  if (product.name.includes("Compact 5500")) {
+    return "Máy siêu âm Xách tay Philips 5500 Series";
+  }
+  
+  // Standard naming: "Máy [type] Philips [model]"
+  // Handle special cases where brand is already in the name
+  let modelName = product.name;
+  if (modelName.startsWith("Philips ")) {
+    modelName = modelName.replace("Philips ", "");
+  }
+  
+  return `${info.prefix} ${modelName}`;
+}
+
 export default function ProductFilter({ initialDeviceType = "all", disableDeviceTypeSelect = false }: Props) {
   const searchParams = useSearchParams();
   const initPrice = searchParams?.get("price") || "all";
@@ -32,6 +60,15 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
     setActiveDevice(initialDeviceType);
   }, [initialDeviceType]);
 
+  // Derive available price tiers based only on active device type
+  const availablePriceTiers = Array.from(new Set(
+    ALL_PRODUCTS
+      .filter((p) => activeDevice === "all" || p.deviceType === activeDevice)
+      .map((p) => p.priceTier)
+  ));
+  
+  const applicablePriceTiers = PRICE_TIERS.filter(tier => availablePriceTiers.includes(tier.id));
+
   // Derived filtered products
   const filteredProducts = ALL_PRODUCTS.filter((p) => {
     const matchDevice = activeDevice === "all" || p.deviceType === activeDevice;
@@ -47,15 +84,6 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
     }, 50);
     return () => clearTimeout(timer);
   }, [activeDevice, activePrice, filteredProducts]);
-
-  // Derive available price tiers based only on active device type
-  const availablePriceTiers = Array.from(new Set(
-    ALL_PRODUCTS
-      .filter((p) => activeDevice === "all" || p.deviceType === activeDevice)
-      .map((p) => p.priceTier)
-  ));
-  
-  const applicablePriceTiers = PRICE_TIERS.filter(tier => availablePriceTiers.includes(tier.id));
 
   return (
     <>
@@ -162,7 +190,7 @@ export default function ProductFilter({ initialDeviceType = "all", disableDevice
                 )}
               </div>
               <Link href={`/san-pham/chi-tiet/${product.slug}`} className="product-title" style={{ textDecoration: "none", color: "inherit", cursor: "pointer", display: "block", marginTop: "0" }}>
-                {product.name}
+                {getProductDisplayName(product)}
               </Link>
               <p className="product-desc line-clamp-3" style={{ marginTop: "8px" }}>
                 {t(product.subtitle.vi, product.subtitle.en)}
