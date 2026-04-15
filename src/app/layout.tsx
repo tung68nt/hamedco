@@ -154,6 +154,13 @@ export const metadata: Metadata = {
   verification: {
     google: "google-site-verification-code",
   },
+  icons: {
+    icon: [
+      { url: "/assets/favicon.svg", type: "image/svg+xml" },
+      { url: "/assets/favicon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: "/assets/favicon.png",
+  },
 };
 
 import { ThemeProvider } from "../components/ThemeProvider";
