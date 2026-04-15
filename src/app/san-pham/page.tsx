@@ -14,18 +14,18 @@ const SOLUTIONS = [
     title: "Giải pháp Siêu âm",
     desc: "Từ máy siêu âm cầm tay đến hệ thống cao cấp EPIQ, Philips mang đến chất lượng hình ảnh vượt trội cho mọi chuyên khoa.",
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M2 12h2"/>
-        <path d="M6 12h2"/>
-        <path d="M10 12h2"/>
-        <path d="M14 12h2"/>
-        <path d="M18 12h2"/>
-        <path d="M20 12h2"/>
-        <path d="M3 8a4 4 0 0 1 4-4h.5"/>
-        <path d="M3 16a4 4 0 0 0 4 4h.5"/>
-        <path d="M21 8a4 4 0 0 0-4-4h-.5"/>
-        <path d="M21 16a4 4 0 0 1-4-4h-.5"/>
-        <rect x="7" y="8" width="10" height="8" rx="1"/>
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <rect x="2" y="5" width="20" height="14" rx="2"/>
+        <path d="M12 19v2"/>
+        <path d="M8 19v2"/>
+        <path d="M16 19v2"/>
+        <path d="M12 5V3"/>
+        <path d="M8 5V3"/>
+        <path d="M16 5V3"/>
+        <circle cx="12" cy="12" r="3"/>
+        <path d="M12 9v-2"/>
+        <path d="M9 12h-2"/>
+        <path d="M17 12h2"/>
       </svg>
     ),
     link: "/san-pham/sieu-am",
@@ -36,14 +36,13 @@ const SOLUTIONS = [
     title: "Giải pháp Chụp cắt lớp vi tính",
     desc: "CT Scanner Philips với AI Precise Image, giảm liều xạ và nâng cao chất lượng hình ảnh chẩn đoán.",
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="9"/>
-        <circle cx="12" cy="12" r="5"/>
-        <circle cx="12" cy="12" r="1"/>
-        <line x1="12" y1="3" x2="12" y2="7"/>
-        <line x1="12" y1="17" x2="12" y2="21"/>
-        <line x1="3" y1="12" x2="7" y2="12"/>
-        <line x1="17" y1="12" x2="21" y2="12"/>
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <rect x="4" y="2" width="16" height="20" rx="2"/>
+        <circle cx="12" cy="10" r="5"/>
+        <path d="M12 15v4"/>
+        <path d="M8 21h8"/>
+        <path d="M12 2v2"/>
+        <circle cx="12" cy="10" r="2"/>
       </svg>
     ),
     link: "/san-pham/ct",
@@ -54,11 +53,14 @@ const SOLUTIONS = [
     title: "Giải pháp Cộng hưởng từ (MRI)",
     desc: "Hệ thống MRI nam châm BlueSeal không bay hơi Helium, vận hành bền bỉ và rút ngắn thời gian chụp.",
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="3" width="18" height="18" rx="3"/>
-        <ellipse cx="12" cy="12" rx="4" ry="8"/>
-        <ellipse cx="12" cy="12" rx="2" ry="4"/>
-        <circle cx="12" cy="12" r="1"/>
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <rect x="3" y="1" width="18" height="22" rx="3"/>
+        <ellipse cx="12" cy="9" rx="4" ry="5"/>
+        <path d="M3 17h18"/>
+        <path d="M8 22h8"/>
+        <path d="M12 14v3"/>
+        <path d="M10 17h4"/>
+        <ellipse cx="12" cy="9" rx="2" ry="2.5"/>
       </svg>
     ),
     link: "/san-pham/mri",
@@ -69,12 +71,17 @@ const SOLUTIONS = [
     title: "Giải pháp X-quang",
     desc: "Thiết bị X-quang kỹ thuật số Philips với xử lý hình ảnh UNIQUE 2, hỗ trợ chẩn đoán chính xác từ lần bấm chụp đầu tiên.",
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="9"/>
-        <line x1="12" y1="3" x2="12" y2="21"/>
-        <line x1="3" y1="12" x2="21" y2="12"/>
-        <circle cx="12" cy="12" r="4"/>
-        <circle cx="12" cy="12" r="1"/>
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <circle cx="12" cy="12" r="10"/>
+        <circle cx="12" cy="12" r="3"/>
+        <path d="M12 2v4"/>
+        <path d="M12 18v4"/>
+        <path d="M2 12h4"/>
+        <path d="M18 12h4"/>
+        <path d="M4.93 4.93l2.83 2.83"/>
+        <path d="M16.24 16.24l2.83 2.83"/>
+        <path d="M4.93 19.07l2.83-2.83"/>
+        <path d="M16.24 7.76l2.83-2.83"/>
       </svg>
     ),
     link: "/san-pham/x-quang",
