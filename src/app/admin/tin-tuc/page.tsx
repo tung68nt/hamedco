@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { BLOG_POSTS, BLOG_CATEGORIES } from "@/data/blog";
+import PostActions from "./PostActions";
 
 export const metadata: Metadata = {
   title: "Quản lý Tin tức | HAMEDCO Admin",
@@ -178,6 +179,7 @@ export default function AdminBlogPage() {
                           </svg>
                           Sửa
                         </Link>
+                        <PostActions slug={post.slug} postTitle={post.title} />
                       </div>
                     </td>
                   </tr>

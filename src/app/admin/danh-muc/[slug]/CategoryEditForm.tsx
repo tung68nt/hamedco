@@ -1,11 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { updateCategory } from "../actions";
+import { updateCategory, deleteCategory } from "../actions";
+import { useRouter } from "next/navigation";
 
 export default function CategoryEditForm({ initialData, isNew }: { initialData: any, isNew?: boolean }) {
+  const router = useRouter();
   const [formData, setFormData] = useState(initialData);
   const [saving, setSaving] = useState(false);
+  const [deleting, setDeleting] = useState(false);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>, fieldPath: string) => {
@@ -58,6 +62,21 @@ export default function CategoryEditForm({ initialData, isNew }: { initialData: 
            setMessage(null);
         }
       }, 1500);
+    }
+  };
+
+  const handleDelete = async () => {
+    if (!confirm("Bạn có chắc muốn xóa danh mục này?")) return;
+    
+    setDeleting(true);
+    const res = await deleteCategory(formData.id);
+    
+    if (res.success) {
+      router.push("/admin/danh-muc");
+    } else {
+      alert("Lỗi xóa danh mục: " + res.error);
+      setDeleting(false);
+      setShowDeleteConfirm(false);
     }
   };
 
@@ -142,11 +161,36 @@ export default function CategoryEditForm({ initialData, isNew }: { initialData: 
       <DualLang label="Mô tả SEO / Hero Banner" fieldKey="description" textarea />
 
       <div className="admin-save-bar">
+        {!isNew && (
+          <button
+            type="button"
+            onClick={() => setShowDeleteConfirm(true)}
+            className="btn"
+            style={{ background: "var(--color-error)", color: "white" }}
+          >
+            Xóa danh mục
+          </button>
+        )}
         <span className="save-hint">Mọi thay đổi sẽ ngay lập tức được xuất bản (Published) trên website</span>
         <button type="submit" disabled={saving} className="btn btn-primary btn-lg" style={{ minWidth: "200px" }}>
           {saving ? "Đang lưu..." : "Lưu Danh mục"}
         </button>
       </div>
+
+      {showDeleteConfirm && (
+        <div className="admin-toast error" style={{ position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)", background: "white", padding: "24px", borderRadius: "12px", boxShadow: "0 20px 60px rgba(0,0,0,0.3)", zIndex: 1001 }}>
+          <p style={{ marginBottom: "16px", fontWeight: 600 }}>Xác nhận xóa danh mục?</p>
+          <p style={{ marginBottom: "20px", fontSize: "0.875rem", color: "var(--color-gray-600)" }}>
+            Hành động này không thể hoàn tác.
+          </p>
+          <div style={{ display: "flex", gap: "12px", justifyContent: "flex-end" }}>
+            <button onClick={() => setShowDeleteConfirm(false)} className="btn btn-outline">Hủy</button>
+            <button onClick={handleDelete} disabled={deleting} className="btn" style={{ background: "var(--color-error)", color: "white" }}>
+              {deleting ? "Đang xóa..." : "Xóa"}
+            </button>
+          </div>
+        </div>
+      )}
     </form>
   );
 }

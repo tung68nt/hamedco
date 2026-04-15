@@ -37,7 +37,7 @@ export default function ProductEditForm({ initialData }: { initialData: any }) {
     e.preventDefault();
     setSaving(true);
     setMessage(null);
-    const res = await updateProduct(formData);
+    const res = await updateProduct(formData.slug, formData);
     setMessage(
       res.success
         ? { type: "success", text: "✓ Lưu thành công! Dữ liệu đã được cập nhật." }
