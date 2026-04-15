@@ -147,7 +147,7 @@ export default function Footer() {
             <div className="footer-bottom-links">
               <Link href="#">{t("Chính sách bảo mật", "Privacy Policy")}</Link>
               <Link href="#">{t("Điều khoản sử dụng", "Terms of Use")}</Link>
-              <Link href="#">Sitemap</Link>
+              <Link href="/sitemap">Sitemap</Link>
             </div>
           </div>
         </div>

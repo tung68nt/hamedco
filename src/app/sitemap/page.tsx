@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import PageHero from "@/components/layout/PageHero";
+import Link from "next/link";
 import "@/app/css/article.css";
 
 export const metadata: Metadata = {
@@ -71,27 +72,14 @@ export default function SitemapPage() {
                 Dưới đây là danh sách tất cả các trang trên website HAMEDCO để bạn dễ dàng điều hướng.
               </p>
 
-              <div style={{ display: "grid", gap: "2rem", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}>
+              <div className="sitemap-grid">
                 {sections.map((section) => (
                   <div key={section.title}>
-                    <h2 style={{ fontSize: "1.25rem", marginBottom: "1rem", color: "var(--color-primary)" }}>
-                      {section.title}
-                    </h2>
-                    <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                    <h2>{section.title}</h2>
+                    <ul>
                       {section.links.map((link) => (
-                        <li key={link.href} style={{ marginBottom: "0.5rem" }}>
-                          <a 
-                            href={link.href}
-                            style={{ 
-                              color: "var(--color-gray-700)", 
-                              textDecoration: "none",
-                              transition: "color 0.2s"
-                            }}
-                            onMouseEnter={(e) => e.currentTarget.style.color = "var(--color-primary)"}
-                            onMouseLeave={(e) => e.currentTarget.style.color = "var(--color-gray-700)"}
-                          >
-                            {link.label}
-                          </a>
+                        <li key={link.href}>
+                          <Link href={link.href}>{link.label}</Link>
                         </li>
                       ))}
                     </ul>
@@ -102,6 +90,34 @@ export default function SitemapPage() {
           </div>
         </section>
       </main>
+      <style jsx>{`
+        .sitemap-grid {
+          display: grid;
+          gap: 2rem;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+        .sitemap-grid h2 {
+          font-size: 1.25rem;
+          margin-bottom: 1rem;
+          color: var(--color-primary);
+        }
+        .sitemap-grid ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        .sitemap-grid li {
+          margin-bottom: 0.5rem;
+        }
+        .sitemap-grid a {
+          color: var(--color-gray-700);
+          text-decoration: none;
+          transition: color 0.2s;
+        }
+        .sitemap-grid a:hover {
+          color: var(--color-primary);
+        }
+      `}</style>
     </>
   );
 }

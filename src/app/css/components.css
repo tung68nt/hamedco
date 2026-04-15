@@ -1096,7 +1096,7 @@
 
 /* Footer Main */
 .footer-main {
-  padding: var(--space-16) 0 var(--space-10);
+  padding: var(--space-16) 0 calc(var(--space-10) + 60px);
 }
 
 .footer-grid {
@@ -1335,6 +1335,11 @@
   .footer-cta-inner { text-align: center; justify-content: center; }
   .footer-cta-inner .flex { justify-content: center; }
   .footer-bottom { flex-direction: column; text-align: center; }
+  .footer-main { padding-bottom: calc(var(--space-10) + 100px); }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .footer-main { padding-bottom: calc(var(--space-10) + 60px); }
 }
 
 /* ── Language Switcher ──────────────────────────────────── */
