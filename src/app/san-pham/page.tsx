@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import CTASection from "@/components/home/CTASection";
 import ProductFilterWrapper from "./ProductFilterWrapper";
 
 export const metadata: Metadata = {
@@ -136,24 +136,7 @@ export default function ProductsPage() {
       </section>
 
       {/* ═══ CTA SECTION ═══ */}
-      <section className="cta-section">
-        <div className="container" style={{ textAlign: "center" }}>
-          <h2 style={{ color: "var(--color-white)", marginBottom: "16px" }}>
-            Cần tư vấn chọn thiết bị phù hợp?
-          </h2>
-          <p style={{ color: "rgba(255,255,255,.75)", maxWidth: "500px", margin: "0 auto 24px" }}>
-            Đội ngũ chuyên gia HAMEDCO sẵn sàng phân tích nhu cầu và đề xuất giải pháp tối ưu cho cơ sở y tế của bạn.
-          </p>
-          <div style={{ display: "flex", gap: "var(--space-4)", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/bao-gia" className="btn btn-accent btn-xl">
-              Yêu cầu báo giá
-            </Link>
-            <a href="tel:+84869009486" className="btn btn-outline-white btn-xl">
-              📞 086 900 9486
-            </a>
-          </div>
-        </div>
-      </section>
+      <CTASection />
     </main>
   );
 }

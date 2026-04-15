@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import PageHero from "@/components/layout/PageHero";
-import Link from "next/link";
+import CTASection from "@/components/home/CTASection";
 
 export const metadata: Metadata = {
   title: "Dịch vụ | HAMEDCO",
@@ -151,20 +151,7 @@ export default function ServicesPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="cta-section">
-          <div className="container" style={{ textAlign: "center" }}>
-            <h2 style={{ color: "var(--color-white)", marginBottom: "16px" }}>
-              Cần tư vấn về dịch vụ?
-            </h2>
-            <p style={{ color: "rgba(255,255,255,.75)", maxWidth: "500px", margin: "0 auto 24px" }}>
-              Liên hệ đội ngũ chuyên gia HAMEDCO để được hỗ trợ và báo giá chi tiết
-            </p>
-            <div style={{ display: "flex", gap: "var(--space-4)", justifyContent: "center", flexWrap: "wrap" }}>
-              <Link href="/lien-he" className="btn btn-accent btn-xl">Liên hệ ngay</Link>
-              <a href="tel:+84869009486" className="btn btn-outline-white btn-xl">📞 086 900 9486</a>
-            </div>
-          </div>
-        </section>
+        <CTASection />
       </main>
     </>
   );
