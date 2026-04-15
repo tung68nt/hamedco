@@ -90,34 +90,6 @@ export default function SitemapPage() {
           </div>
         </section>
       </main>
-      <style jsx>{`
-        .sitemap-grid {
-          display: grid;
-          gap: 2rem;
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        }
-        .sitemap-grid h2 {
-          font-size: 1.25rem;
-          margin-bottom: 1rem;
-          color: var(--color-primary);
-        }
-        .sitemap-grid ul {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-        }
-        .sitemap-grid li {
-          margin-bottom: 0.5rem;
-        }
-        .sitemap-grid a {
-          color: var(--color-gray-700);
-          text-decoration: none;
-          transition: color 0.2s;
-        }
-        .sitemap-grid a:hover {
-          color: var(--color-primary);
-        }
-      `}</style>
     </>
   );
 }

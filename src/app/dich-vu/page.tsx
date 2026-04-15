@@ -20,7 +20,6 @@ const services = [
     ),
     title: "Giải pháp toàn diện",
     description: "Đồng hành cùng khách hàng từ giai đoạn tư vấn, triển khai đến vận hành và bảo trì — đảm bảo hệ thống thiết bị luôn hoạt động ổn định, tối ưu hiệu suất và chi phí.",
-    image: "/assets/images/services/comprehensive-solution.jpg",
     features: [
       "Quy trình chuẩn hóa từ tư vấn đến bàn giao",
       "Đội ngũ chuyên gia giàu kinh nghiệm",
@@ -36,7 +35,6 @@ const services = [
     ),
     title: "Tư vấn giải pháp",
     description: "Phân tích chuyên sâu nhu cầu thực tế, từ đó đề xuất giải pháp thiết bị phù hợp với từng chuyên khoa, quy mô và định hướng phát triển của cơ sở y tế.",
-    image: "/assets/images/services/consulting.jpg",
     features: [
       "Khảo sát thực tế tại cơ sở y tế",
       "Demo thiết bị trước khi quyết định",
@@ -53,7 +51,6 @@ const services = [
     ),
     title: "Triển khai & Lắp đặt",
     description: "Đội ngũ kỹ thuật viên giàu kinh nghiệm thực hiện lắp đặt theo đúng tiêu chuẩn nhà sản xuất, đảm bảo an toàn, chính xác và bàn giao vận hành đầy đủ.",
-    image: "/assets/images/services/installation.jpg",
     features: [
       "Lắp đặt theo tiêu chuẩn nhà sản xuất",
       "Kiểm tra và hiệu chuẩn thiết bị",
@@ -69,7 +66,6 @@ const services = [
     ),
     title: "Bảo trì & Bảo hành",
     description: "Cung cấp chế độ bảo hành chính hãng, bảo trì định kỳ và dịch vụ sửa chữa nhanh chóng — giúp tối đa thời gian hoạt động (uptime) và kéo dài tuổi thọ thiết bị.",
-    image: "/assets/images/services/maintenance.jpg",
     features: [
       "Bảo hành chính hãng 12-24 tháng",
       "Bảo trì định kỳ theo tiêu chuẩn",
@@ -85,7 +81,6 @@ const services = [
     ),
     title: "Chuyển giao công nghệ & Hướng dẫn sử dụng",
     description: "Tổ chức đào tạo và chuyển giao công nghệ bài bản cho đội ngũ y bác sĩ, đảm bảo sử dụng thiết bị đúng quy trình, khai thác tối đa tính năng và ứng dụng hiệu quả trong thực hành lâm sàng suốt vòng đời thiết bị.",
-    image: "/assets/images/services/training.jpg",
     features: [
       "Đào tạo tại chỗ cho đội ngũ y bác sĩ",
       "Workshop định kỳ cập nhật kiến thức",
@@ -102,7 +97,6 @@ const services = [
     ),
     title: "Sửa chữa, thay thế linh kiện & Nâng cấp",
     description: "Cung cấp dịch vụ sửa chữa chuyên sâu, thay thế linh kiện chính hãng, đồng thời nâng cấp phần mềm và ứng dụng theo tiêu chuẩn của nhà sản xuất.",
-    image: "/assets/images/services/repair.jpg",
     features: [
       "Sửa chữa chuyên sâu với thiết bị hiện đại",
       "Linh kiện chính hãng 100%",
@@ -124,7 +118,7 @@ export default function ServicesPage() {
         {/* Hero Value Proposition */}
         <section className="services-hero">
           <div className="container">
-            <div className="services-hero-content fade-in-up">
+            <div className="services-hero-content">
               <h2>Đồng hành cùng quý khách hàng trên toàn quốc</h2>
               <p>
                 Với hơn 20 năm kinh nghiệm trong lĩnh vực thiết bị y tế, HAMEDCO cung cấp giải pháp trọn gói từ tư vấn, 
@@ -188,127 +182,6 @@ export default function ServicesPage() {
           </div>
         </section>
       </main>
-
-      <style jsx>{`
-        .services-hero {
-          background: var(--gradient-hero);
-          padding: 4rem 0;
-          text-align: center;
-        }
-        .services-hero-content {
-          max-width: 700px;
-          margin: 0 auto;
-        }
-        .services-hero h2 {
-          font-size: 1.75rem;
-          color: var(--color-white);
-          margin-bottom: 1rem;
-        }
-        .services-hero p {
-          color: rgba(255,255,255,0.85);
-          font-size: 1.125rem;
-          line-height: 1.7;
-        }
-        .services-grid {
-          display: flex;
-          flex-direction: column;
-          gap: 4rem;
-        }
-        .service-card {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 3rem;
-          align-items: center;
-        }
-        .service-card.reverse {
-          direction: rtl;
-        }
-        .service-card.reverse > * {
-          direction: ltr;
-        }
-        .service-image {
-          position: relative;
-          border-radius: var(--radius-xl);
-          overflow: hidden;
-          aspect-ratio: 4/3;
-          background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
-        }
-        .service-image-placeholder {
-          position: absolute;
-          inset: 0;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        .service-icon-large {
-          color: rgba(255,255,255,0.3);
-        }
-        .service-icon-large svg {
-          width: 80px;
-          height: 80px;
-        }
-        .service-content {
-          padding: 1rem 0;
-        }
-        .service-icon {
-          width: 56px;
-          height: 56px;
-          background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
-          border-radius: var(--radius-lg);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: var(--color-white);
-          margin-bottom: 1.5rem;
-        }
-        .service-content h3 {
-          font-size: 1.5rem;
-          font-weight: 700;
-          color: var(--color-gray-900);
-          margin-bottom: 1rem;
-        }
-        .service-content > p {
-          color: var(--color-gray-600);
-          line-height: 1.7;
-          margin-bottom: 1.5rem;
-        }
-        .service-features {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-          display: flex;
-          flex-direction: column;
-          gap: 0.75rem;
-        }
-        .service-features li {
-          display: flex;
-          align-items: center;
-          gap: 0.75rem;
-          color: var(--color-gray-700);
-        }
-        .service-features svg {
-          color: var(--color-primary);
-          flex-shrink: 0;
-        }
-        @media (max-width: 768px) {
-          .service-card {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-          }
-          .service-card.reverse {
-            direction: ltr;
-          }
-          .service-image {
-            aspect-ratio: 16/9;
-          }
-          .services-hero h2 {
-            font-size: 1.5rem;
-          }
-          .services-hero p {
-            font-size: 1rem;
-          }
-        }
-      `}</style>
     </>
   );
 }

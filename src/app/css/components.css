@@ -830,6 +830,160 @@
   line-height: 1.6;
 }
 
+/* ── Services Page ──────────────────────────────────────── */
+.services-hero {
+  background: var(--gradient-hero);
+  padding: 4rem 0;
+  text-align: center;
+}
+.services-hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.services-hero h2 {
+  font-size: 1.75rem;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+.services-hero p {
+  color: rgba(255,255,255,0.85);
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+.services-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.service-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  text-align: left;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+.service-card:hover {
+  border: none;
+  box-shadow: none;
+  transform: none;
+}
+.service-card.reverse {
+  direction: rtl;
+}
+.service-card.reverse > * {
+  direction: ltr;
+}
+.service-image {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+}
+.service-image-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.service-icon-large {
+  color: rgba(255,255,255,0.3);
+}
+.service-icon-large svg {
+  width: 80px;
+  height: 80px;
+}
+.service-content {
+  padding: 1rem 0;
+}
+.service-content .service-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+}
+.service-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-gray-900);
+  margin-bottom: 1rem;
+}
+.service-content p {
+  color: var(--color-gray-600);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.service-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-gray-700);
+}
+.service-features svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+/* ── Sitemap Page ───────────────────────────────────────── */
+.sitemap-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.sitemap-grid h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+.sitemap-grid ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sitemap-grid li {
+  margin-bottom: 0.5rem;
+}
+.sitemap-grid a {
+  color: var(--color-gray-700);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.sitemap-grid a:hover {
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .service-card.reverse {
+    direction: ltr;
+  }
+  .service-image {
+    aspect-ratio: 16/9;
+  }
+  .services-hero h2 {
+    font-size: 1.5rem;
+  }
+  .services-hero p {
+    font-size: 1rem;
+  }
+}
+
 /* ── Tabs ───────────────────────────────────────────────── */
 .tabs {
   display: flex;
