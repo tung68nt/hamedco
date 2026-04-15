@@ -106,7 +106,6 @@ body:has(.admin-wrapper) {
   background: var(--color-primary);
   color: #fff;
   font-weight: 500;
-  box-shadow: 0 4px 12px rgba(43,158,179,0.3);
 }
 .admin-sidebar .sidebar-nav a.active .nav-icon { opacity: 1; }
 
