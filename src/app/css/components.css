@@ -937,6 +937,125 @@
   flex-shrink: 0;
 }
 
+/* ── Services Page ────────────────────────────────────────── */
+.services-intro {
+  background: var(--gradient-hero);
+  padding: 5rem 0;
+  text-align: center;
+}
+.services-intro-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.services-intro h2 {
+  font-size: 2rem;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.services-intro p {
+  color: rgba(255,255,255,0.85);
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+.services-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.service-box {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+.service-box:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 30px rgba(43, 158, 179, 0.15);
+  transform: translateY(-4px);
+}
+.service-box-icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+}
+.service-box h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-gray-900);
+  margin-bottom: 1rem;
+}
+.service-box-desc {
+  color: var(--color-gray-600);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+.service-box-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.service-box-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--color-gray-700);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+.service-box-features li:last-child {
+  margin-bottom: 0;
+}
+.check-icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  background: rgba(43, 158, 179, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+.check-icon svg {
+  width: 12px;
+  height: 12px;
+}
+
+@media (max-width: 1024px) {
+  .services-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-intro {
+    padding: 3rem 0;
+  }
+  .services-intro h2 {
+    font-size: 1.5rem;
+  }
+  .services-intro p {
+    font-size: 1rem;
+  }
+  .services-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .service-box {
+    padding: 1.5rem;
+  }
+}
+
 /* ── Sitemap Page ───────────────────────────────────────── */
 .sitemap-grid {
   display: grid;
