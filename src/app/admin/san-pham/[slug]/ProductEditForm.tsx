@@ -215,26 +215,194 @@ export default function ProductEditForm({ initialData }: { initialData: any }) {
           <svg className="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
             <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
-          Tối ưu hóa SEO (Tùy chọn nâng cao)
+          Tối ưu hóa SEO (Tùy chỉnh nâng cao)
         </div>
         <div style={{ padding: "20px 24px", background: "#f9fafb", borderRadius: "0 0 8px 8px" }}>
           <div className="form-group">
-            <label className="form-label">SEO Title (Tiêu đề chuẩn SEO)</label>
-            <input type="text" className="form-input" value={formData.seo?.title || ""} onChange={(e) => handleChange(e, "seo.title")} placeholder={`Mặc định: ${formData.name} | HAMEDCO`} />
+            <label className="form-label">
+              SEO Title (Tiêu đề chuẩn SEO)
+              <span style={{ color: "#ef4444", marginLeft: "4px" }}>*</span>
+              <span style={{ float: "right", fontSize: "0.75rem", color: formData.seo?.title?.length > 60 ? "#ef4444" : "#6b7280" }}>
+                {formData.seo?.title?.length || 0}/60 ký tự
+              </span>
+            </label>
+            <input 
+              type="text" 
+              className="form-input" 
+              value={formData.seo?.title || ""} 
+              onChange={(e) => handleChange(e, "seo.title")} 
+              placeholder={`Mặc định: ${formData.name} | HAMEDCO`} 
+              maxLength={70}
+            />
           </div>
           <div className="form-group">
-            <label className="form-label">Meta Description (Mô tả thẻ Meta)</label>
-            <textarea className="form-input" style={{ minHeight: "80px" }} value={formData.seo?.description || ""} onChange={(e) => handleChange(e, "seo.description")} placeholder="Mô tả dưới 160 ký tự cho kết quả tìm kiếm Google..."></textarea>
+            <label className="form-label">
+              Meta Description (Mô tả thẻ Meta)
+              <span style={{ color: "#ef4444", marginLeft: "4px" }}>*</span>
+              <span style={{ float: "right", fontSize: "0.75rem", color: formData.seo?.description?.length > 160 ? "#ef4444" : "#6b7280" }}>
+                {formData.seo?.description?.length || 0}/160 ký tự
+              </span>
+            </label>
+            <textarea 
+              className="form-input" 
+              style={{ minHeight: "80px" }} 
+              value={formData.seo?.description || ""} 
+              onChange={(e) => handleChange(e, "seo.description")} 
+              placeholder="Mô tả dưới 160 ký tự cho kết quả tìm kiếm Google..."
+              maxLength={200}
+            />
           </div>
           <div className="form-group">
-            <label className="form-label">Tùy chỉnh URL Slug (Đường dẫn tĩnh thân thiện)</label>
-            <input type="text" className="form-input" value={formData.seo?.slug || formData.slug || ""} onChange={(e) => handleChange(e, "seo.slug")} />
+            <label className="form-label">
+              URL Slug (Đường dẫn tĩnh thân thiện)
+              <span style={{ color: "#ef4444", marginLeft: "4px" }}>*</span>
+              <span style={{ float: "right", fontSize: "0.75rem", color: "#6b7280" }}>
+                Tối đa 75 ký tự
+              </span>
+            </label>
+            <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+              <span style={{ color: "#6b7280", fontSize: "0.875rem", whiteSpace: "nowrap" }}>/san-pham/chi-tiet/</span>
+              <input 
+                type="text" 
+                className="form-input" 
+                value={formData.seo?.slug || formData.slug || ""} 
+                onChange={(e) => handleChange(e, "seo.slug")} 
+                placeholder="ten-san-pham"
+                maxLength={75}
+                style={{ flex: 1 }}
+              />
+            </div>
+          </div>
+          <div className="form-group">
+            <label className="form-label">Meta Robots</label>
+            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+              <label style={{ display: "flex", alignItems: "center", gap: "6px", cursor: "pointer" }}>
+                <input 
+                  type="radio" 
+                  name="seo.metaRobots" 
+                  value="index,follow"
+                  checked={formData.seo?.metaRobots === "index,follow" || !formData.seo?.metaRobots}
+                  onChange={() => setFormData({ ...formData, seo: { ...formData.seo, metaRobots: "index,follow" } })}
+                  style={{ width: "16px", height: "16px" }}
+                />
+                <span style={{ fontSize: "0.875rem" }}>Index, Follow <span style={{ color: "#22c55e", fontSize: "0.75rem" }}>(Mặc định)</span></span>
+              </label>
+              <label style={{ display: "flex", alignItems: "center", gap: "6px", cursor: "pointer" }}>
+                <input 
+                  type="radio" 
+                  name="seo.metaRobots" 
+                  value="noindex,follow"
+                  checked={formData.seo?.metaRobots === "noindex,follow"}
+                  onChange={() => setFormData({ ...formData, seo: { ...formData.seo, metaRobots: "noindex,follow" } })}
+                  style={{ width: "16px", height: "16px" }}
+                />
+                <span style={{ fontSize: "0.875rem" }}>Noindex, Follow</span>
+              </label>
+              <label style={{ display: "flex", alignItems: "center", gap: "6px", cursor: "pointer" }}>
+                <input 
+                  type="radio" 
+                  name="seo.metaRobots" 
+                  value="noindex,nofollow"
+                  checked={formData.seo?.metaRobots === "noindex,nofollow"}
+                  onChange={() => setFormData({ ...formData, seo: { ...formData.seo, metaRobots: "noindex,nofollow" } })}
+                  style={{ width: "16px", height: "16px" }}
+                />
+                <span style={{ fontSize: "0.875rem" }}>Noindex, Nofollow</span>
+              </label>
+            </div>
+            <p style={{ margin: "8px 0 0", fontSize: "0.75rem", color: "#6b7280" }}>
+              Noindex: Khi sản phẩm không còn kinh doanh hoặc nội dung trùng lặp
+            </p>
+          </div>
+          <div className="form-group">
+            <label className="form-label">Canonical URL</label>
+            <input 
+              type="text" 
+              className="form-input" 
+              value={formData.seo?.canonical || ""} 
+              onChange={(e) => handleChange(e, "seo.canonical")} 
+              placeholder="Để trống = URL mặc định"
+            />
           </div>
           <div className="form-group" style={{ marginBottom: "0" }}>
-            <label className="form-label">FAQ Schema (Cặp Câu HỎI & ĐÁP)</label>
-            <div style={{ border: "1px dashed #d1d5db", padding: "16px", borderRadius: "8px", background: "#fff", color: "#6b7280", fontSize: "0.85rem", textAlign: "center" }}>
-               Chức năng thêm Block Hỏi-Đáp tĩnh sẽ được cập nhật ở phiên bản quản trị Data kế tiếp.
+            <label className="form-label">
+              FAQ Schema (Cặp Câu HỎI & ĐÁP)
+              <span style={{ float: "right", fontSize: "0.75rem", color: "#6b7280" }}>
+                {(formData.seo?.faq?.length || 0)} câu hỏi
+              </span>
+            </label>
+            <div style={{ border: "1px solid #e5e7eb", borderRadius: "8px", background: "#fff", overflow: "hidden" }}>
+              {(formData.seo?.faq || []).map((faq: any, index: number) => (
+                <div key={index} style={{ padding: "12px 16px", borderBottom: index < (formData.seo?.faq?.length || 0) - 1 ? "1px solid #f3f4f6" : "none" }}>
+                  <div style={{ display: "flex", gap: "8px", marginBottom: "8px" }}>
+                    <span style={{ fontSize: "0.75rem", color: "#6b7280", minWidth: "24px" }}>#{index + 1}</span>
+                    <input 
+                      type="text" 
+                      className="form-input" 
+                      style={{ flex: 1, fontSize: "0.875rem" }}
+                      value={faq.question} 
+                      onChange={(e) => {
+                        const newFaq = [...(formData.seo?.faq || [])];
+                        newFaq[index] = { ...newFaq[index], question: e.target.value };
+                        setFormData({ ...formData, seo: { ...formData.seo, faq: newFaq } });
+                      }}
+                      placeholder="Câu hỏi (VD: Thiết bị này bảo hành bao lâu?)"
+                    />
+                    <button 
+                      type="button"
+                      onClick={() => {
+                        const newFaq = (formData.seo?.faq || []).filter((_: any, i: number) => i !== index);
+                        setFormData({ ...formData, seo: { ...formData.seo, faq: newFaq } });
+                      }}
+                      style={{ padding: "6px 12px", background: "#fef2f2", border: "1px solid #fecaca", borderRadius: "6px", color: "#dc2626", cursor: "pointer", fontSize: "0.75rem" }}
+                    >
+                      Xóa
+                    </button>
+                  </div>
+                  <textarea 
+                    className="form-input" 
+                    style={{ minHeight: "60px", fontSize: "0.875rem" }}
+                    value={faq.answer} 
+                    onChange={(e) => {
+                      const newFaq = [...(formData.seo?.faq || [])];
+                      newFaq[index] = { ...newFaq[index], answer: e.target.value };
+                      setFormData({ ...formData, seo: { ...formData.seo, faq: newFaq } });
+                    }}
+                    placeholder="Câu trả lời..."
+                  />
+                </div>
+              ))}
+              <button 
+                type="button"
+                onClick={() => {
+                  const newFaq = [...(formData.seo?.faq || []), { question: "", answer: "" }];
+                  setFormData({ ...formData, seo: { ...formData.seo, faq: newFaq } });
+                }}
+                style={{ 
+                  width: "100%", 
+                  padding: "12px", 
+                  background: "#f9fafb", 
+                  border: "none", 
+                  borderTop: "1px dashed #e5e7eb",
+                  color: "#374151", 
+                  cursor: "pointer", 
+                  fontSize: "0.875rem",
+                  fontWeight: 500,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "6px"
+                }}
+              >
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
+                </svg>
+                Thêm câu hỏi
+              </button>
             </div>
+            <p style={{ margin: "8px 0 0", fontSize: "0.75rem", color: "#6b7280" }}>
+              FAQ sẽ tự động hiển thị dưới dạng Schema FAQPage cho Google
+            </p>
           </div>
         </div>
       </div>

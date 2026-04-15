@@ -31,7 +31,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     },
     {
       label: "Tin tức & Blog",
-      href: "#",
+      href: "/admin/tin-tuc",
       icon: (
         <svg className="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
           <path d="M4 19.5A2.5 2.5 0 016.5 17H20" />

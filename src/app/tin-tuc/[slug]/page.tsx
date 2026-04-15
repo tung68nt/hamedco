@@ -151,54 +151,60 @@ export default async function BlogPostPage({ params }: Props) {
       )}
 
       <main className="main-content">
-        {/* Article Hero */}
-        <section className="article-hero">
-          <div className="container">
-            <nav className="breadcrumbs" aria-label="Breadcrumb">
-              <Link href="/" className="breadcrumb-item">Trang chủ</Link>
-              <span className="breadcrumb-separator">/</span>
-              <Link href="/tin-tuc" className="breadcrumb-item">Tin tức</Link>
-              <span className="breadcrumb-separator">/</span>
-              <span className="breadcrumb-current">{post.title}</span>
-            </nav>
-            
-            <Link 
-              href={`/tin-tuc?danh-muc=${post.category}`} 
-              className="article-hero-category"
-            >
-              {categoryNames[post.category]}
-            </Link>
-            
-            <h1 className="article-hero-title">
-              {post.title}
-            </h1>
-            
-            <p className="article-hero-subtitle">
-              {post.subtitle}
-            </p>
+        {/* Breadcrumb */}
+        <div className="container" style={{ paddingTop: "1.5rem" }}>
+          <nav className="breadcrumbs" aria-label="Breadcrumb">
+            <Link href="/">Trang chủ</Link>
+            <span className="breadcrumb-separator">/</span>
+            <Link href="/tin-tuc">Tin tức</Link>
+            <span className="breadcrumb-separator">/</span>
+            <span className="breadcrumb-current">{post.title}</span>
+          </nav>
+        </div>
 
-            <div className="article-hero-meta">
-              <div className="article-hero-meta-item">
-                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <time dateTime={post.publishedAt}>
-                  {new Date(post.publishedAt).toLocaleDateString("vi-VN", { day: "numeric", month: "long", year: "numeric" })}
-                </time>
-              </div>
-              {post.updatedAt && post.updatedAt !== post.publishedAt && (
+        {/* Article Hero - Brand Gradient */}
+        <section className="article-hero">
+          <div className="article-hero-bg"></div>
+          <div className="container">
+            <div className="article-hero-content">
+              <Link 
+                href={`/tin-tuc?danh-muc=${post.category}`} 
+                className="article-hero-category"
+              >
+                {categoryNames[post.category]}
+              </Link>
+              
+              <h1 className="article-hero-title">
+                {post.title}
+              </h1>
+              
+              <p className="article-hero-subtitle">
+                {post.subtitle}
+              </p>
+
+              <div className="article-hero-meta">
                 <div className="article-hero-meta-item">
-                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                  <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
-                  <span>Cập nhật: {new Date(post.updatedAt).toLocaleDateString("vi-VN")}</span>
+                  <time dateTime={post.publishedAt}>
+                    {new Date(post.publishedAt).toLocaleDateString("vi-VN", { day: "numeric", month: "long", year: "numeric" })}
+                  </time>
                 </div>
-              )}
-              <div className="article-hero-meta-item">
-                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-                <span>{post.author.name}</span>
+                {post.updatedAt && post.updatedAt !== post.publishedAt && (
+                  <div className="article-hero-meta-item">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                    </svg>
+                    <span>Cập nhật: {new Date(post.updatedAt).toLocaleDateString("vi-VN")}</span>
+                  </div>
+                )}
+                <div className="article-hero-meta-item">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                  <span>{post.author.name}</span>
+                </div>
               </div>
             </div>
           </div>

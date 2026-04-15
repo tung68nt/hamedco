@@ -512,40 +512,52 @@
 
 /* ── Article Hero (Detail Page) ─────────────────────────── */
 .article-hero {
-  background: linear-gradient(135deg, var(--color-gray-900) 0%, var(--color-gray-800) 100%);
-  padding: var(--space-10) 0;
   position: relative;
+  margin-bottom: var(--space-10);
   overflow: hidden;
 }
 
-.article-hero::before {
+.article-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-primary-mid) 100%);
+  z-index: 0;
+}
+
+.article-hero-bg::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.article-hero-bg::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0,0,0,0.2) 0%, transparent 100%);
   pointer-events: none;
 }
 
 .article-hero .container {
   position: relative;
   z-index: 1;
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-12);
 }
 
-.article-hero .breadcrumbs {
-  margin-bottom: var(--space-5);
-}
-
-.article-hero .breadcrumbs .breadcrumb-item,
-.article-hero .breadcrumbs .breadcrumb-separator {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.article-hero .breadcrumbs .breadcrumb-current,
-.article-hero .breadcrumbs .breadcrumb-item:hover {
-  color: white;
+.article-hero-content {
+  max-width: 800px;
 }
 
 .article-hero-category {
@@ -558,33 +570,42 @@
   font-size: 0.8125rem;
   font-weight: 500;
   margin-bottom: var(--space-4);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.article-hero-category:hover {
+  background: var(--color-primary-dark);
+  color: white;
+  transform: translateY(-1px);
 }
 
 .article-hero-title {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 800;
   color: white;
-  line-height: 1.25;
+  line-height: 1.2;
   margin-bottom: var(--space-4);
-  letter-spacing: -0.02em;
-  max-width: 800px;
+  letter-spacing: -0.025em;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
 }
 
 .article-hero-subtitle {
-  font-size: 1.0625rem;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.6;
   margin-bottom: var(--space-5);
   max-width: 700px;
+  text-shadow: 0 1px 10px rgba(0,0,0,0.2);
 }
 
 .article-hero-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-4);
+  gap: var(--space-5);
   align-items: center;
-  font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .article-hero-meta-item {
@@ -594,9 +615,23 @@
 }
 
 .article-hero-meta-item svg {
-  width: 16px;
-  height: 16px;
-  opacity: 0.7;
+  opacity: 0.8;
+}
+
+@media (max-width: 767px) {
+  .article-hero-image {
+    height: 320px;
+  }
+  .article-hero-title {
+    font-size: 1.5rem;
+  }
+  .article-hero-subtitle {
+    font-size: 1rem;
+  }
+  .article-hero-meta {
+    gap: var(--space-3);
+    font-size: 0.8125rem;
+  }
 }
 
 .blog-categories {
@@ -813,8 +848,9 @@
     padding: var(--space-4);
     margin-top: var(--space-6);
   }
-  .article-hero {
-    padding: var(--space-8) 0;
+  .article-hero .container {
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-8);
   }
   .article-hero-title {
     font-size: 1.5rem;

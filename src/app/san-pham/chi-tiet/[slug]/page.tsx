@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
 import { ALL_PRODUCTS, getProductBySlug } from "@/data/products";
 import Link from "next/link";
 import ProductDetailClient from "./ProductDetailClient";
@@ -9,20 +10,60 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const product = getProductBySlug(slug) as any;
   if (!product) return { title: "Không tìm thấy sản phẩm" };
   
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://hamedco.com.vn';
+  const canonicalUrl = product.seo?.canonical || `${baseUrl}/san-pham/chi-tiet/${slug}`;
   const title = product.seo?.title || `${product.name} — ${product.subtitle?.vi || product.subtitle} | HAMEDCO`;
   const description = product.seo?.description || product.description?.vi || product.description;
+  const images = product.images?.length ? product.images : [product.thumbnail];
 
   return {
     title,
     description,
+    keywords: [
+      product.name,
+      product.brand,
+      "thiết bị y tế",
+      "philips healthcare",
+      product.deviceType,
+    ].filter(Boolean),
     alternates: {
-      canonical: `/san-pham/chi-tiet/${slug}`,
-    }
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+      siteName: "HAMEDCO",
+      images: images.map((img: string) => ({
+        url: img,
+        width: 1200,
+        height: 630,
+        alt: product.name,
+      })),
+      locale: "vi_VN",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images,
+    },
+    robots: {
+      index: product.seo?.metaRobots?.includes("noindex") ? false : true,
+      follow: product.seo?.metaRobots?.includes("nofollow") ? false : true,
+      googleBot: {
+        index: product.seo?.metaRobots?.includes("noindex") ? false : true,
+        follow: product.seo?.metaRobots?.includes("nofollow") ? false : true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
   };
 }
 
@@ -58,12 +99,34 @@ export default async function ProductDetailPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": product.name,
-    "image": product.images ? product.images : [product.thumbnail],
+    "image": product.images?.length ? product.images : [product.thumbnail],
     "description": product.seo?.description || product.description?.vi || product.description,
+    "sku": product.slug?.toUpperCase(),
+    "mpn": product.slug?.toUpperCase(),
     "brand": {
       "@type": "Brand",
       "name": product.brand || "Philips"
-    }
+    },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": product.brand || "Philips"
+    },
+    "category": catName,
+    "offers": {
+      "@type": "Offer",
+      "url": `https://hamedco.com.vn/san-pham/chi-tiet/${slug}`,
+      "priceCurrency": "VND",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "HAMEDCO"
+      }
+    },
+    "aggregateRating": product.rating ? {
+      "@type": "AggregateRating",
+      "ratingValue": product.rating,
+      "reviewCount": product.reviewCount || "1"
+    } : undefined,
   };
 
   const breadcrumbSchema = {

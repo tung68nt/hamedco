@@ -1,0 +1,643 @@
+
+<!DOCTYPE html>
+<!--[if IE 9 ]> <html lang="vi" class="ie9 loading-site no-js bg-fill"> <![endif]-->
+<!--[if IE 8 ]> <html lang="vi" class="ie8 loading-site no-js bg-fill"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="vi" class="loading-site no-js bg-fill"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8" />
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="https://bvdkkvquangnam.org/xmlrpc.php" />
+
+	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<meta name='robots' content='noindex, follow' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<!-- This site is optimized with the Yoast SEO plugin v19.4 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Không tìm thấy trang - Bệnh viện đa khoa khu vực Quảng Nam</title>
+	<meta property="og:locale" content="vi_VN" />
+	<meta property="og:title" content="Không tìm thấy trang - Bệnh viện đa khoa khu vực Quảng Nam" />
+	<meta property="og:site_name" content="Bệnh viện đa khoa khu vực Quảng Nam" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"http://bvdkqn.shantira.live/#organization","name":"Bệnh viện khu vực Quảng Nam","url":"http://bvdkqn.shantira.live/","sameAs":[],"logo":{"@type":"ImageObject","inLanguage":"vi","@id":"http://bvdkqn.shantira.live/#/schema/logo/image/","url":"https://bvdkkvquangnam.org/wp-content/uploads/2020/12/BSTAI.jpg","contentUrl":"https://bvdkkvquangnam.org/wp-content/uploads/2020/12/BSTAI.jpg","width":768,"height":476,"caption":"Bệnh viện khu vực Quảng Nam"},"image":{"@id":"http://bvdkqn.shantira.live/#/schema/logo/image/"}},{"@type":"WebSite","@id":"http://bvdkqn.shantira.live/#website","url":"http://bvdkqn.shantira.live/","name":"Bệnh viện đa khoa khu vực Quảng Nam","description":"Sự hài lòng của bạn là mục tiêu của chúng tôi!","publisher":{"@id":"http://bvdkqn.shantira.live/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"http://bvdkqn.shantira.live/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"vi"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Dòng thông tin Bệnh viện đa khoa khu vực Quảng Nam &raquo;" href="https://bvdkkvquangnam.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Dòng phản hồi Bệnh viện đa khoa khu vực Quảng Nam &raquo;" href="https://bvdkkvquangnam.org/comments/feed/" />
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/bvdkkvquangnam.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.0.11"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://bvdkkvquangnam.org/wp-includes/css/dist/block-library/style.min.css?ver=6.0.11' type='text/css' media='all' />
+<link rel='stylesheet' id='awsm-ead-public-css'  href='https://bvdkkvquangnam.org/wp-content/plugins/embed-any-document/css/embed-public.min.css?ver=2.6.1' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel='stylesheet' id='contact-form-7-css'  href='https://bvdkkvquangnam.org/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-four-css'  href='https://bvdkkvquangnam.org/wp-content/plugins/font-awesome-4-menus/css/font-awesome.min.css?ver=4.7.0' type='text/css' media='all' />
+<link rel='stylesheet' id='toc-screen-css'  href='https://bvdkkvquangnam.org/wp-content/plugins/table-of-contents-plus/screen.min.css?ver=2002' type='text/css' media='all' />
+<link rel='stylesheet' id='Viet-contact-css-css'  href='https://bvdkkvquangnam.org/wp-content/plugins/viet-contact/css/viet-contact.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='flatsome-icons-css'  href='https://bvdkkvquangnam.org/wp-content/themes/flatsome/assets/css/fl-icons.css?ver=3.12' type='text/css' media='all' />
+<link rel='stylesheet' id='flatsome-main-css'  href='https://bvdkkvquangnam.org/wp-content/themes/flatsome/assets/css/flatsome.css?ver=3.13.0' type='text/css' media='all' />
+<link rel='stylesheet' id='flatsome-style-css'  href='https://bvdkkvquangnam.org/wp-content/themes/hoc-bong/style.css?ver=3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='flatsome-googlefonts-css'  href='//fonts.googleapis.com/css?family=Roboto%3Aregular%2Cregular%2Cregular%2C700%7CDancing+Script%3Aregular%2C400&#038;display=swap&#038;ver=3.9' type='text/css' media='all' />
+<script type='text/javascript' src='https://bvdkkvquangnam.org/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://bvdkkvquangnam.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<link rel="https://api.w.org/" href="https://bvdkkvquangnam.org/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://bvdkkvquangnam.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://bvdkkvquangnam.org/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 6.0.11" />
+<style>.bg{opacity: 0; transition: opacity 1s; -webkit-transition: opacity 1s;} .bg-loaded{opacity: 1;}</style><!--[if IE]><link rel="stylesheet" type="text/css" href="https://bvdkkvquangnam.org/wp-content/themes/flatsome/assets/css/ie-fallback.css"><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script><script>var head = document.getElementsByTagName('head')[0],style = document.createElement('style');style.type = 'text/css';style.styleSheet.cssText = ':before,:after{content:none !important';head.appendChild(style);setTimeout(function(){head.removeChild(style);}, 0);</script><script src="https://bvdkkvquangnam.org/wp-content/themes/flatsome/assets/libs/ie-flexibility.js"></script><![endif]--><link rel="icon" href="https://bvdkkvquangnam.org/wp-content/uploads/2020/12/cropped-Header_new-copy-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://bvdkkvquangnam.org/wp-content/uploads/2020/12/cropped-Header_new-copy-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://bvdkkvquangnam.org/wp-content/uploads/2020/12/cropped-Header_new-copy-180x180.png" />
+<meta name="msapplication-TileImage" content="https://bvdkkvquangnam.org/wp-content/uploads/2020/12/cropped-Header_new-copy-270x270.png" />
+<style id="custom-css" type="text/css">:root {--primary-color: #2aacf1;}html{background-image: url('http://localhost:8080/pmc/wp-content/uploads/2019/07/bg.png');}.full-width .ubermenu-nav, .container, .row{max-width: 1170px}.row.row-collapse{max-width: 1140px}.row.row-small{max-width: 1162.5px}.row.row-large{max-width: 1200px}.header-main{height: 115px}#logo img{max-height: 115px}#logo{width:488px;}.header-bottom{min-height: 50px}.header-top{min-height: 30px}.transparent .header-main{height: 30px}.transparent #logo img{max-height: 30px}.has-transparent + .page-title:first-of-type,.has-transparent + #main > .page-title,.has-transparent + #main > div > .page-title,.has-transparent + #main .page-header-wrapper:first-of-type .page-title{padding-top: 110px;}.header.show-on-scroll,.stuck .header-main{height:30px!important}.stuck #logo img{max-height: 30px!important}.search-form{ width: 50%;}.header-bg-color, .header-wrapper {background-color: rgba(255,255,255,0.9)}.header-bottom {background-color: #2aacf1}.header-main .nav > li > a{line-height: 16px }.stuck .header-main .nav > li > a{line-height: 50px }.header-bottom-nav > li > a{line-height: 51px }@media (max-width: 549px) {.header-main{height: 70px}#logo img{max-height: 70px}}.nav-dropdown{font-size:96%}.nav-dropdown-has-arrow li.has-dropdown:after{border-bottom-color: #0065b3;}.nav .nav-dropdown{background-color: #0065b3}.header-top{background-color:#2aacf1!important;}.blog-wrapper{background-color: rgba(234,234,234,0.5);}/* Color */.accordion-title.active, .has-icon-bg .icon .icon-inner,.logo a, .primary.is-underline, .primary.is-link, .badge-outline .badge-inner, .nav-outline > li.active> a,.nav-outline >li.active > a, .cart-icon strong,[data-color='primary'], .is-outline.primary{color: #2aacf1;}/* Color !important */[data-text-color="primary"]{color: #2aacf1!important;}/* Background Color */[data-text-bg="primary"]{background-color: #2aacf1;}/* Background */.scroll-to-bullets a,.featured-title, .label-new.menu-item > a:after, .nav-pagination > li > .current,.nav-pagination > li > span:hover,.nav-pagination > li > a:hover,.has-hover:hover .badge-outline .badge-inner,button[type="submit"], .button.wc-forward:not(.checkout):not(.checkout-button), .button.submit-button, .button.primary:not(.is-outline),.featured-table .title,.is-outline:hover, .has-icon:hover .icon-label,.nav-dropdown-bold .nav-column li > a:hover, .nav-dropdown.nav-dropdown-bold > li > a:hover, .nav-dropdown-bold.dark .nav-column li > a:hover, .nav-dropdown.nav-dropdown-bold.dark > li > a:hover, .is-outline:hover, .tagcloud a:hover,.grid-tools a, input[type='submit']:not(.is-form), .box-badge:hover .box-text, input.button.alt,.nav-box > li > a:hover,.nav-box > li.active > a,.nav-pills > li.active > a ,.current-dropdown .cart-icon strong, .cart-icon:hover strong, .nav-line-bottom > li > a:before, .nav-line-grow > li > a:before, .nav-line > li > a:before,.banner, .header-top, .slider-nav-circle .flickity-prev-next-button:hover svg, .slider-nav-circle .flickity-prev-next-button:hover .arrow, .primary.is-outline:hover, .button.primary:not(.is-outline), input[type='submit'].primary, input[type='submit'].primary, input[type='reset'].button, input[type='button'].primary, .badge-inner{background-color: #2aacf1;}/* Border */.nav-vertical.nav-tabs > li.active > a,.scroll-to-bullets a.active,.nav-pagination > li > .current,.nav-pagination > li > span:hover,.nav-pagination > li > a:hover,.has-hover:hover .badge-outline .badge-inner,.accordion-title.active,.featured-table,.is-outline:hover, .tagcloud a:hover,blockquote, .has-border, .cart-icon strong:after,.cart-icon strong,.blockUI:before, .processing:before,.loading-spin, .slider-nav-circle .flickity-prev-next-button:hover svg, .slider-nav-circle .flickity-prev-next-button:hover .arrow, .primary.is-outline:hover{border-color: #2aacf1}.nav-tabs > li.active > a{border-top-color: #2aacf1}.widget_shopping_cart_content .blockUI.blockOverlay:before { border-left-color: #2aacf1 }.woocommerce-checkout-review-order .blockUI.blockOverlay:before { border-left-color: #2aacf1 }/* Fill */.slider .flickity-prev-next-button:hover svg,.slider .flickity-prev-next-button:hover .arrow{fill: #2aacf1;}/* Background Color */[data-icon-label]:after, .secondary.is-underline:hover,.secondary.is-outline:hover,.icon-label,.button.secondary:not(.is-outline),.button.alt:not(.is-outline), .badge-inner.on-sale, .button.checkout, .single_add_to_cart_button, .current .breadcrumb-step{ background-color:#ff0000; }[data-text-bg="secondary"]{background-color: #ff0000;}/* Color */.secondary.is-underline,.secondary.is-link, .secondary.is-outline,.stars a.active, .star-rating:before, .woocommerce-page .star-rating:before,.star-rating span:before, .color-secondary{color: #ff0000}/* Color !important */[data-text-color="secondary"]{color: #ff0000!important;}/* Border */.secondary.is-outline:hover{border-color:#ff0000}.alert.is-underline:hover,.alert.is-outline:hover,.alert{background-color: #2b30b9}.alert.is-link, .alert.is-outline, .color-alert{color: #2b30b9;}/* Color !important */[data-text-color="alert"]{color: #2b30b9!important;}/* Background Color */[data-text-bg="alert"]{background-color: #2b30b9;}body{font-size: 97%;}@media screen and (max-width: 549px){body{font-size: 100%;}}body{font-family:"Roboto", sans-serif}body{font-weight: 0}body{color: #333333}.nav > li > a {font-family:"Roboto", sans-serif;}.mobile-sidebar-levels-2 .nav > li > ul > li > a {font-family:"Roboto", sans-serif;}.nav > li > a {font-weight: 700;}.mobile-sidebar-levels-2 .nav > li > ul > li > a {font-weight: 700;}h1,h2,h3,h4,h5,h6,.heading-font, .off-canvas-center .nav-sidebar.nav-vertical > li > a{font-family: "Roboto", sans-serif;}h1,h2,h3,h4,h5,h6,.heading-font,.banner h1,.banner h2{font-weight: 0;}h1,h2,h3,h4,h5,h6,.heading-font{color: #005c7d;}.alt-font{font-family: "Dancing Script", sans-serif;}.alt-font{font-weight: 400!important;}.header:not(.transparent) .header-bottom-nav.nav > li > a{color: #ffffff;}.header:not(.transparent) .header-bottom-nav.nav > li > a:hover,.header:not(.transparent) .header-bottom-nav.nav > li.active > a,.header:not(.transparent) .header-bottom-nav.nav > li.current > a,.header:not(.transparent) .header-bottom-nav.nav > li > a.active,.header:not(.transparent) .header-bottom-nav.nav > li > a.current{color: #0092ff;}.header-bottom-nav.nav-line-bottom > li > a:before,.header-bottom-nav.nav-line-grow > li > a:before,.header-bottom-nav.nav-line > li > a:before,.header-bottom-nav.nav-box > li > a:hover,.header-bottom-nav.nav-box > li.active > a,.header-bottom-nav.nav-pills > li > a:hover,.header-bottom-nav.nav-pills > li.active > a{color:#FFF!important;background-color: #0092ff;}a{color: #5d5d59;}a:hover{color: #ff0000;}.tagcloud a:hover{border-color: #ff0000;background-color: #ff0000;}.absolute-footer, html{background-color: #ff0000}/* Custom CSS */.header-inner{width:1920px; background-image: url(https://bvdkkvquangnam.org/wp-content/uploads/2020/11/bg-header2-1.png); background-repeat: no-repeat; background-size: cover;}.nav-spacing-large>li, .nav>li{margin:auto}.tin-danh-muc .cot3 .col-inner .large-columns-1{border: 1px solid #eeeeee; margin-left:0; margin-right:0; margin-bottom:15px}.header:not(.transparent) .header-bottom-nav.nav > li > a {color: #ffffff; font-weight: normal;padding-left: 12px;padding-right: 12px;line-height: 23px;}.header:not(.transparent) .header-bottom-nav.nav > li > a:hover, .nav-dark .nav>li.active>a{background-color: #f1f1f1;/* box-shadow: inset 0 5px 5px 0 rgba(0,0,0,0.2); */-webkit-box-shadow: inset 0 5px 5px 0 rgba(0,0,0,0.2);position: relative;z-index: 2;overflow: visible;}.nav-dropdown{padding: 0px 0 0px; border: 0px solid white}.nav-dropdown.nav-dropdown-simple>li>a:hover{background-color:#3e4095;}.footer-block input[type='submit']:not(.is-form){margin-bottom:0; font-size:14px; text-transform:none; border-radius:4px; font-weight:normal}.footer-block .cot3 form{margin-bottom:8px}.footer-block .col{padding-bottom:0}.footer-block{background: url(/wp-content/uploads/2018/041/footer-bg.jpg); background-repeat:repeat}.footer-secondary{padding:0}.absolute-footer{ border-bottom: 5px solid #fff; padding: 10px 0 10px}.page-wrapper{padding: 20px 0; background: #eee;}.search-block{background: #f1f1f1; padding-top: 5px; padding-bottom:5px}.header .flex-row, .container, .row.row-large, .row{max-width: 1193px} input[type='search']{height: 39px;border-top-left-radius: 4px;border-bottom-left-radius: 4px;border: 1px solid #bfbfbf;}.searchform-wrapper:not(.form-flat) .submit-button{border-top-right-radius: 4px; border-bottom-right-radius: 4px}.search-block .col{padding-bottom:0}.search-blockp{margin-bottom:0; font-weight: bold;color: #0092ff;}.box-blog-post .is-divider{display: none}.search-block .box-text{padding-bottom:0}.search-block .box-text .post-title{font-weight: normal; padding-top: 2px; color: #505050;}.search-block .flickity-prev-next-button.previous, .search-block .flickity-prev-next-button{display:none}.block-news-1 .col{padding-left:8px; padding-right: 8px}.block-news-1 .cot2 .box-text{padding-bottom:7px; padding-top:7px; border-bottom: 1px dashed #ddd}.tin-danh-muc .row .left .col-inner:before{background: url("/wp-content/uploads/2018/04/grd-border.png") top right repeat-y;content: '';position: absolute;top: 0;right: -20px;width: 20px;height: 100%;z-index: -1;}.mb{margin-bottom:10px}.cot3-title h4{ border-top-left-radius:0px; border-top-right-radius:0px; background: #005c7d;color: white;height: 40px;padding-left: 10px;padding: 6px 10px;margin-bottom: 0;font-weight: bold;font-size: 15px;}.block-news-1 .cot2 .box-text .post-title{font-weight: normal; color: black; background: url(http://cdbvtbd.com/wp-content/uploads/2019/07/new.gif);background-repeat: no-repeat;padding-left: 27px; line-height:22px}.block-news-1 .cot2 .box-text .post-title:hover{color: #6d1315}.search-block .cot2 .post-item{padding:0}.block-news-1 .cot2 .box-text:hover{background: white}.flickity-page-dots{bottom:10px !important}.khoi-tin-2 .post-item .box-text .post-title{font-size:14px; font-weight:bold}.khoi-tin-2 .col{padding-bottom:0}.khoi-tin-2 .post-item .box-text{padding-bottom:0px}.block-news-1 .cot2{margin-left:0px}.nav-dropdown>li>a{font-size: 14px;padding: 10px 10px;}.block-news-1 .cot5 .flickity-prev-next-button.next, .block-news-1 .cot5 .flickity-prev-next-button.previous{display:none}.block-news-1 .cot5 .col, .block-news-1 .cot5 .post-item .box-text, .block-news-1 .col, .khoi-tin-2 .row-small>.flickity-viewport>.flickity-slider>.col{padding-bottom:0}.block-news-1 .cot2 .col-inner{border: 0px solid #0092ff}.block-news-1 .cot2 .col-inner .col .col-inner{border:0}.nav-dropdown{margin-left:15px; min-width: 245px;}.block-cau-nguyen h5{border-top-left-radius:4px; border-top-right-radius:4px;padding-left: 10px;font-weight: bold;font-size: 15px;color: #ffffff;background: #0092ff;padding: 5px 10px;border-bottom: 1px solid #cce8f3;text-align: center;padding-bottom: 5px;margin-bottom: 0px;}.block-cau-nguyen{display:block; margin-bottom:15px}.block-cau-nguyen .content p{margin-bottom:10px; font-size:14px}.block-cau-nguyen .content h6{font-size: 14px;text-transform: none;letter-spacing: 0;color: #fd2121;}.block-cau-nguyen .content{padding: 10px; padding-bottom:0;border: 1px solid #eeeeee;background:white;}div.title.bg {border-bottom: 4px solid #ff0000;height: 40px;line-height: 40px;background-image: linear-gradient(to right, #005c7d, #005c7d);margin-top: 0px;margin-bottom: 14px;}.tin-danh-muc .cot3 .post-item .box-text .post-title{background: url(wp-content/uploads/2018/04/ic_point.png));background-repeat: no-repeat;padding-left: 20px;line-height: 20px; }.tin-danh-muc .cot3 .col-inner p{margin-bottom:10px; }.tin-danh-muc .cot3 .post-item{border-bottom:1px solid #eeeeee}.tin-danh-muc .cot3 .post-item, .tin-danh-muc .cot3 .post-item .box-text{padding-bottom:5px} div.title {font-size: 14px;margin: 15px 0 5px 0;border-top-right-radius: 0;border-bottom-right-radius: 0;border-bottom-left-radius: 4px;border-top-left-radius: 4px;-moz-background-clip: padding-box;-webkit-background-clip: padding-box;background-clip: padding-box;overflow: hidden;clear: both;width: 100%;box-sizing: border-box;margin-top: 5px;}div.title span.title_co {display: inline-block;padding: 0 10px;height: 40px;background: #e90102f0;color: #fff;padding-top: 7px;box-sizing: border-box;-webkit-border-top-right-radius: 0;-webkit-border-bottom-right-radius: 0;-webkit-border-bottom-left-radius: 4px;-webkit-border-top-left-radius: 4px;-moz-border-radius-topright: 0;-moz-border-radius-bottomright: 0;-moz-border-radius-bottomleft: 4px;-moz-border-radius-topleft: 4px;border-top-right-radius: 0;border-bottom-right-radius: 0;border-bottom-left-radius: 4px;border-top-left-radius: 4px;-moz-background-clip: padding-box;-webkit-background-clip: padding-box; position: relative;padding-right: 10px;float: left;font-weight: bold;font-size: 14px;line-height: 20px;}div.title span.title_co.bg:after {border-color: #eee;border-left-color: #0092ff;}div.title span.title_co:after { }div.title ul.menu_title {float: right;margin-bottom:0;list-style: none;margin-top: 11px;}.tin-danh-muc .left .cot8 .post-item{padding-bottom:4px !important}.tin-danh-muc .left .cot8 .post-item, .tin-danh-muc .left .cot8{padding-bottom:0}div.title li:first-child {border: 0;}div.title li {margin-left:0; margin-bottom:0;float: Right;border-right: 1px solid #999;color: #555;line-height: 14px;}div.title li a {color: #fff;padding: 0 10px;text-decoration: none;font-size: 14px;}.tin-danh-muc .left .cot4 .post-item, .tin-danh-muc .left .cot4 {padding-bottom:0}.tin-danh-muc .left .cot4 .post-item .box-text{padding-top: 5px;padding-bottom: 5px;border-bottom: 1px dashed #eeeeee;}.tin-danh-muc .left .cot4 .post-item .box-text h5{font-weight: normal; font-size: 13px; color: #333;}.tin-danh-muc .left .cot4 .post-item .box-text h5:hover{color: #004980}.tin-danh-muc .left .cot8 .post-item .box-image{vertical-align: top; padding-bottom:12px}.tin-danh-muc .left .cot8 .post-item .box-text {padding-right:3px; padding-top:0; padding-left:12px; padding-bottom:12px}.tin-danh-muc .left .cot8 .post-item .box-text p{font-size:13px; padding-top:13px}div.block_right {border: 1px dashed #e3e4e8;-webkit-border-top-right-radius: 4px;-webkit-border-bottom-right-radius: 4px;-webkit-border-bottom-left-radius: 4px;-webkit-border-top-left-radius: 4px;-moz-border-radius-topright: 4px;-moz-border-radius-bottomright: 4px;-moz-border-radius-bottomleft: 4px;-moz-border-radius-topleft: 4px;border-top-right-radius: 4px;border-bottom-right-radius: 4px;border-bottom-left-radius: 4px;border-top-left-radius: 4px;-moz-background-clip: padding-box;-webkit-background-clip: padding-box;background-clip: padding-box;position: relative;margin-top: 30px;padding: 10px 5px 5px 5px;margin-bottom: 10px;}div.title2 {font-size: 14px;margin: 15px 0 5px 0;clear: both;width: 100%;box-sizing: border-box;position: absolute;top: -55px;left: 0;z-index: 1;}div.title2 span.title_co {display: inline-block;padding: 0 10px;height: 26px;background: #0092ff;color: #fff;padding-top: 3px;box-sizing: border-box;position: relative;padding-right: 10px;line-height: 20px;font-weight: bold;}div.title2 span.title_co:after {left: 100%;top: 50%;border: solid transparent;content: " ";height: 0;width: 0;position: absolute;pointer-events: none;border-color: #0092ff #fff #0092ff #0092ff;border-left-color: #0092ff;border-width: 13px;margin-top: -13px;}.duong_dan_breadcrumb {display: none;margin-bottom: 10px;}.duong_dan_breadcrumb #crumbs {margin-bottom: 0;}.duong_dan_breadcrumb #crumbs li {color: gray;display: inline-block;font-size: 14px;margin-bottom: 0;list-style: none;}.duong_dan_breadcrumb li a {display: inline-block;white-space: nowrap;font-size: 14px;color: #288ad6;padding: 0 10px 0 0;padding-left: 5px;padding-right: 5px;}.duong_dan_breadcrumb span {display: inline-block;font-size: 14px;color: #999;line-height: 1; padding-right: 7px;}.info-tieu-de {margin-top: 10px;font-size: 13px;color: #0092ff;}.meta-date-capnhat, .luot-xem {padding-right: 13px;}.info-tieu-de a {color: gray;}.meta-date-capnhat, .luot-xem {padding-right: 13px;}.info-tieu-de a {color: #0092ff;}.is-divider {max-width: 100%;height: 1px;}.duong_dan_breadcrumb li a:first-child{padding-left:0}.blog-single .article-inner .entry-image{display: none;}.article-inner{transition: opacity .3s, box-shadow .5s, transform .3s;background: white;border: 1px solid #ddd;padding: 10px;}.post {margin: 0 0 15px;}span.widget-title{display: block;background: #005c7d;padding: 10px;color: white;text-transform: none;font-size: 15px;letter-spacing: 0;border-top-left-radius: 3px;border-top-right-radius: 3px;}.widget .is-divider{display:none}.widget_recent_entries ul, .widget_archive ul, .widget_categories ul, .widget_meta ul{margin: 0;border: 1px solid #0092ff;padding: 0 10px;font-size: 15px;}.article-inner:before, .blog-archive .large-9:before, .page-wrapper .large-9:before{background: url("/wp-content/uploads/2018/04/grd-border.png") top right repeat-y;content: '';position: absolute;top: 0;right: -5px;width: 20px;height: 100%;z-index: 8;}.blog-single .large-3, .blog-archive .post-sidebar, .page-wrapper .large-3{padding-left: 5px !important; padding-right: 15px;}.meta-post-danh-muc{display:none}.blog-archive .post-item .post-title{font-size:17px}.blog-archive .post-item .box-text{padding-right:0}.blog-archive .post-item {padding-bottom:4px;padding-top:4px; border-bottom:1px dotted #ececec; margin-right:10px}.blog-archive .post-item .post-title{margin-bottom:10px; color: #005dbd}.blog-archive .post-item .from_the_blog_excerpt {margin-top:10px}.blog-archive .meta-post-danh-muc{display:block !important; font-size:13px; color: gray}.blog-archive .meta-post-danh-muc .category a, .blog-archive .meta-post-danh-muc .tac-gia a {color: gray}.blog-archive .meta-post-danh-muc .category, .blog-archive .meta-post-danh-muc .tac-gia{padding-right:10px}.blog-archive .badge.post-date{display:none}.blog-single #comments{margin-right:15px}.blog-single .row-large>.col, .blog-archive .large-9{padding: 0 15px 20px;}.entry-header-text-top, .entry-content{padding:0}footer.entry-meta{padding: 10px 0;font-size: 14px;border-bottom: 0px solid #ececec;}.footer-single-cat, .footer-single-tag{margin-bottom:10px}.footer-single-cat a{color: #0092ff}.footer-single-tag a{background: #ececec;padding: 5px;border-radius: 3px; border: 1px solid #dddddd}.footer-single-tag a:hover{background: #d8d8d8}.row.row-small{max-width: 1193px;}svg{background: #0092ff; border: 2px solid #f9edd6 !important; color: white}.slider-nav-push:not(.slider-nav-simple) .flickity-prev-next-button svg{margin-top:0}.thong-tin-lien-he .clearboth{clear:both}.thong-tin-lien-he {display: inline-block;background: #0092ff; color: #fff;padding: 15px;border-radius: 3px;margin-bottom: 0px;border: 0px dashed #2a5584;}.thong-tin-lien-he .tieu-de {font-size: 20px;font-weight: 500;margin-bottom: 10px;}.thong-tin-lien-he .thong-tin {margin-bottom: 0;width: 50%;float: left;display: inline-block;}.thong-tin-lien-he textarea {min-height: 59px;}.related.product-section {border-top: 0;}.thong-tin-lien-he .right formơ{margin-bottom:0}.thong-tin-lien-he .right input[type='submit']{margin: 0;border-radius: 4px;text-transform: none;font-weight: normal;letter-spacing: 0;}.thong-tin-lien-he .right input[type='tel'], .thong-tin-lien-he .rightinput[type='text'],.thong-tin-lien-he .right textarea{border-radius:4px; box-shadow:none}.thong-tin .des{display: block;margin-bottom: 10px;font-size: 15px;}.thong-tin-lien-he .ten-cong-ty {font-weight: 500;color: #fff;}.thong-tin-lien-he ul li {margin-left:20px; font-size:15px;margin-bottom: 0;list-style: square;}.thong-tin-lien-he .right {width: 50%;float: right;display: inline-block;background: #ffffff;padding: 10px;color: #ff5400;font-size: 15px;} .thong-tin-lien-he ul li .info {color: #ff0000;}.rps_wrapper {height: 350px;background: #005c7d;color: #333333;border: 1px solid #F1F1F1;font-family: Verdana,Geneva,sans-serif;font-size: 12px;line-height: 16px;}/* Custom CSS Mobile */@media (max-width: 549px){.header-inner {padding:5px;width: 100%;background: url(https://bvdkkvquangnam.org/wp-content/uploads/2020/12/Header_new-copy.png);background-size: cover;}#logo img{display:none}}.label-new.menu-item > a:after{content:"New";}.label-hot.menu-item > a:after{content:"Hot";}.label-sale.menu-item > a:after{content:"Sale";}.label-popular.menu-item > a:after{content:"Popular";}</style>		<style type="text/css" id="wp-custom-css">
+			h1, h2, h3, h4, h5, h6, .heading-font{
+    color: #005c7d;
+	  font-weight: 000;
+    font-size: 14px;
+}
+.bg {
+      background: #f5f6f7;
+}		</style>
+		<style id="sccss">/* Điền CSS tùy chỉnh ở đây */
+.chuyenkhoa #toc_container {
+	display:none!important;
+} 
+
+.html .social-icons .button {
+	color: #fff;
+}
+.html .social-icons .button i {
+	top: 0;
+}
+.nav-small.nav>li.html {
+	display: flex;
+}
+
+#section_505197941 .section-bg-overlay {
+	background: #2aacf1;
+}
+
+.header-inner {
+	width: 100%;
+}
+@media (max-width: 549px) {
+	.header-main {
+    height: 94px;
+		margin-bottom:10px;
+		margin-top:10px;
+	}
+}
+.group-button a i:before {
+    display: inline-block;
+    margin-right: 14px;
+    vertical-align: middle;
+}
+.group-button .button {
+	padding: 8px 12px;
+}
+.icon-sf-calc:before {
+    content: url('/wp-content/uploads/2022/06/icon-calc-hover.png');
+}
+
+.icon-sf-doctor:before {
+    content: url('/wp-content/uploads/2022/06/icon-tool-hover.png');
+}
+.tbs__banner {
+	position: relative;
+}
+.tbs__title {
+	padding: 30px 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 24px;
+    color: #2aacf1;
+}
+.tbs__banner__buttons {
+	position: absolute;
+    top: 15%;
+    left: 24px;
+}
+.tbs__grid {
+	display:grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 30px;
+	padding: 0 24px;
+}
+@media (min-width: 768px) {
+	.tbs__grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+.tbs__item-title {
+		padding-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.tbs__item-excerpt {
+	text-align: center;
+	font-size: 13px;
+}
+@media (min-width: 768px) {
+	.tbs__item-excerpt {
+	font-size: 15px;
+}
+}
+
+
+.tbs__paginate {
+	display: flex;
+	padding: 24px;
+	justify-content: center;
+}
+.tbs__paginate span, .tbs__paginate a {
+
+    box-sizing: border-box;
+    font-size: 18px !important;
+    font-weight: bold;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    outline: 0;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+	width: 40px;
+    height: 40px;
+    line-height: 38px;
+	    display: flex;
+    align-items: center;
+    justify-content: center;
+	margin-right: 7px;
+}
+.tbs__paginate a:hover, .tbs__paginate span {
+    color: #ffffff !important;
+    background-color: #2aacf1;
+    box-shadow: none;
+    border-color: #2aacf1;
+}
+.tbs__form {
+	   display: grid;
+
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 24px;
+	width: 100%;
+	
+}
+.tbs__form_submit {
+	margin-right:0;
+	color: #fff;
+}
+@media (min-width: 768px) {
+	.tbs__form {
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
+}
+
+div.title.bg {
+    background-image: linear-gradient(to right, #2aacf1, #2aacf1);
+}
+.header-button .icon {
+	border-color: rgba(255,255,255,0.5);
+}
+</style></head>
+
+<body class="error404 full-width bg-fill lightbox nav-dropdown-has-shadow nav-dropdown-has-border">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg>
+<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+
+<div id="wrapper">
+
+	
+	<header id="header" class="header has-sticky sticky-jump">
+		<div class="header-wrapper">
+			<div id="top-bar" class="header-top hide-for-sticky flex-has-center">
+    <div class="flex-row container">
+      <div class="flex-col hide-for-medium flex-left">
+          <ul class="nav nav-left medium-nav-center nav-small  nav-divided">
+              <li class="html custom html_topbar_left"><marquee behavior="" direction=""><span style="color: white; font-size: 110%;">Chào mừng đến với Bệnh viện đa khoa khu vực Quảng Nam</span> </marquee></li>          </ul>
+      </div>
+
+      <div class="flex-col hide-for-medium flex-center">
+          <ul class="nav nav-center nav-small  nav-divided">
+              <li class="html custom html_topbar_right"><span style="color: white; font-size: 110%;">Thời gian làm việc T2-T6: 07:00 - 17:30</span></li>          </ul>
+      </div>
+
+      <div class="flex-col hide-for-medium flex-right">
+         <ul class="nav top-bar-nav nav-right nav-small  nav-divided">
+              <li class="html header-social-icons ml-0">
+	<div class="social-icons follow-icons" ><a href="https://www.facebook.com/bvdkkvqnam" target="_blank" data-label="Facebook"  rel="noopener noreferrer nofollow" class="icon button circle is-outline facebook tooltip" title="Follow on Facebook"><i class="icon-facebook" ></i></a><a href="http://url" target="_blank" rel="noopener noreferrer nofollow" data-label="Instagram" class="icon button circle is-outline  instagram tooltip" title="Follow on Instagram"><i class="icon-instagram" ></i></a><a href="http://url" target="_blank"  data-label="Twitter"  rel="noopener noreferrer nofollow" class="icon button circle is-outline  twitter tooltip" title="Follow on Twitter"><i class="icon-twitter" ></i></a><a href="mailto:your@email" data-label="E-mail"  rel="nofollow" class="icon button circle is-outline  email tooltip" title="Send us an email"><i class="icon-envelop" ></i></a></div></li>          </ul>
+      </div>
+
+            <div class="flex-col show-for-medium flex-grow">
+          <ul class="nav nav-center nav-small mobile-nav  nav-divided">
+              <li class="html custom html_topbar_left"><marquee behavior="" direction=""><span style="color: white; font-size: 110%;">Chào mừng đến với Bệnh viện đa khoa khu vực Quảng Nam</span> </marquee></li>          </ul>
+      </div>
+      
+    </div>
+</div>
+<div id="masthead" class="header-main hide-for-sticky has-sticky-logo">
+      <div class="header-inner flex-row container logo-left medium-logo-center" role="navigation">
+
+          <!-- Logo -->
+          <div id="logo" class="flex-col logo">
+            <!-- Header logo -->
+<a href="https://bvdkkvquangnam.org/" title="Bệnh viện đa khoa khu vực Quảng Nam - Sự hài lòng của bạn là mục tiêu của chúng tôi!" rel="home">
+    <img width="488" height="115" src="http://localhost:8080/pmc/wp-content/uploads/2019/07/logo-.png" class="header-logo-sticky" alt="Bệnh viện đa khoa khu vực Quảng Nam"/><img width="488" height="115" src="https://bvdkkvquangnam.org/wp-content/uploads/2020/12/Header_new-copy.png" class="header_logo header-logo" alt="Bệnh viện đa khoa khu vực Quảng Nam"/><img  width="488" height="115" src="https://bvdkkvquangnam.org/wp-content/uploads/2023/04/z4233561693707_47ff55edf871dab29b496950d9795881-1.jpg" class="header-logo-dark" alt="Bệnh viện đa khoa khu vực Quảng Nam"/></a>
+          </div>
+
+          <!-- Mobile Left Elements -->
+          <div class="flex-col show-for-medium flex-left">
+            <ul class="mobile-nav nav nav-left ">
+              <li class="nav-icon has-icon">
+  <div class="header-button">		<a href="#" data-open="#main-menu" data-pos="left" data-bg="main-menu-overlay" data-color="" class="icon primary button round is-small" aria-label="Menu" aria-controls="main-menu" aria-expanded="false">
+		
+		  <i class="icon-menu" ></i>
+		  		</a>
+	 </div> </li>            </ul>
+          </div>
+
+          <!-- Left Elements -->
+          <div class="flex-col hide-for-medium flex-left
+            flex-grow">
+            <ul class="header-nav header-nav-main nav nav-left  nav-spacing-small nav-uppercase" >
+              <li class="header-block"><div class="header-block-block-1"><div class="row"  id="row-798215588">
+
+
+	<div id="col-1649276259" class="col medium-5 small-12 large-5"  >
+		<div class="col-inner"  >
+			
+			
+
+
+		</div>
+			</div>
+
+	
+
+	<div id="col-1553164584" class="col medium-6 small-12 large-6"  >
+		<div class="col-inner"  >
+			
+			
+
+
+		<div class="icon-box featured-box icon-box-left text-left"  >
+					<div class="icon-box-img" style="width: 50px">
+				<div class="icon">
+					<div class="icon-inner" >
+						<img width="128" height="128" src="https://bvdkkvquangnam.org/wp-content/uploads/2020/12/FontAwesome_f0950_128.png" class="attachment-medium size-medium" alt="" loading="lazy" />					</div>
+				</div>
+			</div>
+				<div class="icon-box-text last-reset">
+									
+
+	<div id="gap-1026975422" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-1026975422 {
+  padding-top: 16px;
+}
+</style>
+	</div>
+	
+
+<h5 style="text-align: left; color:red;">Đường dây nóng: 0967931313</h5>
+
+		</div>
+	</div>
+	
+	
+
+		<div class="icon-box featured-box icon-box-left text-left"  >
+					<div class="icon-box-img" style="width: 50px">
+				<div class="icon">
+					<div class="icon-inner" >
+						<img width="128" height="128" src="https://bvdkkvquangnam.org/wp-content/uploads/2020/12/FontAwesome_f0031_128.png" class="attachment-medium size-medium" alt="" loading="lazy" />					</div>
+				</div>
+			</div>
+				<div class="icon-box-text last-reset">
+									
+
+	<div id="gap-1204177231" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-1204177231 {
+  padding-top: 16px;
+}
+</style>
+	</div>
+	
+
+<h5 style="text-align: left; color:red;">bvdkkvqnam@gmail.com</h5>
+
+		</div>
+	</div>
+	
+	
+
+		</div>
+			</div>
+
+	
+
+</div></div></li>            </ul>
+          </div>
+
+          <!-- Right Elements -->
+          <div class="flex-col hide-for-medium flex-right">
+            <ul class="header-nav header-nav-main nav nav-right  nav-spacing-small nav-uppercase">
+                          </ul>
+          </div>
+
+          <!-- Mobile Right Elements -->
+          <div class="flex-col show-for-medium flex-right">
+            <ul class="mobile-nav nav nav-right ">
+                          </ul>
+          </div>
+
+      </div>
+     
+      </div><div id="wide-nav" class="header-bottom wide-nav nav-dark flex-has-center hide-for-medium">
+    <div class="flex-row container">
+
+                        <div class="flex-col hide-for-medium flex-left">
+                <ul class="nav header-nav header-bottom-nav nav-left  nav-outline nav-size-medium nav-spacing-medium nav-uppercase">
+                    <li class="nav-icon has-icon">
+  <div class="header-button">		<a href="#" data-open="#main-menu" data-pos="left" data-bg="main-menu-overlay" data-color="" class="icon primary button round is-small" aria-label="Menu" aria-controls="main-menu" aria-expanded="false">
+		
+		  <i class="icon-menu" ></i>
+		  		</a>
+	 </div> </li>                </ul>
+            </div>
+            
+                        <div class="flex-col hide-for-medium flex-center">
+                <ul class="nav header-nav header-bottom-nav nav-center  nav-outline nav-size-medium nav-spacing-medium nav-uppercase">
+                    <li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-68 menu-item-design-default"><a href="https://bvdkkvquangnam.org/" class="nav-top-link">Trang chủ</a></li>
+<li id="menu-item-2707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2707 menu-item-design-default"><a href="https://bvdkkvquangnam.org/gioi-thieu/" class="nav-top-link">Giới thiệu</a></li>
+<li id="menu-item-3908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3908 menu-item-design-default"><a href="https://bvdkkvquangnam.org/chuyen-khoa/" class="nav-top-link">Chuyên khoa</a></li>
+<li id="menu-item-5807" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5807 menu-item-design-default"><a href="https://bvdkkvquangnam.org/blogs/dao-tao/" class="nav-top-link">Đào Tạo</a></li>
+<li id="menu-item-5811" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5811 menu-item-design-default"><a href="https://bvdkkvquangnam.org/chuyen-doi-so/" class="nav-top-link">Chuyển Đổi Số</a></li>
+<li id="menu-item-2729" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2729 menu-item-design-default"><a href="https://bvdkkvquangnam.org/lien-he/" class="nav-top-link">Liên hệ</a></li>
+                </ul>
+            </div>
+            
+                        <div class="flex-col hide-for-medium flex-right flex-grow">
+              <ul class="nav header-nav header-bottom-nav nav-right  nav-outline nav-size-medium nav-spacing-medium nav-uppercase">
+                   <li class="header-search-form search-form html relative has-icon">
+	<div class="header-search-form-wrapper">
+		<div class="searchform-wrapper ux-search-box relative form-flat is-normal"><form method="get" class="searchform" action="https://bvdkkvquangnam.org/" role="search">
+		<div class="flex-row relative">
+			<div class="flex-col flex-grow">
+	   	   <input type="search" class="search-field mb-0" name="s" value="" id="s" placeholder="Bạn cần tìm gì..." />
+			</div>
+			<div class="flex-col">
+				<button type="submit" class="ux-search-submit submit-button secondary button icon mb-0" aria-label="Submit">
+					<i class="icon-search" ></i>				</button>
+			</div>
+		</div>
+    <div class="live-search-results text-left z-top"></div>
+</form>
+</div>	</div>
+</li>              </ul>
+            </div>
+            
+            
+    </div>
+</div>
+
+<div class="header-bg-container fill"><div class="header-bg-image fill"></div><div class="header-bg-color fill"></div></div>		</div>
+	</header>
+
+	
+	<main id="main" class="">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main container pt" role="main">
+			<section class="error-404 not-found mt mb">
+				<div class="row">
+					<div class="col medium-3"><span class="header-font" style="font-size: 6em; font-weight: bold; opacity: .3">404</span></div>
+					<div class="col medium-9">
+						<header class="page-title">
+							<h1 class="page-title">Oops! That page can&rsquo;t be found.</h1>
+						</header>
+						<div class="page-content">
+							<p>It looks like nothing was found at this location. Maybe try one of the links below or a search?</p>
+							<form method="get" class="searchform" action="https://bvdkkvquangnam.org/" role="search">
+		<div class="flex-row relative">
+			<div class="flex-col flex-grow">
+	   	   <input type="search" class="search-field mb-0" name="s" value="" id="s" placeholder="Bạn cần tìm gì..." />
+			</div>
+			<div class="flex-col">
+				<button type="submit" class="ux-search-submit submit-button secondary button icon mb-0" aria-label="Submit">
+					<i class="icon-search" ></i>				</button>
+			</div>
+		</div>
+    <div class="live-search-results text-left z-top"></div>
+</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+
+</main>
+
+<footer id="footer" class="footer-wrapper">
+
+		<section class="section footer-block dark" id="section_1083578048">
+		<div class="bg section-bg fill bg-fill  bg-loaded" >
+
+			
+			<div class="section-bg-overlay absolute fill"></div>
+			
+
+		</div>
+
+		<div class="section-content relative">
+			
+
+<div class="row"  id="row-1598433955">
+
+
+	<div id="col-724331931" class="col small-12 large-12"  >
+		<div class="col-inner"  >
+			
+			
+
+<div class="row"  id="row-260283336">
+
+
+	<div id="col-743085386" class="col medium-4 small-6 large-4"  >
+		<div class="col-inner dark"  >
+			
+			
+
+<p><strong>THỜI GIAN LÀM VIỆC</strong></p>
+<p><strong>Khám bệnh ngoại trú: từ 7h00-17h00</strong><br /><i>(Từ thứ 2 đến thứ 6)</i></p>
+<hr />
+<p><strong>Tiếp nhận cấp cứu: 24/24h</strong><br /><i>(Tất cả các ngày kể cả ngày lễ, T7&CN)</i></p>
+<hr />
+<p><strong>Điều trị nội trú: 24/24h</strong><br /><i>(Tất cả các ngày kể cả ngày lễ, T7&CN)</i></p>
+
+		</div>
+			</div>
+
+	
+
+	<div id="col-61326880" class="col cot3 medium-4 small-12 large-4"  >
+		<div class="col-inner dark"  >
+			
+			
+
+<p><strong><span style="color: #fff;">BẢN ĐỒ CHỈ ĐƯỜNG</span></strong></p>
+<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30697.983665531527!2d108.23274591930506!3d15.896075387519067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31420f859fd829f3%3A0x795e69ee9309ff98!2zQuG7h25oIFZp4buHbiDEkGEgS2hvYSBLaHUgVuG7sWMgUXXhuqNuZyBOYW0!5e0!3m2!1svi!2s!4v1600510051167!5m2!1svi!2s" width="380" height="230" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></p>
+
+		</div>
+			</div>
+
+	
+
+	<div id="col-945161143" class="col medium-4 small-6 large-4"  >
+		<div class="col-inner dark"  >
+			
+			
+
+<p><strong>LIÊN HỆ</strong></p>
+<p><i class="fa fa-stethoscope fa- "></i> Số 24 Lê Hữu Trác, phường Điện Bàn, Thành Phố Đà Nẵng</p>
+<p><i class="fa fa-volume-control-phone fa- "></i> Cấp cứu: 0235 3867 388</p>
+<p><i class="fa fa-volume-control-phone fa- "></i> Hotline: <span class="hotline"><span class="num">0967931313</span></span></p>
+<p><a href="mailto:bvdkkvqnam@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-envelope fa- "></i> <br />
+bvdkkvqnam@gmail.com</a></p>
+
+		</div>
+			</div>
+
+	
+
+</div>
+
+		</div>
+			</div>
+
+	
+
+</div>
+
+		</div>
+
+		
+<style>
+#section_1083578048 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: rgba(234, 234, 234, 0.5);
+}
+#section_1083578048 .section-bg-overlay {
+  background-color: rgb(42, 172, 241);
+}
+</style>
+	</section>
+	
+<div class="absolute-footer dark medium-text-center text-center">
+  <div class="container clearfix">
+
+    
+    <div class="footer-primary pull-left">
+            <div class="copyright-footer">
+        <a href="https://www.bvdkkvquangnam.org">Copyright 2019 © www.bvdkkvquangnam.org | Bệnh viện đa khoa khu vực Quảng Nam</a>      </div>
+          </div>
+  </div>
+</div>
+<a href="#top" class="back-to-top button icon invert plain fixed bottom z-1 is-outline left hide-for-medium circle" id="top-link"><i class="icon-angle-up" ></i></a>
+
+</footer>
+
+</div>
+<div id="vcdesktop" class="vcdesktop">
+<div id="vietcontact">
+<button onclick="window.location.href='tel:02353867388'" id="vc-phone" type="button"><img style="width:35px;" src="https://bvdkkvquangnam.org/wp-content/plugins/viet-contact/inc/img/phone.svg" /><span>02353867388</span></button>
+<button onclick="window.location.href='mailto:bvdkkvqnam@gmail.com'" id="vc-email" type="button"><img style="width:35px;" src="https://bvdkkvquangnam.org/wp-content/plugins/viet-contact/inc/img/email.svg" /><span>Email</span></button>
+<button onclick="window.open('https://chat.zalo.me/?phone=02353867388')" id="vc-zalo" type="button"><img style="width:35px;" src="https://bvdkkvquangnam.org/wp-content/plugins/viet-contact/inc/img/zalo.svg" /><span>Zalo</span></button> 
+<button onclick="window.open('https://m.me/')" id="vc-messenger" type="button"><img style="width:35px;" src="https://bvdkkvquangnam.org/wp-content/plugins/viet-contact/inc/img/messenger.svg" /><span>Messenger</span></button> 
+</div>
+<div id="vcnutan">
+<button id="vc-andi" onclick="vcandi()"><img style="width:35px;" src="https://bvdkkvquangnam.org/wp-content/plugins/viet-contact/inc/img/andi.svg" /><span>Ẩn</span></button>
+<button id="vc-anhien" style="display:none" onclick="vcanhien()"><img style="width:35px;" src="https://bvdkkvquangnam.org/wp-content/plugins/viet-contact/inc/img/anhien.svg" /><span>Hiện</span></button>
+</div>
+</div>
+
+<div class="vcmobile Pro1"  style="background:#2aacf1 !important">
+<button onclick="window.location.href='tel:02353867388'" id="vc-phone2" type="button"><img style="width:35px;" src="https://bvdkkvquangnam.org/wp-content/plugins/viet-contact/inc/img/phone.svg" /></button>
+<button onclick="window.location.href='mailto:bvdkkvqnam@gmail.com'" id="vc-email2" type="button"><img style="width:35px;" src="https://bvdkkvquangnam.org/wp-content/plugins/viet-contact/inc/img/email.svg" /></button>
+<button onclick="window.open('https://chat.zalo.me/?phone=02353867388')" id="vc-zalo2" type="button"><img style="width:35px;" src="https://bvdkkvquangnam.org/wp-content/plugins/viet-contact/inc/img/zalo.svg" /></button> 
+<button onclick="window.open('https://m.me/')" id="vc-messenger2" type="button"><img style="width:35px;" src="https://bvdkkvquangnam.org/wp-content/plugins/viet-contact/inc/img/messenger.svg" /></button> 
+</div>
+
+
+<div id="main-menu" class="mobile-sidebar no-scrollbar mfp-hide">
+	<div class="sidebar-menu no-scrollbar ">
+		<ul class="nav nav-sidebar nav-vertical nav-uppercase">
+			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-68"><a href="https://bvdkkvquangnam.org/">Trang chủ</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2707"><a href="https://bvdkkvquangnam.org/gioi-thieu/">Giới thiệu</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3908"><a href="https://bvdkkvquangnam.org/chuyen-khoa/">Chuyên khoa</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5807"><a href="https://bvdkkvquangnam.org/blogs/dao-tao/">Đào Tạo</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5811"><a href="https://bvdkkvquangnam.org/chuyen-doi-so/">Chuyển Đổi Số</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2729"><a href="https://bvdkkvquangnam.org/lien-he/">Liên hệ</a></li>
+		</ul>
+	</div>
+</div>
+<script type='text/javascript' src='https://bvdkkvquangnam.org/wp-content/plugins/embed-any-document/js/pdfobject.min.js?ver=2.6.1' id='awsm-ead-pdf-object-js'></script>
+<script type='text/javascript' id='awsm-ead-public-js-extra'>
+/* <![CDATA[ */
+var eadPublic = [];
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://bvdkkvquangnam.org/wp-content/plugins/embed-any-document/js/embed-public.min.js?ver=2.6.1' id='awsm-ead-public-js'></script>
+<script type='text/javascript' src='https://bvdkkvquangnam.org/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9' id='regenerator-runtime-js'></script>
+<script type='text/javascript' src='https://bvdkkvquangnam.org/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/bvdkkvquangnam.org\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://bvdkkvquangnam.org/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.6.1' id='contact-form-7-js'></script>
+<script type='text/javascript' id='toc-front-js-extra'>
+/* <![CDATA[ */
+var tocplus = {"visibility_show":"Hi\u1ec3n","visibility_hide":"\u1ea8n","width":"Auto"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://bvdkkvquangnam.org/wp-content/plugins/table-of-contents-plus/front.min.js?ver=2002' id='toc-front-js'></script>
+<script type='text/javascript' src='https://bvdkkvquangnam.org/wp-content/plugins/viet-contact/js/viet-contact.js?ver=1.0' id='Viet-contact-js-js'></script>
+<script type='text/javascript' src='https://bvdkkvquangnam.org/wp-includes/js/hoverIntent.min.js?ver=1.10.2' id='hoverIntent-js'></script>
+<script type='text/javascript' id='flatsome-js-js-extra'>
+/* <![CDATA[ */
+var flatsomeVars = {"ajaxurl":"https:\/\/bvdkkvquangnam.org\/wp-admin\/admin-ajax.php","rtl":"","sticky_height":"30","lightbox":{"close_markup":"<button title=\"%title%\" type=\"button\" class=\"mfp-close\"><svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-x\"><line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"><\/line><line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"><\/line><\/svg><\/button>","close_btn_inside":false},"user":{"can_edit_pages":false},"i18n":{"mainMenu":"Main Menu"},"options":{"cookie_notice_version":"1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://bvdkkvquangnam.org/wp-content/themes/flatsome/assets/js/flatsome.js?ver=3.13.0' id='flatsome-js-js'></script>
+<script type='text/javascript' src='https://bvdkkvquangnam.org/wp-content/themes/flatsome/inc/extensions/flatsome-lazy-load/flatsome-lazy-load.js?ver=3.13.0' id='flatsome-lazy-js'></script>
+
+</body>
+</html>

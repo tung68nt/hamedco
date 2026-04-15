@@ -3,14 +3,39 @@
 import { useState, useEffect, useRef } from "react";
 
 /**
- * FloatingContact — Floating contact widget (bottom-right)
+ * FloatingContact — Floating contact widget + back-to-top (bottom-right)
  * Zalo, Hotline, Facebook messenger
  */
 export default function FloatingContact() {
   const [open, setOpen] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const [showBackToTop, setShowBackToTop] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const lastScrollY = useRef(0);
 
-  // Close on outside click
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+      const delta = currentY - lastScrollY.current;
+
+      if (currentY <= 100) {
+        setVisible(true);
+        setShowBackToTop(false);
+      } else if (delta > 0) {
+        setVisible(false);
+        setShowBackToTop(false);
+      } else {
+        setVisible(true);
+        setShowBackToTop(currentY > 600);
+      }
+
+      lastScrollY.current = currentY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (ref.current && !ref.current.contains(e.target as Node)) {
@@ -21,8 +46,23 @@ export default function FloatingContact() {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <div className={`floating-cta${open ? " open" : ""}`} ref={ref}>
+    <div className={`floating-cta${open ? " open" : ""}${visible ? "" : " hidden"}`} ref={ref}>
+      {/* Back to Top */}
+      <button
+        className={`floating-top${showBackToTop ? " visible" : ""}`}
+        onClick={scrollToTop}
+        aria-label="Quay lên đầu trang"
+      >
+        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+      </button>
+
       {/* Contact Panel */}
       <div className="floating-panel" role="dialog" aria-label="Liên hệ nhanh">
         <div className="floating-panel-header">
@@ -30,7 +70,6 @@ export default function FloatingContact() {
           <p>Chúng tôi sẵn sàng hỗ trợ bạn</p>
         </div>
         <div className="floating-panel-list">
-          {/* Hotline */}
           <a href="tel:+84869009486" className="floating-panel-item">
             <div className="floating-panel-icon hotline">
               <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -44,7 +83,6 @@ export default function FloatingContact() {
             <span className="floating-panel-action hotline">Gọi →</span>
           </a>
 
-          {/* Zalo */}
           <a href="https://zalo.me/0869009486" target="_blank" rel="noopener noreferrer" className="floating-panel-item">
             <div className="floating-panel-icon zalo">
               <img src="https://cdn.haitrieu.com/wp-content/uploads/2022/01/Logo-Zalo-Arc.png" alt="Zalo" width="24" height="24" style={{ objectFit: 'contain' }} />
@@ -56,7 +94,6 @@ export default function FloatingContact() {
             <span className="floating-panel-action" style={{ color: "#0068FF" }}>Mở →</span>
           </a>
 
-          {/* Facebook */}
           <a href="https://www.facebook.com/hamedco" target="_blank" rel="noopener noreferrer" className="floating-panel-item">
             <div className="floating-panel-icon fb">
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/960px-2023_Facebook_icon.svg.png" alt="Facebook" width="24" height="24" style={{ objectFit: 'contain' }} />
@@ -68,7 +105,6 @@ export default function FloatingContact() {
             <span className="floating-panel-action" style={{ color: "#1877F2" }}>Mở →</span>
           </a>
 
-          {/* Email */}
           <a href="mailto:info@hamedco.vn" className="floating-panel-item">
             <div className="floating-panel-icon" style={{ background: "linear-gradient(135deg, rgba(232,131,74,0.08), rgba(232,131,74,0.16))", color: "var(--color-accent)" }}>
               <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">

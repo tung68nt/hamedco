@@ -44,32 +44,24 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
     <div className="quote-modal-overlay fadeIn" role="dialog" aria-modal="true" aria-labelledby="quote-title">
       <div className="quote-modal-backdrop" onClick={onClose}></div>
       
-      <div className="quote-modal-container slideUp" style={{ maxWidth: "600px", borderRadius: "1.5rem", overflow: "hidden", background: "var(--color-white)", boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" }}>
-        <button className="quote-modal-close" onClick={onClose} aria-label="Đóng popup" style={{
-          position: "absolute", top: "1rem", right: "1rem", background: "rgba(255,255,255,0.8)", border: "none",
-          width: "36px", height: "36px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center",
-          cursor: "pointer", zIndex: 10, color: "var(--color-primary-dark)", transition: "all 0.2s ease"
-        }}>
+      <div className="quote-modal-container slideUp">
+        <button className="quote-modal-close" onClick={onClose} aria-label="Đóng popup">
           <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
 
-        <div className="quote-modal-header" style={{
-          background: "linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%)",
-          color: "var(--color-white)", padding: "2.5rem 2rem 2rem", position: "relative"
-        }}>
-          <div style={{ position: "absolute", top: 0, right: 0, bottom: 0, width: "50%", background: "url('/assets/images/header-pattern.svg') no-repeat right center", opacity: 0.1, pointerEvents: "none" }}></div>
-          <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "0.5rem" }}>
-            <div style={{ background: "rgba(255,255,255,0.2)", padding: "0.75rem", borderRadius: "1rem", display: "inline-flex" }}>
-              <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+        <div className="quote-modal-header">
+          <div className="quote-modal-header-row">
+            <div className="quote-modal-header-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
                 <line x1="22" y1="2" x2="11" y2="13"></line>
                 <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
               </svg>
             </div>
-            <h2 id="quote-title" style={{ margin: 0, fontSize: "1.75rem", fontWeight: 700 }}>{t("Yêu cầu báo giá", "Request a Quote")}</h2>
+            <h2 id="quote-title">{t("Yêu cầu báo giá", "Request a Quote")}</h2>
           </div>
-          <p style={{ margin: 0, opacity: 0.9, fontSize: "1.0625rem", lineHeight: 1.5, marginLeft: "4.25rem" }}>
+          <p>
             {t(
               "Để lại thông tin, chuyên viên tư vấn của HAMEDCO sẽ liên hệ lại ngay lập tức.",
               "Leave your details and a HAMEDCO consultant will contact you immediately."
@@ -89,36 +81,36 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
               <p style={{ color: "var(--color-neutral)" }}>{t("Cảm ơn bạn. Chúng tôi sẽ liên hệ lại sớm nhất.", "Thank you. We will get back to you shortly.")}</p>
             </div>
           ) : (
-            <form className="quote-modal-form" onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
-              <div className="form-group grid-2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+            <form className="quote-modal-form" onSubmit={handleSubmit}>
+              <div className="form-group grid-2">
                 <div className="form-field">
-                  <label htmlFor="quote-name" style={{ fontSize: "0.875rem", fontWeight: 600, color: "var(--color-neutral-dark)", marginBottom: "0.5rem", display: "block" }}>{t("Họ và tên *", "Full Name *")}</label>
-                  <input type="text" id="quote-name" className="form-input" style={{ width: "100%", padding: "0.75rem", border: "1px solid var(--color-gray-300)", borderRadius: "0.5rem", background: "var(--color-light)" }} placeholder="VD: Nguyễn Văn A" required />
+                  <label htmlFor="quote-name">{t("Họ và tên *", "Full Name *")}</label>
+                  <input type="text" id="quote-name" className="form-input" placeholder="VD: Nguyễn Văn A" required />
                 </div>
                 <div className="form-field">
-                  <label htmlFor="quote-phone" style={{ fontSize: "0.875rem", fontWeight: 600, color: "var(--color-neutral-dark)", marginBottom: "0.5rem", display: "block" }}>{t("Số điện thoại *", "Phone Number *")}</label>
-                  <input type="tel" id="quote-phone" className="form-input" style={{ width: "100%", padding: "0.75rem", border: "1px solid var(--color-gray-300)", borderRadius: "0.5rem", background: "var(--color-light)" }} placeholder="VD: 09xx xxx xxx" required />
-                </div>
-              </div>
-
-              <div className="form-group">
-                <div className="form-field">
-                  <label htmlFor="quote-email" style={{ fontSize: "0.875rem", fontWeight: 600, color: "var(--color-neutral-dark)", marginBottom: "0.5rem", display: "block" }}>{t("Email", "Email")}</label>
-                  <input type="email" id="quote-email" className="form-input" style={{ width: "100%", padding: "0.75rem", border: "1px solid var(--color-gray-300)", borderRadius: "0.5rem", background: "var(--color-light)" }} placeholder="VD: email@hospital.com" />
+                  <label htmlFor="quote-phone">{t("Số điện thoại *", "Phone Number *")}</label>
+                  <input type="tel" id="quote-phone" className="form-input" placeholder="VD: 09xx xxx xxx" required />
                 </div>
               </div>
 
               <div className="form-group">
                 <div className="form-field">
-                  <label htmlFor="quote-hospital" style={{ fontSize: "0.875rem", fontWeight: 600, color: "var(--color-neutral-dark)", marginBottom: "0.5rem", display: "block" }}>{t("Bệnh viện / Cơ sở y tế *", "Hospital / Clinic *")}</label>
-                  <input type="text" id="quote-hospital" className="form-input" style={{ width: "100%", padding: "0.75rem", border: "1px solid var(--color-gray-300)", borderRadius: "0.5rem", background: "var(--color-light)" }} placeholder="Tên bệnh viện hoặc phòng khám..." required />
+                  <label htmlFor="quote-email">{t("Email", "Email")}</label>
+                  <input type="email" id="quote-email" className="form-input" placeholder="VD: email@hospital.com" />
                 </div>
               </div>
 
               <div className="form-group">
                 <div className="form-field">
-                  <label htmlFor="quote-product" style={{ fontSize: "0.875rem", fontWeight: 600, color: "var(--color-neutral-dark)", marginBottom: "0.5rem", display: "block" }}>{t("Sản phẩm quan tâm", "Product of interest")}</label>
-                  <select id="quote-product" className="form-input select-input" style={{ width: "100%", padding: "0.75rem", border: "1px solid var(--color-gray-300)", borderRadius: "0.5rem", background: "var(--color-light)" }}>
+                  <label htmlFor="quote-hospital">{t("Bệnh viện / Cơ sở y tế *", "Hospital / Clinic *")}</label>
+                  <input type="text" id="quote-hospital" className="form-input" placeholder="Tên bệnh viện hoặc phòng khám..." required />
+                </div>
+              </div>
+
+              <div className="form-group">
+                <div className="form-field">
+                  <label htmlFor="quote-product">{t("Sản phẩm quan tâm", "Product of interest")}</label>
+                  <select id="quote-product" className="form-input select-input">
                     <option value="">{t("-- Chọn danh mục thiết bị --", "-- Select equipment category --")}</option>
                     <option value="ct">{t("Máy chụp cắt lớp vi tính (CT)", "CT Scanner")}</option>
                     <option value="mri">{t("Hệ thống cộng hưởng từ (MRI)", "MRI System")}</option>
@@ -130,13 +122,13 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
 
               <div className="form-group">
                 <div className="form-field">
-                  <label htmlFor="quote-message" style={{ fontSize: "0.875rem", fontWeight: 600, color: "var(--color-neutral-dark)", marginBottom: "0.5rem", display: "block" }}>{t("Ghi chú thêm", "Additional notes")}</label>
-                  <textarea id="quote-message" className="form-input" rows={3} style={{ width: "100%", padding: "0.75rem", border: "1px solid var(--color-gray-300)", borderRadius: "0.5rem", background: "var(--color-light)", resize: "vertical" }} placeholder="Bạn có yêu cầu đặc biệt gì không..."></textarea>
+                  <label htmlFor="quote-message">{t("Ghi chú thêm", "Additional notes")}</label>
+                  <textarea id="quote-message" className="form-input" rows={5} placeholder="Bạn có yêu cầu đặc biệt gì không..."></textarea>
                 </div>
               </div>
 
-              <div className="form-actions" style={{ marginTop: "0.5rem" }}>
-                <button type="submit" className="btn btn-primary btn-lg btn-block" disabled={loading} style={{ width: "100%", padding: "1rem", borderRadius: "0.5rem", fontSize: "1.125rem", display: "flex", justifyContent: "center", alignItems: "center", gap: "0.5rem" }}>
+              <div className="form-actions">
+                <button type="submit" className="btn btn-primary btn-lg btn-block" disabled={loading}>
                   {loading ? (
                     <span className="spinner"></span>
                   ) : (
