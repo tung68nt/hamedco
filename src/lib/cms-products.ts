@@ -1,58 +1,88 @@
-import { promises as fs } from 'fs';
-import path from 'path';
-import { ALL_PRODUCTS } from '@/data/products';
+import { createServerSupabase } from './supabase-server';
 
-const DATA_FILE = path.join(process.cwd(), 'src/data/cms-products.json');
-
-interface CMSProduct {
-  [key: string]: any;
+export function getSupabaseAdmin() {
+  return createServerSupabase();
 }
 
-interface CMSData {
-  products: CMSProduct[];
-  lastUpdated: string | null;
+export interface CMSProduct {
+  id: string;
+  slug: string;
+  name: string;
+  subtitle: { vi: string; en: string };
+  deviceType: string;
+  priceTier: string;
+  brand: string;
+  description: { vi: string; en: string };
+  longDescription: { vi: string; en: string };
+  images: string[];
+  thumbnail: string;
+  sourceUrl?: string;
+  videoUrl?: string;
+  highlights: { vi: string[]; en: string[] };
+  features: any[];
+  specifications: any[];
+  documents?: any[];
+  clinicalImages?: any[];
+  seo?: any;
+  _createdAt?: string;
+  _updatedAt?: string;
+  _source?: 'cms' | 'static';
 }
 
-async function readCMSData(): Promise<CMSData> {
-  try {
-    const data = await fs.readFile(DATA_FILE, 'utf-8');
-    return JSON.parse(data);
-  } catch {
-    return { products: [], lastUpdated: null };
+export async function getAllProducts(): Promise<CMSProduct[]> {
+  const supabase = getSupabaseAdmin();
+  const { data, error } = await supabase
+    .from('cms_products')
+    .select('*')
+    .order('created_at', { ascending: false });
+  
+  if (error) {
+    console.error('Error fetching products:', error);
+    return [];
   }
+  
+  return data || [];
 }
 
-async function writeCMSData(data: CMSData): Promise<void> {
-  await fs.writeFile(DATA_FILE, JSON.stringify(data, null, 2), 'utf-8');
+export async function getProductBySlug(slug: string): Promise<CMSProduct | null> {
+  const supabase = getSupabaseAdmin();
+  const { data, error } = await supabase
+    .from('cms_products')
+    .select('*')
+    .eq('slug', slug)
+    .single();
+  
+  if (error) {
+    console.error('Error fetching product:', error);
+    return null;
+  }
+  
+  return data;
 }
 
-export function getAllProducts(): any[] {
-  return ALL_PRODUCTS;
-}
-
-export async function getProductBySlug(slug: string): Promise<any | null> {
-  const product = ALL_PRODUCTS.find((p: any) => p.slug === slug);
-  return product || null;
-}
-
-export async function createProduct(productData: any): Promise<{ success: boolean; product?: any; error?: string }> {
+export async function createProduct(productData: any): Promise<{ success: boolean; product?: CMSProduct; error?: string }> {
   try {
-    const cmsData = await readCMSData();
+    const supabase = getSupabaseAdmin();
     
-    const newProduct: CMSProduct = {
+    const newProduct = {
       ...productData,
       id: `cms-${Date.now()}`,
-      _createdAt: new Date().toISOString(),
-      _updatedAt: new Date().toISOString(),
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
       _source: 'cms'
     };
     
-    cmsData.products.push(newProduct);
-    cmsData.lastUpdated = new Date().toISOString();
+    const { data, error } = await supabase
+      .from('cms_products')
+      .insert([newProduct])
+      .select()
+      .single();
     
-    await writeCMSData(cmsData);
+    if (error) {
+      return { success: false, error: error.message };
+    }
     
-    return { success: true, product: newProduct };
+    return { success: true, product: data };
   } catch (err: any) {
     console.error('Failed to create product:', err);
     return { success: false, error: err.message };
@@ -62,40 +92,42 @@ export async function createProduct(productData: any): Promise<{ success: boolea
 export async function updateProduct(
   slug: string, 
   productData: any
-): Promise<{ success: boolean; product?: any; error?: string }> {
+): Promise<{ success: boolean; product?: CMSProduct; error?: string }> {
   try {
-    const cmsData = await readCMSData();
+    const supabase = getSupabaseAdmin();
     
-    const index = cmsData.products.findIndex((p: CMSProduct) => p.slug === slug);
+    const { data: existing } = await supabase
+      .from('cms_products')
+      .select('*')
+      .eq('slug', slug)
+      .single();
     
-    if (index === -1) {
-      const staticProduct = ALL_PRODUCTS.find((p: any) => p.slug === slug);
-      if (!staticProduct) {
-        return { success: false, error: 'Sản phẩm không tồn tại' };
+    if (existing) {
+      const { data, error } = await supabase
+        .from('cms_products')
+        .update({ ...productData, updated_at: new Date().toISOString() })
+        .eq('slug', slug)
+        .select()
+        .single();
+      
+      if (error) {
+        return { success: false, error: error.message };
       }
       
-      const updated: CMSProduct = {
-        ...staticProduct,
-        ...productData,
-        id: staticProduct.id,
-        _updatedAt: new Date().toISOString(),
-        _source: 'cms'
-      };
-      
-      cmsData.products.push(updated);
+      return { success: true, product: data };
     } else {
-      cmsData.products[index] = {
-        ...cmsData.products[index],
-        ...productData,
-        _updatedAt: new Date().toISOString()
-      };
+      const { data, error } = await supabase
+        .from('cms_products')
+        .insert([{ ...productData, slug, updated_at: new Date().toISOString(), _source: 'cms' }])
+        .select()
+        .single();
+      
+      if (error) {
+        return { success: false, error: error.message };
+      }
+      
+      return { success: true, product: data };
     }
-    
-    cmsData.lastUpdated = new Date().toISOString();
-    await writeCMSData(cmsData);
-    
-    const updated = cmsData.products.find((p: CMSProduct) => p.slug === slug);
-    return { success: true, product: updated };
   } catch (err: any) {
     console.error('Failed to update product:', err);
     return { success: false, error: err.message };
@@ -104,17 +136,16 @@ export async function updateProduct(
 
 export async function deleteProduct(slug: string): Promise<{ success: boolean; error?: string }> {
   try {
-    const cmsData = await readCMSData();
+    const supabase = getSupabaseAdmin();
     
-    const index = cmsData.products.findIndex((p: CMSProduct) => p.slug === slug);
-    if (index === -1) {
-      return { success: false, error: 'Sản phẩm không tồn tại trong CMS' };
+    const { error } = await supabase
+      .from('cms_products')
+      .delete()
+      .eq('slug', slug);
+    
+    if (error) {
+      return { success: false, error: error.message };
     }
-    
-    cmsData.products.splice(index, 1);
-    cmsData.lastUpdated = new Date().toISOString();
-    
-    await writeCMSData(cmsData);
     
     return { success: true };
   } catch (err: any) {

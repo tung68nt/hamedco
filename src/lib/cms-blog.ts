@@ -1,61 +1,89 @@
-import { promises as fs } from 'fs';
-import path from 'path';
-import { BLOG_POSTS } from '@/data/blog';
+import { createServerSupabase } from './supabase-server';
 
-const DATA_FILE = path.join(process.cwd(), 'src/data/cms-blog.json');
-
-interface CMSPost {
-  [key: string]: any;
+export function getSupabaseAdmin() {
+  return createServerSupabase();
 }
 
-interface CMSBlogData {
-  posts: CMSPost[];
-  lastUpdated: string | null;
+export interface CMSPost {
+  id: string;
+  slug: string;
+  title: string;
+  subtitle: string;
+  category: string;
+  author: { name: string; avatar?: string };
+  publishedAt: string;
+  coverImage: string;
+  content: string;
+  tags: string[];
+  relatedPosts?: string[];
+  seo?: any;
+  created_at?: string;
+  updated_at?: string;
 }
 
-async function readCMSData(): Promise<CMSBlogData> {
-  try {
-    const data = await fs.readFile(DATA_FILE, 'utf-8');
-    return JSON.parse(data);
-  } catch {
-    return { posts: [], lastUpdated: null };
+export async function getAllPosts(): Promise<CMSPost[]> {
+  const supabase = getSupabaseAdmin();
+  const { data, error } = await supabase
+    .from('cms_posts')
+    .select('*')
+    .order('created_at', { ascending: false });
+  
+  if (error) {
+    console.error('Error fetching posts:', error);
+    return [];
   }
+  
+  return data || [];
 }
 
-async function writeCMSData(data: CMSBlogData): Promise<void> {
-  await fs.writeFile(DATA_FILE, JSON.stringify(data, null, 2), 'utf-8');
+export async function getPostBySlug(slug: string): Promise<CMSPost | null> {
+  const supabase = getSupabaseAdmin();
+  const { data, error } = await supabase
+    .from('cms_posts')
+    .select('*')
+    .eq('slug', slug)
+    .single();
+  
+  if (error) {
+    console.error('Error fetching post:', error);
+    return null;
+  }
+  
+  return data;
 }
 
-export function getAllPosts(): any[] {
-  return BLOG_POSTS;
-}
-
-export async function getPostBySlug(slug: string): Promise<any | null> {
-  const post = BLOG_POSTS.find((p: any) => p.slug === slug);
-  return post || null;
-}
-
-export async function createPost(postData: any): Promise<{ success: boolean; post?: any; error?: string }> {
+export async function createPost(postData: any): Promise<{ success: boolean; post?: CMSPost; error?: string }> {
   try {
-    const cmsData = await readCMSData();
+    const supabase = getSupabaseAdmin();
     
-    const existingSlug = BLOG_POSTS.find((p: any) => p.slug === postData.slug) || 
-                         cmsData.posts.find((p: CMSPost) => p.slug === postData.slug);
-    if (existingSlug) {
+    const { data: existing } = await supabase
+      .from('cms_posts')
+      .select('slug')
+      .eq('slug', postData.slug)
+      .single();
+    
+    if (existing) {
       return { success: false, error: 'Slug đã tồn tại' };
     }
     
-    const newPost: CMSPost = {
+    const newPost = {
       ...postData,
       id: `cms-${Date.now()}`,
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
     };
     
-    cmsData.posts.push(newPost);
-    cmsData.lastUpdated = new Date().toISOString();
+    const { data, error } = await supabase
+      .from('cms_posts')
+      .insert([newPost])
+      .select()
+      .single();
     
-    await writeCMSData(cmsData);
+    if (error) {
+      return { success: false, error: error.message };
+    }
     
-    return { success: true, post: newPost };
+    return { success: true, post: data };
   } catch (err: any) {
     console.error('Failed to create post:', err);
     return { success: false, error: err.message };
@@ -65,37 +93,22 @@ export async function createPost(postData: any): Promise<{ success: boolean; pos
 export async function updatePost(
   slug: string, 
   postData: any
-): Promise<{ success: boolean; post?: any; error?: string }> {
+): Promise<{ success: boolean; post?: CMSPost; error?: string }> {
   try {
-    const cmsData = await readCMSData();
+    const supabase = getSupabaseAdmin();
     
-    const index = cmsData.posts.findIndex((p: CMSPost) => p.slug === slug);
+    const { data, error } = await supabase
+      .from('cms_posts')
+      .update({ ...postData, updated_at: new Date().toISOString() })
+      .eq('slug', slug)
+      .select()
+      .single();
     
-    if (index === -1) {
-      const staticPost = BLOG_POSTS.find((p: any) => p.slug === slug);
-      if (!staticPost) {
-        return { success: false, error: 'Bài viết không tồn tại' };
-      }
-      
-      const updated: CMSPost = {
-        ...staticPost,
-        ...postData,
-        id: staticPost.id,
-      };
-      
-      cmsData.posts.push(updated);
-    } else {
-      cmsData.posts[index] = {
-        ...cmsData.posts[index],
-        ...postData,
-      };
+    if (error) {
+      return { success: false, error: error.message };
     }
     
-    cmsData.lastUpdated = new Date().toISOString();
-    await writeCMSData(cmsData);
-    
-    const updated = cmsData.posts.find((p: CMSPost) => p.slug === slug);
-    return { success: true, post: updated };
+    return { success: true, post: data };
   } catch (err: any) {
     console.error('Failed to update post:', err);
     return { success: false, error: err.message };
@@ -104,17 +117,16 @@ export async function updatePost(
 
 export async function deletePost(slug: string): Promise<{ success: boolean; error?: string }> {
   try {
-    const cmsData = await readCMSData();
+    const supabase = getSupabaseAdmin();
     
-    const index = cmsData.posts.findIndex((p: CMSPost) => p.slug === slug);
-    if (index === -1) {
-      return { success: false, error: 'Bài viết không tồn tại trong CMS' };
+    const { error } = await supabase
+      .from('cms_posts')
+      .delete()
+      .eq('slug', slug);
+    
+    if (error) {
+      return { success: false, error: error.message };
     }
-    
-    cmsData.posts.splice(index, 1);
-    cmsData.lastUpdated = new Date().toISOString();
-    
-    await writeCMSData(cmsData);
     
     return { success: true };
   } catch (err: any) {
