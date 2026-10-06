@@ -7,8 +7,12 @@ export const MRI_PRODUCTS = [
   {
     id: 'mr-5300',
     slug: '782110-mr-5300',
+<<<<<<< HEAD
     slug_en: 'mr-5300-mri-system',
     name: { vi: 'MR 5300', en: 'MR 5300' },
+=======
+    name: 'MR 5300',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Hệ thống cộng hưởng từ 1.5T',
       en: '1.5T MRI System'
@@ -72,8 +76,12 @@ export const MRI_PRODUCTS = [
   {
     id: 'ingenia-ambition-1.5t-s',
     slug: 'HC781359-ingenia-ambition-1-5t-s',
+<<<<<<< HEAD
     slug_en: 'ingenia-ambition-1-5t-s',
     name: { vi: 'Ingenia Ambition 1.5T S', en: 'Ingenia Ambition 1.5T S' },
+=======
+    name: 'Ingenia Ambition 1.5T S',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Hệ thống cộng hưởng từ 1.5T',
       en: '1.5T MRI System'
@@ -139,8 +147,12 @@ export const MRI_PRODUCTS = [
   {
     id: 'ingenia-ambition-1.5t-x',
     slug: 'HC781356-ingenia-ambition-1-5t-x',
+<<<<<<< HEAD
     slug_en: 'ingenia-ambition-1-5t-x',
     name: { vi: 'Ingenia Ambition 1.5T X', en: 'Ingenia Ambition 1.5T X' },
+=======
+    name: 'Ingenia Ambition 1.5T X',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Hệ thống cộng hưởng từ 1.5T cao cấp',
       en: 'Premium 1.5T MRI System'
@@ -205,8 +217,12 @@ export const MRI_PRODUCTS = [
   {
     id: 'ingenia-elition-3.0t-s',
     slug: 'HC781357-ingenia-elition-3-0t-s',
+<<<<<<< HEAD
     slug_en: 'ingenia-elition-3-0t-s',
     name: { vi: 'Ingenia Elition 3.0T S', en: 'Ingenia Elition 3.0T S' },
+=======
+    name: 'Ingenia Elition 3.0T S',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Hệ thống cộng hưởng từ 3.0T',
       en: '3.0T MRI System'
@@ -276,8 +292,12 @@ export const MRI_PRODUCTS = [
   {
     id: 'ingenia-elition-3.0t-x',
     slug: 'HC781358-ingenia-elition-3-0t-x',
+<<<<<<< HEAD
     slug_en: 'ingenia-elition-3-0t-x',
     name: { vi: 'Ingenia Elition 3.0T X', en: 'Ingenia Elition 3.0T X' },
+=======
+    name: 'Ingenia Elition 3.0T X',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Hệ thống cộng hưởng từ 3.0T cao cấp',
       en: 'Premium 3.0T MRI System'
@@ -340,8 +360,12 @@ export const MRI_PRODUCTS = [
   {
     id: 'mr-7700',
     slug: 'HCNMRF429-mr-7700',
+<<<<<<< HEAD
     slug_en: 'mr-7700-mri-system',
     name: { vi: 'MR 7700', en: 'MR 7700' },
+=======
+    name: 'MR 7700',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Hệ thống cộng hưởng từ 3.0T đỉnh cao',
       en: 'Ultimate 3.0T MRI System'

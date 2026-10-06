@@ -1,0 +1,11 @@
+/* ============================================================
+   HAMEDCO — Global Stylesheet for Next.js
+   Import legacy CSS in correct order (variables first)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "./css/variables.css";
+@import "./css/base.css";
+@import "./css/layout.css";
+@import "./css/components.css";
+@import "./css/pages.css";

@@ -12,17 +12,24 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
   const { t } = useLocale();
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+<<<<<<< HEAD
   const [error, setError] = useState("");
+=======
+>>>>>>> origin/main
 
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
+<<<<<<< HEAD
       setTimeout(() => {
         setSuccess(false);
         setError("");
       }, 300); // Reset after close
+=======
+      setTimeout(() => setSuccess(false), 300); // Reset after close
+>>>>>>> origin/main
     }
     return () => {
       document.body.style.overflow = "";
@@ -31,6 +38,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
 
   if (!isOpen) return null;
 
+<<<<<<< HEAD
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
@@ -87,6 +95,19 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
     } finally {
       setLoading(false);
     }
+=======
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    // Simulate API call
+    setTimeout(() => {
+      setLoading(false);
+      setSuccess(true);
+      setTimeout(() => {
+        onClose();
+      }, 2000);
+    }, 1200);
+>>>>>>> origin/main
   };
 
   return (
@@ -131,6 +152,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
             </div>
           ) : (
             <form className="quote-modal-form" onSubmit={handleSubmit}>
+<<<<<<< HEAD
               {error && <div style={{ color: "var(--color-error)", marginBottom: "1.5rem", backgroundColor: "var(--color-error-light)", padding: "12px", borderRadius: "8px", border: "1px solid var(--color-error-mid)", fontSize: "0.875rem" }}>{error}</div>}
               
               <div className="form-group grid-2">
@@ -141,27 +163,49 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                 <div className="form-field">
                   <label htmlFor="quote-phone">{t("Số điện thoại *", "Phone Number *")}</label>
                   <input type="tel" id="quote-phone" name="phone" className="form-input" placeholder="VD: 09xx xxx xxx" required />
+=======
+              <div className="form-group grid-2">
+                <div className="form-field">
+                  <label htmlFor="quote-name">{t("Họ và tên *", "Full Name *")}</label>
+                  <input type="text" id="quote-name" className="form-input" placeholder="VD: Nguyễn Văn A" required />
+                </div>
+                <div className="form-field">
+                  <label htmlFor="quote-phone">{t("Số điện thoại *", "Phone Number *")}</label>
+                  <input type="tel" id="quote-phone" className="form-input" placeholder="VD: 09xx xxx xxx" required />
+>>>>>>> origin/main
                 </div>
               </div>
 
               <div className="form-group">
                 <div className="form-field">
                   <label htmlFor="quote-email">{t("Email", "Email")}</label>
+<<<<<<< HEAD
                   <input type="email" id="quote-email" name="email" className="form-input" placeholder="VD: email@hospital.com" />
+=======
+                  <input type="email" id="quote-email" className="form-input" placeholder="VD: email@hospital.com" />
+>>>>>>> origin/main
                 </div>
               </div>
 
               <div className="form-group">
                 <div className="form-field">
                   <label htmlFor="quote-hospital">{t("Bệnh viện / Cơ sở y tế *", "Hospital / Clinic *")}</label>
+<<<<<<< HEAD
                   <input type="text" id="quote-hospital" name="hospital" className="form-input" placeholder="Tên bệnh viện hoặc phòng khám..." required />
+=======
+                  <input type="text" id="quote-hospital" className="form-input" placeholder="Tên bệnh viện hoặc phòng khám..." required />
+>>>>>>> origin/main
                 </div>
               </div>
 
               <div className="form-group">
                 <div className="form-field">
                   <label htmlFor="quote-product">{t("Sản phẩm quan tâm", "Product of interest")}</label>
+<<<<<<< HEAD
                   <select id="quote-product" name="product" className="form-input select-input">
+=======
+                  <select id="quote-product" className="form-input select-input">
+>>>>>>> origin/main
                     <option value="">{t("-- Chọn danh mục thiết bị --", "-- Select equipment category --")}</option>
                     <option value="ct">{t("Máy chụp cắt lớp vi tính (CT)", "CT Scanner")}</option>
                     <option value="mri">{t("Hệ thống cộng hưởng từ (MRI)", "MRI System")}</option>
@@ -174,7 +218,11 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
               <div className="form-group">
                 <div className="form-field">
                   <label htmlFor="quote-message">{t("Ghi chú thêm", "Additional notes")}</label>
+<<<<<<< HEAD
                   <textarea id="quote-message" name="message" className="form-input form-textarea" rows={5} style={{ paddingTop: "12px" }} placeholder="Bạn có yêu cầu đặc biệt gì không..."></textarea>
+=======
+                  <textarea id="quote-message" className="form-input" rows={5} placeholder="Bạn có yêu cầu đặc biệt gì không..."></textarea>
+>>>>>>> origin/main
                 </div>
               </div>
 

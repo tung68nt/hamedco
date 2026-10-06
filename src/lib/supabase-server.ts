@@ -7,6 +7,7 @@ import { createClient } from "@supabase/supabase-js";
  */
 export function createServerSupabase() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+<<<<<<< HEAD
   const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || "";
 
   if (!url || !serviceKey) {
@@ -14,6 +15,9 @@ export function createServerSupabase() {
       "Missing Supabase server config. Ensure NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are set."
     );
   }
+=======
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || "";
+>>>>>>> origin/main
 
   return createClient(url, serviceKey, {
     auth: { persistSession: false },

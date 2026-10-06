@@ -7,8 +7,12 @@ export const XRAY_PRODUCTS = [
   {
     id: 'digitaldiagnost-c90',
     slug: 'HC712034-digitaldiagnost-c90',
+<<<<<<< HEAD
     slug_en: 'digitaldiagnost-c90',
     name: { vi: 'DigitalDiagnost C90', en: 'DigitalDiagnost C90' },
+=======
+    name: 'DigitalDiagnost C90',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Hệ thống X-quang kỹ thuật số',
       en: 'Digital Radiography System'
@@ -85,8 +89,12 @@ export const XRAY_PRODUCTS = [
   {
     id: 'combidiagnost-r90',
     slug: 'HC709031-combidiagnost-r90',
+<<<<<<< HEAD
     slug_en: 'combidiagnost-r90',
     name: { vi: 'CombiDiagnost R90', en: 'CombiDiagnost R90' },
+=======
+    name: 'CombiDiagnost R90',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Hệ thống X-quang kỹ thuật số đa chức năng (DRF)',
       en: 'Cross-functional Digital Radiography-Fluoroscopy (DRF) System'

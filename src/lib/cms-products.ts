@@ -7,8 +7,12 @@ export function getSupabaseAdmin() {
 export interface CMSProduct {
   id: string;
   slug: string;
+<<<<<<< HEAD
   slug_en?: string;
   name: string | { vi: string; en: string };
+=======
+  name: string;
+>>>>>>> origin/main
   subtitle: { vi: string; en: string };
   deviceType: string;
   priceTier: string;
@@ -24,10 +28,17 @@ export interface CMSProduct {
   specifications: any[];
   documents?: any[];
   clinicalImages?: any[];
+<<<<<<< HEAD
   categoryIds?: string[];
   seo?: any;
   _createdAt?: string;
   _updatedAt?: string;
+=======
+  seo?: any;
+  _createdAt?: string;
+  _updatedAt?: string;
+  _source?: 'cms' | 'static';
+>>>>>>> origin/main
 }
 
 export async function getAllProducts(): Promise<CMSProduct[]> {
@@ -42,7 +53,11 @@ export async function getAllProducts(): Promise<CMSProduct[]> {
     return [];
   }
   
+<<<<<<< HEAD
   return (data || []).map(transformDbToCms);
+=======
+  return data || [];
+>>>>>>> origin/main
 }
 
 export async function getProductBySlug(slug: string): Promise<CMSProduct | null> {
@@ -58,6 +73,7 @@ export async function getProductBySlug(slug: string): Promise<CMSProduct | null>
     return null;
   }
   
+<<<<<<< HEAD
   return transformDbToCms(data);
 }
 
@@ -91,12 +107,16 @@ function transformDbToCms(dbProduct: any): CMSProduct {
     _createdAt: dbProduct.created_at,
     _updatedAt: dbProduct.updated_at,
   };
+=======
+  return data;
+>>>>>>> origin/main
 }
 
 export async function createProduct(productData: any): Promise<{ success: boolean; product?: CMSProduct; error?: string }> {
   try {
     const supabase = getSupabaseAdmin();
     
+<<<<<<< HEAD
     // Transform data from CMS format to DB column names
     const dbData: Record<string, any> = {
       slug: productData.slug,
@@ -119,16 +139,31 @@ export async function createProduct(productData: any): Promise<{ success: boolea
       seo: productData.seo || {},
       created_at: new Date().toISOString(),
       updated_at: new Date().toISOString()
+=======
+    const newProduct = {
+      ...productData,
+      id: `cms-${Date.now()}`,
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+      _source: 'cms'
+>>>>>>> origin/main
     };
     
     const { data, error } = await supabase
       .from('cms_products')
+<<<<<<< HEAD
       .insert([dbData])
+=======
+      .insert([newProduct])
+>>>>>>> origin/main
       .select()
       .single();
     
     if (error) {
+<<<<<<< HEAD
       console.error('Supabase insert error:', error);
+=======
+>>>>>>> origin/main
       return { success: false, error: error.message };
     }
     
@@ -146,6 +181,7 @@ export async function updateProduct(
   try {
     const supabase = getSupabaseAdmin();
     
+<<<<<<< HEAD
     // Transform data from CMS format to DB column names
     const dbData: Record<string, any> = {
       slug: productData.slug,
@@ -169,6 +205,8 @@ export async function updateProduct(
       updated_at: new Date().toISOString()
     };
     
+=======
+>>>>>>> origin/main
     const { data: existing } = await supabase
       .from('cms_products')
       .select('*')
@@ -178,18 +216,26 @@ export async function updateProduct(
     if (existing) {
       const { data, error } = await supabase
         .from('cms_products')
+<<<<<<< HEAD
         .update(dbData)
+=======
+        .update({ ...productData, updated_at: new Date().toISOString() })
+>>>>>>> origin/main
         .eq('slug', slug)
         .select()
         .single();
       
       if (error) {
+<<<<<<< HEAD
         console.error('Supabase update error:', error);
+=======
+>>>>>>> origin/main
         return { success: false, error: error.message };
       }
       
       return { success: true, product: data };
     } else {
+<<<<<<< HEAD
       // Insert new product
       const newProduct = {
         ...dbData,
@@ -200,11 +246,19 @@ export async function updateProduct(
       const { data, error } = await supabase
         .from('cms_products')
         .insert([newProduct])
+=======
+      const { data, error } = await supabase
+        .from('cms_products')
+        .insert([{ ...productData, slug, updated_at: new Date().toISOString(), _source: 'cms' }])
+>>>>>>> origin/main
         .select()
         .single();
       
       if (error) {
+<<<<<<< HEAD
         console.error('Supabase insert error:', error);
+=======
+>>>>>>> origin/main
         return { success: false, error: error.message };
       }
       

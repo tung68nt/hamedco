@@ -9,6 +9,7 @@ export interface CMSPost {
   slug: string;
   title: string;
   subtitle: string;
+<<<<<<< HEAD
   category_id: string;
   author_name: string;
   author_avatar?: string;
@@ -26,11 +27,22 @@ export interface CMSPost {
   categories?: {
     name: string;
   };
+=======
+  category: string;
+  author: { name: string; avatar?: string };
+  publishedAt: string;
+  coverImage: string;
+  content: string;
+  tags: string[];
+  relatedPosts?: string[];
+  seo?: any;
+>>>>>>> origin/main
   created_at?: string;
   updated_at?: string;
 }
 
 export async function getAllPosts(): Promise<CMSPost[]> {
+<<<<<<< HEAD
   try {
     const supabase = getSupabaseAdmin();
     // Fetch raw posts first to avoid JOIN errors
@@ -108,6 +120,36 @@ export async function getPostBySlug(slug: string): Promise<CMSPost | null> {
     console.error('Unexpected error in getPostBySlug:', err);
     return null;
   }
+=======
+  const supabase = getSupabaseAdmin();
+  const { data, error } = await supabase
+    .from('cms_posts')
+    .select('*')
+    .order('created_at', { ascending: false });
+  
+  if (error) {
+    console.error('Error fetching posts:', error);
+    return [];
+  }
+  
+  return data || [];
+}
+
+export async function getPostBySlug(slug: string): Promise<CMSPost | null> {
+  const supabase = getSupabaseAdmin();
+  const { data, error } = await supabase
+    .from('cms_posts')
+    .select('*')
+    .eq('slug', slug)
+    .single();
+  
+  if (error) {
+    console.error('Error fetching post:', error);
+    return null;
+  }
+  
+  return data;
+>>>>>>> origin/main
 }
 
 export async function createPost(postData: any): Promise<{ success: boolean; post?: CMSPost; error?: string }> {
@@ -192,6 +234,7 @@ export async function deletePost(slug: string): Promise<{ success: boolean; erro
     return { success: false, error: err.message };
   }
 }
+<<<<<<< HEAD
 
 export async function getRelatedPosts(currentId: string, categoryId?: string | null, limit: number = 3): Promise<CMSPost[]> {
   try {
@@ -229,3 +272,5 @@ export async function getRelatedPosts(currentId: string, categoryId?: string | n
     return [];
   }
 }
+=======
+>>>>>>> origin/main

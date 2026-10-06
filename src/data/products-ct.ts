@@ -7,8 +7,12 @@ export const CT_PRODUCTS = [
   {
     id: 'ct-3500',
     slug: 'HC728134-ct-3500',
+<<<<<<< HEAD
     slug_en: 'ct-3500-scanner',
     name: { vi: 'CT 3500', en: 'CT 3500' },
+=======
+    name: 'CT 3500',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Hệ thống chụp cắt lớp vi tính',
       en: 'Computed tomography scanner'
@@ -74,8 +78,12 @@ export const CT_PRODUCTS = [
   {
     id: 'incisive-ct',
     slug: 'HC728143-incisive-ct',
+<<<<<<< HEAD
     slug_en: 'incisive-ct-scanner',
     name: { vi: 'Incisive CT', en: 'Incisive CT' },
+=======
+    name: 'Incisive CT',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Hệ thống chụp cắt lớp vi tính',
       en: 'CT Scanner'
@@ -159,8 +167,12 @@ export const CT_PRODUCTS = [
   {
     id: 'ct-5300',
     slug: 'HC728285-ct-5300',
+<<<<<<< HEAD
     slug_en: 'ct-5300-scanner',
     name: { vi: 'CT 5300', en: 'CT 5300' },
+=======
+    name: 'CT 5300',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Hệ thống chụp cắt lớp vi tính',
       en: 'CT Scanner'
@@ -249,8 +261,12 @@ export const CT_PRODUCTS = [
   {
     id: 'spectral-ct-7500',
     slug: '728333-spectral-ct-7500',
+<<<<<<< HEAD
     slug_en: 'spectral-ct-7500',
     name: { vi: 'Spectral CT 7500', en: 'Spectral CT 7500' },
+=======
+    name: 'Spectral CT 7500',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Hệ thống CT phổ đầu dò',
       en: 'Spectral-detector CT scanner'

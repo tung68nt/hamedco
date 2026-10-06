@@ -13,7 +13,11 @@ export const ALL_PRODUCTS = [
 ];
 
 export function getProductBySlug(slug: string) {
+<<<<<<< HEAD
   return ALL_PRODUCTS.find(p => p.slug === slug || p.slug_en === slug);
+=======
+  return ALL_PRODUCTS.find(p => p.slug === slug);
+>>>>>>> origin/main
 }
 
 export function getProductsByDeviceType(deviceType: string) {

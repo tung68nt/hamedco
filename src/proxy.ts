@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+<<<<<<< HEAD
 /**
  * Next.js Proxy (replaces middleware in this version).
  * Handles auth protection for /admin routes + SEO headers for /san-pham.
@@ -80,10 +81,47 @@ export default async function proxy(request: NextRequest) {
       headers: requestHeaders,
     },
   });
+=======
+export function proxy(request: NextRequest) {
+  const { pathname, searchParams } = request.nextUrl;
+
+  // Only apply to product listing pages
+  if (!pathname.startsWith('/san-pham')) {
+    return NextResponse.next();
+  }
+
+  // Check for filter/sort parameters
+  const hasFilter = searchParams.has('filter');
+  const hasSort = searchParams.has('sort');
+  const hasPage = searchParams.has('page');
+
+  // If filter or sort param exists, add noindex header
+  if (hasFilter || hasSort) {
+    const response = NextResponse.next();
+    response.headers.set('X-Robots-Tag', 'noindex, follow');
+    return response;
+  }
+
+  // For paginated pages, allow indexing but use self-canonical (handled in page component)
+  if (hasPage) {
+    const response = NextResponse.next();
+    // Page 1 of pagination - could be index, others may vary
+    if (searchParams.get('page') === '1') {
+      response.headers.set('X-Robots-Tag', 'noindex, follow');
+    }
+    return response;
+  }
+
+  return NextResponse.next();
+>>>>>>> origin/main
 }
 
 export const config = {
   matcher: [
+<<<<<<< HEAD
     "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
+=======
+    '/san-pham/:path*',
+>>>>>>> origin/main
   ],
 };

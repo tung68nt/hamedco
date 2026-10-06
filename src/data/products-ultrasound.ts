@@ -7,8 +7,12 @@ export const ULTRASOUND_PRODUCTS = [
   {
     id: 'lumify',
     slug: 'HC795005-lumify',
+<<<<<<< HEAD
     slug_en: 'lumify',
     name: { vi: 'Lumify', en: 'Lumify' },
+=======
+    name: 'Lumify',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Hệ thống siêu âm cầm tay',
       en: 'Exceptional portable ultrasound system for Android'
@@ -152,8 +156,12 @@ export const ULTRASOUND_PRODUCTS = [
   {
     id: 'innosight',
     slug: 'HC795001-innosight-compact-ultrasound-system',
+<<<<<<< HEAD
     slug_en: 'innosight-compact-ultrasound-system',
     name: { vi: 'InnoSight', en: 'InnoSight' },
+=======
+    name: 'InnoSight',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Hệ thống siêu âm compact',
       en: 'Compact ultrasound system'
@@ -364,8 +372,12 @@ export const ULTRASOUND_PRODUCTS = [
   {
     id: 'flash-5100-poc',
     slug: '795158-flash-ultrasound-system-5100-poc',
+<<<<<<< HEAD
     slug_en: 'flash-ultrasound-system-5100-poc',
     name: { vi: 'Flash 5100 POC', en: 'Flash 5100 POC' },
+=======
+    name: 'Flash 5100 POC',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Hệ thống siêu âm Point-of-Care',
       en: 'Point of care ultrasound system'
@@ -509,8 +521,12 @@ export const ULTRASOUND_PRODUCTS = [
   {
     id: 'flash-5100-poc-pro',
     slug: '795404-flash-ultrasound-system-5100-poc-pro',
+<<<<<<< HEAD
     slug_en: 'flash-ultrasound-system-5100-poc-pro',
     name: { vi: 'Flash 5100 POC Pro', en: 'Flash 5100 POC Pro' },
+=======
+    name: 'Flash 5100 POC Pro',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Hệ thống siêu âm POC nâng cao',
       en: 'Advanced point-of-care ultrasound system'
@@ -608,8 +624,12 @@ export const ULTRASOUND_PRODUCTS = [
   {
     id: 'compact-5300',
     slug: 'HC795136-compact-5300',
+<<<<<<< HEAD
     slug_en: 'compact-5300-ultrasound-system',
     name: { vi: 'Compact 5300 Series', en: 'Compact 5300 Series' },
+=======
+    name: 'Compact 5300 Series',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Hệ thống siêu âm compact cao cấp',
       en: 'Premium compact ultrasound system'
@@ -800,8 +820,12 @@ export const ULTRASOUND_PRODUCTS = [
   {
     id: 'compact-5500',
     slug: 'HC795140-compact-5500',
+<<<<<<< HEAD
     slug_en: 'compact-5500-ultrasound-system',
     name: { vi: 'Compact 5500 Series', en: 'Compact 5500 Series' },
+=======
+    name: 'Compact 5500 Series',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Hệ thống siêu âm compact cao cấp',
       en: 'Premium compact ultrasound system'
@@ -938,8 +962,12 @@ export const ULTRASOUND_PRODUCTS = [
   {
     id: 'affiniti-30',
     slug: 'HC795218-affiniti-30',
+<<<<<<< HEAD
     slug_en: 'affiniti-30-ultrasound-system',
     name: { vi: 'Affiniti 30', en: 'Affiniti 30' },
+=======
+    name: 'Affiniti 30',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Hệ thống siêu âm đa năng',
       en: 'Ultrasound system'
@@ -1048,8 +1076,12 @@ export const ULTRASOUND_PRODUCTS = [
   {
     id: 'affiniti-50',
     slug: 'HC795208-affiniti-50',
+<<<<<<< HEAD
     slug_en: 'affiniti-50-ultrasound-system',
     name: { vi: 'Affiniti 50', en: 'Affiniti 50' },
+=======
+    name: 'Affiniti 50',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Thiết kế cho thực hành hàng ngày',
       en: 'Designed for your everyday'
@@ -1159,8 +1191,12 @@ export const ULTRASOUND_PRODUCTS = [
   {
     id: 'affiniti-70',
     slug: 'HC795210-affiniti-70',
+<<<<<<< HEAD
     slug_en: 'affiniti-70-ultrasound-system',
     name: { vi: 'Affiniti 70', en: 'Affiniti 70' },
+=======
+    name: 'Affiniti 70',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Thiết kế cho thực hành hàng ngày',
       en: 'Designed for your everyday'
@@ -1304,8 +1340,12 @@ export const ULTRASOUND_PRODUCTS = [
   {
     id: 'affiniti-cvx',
     slug: '795190-affiniti-cvx',
+<<<<<<< HEAD
     slug_en: 'affiniti-cvx-ultrasound',
     name: { vi: 'Affiniti CVx', en: 'Affiniti CVx' },
+=======
+    name: 'Affiniti CVx',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Siêu âm tim thế hệ mới',
       en: 'Next dimension in echocardiography'
@@ -1407,8 +1447,12 @@ export const ULTRASOUND_PRODUCTS = [
   {
     id: 'epiq-cvx',
     slug: 'HC795231-epiq-cvx',
+<<<<<<< HEAD
     slug_en: 'epiq-cvx-ultrasound',
     name: { vi: 'EPIQ CVx', en: 'EPIQ CVx' },
+=======
+    name: 'EPIQ CVx',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Hệ thống siêu âm tim cao cấp',
       en: 'Premium cardiology ultrasound system'
@@ -1552,8 +1596,12 @@ export const ULTRASOUND_PRODUCTS = [
   {
     id: 'epiq-elite',
     slug: 'HC795098-epiq-elite',
+<<<<<<< HEAD
     slug_en: 'epiq-elite-ultrasound-system',
     name: { vi: 'EPIQ Elite', en: 'EPIQ Elite' },
+=======
+    name: 'EPIQ Elite',
+>>>>>>> origin/main
     subtitle: {
       vi: 'Hiệu suất được tái định nghĩa',
       en: 'Performance redefined'

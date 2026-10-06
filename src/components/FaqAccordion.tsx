@@ -26,7 +26,11 @@ const FAQ_DATA: FaqItem[] = [
     },
     answer: {
       vi: "Tất cả sản phẩm được bảo hành chính hãng từ 12–24 tháng. HAMEDCO cung cấp dịch vụ bảo trì định kỳ theo lịch, kho linh kiện dự phòng tại Hà Nội và TP.HCM, và cam kết phản hồi yêu cầu kỹ thuật trong vòng 4 giờ làm việc.",
+<<<<<<< HEAD
       en: "All products come with a manufacturer warranty of 12–24 months. HAMEDCO provides scheduled maintenance services, spare parts stock in Hanoi and Ho Chi Minh City, and is committed to responding to technical requests within 4 business hours."
+=======
+      en: "All products come with a manufacturer's warranty of 12–24 months. HAMEDCO provides scheduled maintenance services, spare parts stock in Hanoi and Ho Chi Minh City, and is committed to responding to technical requests within 4 business hours."
+>>>>>>> origin/main
     }
   },
   {
@@ -51,6 +55,7 @@ const FAQ_DATA: FaqItem[] = [
   }
 ];
 
+<<<<<<< HEAD
 export default function FaqAccordion({ data }: { data?: any }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0); 
   const { locale } = useLocale();
@@ -83,6 +88,41 @@ export default function FaqAccordion({ data }: { data?: any }) {
             <div 
               className="faq-answer-content"
               dangerouslySetInnerHTML={{ __html: faq.answer[locale] || faq.answer }} 
+=======
+export default function FaqAccordion() {
+  const [openIndex, setOpenIndex] = useState(0); 
+  const { locale } = useLocale();
+
+  const toggle = (index: number) => {
+    setOpenIndex((prev) => (prev === index ? -1 : index));
+  };
+
+  return (
+    <div className="faq-list fade-in-up">
+      {FAQ_DATA.map((faq, i) => (
+        <div className={`faq-item${openIndex === i ? " open" : ""}`} key={i}>
+          <button
+            className="faq-question"
+            aria-expanded={openIndex === i}
+            aria-controls={`faq-${i}`}
+            id={`faq-${i}-btn`}
+            onClick={() => toggle(i)}
+          >
+            {faq.question[locale]}
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeWidth="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div
+            className="faq-answer-wrapper"
+            id={`faq-${i}`}
+            role="region"
+            aria-labelledby={`faq-${i}-btn`}
+          >
+            <div 
+              className="faq-answer-content"
+              dangerouslySetInnerHTML={{ __html: faq.answer[locale] }} 
+>>>>>>> origin/main
             />
           </div>
         </div>

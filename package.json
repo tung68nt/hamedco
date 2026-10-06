@@ -10,25 +10,37 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.102.1",
+<<<<<<< HEAD
     "@tinymce/tinymce-react": "^4.3.0",
     "cheerio": "^1.2.0",
     "next": "16.2.2",
     "next-themes": "^0.4.6",
     "nodemailer": "^6.9.11",
+=======
+    "cheerio": "^1.2.0",
+    "next": "16.2.2",
+    "next-themes": "^0.4.6",
+>>>>>>> origin/main
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+<<<<<<< HEAD
     "@types/nodemailer": "^6.4.14",
+=======
+>>>>>>> origin/main
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.2",
     "puppeteer": "^24.40.0",
     "tailwindcss": "^4",
+<<<<<<< HEAD
     "tsx": "^4.21.0",
+=======
+>>>>>>> origin/main
     "typescript": "^5"
   }
 }

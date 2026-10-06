@@ -155,23 +155,38 @@ export const metadata: Metadata = {
     google: "google-site-verification-code",
   },
   icons: {
+<<<<<<< HEAD
     icon: "/assets/favicon.png",
+=======
+    icon: [
+      { url: "/assets/favicon.svg", type: "image/svg+xml" },
+      { url: "/assets/favicon.png", type: "image/png", sizes: "32x32" },
+    ],
+>>>>>>> origin/main
     apple: "/assets/favicon.png",
   },
 };
 
 import { ThemeProvider } from "../components/ThemeProvider";
+<<<<<<< HEAD
 import { headers } from "next/headers";
 
 export default async function RootLayout({
+=======
+
+export default function RootLayout({
+>>>>>>> origin/main
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+<<<<<<< HEAD
   const headerList = await headers();
   const pathname = headerList.get("x-pathname") || "";
   const isAdminPath = pathname.startsWith("/admin");
 
+=======
+>>>>>>> origin/main
   return (
     <html lang="vi" suppressHydrationWarning>
       <head>
@@ -182,6 +197,7 @@ export default async function RootLayout({
       <body>
         <ThemeProvider>
           <LocaleProvider>
+<<<<<<< HEAD
             {!isAdminPath && <Header />}
             <main id="main">
               {children}
@@ -189,6 +205,15 @@ export default async function RootLayout({
             {!isAdminPath && <Footer />}
             {!isAdminPath && <ScrollAnimator />}
             {!isAdminPath && <FloatingContact />}
+=======
+            <Header />
+            <main id="main">
+              {children}
+            </main>
+            <Footer />
+            <ScrollAnimator />
+            <FloatingContact />
+>>>>>>> origin/main
           </LocaleProvider>
         </ThemeProvider>
       </body>

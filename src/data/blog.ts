@@ -191,6 +191,7 @@ Với trung tâm mới, HAMEDCO cam kết:
       description: "HAMEDCO khai trương trung tâm dịch vụ và hỗ trợ kỹ thuật tại Hà Nội, mở rộng mạng lưới hỗ trợ khách hàng miền Bắc.",
     }
   },
+<<<<<<< HEAD
   {
     id: "4",
     slug: "cong-nghe-sieu-am-philips-compact",
@@ -439,6 +440,8 @@ Chúng tôi cung cấp gói bảo trì trọn đời cho các thiết bị Phili
       ]
     }
   }
+=======
+>>>>>>> origin/main
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
