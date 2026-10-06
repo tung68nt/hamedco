@@ -1,0 +1,378 @@
+{
+  "lumify-android": {
+    "images": [
+      "https://images.philips.com/is/image/philipsconsumer/d894f72aed4a4c55b7f9b103014ed8bc?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/7b30fc08c1ce4d7db67cb3090150e80a?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/73b1f444da994a8c8d29b33301537ad1?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/70fd4d9d28e347708bcab2e5012858cd?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/61195d7d740b4d659da6b0660152520d?wid=1024&$jpglarge$"
+    ],
+    "docs": [
+      {
+        "label": "Lumify Handheld Ultrasound for Android",
+        "url": "https://www.documents.philips.com/assets/20250709/edeb29c4bcb54049a971b3150044f565.pdf"
+      },
+      {
+        "label": "Lumify Device Compatibility List",
+        "url": "https://www.documents.philips.com/assets/20250811/40c397e620e74ac7b1ceb33601451281.pdf"
+      },
+      {
+        "label": "Lumify Device Compatibility List",
+        "url": "https://www.documents.philips.com/assets/20250811/40c397e620e74ac7b1ceb33601451281.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20250709/edeb29c4bcb54049a971b3150044f565.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20250811/40c397e620e74ac7b1ceb33601451281.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20250811/40c397e620e74ac7b1ceb33601451281.pdf"
+      }
+    ]
+  },
+  "innosight": {
+    "images": [
+      "https://images.philips.com/is/image/philipsconsumer/a6671c8ef0084f60928eb18b0151f25f?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/4183db5e85b7488fb8ffab4200f41473?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/2169262dae7f428eb415ab4200f41a1e?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/15e762303e9b42aa8f5cab4200f417f2?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/12192ad24e674e67809bab4200f4161e?wid=1024&$jpglarge$"
+    ],
+    "docs": [
+      {
+        "label": "User Manual",
+        "url": "https://www.documents.philips.com/assets/20200625/a861ed8c7a864dc88963abe500fa145c.pdf"
+      },
+      {
+        "label": "Product Brochure shared services",
+        "url": "https://www.documents.philips.com/assets/20200706/13dc4620ebc44d1496c3abf000d53b6f.pdf"
+      },
+      {
+        "label": "MTM Brochure",
+        "url": "https://www.documents.philips.com/assets/20200706/de51ead51e70478a8c5aabf000d5382b.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20200625/a861ed8c7a864dc88963abe500fa145c.pdf"
+      }
+    ]
+  },
+  "flash-5100-poc": {
+    "images": [
+      "https://images.philips.com/is/image/philipsconsumer/70fd4d9d28e347708bcab2e5012858cd?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/241b13424c9741da81b5b2e400492224?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/8daf4a8adfbf4af3b54ab2e40049245f?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/c2fb3b05c6ee4c21aa4eb2e5012859f3?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/61195d7d740b4d659da6b0660152520d?wid=1024&$jpglarge$"
+    ],
+    "docs": [
+      {
+        "label": "Flash Ultrasound System 5100 POC Brochure",
+        "url": "https://www.documents.philips.com/assets/20250507/2f2a82833fe24c4985a2b2d6012af27d.pdf"
+      },
+      {
+        "label": "EcoPassport Flash Ultrasound System 5100 POC and 5100 POC Pro",
+        "url": "https://www.documents.philips.com/assets/20250507/4fa74198bf24442eae48b2d601117005.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20250507/2f2a82833fe24c4985a2b2d6012af27d.pdf"
+      }
+    ]
+  },
+  "flash-5100-poc-pro": {
+    "images": [
+      "https://images.philips.com/is/image/philipsconsumer/c2fb3b05c6ee4c21aa4eb2e5012859f3?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/b214c2c8d05d49c8bca4b2de00f81c19?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/dced6e0cc36c4c8fb8c3b2e401592f3c?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/8daf4a8adfbf4af3b54ab2e40049245f?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/a8e880605ee14608b404b2e401592ff4?wid=1024&$jpglarge$"
+    ],
+    "docs": [
+      {
+        "label": "Flash Ultrasound System 5100 POC Brochure",
+        "url": "https://www.documents.philips.com/assets/20250507/2f2a82833fe24c4985a2b2d6012af27d.pdf"
+      },
+      {
+        "label": "EcoPassport Flash Ultrasound System 5100 POC and 5100 POC Pro",
+        "url": "https://www.documents.philips.com/assets/20250507/4fa74198bf24442eae48b2d601117005.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20250507/2f2a82833fe24c4985a2b2d6012af27d.pdf"
+      }
+    ]
+  },
+  "compact-5300": {
+    "images": [
+      "https://images.philips.com/is/image/philipsconsumer/4190811865814a78b89caf540122196e?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/4945d46413824375912caf51015de964?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/f037446e246345aebe38b2ed010a9e4b?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/43c8dba3beca4aec994bb28a00465a9a?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/5ff9c15b6a4c441e80f7b2ed010aa079?wid=1024&$jpglarge$"
+    ],
+    "docs": [
+      {
+        "label": "Compact Ultrasound System 5000 Series for OB/GYN",
+        "url": "https://www.documents.philips.com/assets/20250314/1ba1869f72094c56ab2cb2a00172af55.pdf"
+      },
+      {
+        "label": "Product Brochure",
+        "url": "https://www.documents.philips.com/assets/20260204/5000d9f945094d65969db3e700c123a2.pdf"
+      },
+      {
+        "label": "Compact Ultrasound System 5000 Series for point of care",
+        "url": "https://www.documents.philips.com/assets/20250314/3da2091320c648558183b2a00172bf84.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20250314/1ba1869f72094c56ab2cb2a00172af55.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20260204/5000d9f945094d65969db3e700c123a2.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20250314/3da2091320c648558183b2a00172bf84.pdf"
+      }
+    ]
+  },
+  "compact-5500": {
+    "images": [
+      "https://images.philips.com/is/image/philipsconsumer/61195d7d740b4d659da6b0660152520d?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/8634231180c54c4386bdb2900032808d?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/4945d46413824375912caf51015de964?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/f037446e246345aebe38b2ed010a9e4b?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/80353409df3641a0bda3b290015e9b07?wid=1024&$jpglarge$"
+    ],
+    "docs": [
+      {
+        "label": "Compact Ultrasound System 5000 Series for OB/GYN",
+        "url": "https://www.documents.philips.com/assets/20250314/1ba1869f72094c56ab2cb2a00172af55.pdf"
+      },
+      {
+        "label": "Product Brochure",
+        "url": "https://www.documents.philips.com/assets/20260204/5000d9f945094d65969db3e700c123a2.pdf"
+      },
+      {
+        "label": "Compact Ultrasound System 5000 Series for point of care",
+        "url": "https://www.documents.philips.com/assets/20250314/3da2091320c648558183b2a00172bf84.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20250314/1ba1869f72094c56ab2cb2a00172af55.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20260204/5000d9f945094d65969db3e700c123a2.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20250314/3da2091320c648558183b2a00172bf84.pdf"
+      }
+    ]
+  },
+  "affiniti-30": {
+    "images": [
+      "https://images.philips.com/is/image/philipsconsumer/53447b3fc13d47c4af93b38701582ec2?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/09290f667ea64b4fb908a77c014a950c?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/2c5d039d2c2e4ee3ba11b05b011c06c2?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/3921b987ed8e4c0ab399b05b010c6179?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/3988617960fb459c8851b05b011c0a92?wid=1024&$jpglarge$"
+    ],
+    "docs": [
+      {
+        "label": "Product brochure: Affiniti 30 for Women's Health Care",
+        "url": "https://www.documents.philips.com/assets/20170713/ee63a7683cd344ec8973a7af011bbf36.pdf"
+      },
+      {
+        "label": "Infographic: Philips Affiniti ultrasound is a smart investment",
+        "url": "https://www.documents.philips.com/assets/20170523/9d4e1577bdb0457e8446a77c015a1c4d.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20170713/ee63a7683cd344ec8973a7af011bbf36.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20170523/9d4e1577bdb0457e8446a77c015a1c4d.pdf"
+      }
+    ]
+  },
+  "affiniti-50": {
+    "images": [
+      "https://images.philips.com/is/image/philipsconsumer/2f65797ea5444344b899b05a0157f3db?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/3b8b3f0c767344018007b05a01581dde?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/5d009e567e324185b7dab05a0157ecd0?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/633b66899a844c6da49eb05a0157fd67?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/63d5d4c0c4d740ca9c8cb05a0157fa3a?wid=1024&$jpglarge$"
+    ],
+    "docs": [
+      {
+        "label": "EPIQ Elite & Affiniti ultrasound Vascular flyer",
+        "url": "https://www.documents.philips.com/assets/20230823/c717079f784c4620a184b067014fd67d.pdf"
+      },
+      {
+        "label": "EPIQ Elite & Affiniti ultrasound Interventional Radiology flyer",
+        "url": "https://www.documents.philips.com/assets/20230823/edb4b78f9bd744cb849fb067014fd155.pdf"
+      },
+      {
+        "label": "EPIQ Elite & Affiniti Pediatric flyer",
+        "url": "https://www.documents.philips.com/assets/20230823/752a90cd7bd646758be4b067014fdc63.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20230823/c717079f784c4620a184b067014fd67d.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20230823/edb4b78f9bd744cb849fb067014fd155.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20230823/752a90cd7bd646758be4b067014fdc63.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20230417/6d807e2e01774f25883dafe7017faf73.pdf"
+      }
+    ]
+  },
+  "affiniti-70": {
+    "images": [
+      "https://images.philips.com/is/image/philipsconsumer/2f65797ea5444344b899b05a0157f3db?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/04956693a7b940c792a6b05b0123cdd7?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/3b8b3f0c767344018007b05a01581dde?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/5d009e567e324185b7dab05a0157ecd0?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/1241c0095f4e4ab9ad2bb05a015801a7?wid=1024&$jpglarge$"
+    ],
+    "docs": [
+      {
+        "label": "EPIQ Elite & Affiniti Pediatric flyer",
+        "url": "https://www.documents.philips.com/assets/20230823/752a90cd7bd646758be4b067014fdc63.pdf"
+      },
+      {
+        "label": "EPIQ Elite & Affiniti ultrasound Interventional Radiology flyer",
+        "url": "https://www.documents.philips.com/assets/20230823/edb4b78f9bd744cb849fb067014fd155.pdf"
+      },
+      {
+        "label": "EPIQ Elite & Affiniti ultrasound Vascular flyer",
+        "url": "https://www.documents.philips.com/assets/20230823/c717079f784c4620a184b067014fd67d.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20230823/752a90cd7bd646758be4b067014fdc63.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20230823/edb4b78f9bd744cb849fb067014fd155.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20230823/c717079f784c4620a184b067014fd67d.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20230417/6d807e2e01774f25883dafe7017faf73.pdf"
+      }
+    ]
+  },
+  "affiniti-cvx": {
+    "images": [
+      "https://images.philips.com/is/image/philipsconsumer/592e3788937443348a80adcf01135216?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/6c1408c3f19d48c5a5bfac2b00a2e3a2?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/ec1d9f99c67844b28f9ab1500182ca45?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/423bc2e661a945c493bbb150018478ca?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/e8f4337dc98244058019b15001845052?wid=1024&$jpglarge$"
+    ],
+    "docs": [
+      {
+        "label": "Affiniti CVx Ultrasound",
+        "url": "https://www.documents.philips.com/assets/20240503/1630b0290d3045879d20b165014eef63.pdf"
+      },
+      {
+        "label": "Affiniti CVx AutoStrain LV RV LA automated strain measurements",
+        "url": "https://www.documents.philips.com/assets/20220127/f0ff066a9416423c9219ae2a01685c23.pdf"
+      },
+      {
+        "label": "Affiniti CVx iRotate & xPlane: Revealing New Insights",
+        "url": "https://www.documents.philips.com/assets/20211103/9cb3b047e59b4fb59859add5013748f1.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20240503/1630b0290d3045879d20b165014eef63.pdf"
+      }
+    ]
+  },
+  "epiq-cvx": {
+    "images": [
+      "https://images.philips.com/is/image/philipsconsumer/09deb85123eb4a98b04fb14f01513c0a?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/0df8069bddbc41ab8040adb4014370ba?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/ae7c5ae0647142278b48adb4014368c8?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/55b7f343c9db4e548e81adb4014367e1?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/e69fb4c0728a40678051adb401436a6d?wid=1024&$jpglarge$"
+    ],
+    "docs": [
+      {
+        "label": "EPIQ CVx/CVxi Product Overview Ultrasound",
+        "url": "https://www.documents.philips.com/assets/20240502/240d371246504779bca2b164016b35c5.pdf"
+      },
+      {
+        "label": "EPIQ CVx nSIGHT Plus Whitepaper",
+        "url": "https://www.documents.philips.com/assets/20211207/55d862d38c3d4a1eaff9adf7015598e7.pdf"
+      },
+      {
+        "label": "EPIQ CVx Photorealistic Imaging",
+        "url": "https://www.documents.philips.com/assets/20211103/999dc7641eb144b7b346add50165dad2.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20240502/240d371246504779bca2b164016b35c5.pdf"
+      }
+    ]
+  },
+  "epiq-elite": {
+    "images": [
+      "https://images.philips.com/is/image/philipsconsumer/0fcef27f42a74975b38db0bd017fe30d?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/088c8cbf842e441185afb0590134b62b?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/20c701b27c224d25aca0b220013be0d7?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/28ceafe652cb4bcea28bb05901289ef0?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/3ff507c31b294a8cb69ba9b400a01f4a?wid=1024&$jpglarge$"
+    ],
+    "docs": [
+      {
+        "label": "EPIQ Elite & Affiniti ultrasound Interventional Radiology flyer",
+        "url": "https://www.documents.philips.com/assets/20230823/edb4b78f9bd744cb849fb067014fd155.pdf"
+      },
+      {
+        "label": "EPIQ Elite & Affiniti ultrasound Vascular flyer",
+        "url": "https://www.documents.philips.com/assets/20230823/c717079f784c4620a184b067014fd67d.pdf"
+      },
+      {
+        "label": "EPIQ and Affiniti Security brochure",
+        "url": "https://www.documents.philips.com/assets/20230417/6d807e2e01774f25883dafe7017faf73.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20230823/edb4b78f9bd744cb849fb067014fd155.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20230823/c717079f784c4620a184b067014fd67d.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20230417/6d807e2e01774f25883dafe7017faf73.pdf"
+      },
+      {
+        "label": "",
+        "url": "https://www.documents.philips.com/assets/20230823/752a90cd7bd646758be4b067014fdc63.pdf"
+      }
+    ]
+  }
+}

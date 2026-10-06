@@ -1,0 +1,126 @@
+{
+  "lumify-android": {
+    "images": [
+      "https://images.philips.com/is/image/philipsconsumer/d48d52417e784ce0814db3a801682e1f?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/259fa7164cb2401490d5b3a8016830b4?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/772fc9e1fa9b4a75a848b3a80168300d?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/29ee39974428493aa29fb066015253c8?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/41349a8e3ecb4bca994ab3a801682ec9?wid=1024&$jpglarge$"
+    ],
+    "documents": [
+      {
+        "label": "Lumify Handheld Ultrasound for Android",
+        "url": "https://www.documents.philips.com/assets/20250709/edeb29c4bcb54049a971b3150044f565.pdf"
+      },
+      {
+        "label": "Lumify Device Compatibility List",
+        "url": "https://www.documents.philips.com/assets/20250811/40c397e620e74ac7b1ceb33601451281.pdf"
+      },
+      {
+        "label": "Lumify Device Compatibility List",
+        "url": "https://www.documents.philips.com/assets/20250811/40c397e620e74ac7b1ceb33601451281.pdf"
+      },
+      {
+        "label": "Brochure",
+        "url": "https://www.documents.philips.com/assets/20250709/edeb29c4bcb54049a971b3150044f565.pdf"
+      },
+      {
+        "label": "Brochure",
+        "url": "https://www.documents.philips.com/assets/20250811/40c397e620e74ac7b1ceb33601451281.pdf"
+      },
+      {
+        "label": "Brochure",
+        "url": "https://www.documents.philips.com/assets/20250811/40c397e620e74ac7b1ceb33601451281.pdf"
+      }
+    ]
+  },
+  "lumify-ios": {
+    "images": [
+      "https://images.philips.com/is/image/philipsconsumer/c9245a9b69ce4ea0b58baf690160eb01?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/74c41d5ea52348c18d8fb3090150a703?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/5f4b7eb13c8049f98d7fb309016976e9?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/c2fb3b05c6ee4c21aa4eb2e5012859f3?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/70fd4d9d28e347708bcab2e5012858cd?wid=1024&$jpglarge$"
+    ],
+    "documents": [
+      {
+        "label": "Lumify 5.1 iOS Brochure",
+        "url": "https://www.documents.philips.com/assets/20250701/a0a69c9f60f041569522b30d003780d2.pdf"
+      },
+      {
+        "label": "Lumify Device Compatibility List",
+        "url": "https://www.documents.philips.com/assets/20250811/40c397e620e74ac7b1ceb33601451281.pdf"
+      },
+      {
+        "label": "Lumify Device Compatibility List",
+        "url": "https://www.documents.philips.com/assets/20250811/40c397e620e74ac7b1ceb33601451281.pdf"
+      },
+      {
+        "label": "Brochure",
+        "url": "https://www.documents.philips.com/assets/20250701/a0a69c9f60f041569522b30d003780d2.pdf"
+      },
+      {
+        "label": "Brochure",
+        "url": "https://www.documents.philips.com/assets/20250811/40c397e620e74ac7b1ceb33601451281.pdf"
+      },
+      {
+        "label": "Brochure",
+        "url": "https://www.documents.philips.com/assets/20250811/40c397e620e74ac7b1ceb33601451281.pdf"
+      }
+    ]
+  },
+  "flash-5100-poc": {
+    "images": [
+      "https://images.philips.com/is/image/philipsconsumer/9f6f590956da4a49a7c8b2de00f82bd8?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/4aefddb9d8c44e8f933eb2de00f82c6e?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/eec0057006c049ad8b27b2de00f82d01?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/418064e202734ee6b55db2de00f8320c?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/8e169c25efaa48fcb8eeb2de00f8262d?wid=1024&$jpglarge$"
+    ],
+    "documents": [
+      {
+        "label": "Flash Ultrasound System 5100 POC Brochure",
+        "url": "https://www.documents.philips.com/assets/20250507/2f2a82833fe24c4985a2b2d6012af27d.pdf"
+      },
+      {
+        "label": "EcoPassport Flash Ultrasound System 5100 POC and 5100 POC Pro",
+        "url": "https://www.documents.philips.com/assets/20250507/4fa74198bf24442eae48b2d601117005.pdf"
+      },
+      {
+        "label": "Brochure",
+        "url": "https://www.documents.philips.com/assets/20250507/2f2a82833fe24c4985a2b2d6012af27d.pdf"
+      }
+    ]
+  },
+  "epiq-cvx": {
+    "images": [
+      "https://images.philips.com/is/image/philipsconsumer/09deb85123eb4a98b04fb14f01513c0a?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/0df8069bddbc41ab8040adb4014370ba?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/c1435efd194646cdad3bb14f01532d69?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/25845529a5a84a979e6eadb401436fb6?wid=1024&$jpglarge$",
+      "https://images.philips.com/is/image/philipsconsumer/3858958b934a4241bedeadb401437299?wid=1024&$jpglarge$"
+    ],
+    "documents": [
+      {
+        "label": "X11-4t Product Brochure",
+        "url": "https://www.documents.philips.com/assets/20240425/5501a1a1fa774e93a440b15d0186a001.pdf"
+      },
+      {
+        "label": "EPIQ CVx/CVxi Product Overview Ultrasound",
+        "url": "https://www.documents.philips.com/assets/20240502/240d371246504779bca2b164016b35c5.pdf"
+      },
+      {
+        "label": "EPIQ CVx/CVxi Feature and User Experience",
+        "url": "https://www.documents.philips.com/assets/20181113/f1efc848a59b4c118da6a99700902ab7.pdf"
+      },
+      {
+        "label": "Brochure",
+        "url": "https://www.documents.philips.com/assets/20240425/5501a1a1fa774e93a440b15d0186a001.pdf"
+      },
+      {
+        "label": "Brochure",
+        "url": "https://www.documents.philips.com/assets/20240502/240d371246504779bca2b164016b35c5.pdf"
+      }
+    ]
+  }
+}
